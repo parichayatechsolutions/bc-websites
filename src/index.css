@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+/* ── Palette ──────────────────────────────────────────────────
+   Every --c-* variable is set by themeStyle() in src/theme/theme.ts,
+   which also derives contrast-safe variants from the brand colours.
+   Colour roles (which variable to use where) are in docs/DESIGN.md. */
+.boutique {
+  --c-ink: var(--c-dark);
+  /* Form errors. Fixed rather than from the brand, so an error never looks
+     like decoration; 6:1 on white and on pale backgrounds. */
+  --c-error: #b3261e;
+
+  background: var(--c-light);
+  color: var(--c-ink);
+  font-family: var(--f-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme inline {
+  --color-primary: var(--c-primary);
+  --color-primary-ink: var(--c-primary-ink);
+  --color-on-primary-ink: var(--c-on-primary-ink);
+  --color-accent: var(--c-accent);
+  --color-accent-on-dark: var(--c-accent-on-dark);
+  --color-dark: var(--c-dark);
+  --color-light: var(--c-light);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-error: var(--c-error);
+  --color-thread: var(--c-thread);
+  --color-on-primary: var(--c-on-primary);
+  --color-on-accent: var(--c-on-accent);
+  --font-display: var(--f-display);
+  --font-body: var(--f-body);
+}
+
+/* ── Motion ───────────────────────────────────────────────────
+   The CSS twin of src/motion/tokens.ts. Use `ease-stitch` with
+   duration-200 (colour), duration-300 (small movement) or
+   duration-700 (photos). Nothing else. */
+@theme {
+  --ease-stitch: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Text links: a faint running stitch that sews itself in on hover.
+   .is-quiet hides it until hover (navigation links); .is-current keeps it
+   drawn (the page you're on). */
+.link-stitch {
+  position: relative;
+  text-decoration: none;
+}
+.link-stitch::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: -0.2em;
+  border-bottom: 1.5px dashed currentColor;
+  opacity: 0.45;
+  transition: opacity 200ms var(--ease-stitch);
+}
+.link-stitch.is-quiet::after {
+  opacity: 0;
+}
+.link-stitch.is-current::after {
+  opacity: 1;
+}
+.link-stitch:hover::after,
+.link-stitch:focus-visible::after {
+  opacity: 1;
+  animation: stitch-draw 500ms var(--ease-stitch);
+}
+@keyframes stitch-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Type scale and layout helpers live in the components layer, so Tailwind
+   utilities on the same element can adjust them (e.g. `section pt-0`).
+   Unlayered CSS would silently win over every utility. */
+@layer components {
+  /* ── Type scale ───────────────────────────────────────────────
+     A modular scale (≈1.333) anchored at 18px body. Rozha One has a
+     single, heavy weight, so hierarchy comes from size and leading. */
+  .t-hero {
+    font-family: var(--f-display);
+    font-size: clamp(3.2rem, 12vw, 11rem);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+  }
+  .t-1 {
+    font-family: var(--f-display);
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+  }
+  .t-2 {
+    font-family: var(--f-display);
+    font-size: clamp(1.8rem, 3.6vw, 3rem);
+    line-height: 1.1;
+  }
+  .t-3 {
+    font-family: var(--f-display);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    line-height: 1.2;
+  }
+  .t-lead {
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    line-height: 1.45;
+    font-weight: 300;
+  }
+  .t-small {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  /* ── Layout ─────────────────────────────────────────────────── */
+  /* The extra left padding leaves a lane for the running stitch. */
+  .wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-left: 3rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding-left: 5.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .section {
+    padding-block: clamp(5rem, 12vw, 10rem);
+  }
+
+  /* Temple-arch frame for photos. */
+  .arch {
+    border-radius: 999px 999px 0 0;
+    overflow: hidden;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
