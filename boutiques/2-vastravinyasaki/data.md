@@ -143,8 +143,8 @@
 **Brand colours**
 
 - Do they have fixed brand colours? (yes / no): yes
-- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Maroon #7A1F2B and gold #C9A24A
-- Colours they like: Maroon, gold, peacock blue
+- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Orange #D2691E and gold #C9A24A
+- Colours they like: Terracotta orange, rust, gold
 - Colours they DON'T want: Fluorescent shades
 
 **Style they like**

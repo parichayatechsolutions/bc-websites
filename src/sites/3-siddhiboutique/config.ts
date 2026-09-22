@@ -9,7 +9,7 @@ const config: BoutiqueConfig = {
     localName: 'ಸಿದ್ಧಿ ಬೊಟಿಕ್',
     tagline: 'Bespoke tailoring, timeless style',
     logo: 'logo.png',
-    colors: { primary: '#1F7A7A', accent: '#C9A24A' },
+    colors: { primary: '#D8577E', accent: '#C9A24A' },
   },
   owner: {
     name: 'Siddhi',

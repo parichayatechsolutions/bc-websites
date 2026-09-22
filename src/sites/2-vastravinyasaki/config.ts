@@ -9,7 +9,7 @@ const config: BoutiqueConfig = {
     localName: 'ವಸ್ತ್ರ ವಿನ್ಯಾಸಕಿ',
     tagline: 'Tailored with grace, worn with elegance',
     logo: 'logo.png',
-    colors: { primary: '#7A1F2B', accent: '#C9A24A' },
+    colors: { primary: '#D2691E', accent: '#C9A24A' },
   },
   owner: {
     name: 'Smt. Roopa',

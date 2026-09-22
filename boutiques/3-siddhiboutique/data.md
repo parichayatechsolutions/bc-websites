@@ -143,8 +143,8 @@
 **Brand colours**
 
 - Do they have fixed brand colours? (yes / no): yes
-- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Teal #1F7A7A and gold #C9A24A
-- Colours they like: Teal, gold, bottle green
+- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Pink #D8577E and gold #C9A24A
+- Colours they like: Pink, rose gold, blush
 - Colours they DON'T want: Grey, neon
 
 **Style they like**
