@@ -9,7 +9,7 @@ const config: BoutiqueConfig = {
     localName: 'ಧಾರ್ಯ ಡಿಸೈನರ್ ಸ್ಟುಡಿಯೋ',
     tagline: 'Luxury Bridal Couture, Bespoke Ethnic Wear & Designer Rentals',
     logo: 'logo.png',
-    colors: { primary: '#064E3B', accent: '#D4AF37' },
+    colors: { primary: '#0D0D0D', accent: '#C5A059' },
   },
   owner: {
     name: 'Smt. Dharya & Team',
@@ -200,7 +200,7 @@ const config: BoutiqueConfig = {
     storefront: 'storefront.jpg',
     interior: ['interior-1.jpg', 'interior-2.jpg'],
     teamAtWork: 'team-at-work.jpg',
-    work: ['work-01.jpg', 'work-02.jpg', 'work-03.jpg', 'work-04.jpg', 'work-05.jpg'],
+    work: ['work-01.jpg'],
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
   },
   permissions: { showOwnerPhoto: true, showPrices: true },

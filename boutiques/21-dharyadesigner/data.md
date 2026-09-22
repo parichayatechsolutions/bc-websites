@@ -142,8 +142,8 @@
 **Brand colours**
 
 - Do they have fixed brand colours? (yes / no): yes
-- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Deep Emerald #064E3B and champagne gold #D4AF37
-- Colours they like: Deep emerald, champagne gold, royal burgundy
+- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Onyx Black #0D0D0D and vintage gold #C5A059
+- Colours they like: Onyx black, vintage gold, champagne, rose gold
 - Colours they DON'T want: Neon yellow, dull grey
 
 **Style they like**
