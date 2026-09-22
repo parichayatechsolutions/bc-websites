@@ -6,9 +6,10 @@ import { useBoutique } from '../../app/BoutiqueContext'
 
 export default function RatingReviews() {
   const { boutique } = useBoutique()
-  const { testimonials, stats, social } = boutique
+  const { stats, social } = boutique
+  const reviews = boutique.reviews ?? boutique.testimonials ?? []
 
-  if (!testimonials.length && !stats?.length) return null
+  if (!reviews.length && !stats?.length) return null
 
   return (
     <section className="section bg-dark text-light">
@@ -32,9 +33,9 @@ export default function RatingReviews() {
           </p>
         )}
 
-        {testimonials.length > 0 && (
+        {reviews.length > 0 && (
           <ul className="mt-20 grid gap-14 md:grid-cols-3 md:gap-10">
-            {testimonials.slice(0, 3).map((t) => (
+            {reviews.slice(0, 3).map((t) => (
               <li key={t.name + t.text}>
                 <figure>
                   <blockquote className="t-3 text-light">“{t.text}”</blockquote>

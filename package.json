@@ -9,9 +9,9 @@
     "preview": "vite preview",
     "new-boutique": "node scripts/new-boutique.mjs",
     "shots": "node scripts/shots.mjs",
-    "check": "node scripts/validate.mjs && tsc -b && vite build",
-    "config": "node scripts/build-config.mjs",
-    "validate": "node scripts/validate.mjs"
+    "check": "node --experimental-strip-types scripts/validate.mjs && tsc -b && vite build",
+    "config": "node --experimental-strip-types scripts/build-config.mjs",
+    "validate": "node --experimental-strip-types scripts/validate.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

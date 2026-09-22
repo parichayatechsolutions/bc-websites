@@ -23,11 +23,13 @@ export interface ServiceGroup {
   items: string[]
 }
 
-export interface Testimonial {
+export interface Review {
   name: string
   text: string
   source?: 'google' | 'instagram' | 'other'
 }
+
+export type Testimonial = Review
 
 export interface Stat {
   value: string
@@ -39,6 +41,17 @@ export interface HeroMedia {
   src: PhotoFile
   /** Still frame shown while a video loads, and on reduced-motion devices. */
   poster?: PhotoFile
+}
+
+export interface CollectorNotes {
+  collectedBy?: string
+  date?: string
+  decisionMaker?: string
+  interestLevel?: string
+  existingWebsite?: string
+  goal?: string
+  followUpDate?: string
+  notes?: string
 }
 
 export interface BoutiqueConfig {
@@ -100,7 +113,8 @@ export interface BoutiqueConfig {
   }
 
   stats?: Stat[]
-  testimonials: Testimonial[]
+  reviews?: Review[]
+  testimonials?: Testimonial[]
 
   media: {
     hero: HeroMedia
@@ -121,4 +135,6 @@ export interface BoutiqueConfig {
     noindex: boolean
     preparedBy?: string
   }
+
+  collectorNotes?: CollectorNotes
 }

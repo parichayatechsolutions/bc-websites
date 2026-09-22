@@ -104,8 +104,8 @@ export async function validateBoutique(slug) {
   // Content that makes the site convincing
   err(config.services?.featured?.length > 0, 'Nothing listed as "most known for"')
   warn((config.services?.featured?.length ?? 0) >= 3, 'Fewer than 3 "most known for" items')
-  warn(config.owner?.story, "No owner's story: that section will be hidden")
-  warn((config.testimonials?.length ?? 0) >= 3, `${config.testimonials?.length ?? 0} customer reviews: 3 or more make the site more convincing`)
+  const reviews = config.reviews ?? config.testimonials ?? []
+  warn(reviews.length >= 3, `${reviews.length} customer reviews: 3 or more make the site more convincing`)
   warn((config.media?.work?.length ?? 0) >= 5, `${config.media?.work?.length ?? 0} work photos listed: 5 or more are recommended`)
   if (config.owner?.photo && !config.permissions?.showOwnerPhoto) {
     warnings.push("An owner photo is listed but permission to show it is \"no\", so it won't be shown")

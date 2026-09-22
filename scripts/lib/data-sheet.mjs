@@ -167,6 +167,17 @@ export function readSheet(markdown) {
     okPhotos: get(10, 'OK to use their photos and logo in the demo?'),
     okOwnerPhoto: get(10, "OK to show the owner's photo?"),
     okPrices: get(10, 'OK to show prices on the site?'),
+
+    collectorNotes: {
+      collectedBy: get(11, 'Collected by'),
+      date: get(11, 'Date'),
+      decisionMaker: get(11, 'Decision maker'),
+      interestLevel: get(11, 'Interest level'),
+      existingWebsite: get(11, 'Do they already have a website?'),
+      goal: get(11, 'What they want most from a website'),
+      followUpDate: get(11, 'Follow-up date'),
+      notes: get(11, 'Anything else we should know'),
+    },
   }
 }
 
@@ -312,7 +323,7 @@ const drop = (obj) => {
     for (const [k, v] of Object.entries(obj)) {
       const value = drop(v)
       if (value === undefined) continue
-      if (Array.isArray(value) && value.length === 0 && !['testimonials', 'work'].includes(k)) continue
+      if (Array.isArray(value) && value.length === 0 && !['testimonials', 'reviews', 'work'].includes(k)) continue
       if (value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length === 0) continue
       out[k] = value
     }
@@ -432,6 +443,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
       paymentModes: list(sheet.payment),
     },
     stats,
+    reviews: sheet.reviews,
     testimonials: sheet.reviews,
     media: {
       hero: media.hero,
@@ -445,7 +457,11 @@ export function toConfig(sheet, { slug, photoFiles }) {
       showOwnerPhoto: yes(sheet.okOwnerPhoto),
       showPrices: yes(sheet.okPrices),
     },
-    demo: { noindex: true },
+    demo: {
+      noindex: true,
+      preparedBy: sheet.collectorNotes?.collectedBy,
+    },
+    collectorNotes: Object.values(sheet.collectorNotes ?? {}).some(Boolean) ? sheet.collectorNotes : undefined,
   })
 
   return { config, errors, warnings }
