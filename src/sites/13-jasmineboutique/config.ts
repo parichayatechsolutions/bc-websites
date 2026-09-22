@@ -32,15 +32,15 @@ const config: BoutiqueConfig = {
       landmark: 'Opposite Stylish Furniture, near Dia Health',
       city: 'Bengaluru',
       pincode: '560060',
-      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Jasmine%20Boutique%201st%20Main%20Rd%20Kengeri%20Satellite%20Town%20Bengaluru%20560060',
-      hours: 'Mon–Thu & Sat 10:00am–9:00pm, Sun 10:00am–6:00pm, Fri Closed',
+      mapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJn31YsHM_rjsRukp4hSy65gg',
+      hours: 'Mon–Sat 10:00am–8:00pm, Sun closed',
       parking: true,
     },
   ],
   social: {
-    googleBusiness: 'https://www.google.com/maps/search/?api=1&query=Jasmine%20Boutique%201st%20Main%20Rd%20Kengeri%20Satellite%20Town%20Bengaluru%20560060',
-    googleRating: 4.4,
-    googleReviewCount: 26,
+    googleBusiness: 'https://www.google.com/maps/place/?q=place_id:ChIJn31YsHM_rjsRukp4hSy65gg',
+    googleRating: 4.3,
+    googleReviewCount: 22,
   },
   services: {
     featured: [
@@ -207,9 +207,9 @@ const config: BoutiqueConfig = {
     date: '2026-09-22',
     decisionMaker: 'Smt. Jasmine (Owner)',
     interestLevel: 'hot',
-    goal: 'Build a modern online showcase celebrating 20 years of tailoring mastery in Kengeri Satellite Town',
+    goal: 'A truly professional, elegant design celebrating 20 years of tailoring expertise instead of a generic template',
     followUpDate: '2026-09-29',
-    notes: 'Established 20 years in business (since 2006), designer wear specialist on 1st Main Rd, phone 9611188123, 4.4 rating.',
+    notes: 'Established ~20 years in business (since 2006), designer wear specialist on 1st Main Rd, phone 9611188123, 4.3 rating with 22 reviews. Location ID: ChIJn31YsHM_rjsRukp4hSy65gg.',
   },
 }
 
