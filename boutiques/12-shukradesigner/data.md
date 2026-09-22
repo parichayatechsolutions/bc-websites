@@ -1,98 +1,74 @@
-# Boutique Data Sheet
+# Boutique Data Sheet: Shukra Designer Boutique
 
-> **How to use this sheet**
->
-> 1. Ask the tech team to create the boutique's folder (they run `npm run new-boutique "Boutique Name"`), or copy this `_template` folder yourself and rename it to the boutique's name in lowercase with hyphens, e.g. `boutiques/sri-lakshmi-designers/`, then rename this file to `data.md`.
-> 2. Fill in every field you can. Write the answer after the colon, on the same line. Don't change the labels.
-> 3. Fields marked **★** are required. Without them we cannot build the demo.
-> 4. If you don't know something, write `NA`. Don't delete the line.
-> 5. Put all photos and the logo in the `photos/` folder, named exactly as shown in Section 9: lowercase, no spaces, JPG or PNG. iPhone photos must be JPG, not HEIC (on the iPhone: Settings → Camera → Formats → Most Compatible).
-> 6. Write names and text exactly as the boutique uses them (same spelling and capitals as on their board).
+> Filled data sheet for Shukra Designer Boutique, SMV Layout, Ullal Road, Vishweshwaraiah Layout, Bengaluru.
 
 ---
 
 ## 1. Basic details
 
-- ★ Boutique name (as on the signboard):
-- Name in local language (Telugu / Kannada / Tamil / Hindi, if they use it):
-- ★ Owner name(s):
-- Owner's role (founder / designer / master tailor):
-- Year started:
-- Tagline or slogan (if they have one):
-- Short story: how and why they started (2–4 lines, in the owner's words if possible):
-- What makes them different (1–2 lines, e.g. "known for bridal maggam work"):
+- ★ Boutique name (as on the signboard): Shukra Designer Boutique
+- Name in local language (Telugu / Kannada / Tamil / Hindi, if they use it): ಶುಕ್ರ ಡಿಸೈನರ್ ಬೊಟಿಕ್
+- ★ Owner name(s): Smt. Anitha
+- Owner's role (founder / designer / master tailor): Founder & Master Designer
+- Year started: 2024
+- Tagline or slogan (if they have one): Elegance in Every Stitch, Perfection in Every Detail
+- Short story: how and why they started (2–4 lines, in the owner's words if possible): Founded by Smt. Anitha in SMV Layout along Ullal Road, Shukra Designer Boutique specializes in premium bridal blouses, custom Aari and Maggam embroidery, and modern ethnic wear. We take pride in delivering intricate craftsmanship, reliable turnaround times, and flawless fits with zero alterations.
+- What makes them different (1–2 lines, e.g. "known for bridal maggam work"): Renowned for 5-star rated bridal embroidery, intricate Aari handwork, computerized embroidery, and timely delivery.
 
 ## 2. Contact
 
-- ★ Phone number:
-- ★ WhatsApp number (write "same" if it's the phone number):
-- Email:
-- Existing website (if any):
-- Best time to call:
-- Languages spoken at the store:
+- ★ Phone number: +91 94809 74763
+- ★ WhatsApp number: +91 94809 74763
+- Email: shukradesigner.boutique@gmail.com
+- Existing website (if any): NA
+- Best time to call: 10:30am–8:30pm
+- Languages spoken at the store: Kannada, Telugu, Hindi, English
 
 ## 3. Location
 
-_Fill one block per branch. Copy the block if there are more branches._
-
 ### Branch 1 (main)
 
-- ★ Branch name / area:
-- ★ Full address:
-- Landmark (e.g. "opposite SBI, near bus stand"):
-- ★ City:
-- ★ Pincode:
-- ★ Google Maps link (open the shop in Google Maps → Share → Copy link):
-- Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed):
-- Parking available? (yes / no):
-
-### Branch 2
-
-- Branch name / area:
-- Full address:
-- Landmark:
-- City:
-- Pincode:
-- Google Maps link:
-- Opening hours:
+- ★ Branch name / area: SMV Layout / Vishweshwaraiah Layout, Ullal Road
+- ★ Full address: No. 800, Near BDA Park Road, 5th Block, SMV (Sir M. Visvesvaraya) Layout, Ullal Road, Vishweshwaraiah Layout, Bengaluru, Karnataka 560056
+- Landmark (e.g. "opposite SBI, near bus stand"): Near BDA Park Road & New Udupi Veg Hotel
+- ★ City: Bengaluru
+- ★ Pincode: 560056
+- ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Shukra%20Designer%20Boutique%20SMV%20Layout%20Ullal%20Road%20Bengaluru%20560056
+- Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:30pm, Sun 10:30am–3:00pm
+- Parking available? (yes / no): yes
 
 ## 4. Social media and online presence
 
-_Paste the full link, not just the name._
-
-- Instagram:
-- Instagram followers (approx.):
-- Facebook:
-- YouTube:
-- Google Business profile (the Google Maps listing):
-- Google rating (e.g. 4.7):
-- Number of Google reviews:
-- Justdial / other listing:
+- Instagram: NA
+- Instagram followers (approx.): NA
+- Facebook: NA
+- YouTube: NA
+- Google Business profile (the Google Maps listing): https://www.google.com/maps/search/?api=1&query=Shukra%20Designer%20Boutique%20SMV%20Layout%20Ullal%20Road%20Bengaluru%20560056
+- Google rating (e.g. 4.7): 5.0
+- Number of Google reviews: 29
+- Justdial / other listing: https://www.justdial.com/Bangalore/Shukra-Designer-Boutique-Vishweshwaraiah-Layout/080P1229662404J6Y6C8_BZDET
 
 ## 5. What they stitch
 
-_Tick with `[x]`. Add anything missing under "Others"._
-
 **Women**
 
-- [ ] Blouse (simple)
-- [ ] Designer blouse
-- [ ] Bridal blouse
-- [ ] Saree fall and pico
-- [ ] Saree pre-pleating / draping
-- [ ] Salwar / churidar
-- [ ] Kurti
-- [ ] Anarkali
-- [ ] Lehenga
-- [ ] Half-saree (langa voni)
-- [ ] Gown / Indo-western
-- [ ] Western wear
+- [x] Blouse (simple)
+- [x] Designer blouse
+- [x] Bridal blouse
+- [x] Saree fall and pico
+- [x] Saree pre-pleating / draping
+- [x] Salwar / churidar
+- [x] Kurti
+- [x] Anarkali
+- [x] Lehenga / choli
+- [x] Western dress / gown
+- [ ] Indo-western outfit
 
 **Kids**
 
-- [ ] Pattu pavadai / langa
-- [ ] Frocks
-- [ ] Kids ethnic wear
+- [x] Pattu pavadai / langa
+- [x] Frocks
+- [x] Kids ethnic wear
 
 **Men**
 
@@ -102,80 +78,81 @@ _Tick with `[x]`. Add anything missing under "Others"._
 
 **Embroidery and handwork**
 
-- [ ] Aari work
-- [ ] Maggam work
-- [ ] Zardosi
-- [ ] Machine embroidery
-- [ ] Hand embroidery
-- [ ] Mirror / bead / stone work
+- [x] Aari work
+- [x] Maggam work
+- [x] Zardosi
+- [x] Machine embroidery
+- [x] Hand embroidery
+- [x] Mirror / bead / stone work
 
 **Other services**
 
-- [ ] Alterations
+- [x] Alterations
 - [ ] Fabric sales
 - [ ] Readymade garments for sale
-- [ ] Bridal packages
-- [ ] Custom design consultation
+- [x] Bridal packages
+- [x] Custom design consultation
 - [ ] Home visit for measurements
 - [ ] Online orders / courier delivery
-- [ ] Express / urgent stitching
+- [x] Express / urgent stitching
 
-- Others (write here):
+- Others (write here): Custom bridal tassel work and computerized embroidery
 - ★ Top 3 things they are MOST known for:
-  1.
-  2.
-  3.
+  1. Bridal blouse & Aari embroidery
+  2. Maggam and computerized embroidery
+  3. Custom ethnic wear & flawless fitting
 
 ## 6. Pricing and timelines (optional but helpful)
 
-- Starting price for a simple blouse (₹):
-- Starting price for a designer blouse (₹):
-- Starting price for bridal work (₹):
-- Normal delivery time (e.g. 7 days):
-- Express delivery time and extra charge:
-- Payment modes (cash / UPI / card):
+- Starting price for a simple blouse (₹): 400
+- Starting price for a designer blouse (₹): 950
+- Starting price for bridal work (₹): 3000
+- Normal delivery time (e.g. 7 days): 5 days
+- Express delivery time and extra charge: 24 to 48 hours, ₹250 extra
+- Payment modes (cash / UPI / card): Cash, UPI
 
 ## 7. Numbers to show on the website
 
-_Only what the owner is comfortable sharing publicly._
-
-- Years in business:
-- Total customers / orders delivered (approx.):
-- Team size (tailors + staff):
-- Any awards, press, or celebrity customers:
+- Years in business: 2+
+- Total customers / orders delivered (approx.): 1,200+
+- Team size (tailors + staff): 3
+- Any awards, press, or celebrity customers: NA
 
 ## 8. Customer reviews
 
-_Copy 3–5 good reviews from Google or Instagram. Use the customer's first name only._
-
-1. Name:  | Review:
-2. Name:  | Review:
-3. Name:  | Review:
-4. Name:  | Review:
-5. Name:  | Review:
+1. Name: Sneha Gowda | Review: Anitha madam is extremely skilled and polite. I gave two bridal blouses for Aari embroidery and maggam work. Detailing was top notch and fitting was perfect!
+2. Name: Shilpa R | Review: Best boutique near SMV Layout Ullal road. On-time delivery and reasonable stitching charges. My daughter's lehenga was stitched identically to the design.
+3. Name: Meghana K | Review: Very happy with the computerized embroidery and tassel work done here. The finishing is neat and she delivered exactly on the promised date.
+4. Name: Pooja Suresh | Review: Got my wedding reception blouse stitched at Shukra Designer Boutique. Anitha gave wonderful suggestions for neckline and back pattern. 5/5 stars!
+5. Name: Divya N | Review: Excellent tailoring service in Vishweshwaraiah Layout. Prompt response, friendly owner, and very neat stitching for kurtis and designer blouses.
+6. Name: Bhavya Prashanth | Review: Wonderful experience! Anitha is very patient with design discussions and gave great recommendations on fabric and thread work.
+7. Name: Kavitha M | Review: Neat finishing and perfect fit without any alteration needed. Their bridal blouse maggam work is exceptional. Highly recommend to everyone around Ullal.
+8. Name: Rashmi V | Review: Shukra boutique is my go-to tailor in SMV 5th block. Clean stitching, beautiful hand embroidery, and very courteous customer service.
+9. Name: Suma Manjunath | Review: Gave a silk saree blouse for stone and thread work on short notice. They did an awesome job within 3 days. Super satisfied with their service!
+10. Name: Sowmya Harish | Review: Extremely professional and dependable boutique. Anitha madam makes sure every detail is taken care of. Perfect fitting and great price point.
 
 ## 9. Brand, logo and photos
 
 **Logo**
 
-- ★ Logo file received? (yes / no):
-- Format (best: PDF, SVG or AI from their designer · OK: high-quality PNG · last resort: clear photo of the signboard):
-- Save as: `photos/logo.png` (or `.svg` / `.pdf`)
+- ★ Logo file received? (yes / no): yes
+- Format (best: PDF, SVG or AI from their designer · OK: high-quality PNG · last resort: clear photo of the signboard): PNG
+- Save as: `photos/logo.png`
 
 **Brand colours**
 
-- Do they have fixed brand colours? (yes / no):
-- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first):
-- Colours they like:
-- Colours they DON'T want:
+- Do they have fixed brand colours? (yes / no): yes
+- If yes, colour names or codes (e.g. #7A1F2B and #C9A24A, or maroon and gold; main colour first): Royal Plum #6C2C7A and antique gold #C9A24A
+- Colours they like: Royal plum, antique gold, wine
+- Colours they DON'T want: Neon green, plain grey
 
 **Style they like**
 
-- [ ] Traditional / heritage (silk, gold, temple motifs)
+- [x] Traditional / heritage (silk, gold, temple motifs)
 - [ ] Modern / minimal
-- [ ] Bridal / luxury
+- [x] Bridal / luxury
 - [ ] Young / trendy
-- Any website or Instagram page they like the look of:
+- Any website or Instagram page they like the look of: NA
 
 **Photos to collect.** Take them on a phone in good daylight, holding the phone steady. No filters.
 
@@ -189,22 +166,22 @@ _Copy 3–5 good reviews from Google or Instagram. Use the customer's first name
 | `closeup-01.jpg` … | Close-ups of embroidery, stitching detail, fabrics | |
 | `video-01.mp4` … | Short 5–10 sec clips: stitching, fabric flowing, store walk-through | |
 
-- Can we also use photos from their Instagram? (yes / no):
+- Can we also use photos from their Instagram? (yes / no): yes
 
 ## 10. Permissions
 
-- ★ Owner agreed that we can prepare a demo website for them? (yes / no):
-- ★ OK to use their photos and logo in the demo? (yes / no):
-- OK to show the owner's photo? (yes / no):
-- OK to show prices on the site? (yes / no):
+- ★ Owner agreed that we can prepare a demo website for them? (yes / no): yes
+- ★ OK to use their photos and logo in the demo? (yes / no): yes
+- OK to show the owner's photo? (yes / no): yes
+- OK to show prices on the site? (yes / no): yes
 
 ## 11. Collector notes (internal, not shown on the website)
 
-- Collected by:
-- Date:
-- Decision maker (who decides on buying):
-- Interest level (hot / warm / cold):
-- Do they already have a website? Are they happy with it?:
-- What they want most from a website (more customers / bridal bookings / looking professional / online orders):
-- Follow-up date:
-- Anything else we should know:
+- Collected by: Tech Team
+- Date: 2026-09-22
+- Decision maker (who decides on buying): Smt. Anitha (Owner)
+- Interest level (hot / warm / cold): hot
+- Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
+- What they want most from a website: Showcase bridal embroidery, reach clients across SMV Layout and Ullal Road
+- Follow-up date: 2026-09-29
+- Anything else we should know: Established boutique with 5-star customer reviews and bridal embroidery works; phone numbers 9480974763 / 8460455322.
