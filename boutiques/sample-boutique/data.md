@@ -156,6 +156,19 @@
 
 - Can we also use photos from their Instagram? (yes / no): yes
 
+## 9b. Photo notes (optional, one line per photo)
+
+- work-bridal-01.jpg: Bridal blouse, aari and maggam, 14 days
+- work-bridal-02.jpg: Reception lehenga, zardosi border, 21 days
+- work-bridal-03.jpg: Muhurtham blouse, heavy zari, 18 days
+- work-blouse-01.jpg: Designer blouse, mirror work, 8 days
+- work-blouse-02.jpg: Simple blouse, piped neck, 4 days
+- work-blouse-03.jpg: Boat-neck blouse, pearl detailing, 6 days
+- work-lehenga-01.jpg: Half saree for a ritu ceremony, 12 days
+- work-lehenga-02.jpg: Reception lehenga, can-can volume, 16 days
+- work-saree-01.jpg: Saree pre-pleating and fall stitching, 2 days
+- work-kids-01.jpg: Pattu langa, zari border, 7 days
+
 ## 10. Permissions
 
 - ★ Owner agreed that we can prepare a demo website for them? (yes / no): yes

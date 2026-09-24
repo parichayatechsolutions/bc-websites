@@ -199,6 +199,26 @@ _Copy 3–5 good reviews from Google or Instagram. Use the customer's first name
 
 - Can we also use photos from their Instagram? (yes / no):
 
+## 9b. Photo notes (optional, one line per photo)
+
+_Only for the work photos. Write the file name, then what it is: the piece, the
+handwork, and how long it took. This is what a bride reads under the picture._
+
+_Name work photos `work-<what it is>-<number>.jpg` so the website can group
+them: `work-bridal-01.jpg`, `work-blouse-02.jpg`, `work-lehenga-01.jpg`,
+`work-kids-01.jpg`. Use the same words each time._
+
+- work-bridal-01.jpg:
+- work-bridal-02.jpg:
+- work-bridal-03.jpg:
+- work-blouse-01.jpg:
+- work-blouse-02.jpg:
+- work-blouse-03.jpg:
+- work-lehenga-01.jpg:
+- work-lehenga-02.jpg:
+- work-saree-01.jpg:
+- work-kids-01.jpg:
+
 ## 10. Permissions
 
 - ★ Owner agreed that we can prepare a demo website for them? (yes / no):

@@ -123,10 +123,32 @@ export async function validateBoutique(slug) {
   const files = existsSync(photosDir) ? readdirSync(photosDir).filter((f) => !f.startsWith('.')) : []
   const referenced = [...new Set(referencedPhotos(config))]
   const missing = referenced.filter((f) => !files.includes(f))
-  if (missing.length) warnings.push(`Photos still to add to boutiques/${slug}/photos/: ${missing.join(', ')}`)
 
-  const unused = files.filter((f) => !referenced.includes(f))
+  // A generated stand-in stands in for the real photograph of the same name.
+  const standIns = new Map(
+    files
+      .filter((f) => f.startsWith('ai-'))
+      .map((f) => [f.slice(3).replace(/\.[^.]+$/, ''), f]),
+  )
+  const stillMissing = missing.filter((f) => !standIns.has(f.replace(/\.[^.]+$/, '')))
+  const covered = missing.filter((f) => standIns.has(f.replace(/\.[^.]+$/, '')))
+
+  const unused = files.filter(
+    (f) => !referenced.includes(f) && f !== 'photos-prompt.md' && !(f.startsWith('ai-') && covered.some((c) => `ai-${c.replace(/\.[^.]+$/, '')}` === f.replace(/\.[^.]+$/, ''))),
+  )
   if (unused.length) warnings.push(`In photos/ but not used by the site: ${unused.join(', ')}`)
+
+  if (stillMissing.length) {
+    warnings.push(`Photos still to add to boutiques/${slug}/photos/: ${stillMissing.join(', ')}. Prompts for stand-ins: npm run prompts -- ${slug}`)
+  }
+
+  if (covered.length) {
+    const message = `${covered.length} photo${covered.length === 1 ? ' is' : 's are'} still a generated stand-in (ai-*). Replace with the boutique's real work before they sign.`
+    // Once they've bought it, generated pictures of work they didn't make
+    // would be shown to their customers as theirs. That is not a warning.
+    if (config.demo?.sold) errors.push(message)
+    else warnings.push(message)
+  }
 
   for (const f of files) {
     const size = statSync(join(photosDir, f)).size

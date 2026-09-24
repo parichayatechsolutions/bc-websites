@@ -3,11 +3,12 @@
 // never from 'gsap' directly, so plugins are always registered first.
 
 import gsap from 'gsap'
+import { Flip } from 'gsap/Flip'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP)
+gsap.registerPlugin(Flip, ScrollTrigger, SplitText, useGSAP)
 
 /** Conditions for gsap.matchMedia(): every animation checks `motion` first. */
 export const MEDIA = {
@@ -16,5 +17,5 @@ export const MEDIA = {
   mobile: '(max-width: 767px)',
 }
 
-export { gsap, ScrollTrigger, SplitText, useGSAP }
+export { Flip, gsap, ScrollTrigger, SplitText, useGSAP }
 export { DURATION, EASE, SCRUB, STAGGER } from './tokens'

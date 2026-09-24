@@ -26,6 +26,7 @@
   --color-accent-on-dark: var(--c-accent-on-dark);
   --color-dark: var(--c-dark);
   --color-light: var(--c-light);
+  --color-paper: var(--c-paper);
   --color-ink: var(--c-ink);
   --color-muted: var(--c-muted);
   --color-error: var(--c-error);
@@ -172,6 +173,25 @@
   .arch {
     border-radius: 999px 999px 0 0;
     overflow: hidden;
+  }
+
+  /* A zari border: the woven edge of a saree, drawn as a rule. Two hairlines
+     with a run of fine threads between them, in the brand's accent. Used to
+     bound a section the way a border bounds a length of cloth — the lookbook
+     designs' ornament, where the ceremonial ones use the arch and the stitch. */
+  .zari {
+    --zari-color: var(--c-accent);
+    height: 6px;
+    border-top: 1px solid color-mix(in oklab, var(--zari-color) 70%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--zari-color) 70%, transparent);
+    background-image: repeating-linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--zari-color) 55%, transparent) 0 2px,
+      transparent 2px 7px
+    );
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: auto 2px;
   }
 }
 

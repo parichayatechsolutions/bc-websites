@@ -19,6 +19,11 @@ export interface IDesignMeta {
 /** In the order they appear on a boutique's card wall. */
 export const DESIGNS: IDesignMeta[] = [
   {
+    id: 'vitrine',
+    name: 'Vitrine',
+    description: 'The shop window. One photograph edge to edge, then everything they make in a grid you can narrow by kind. For a boutique whose pitch is range.',
+  },
+  {
     id: 'arch',
     name: 'Arch',
     description: 'Dark and ceremonial. The name over a temple arch that opens as you scroll, then their work sliding past on the brand colour.',

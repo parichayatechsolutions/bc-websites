@@ -24,7 +24,26 @@ export async function loadBoutique(slug: string): Promise<BoutiqueConfig | null>
   return load ? (await load()).default : null
 }
 
-/** URL of a file in boutiques/<slug>/photos/, or undefined if it hasn't been added yet. */
+const AI_STANDINS = ['jpg', 'jpeg', 'png', 'webp', 'avif']
+
+/**
+ * URL of a file in boutiques/<slug>/photos/, or undefined if it hasn't been
+ * added yet.
+ *
+ * A config always names the real photograph ("storefront.jpg"). Until the
+ * boutique gives us theirs, a generated stand-in saved as "ai-storefront.jpg"
+ * is used in its place, so the demo is never a grid of empty boxes — and the
+ * moment the real file lands beside it, the real one wins with no config
+ * change. `npm run prompts` writes the prompts for those stand-ins.
+ */
 export function photoUrl(slug: string, file?: PhotoFile): string | undefined {
-  return file ? photos[`/boutiques/${slug}/photos/${file}`] : undefined
+  if (!file) return undefined
+  const real = photos[`/boutiques/${slug}/photos/${file}`]
+  if (real) return real
+  const stem = file.replace(/\.[^.]+$/, '')
+  for (const extension of AI_STANDINS) {
+    const stand = photos[`/boutiques/${slug}/photos/ai-${stem}.${extension}`]
+    if (stand) return stand
+  }
+  return undefined
 }

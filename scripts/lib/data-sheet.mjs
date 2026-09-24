@@ -42,14 +42,14 @@ function field(lines, label) {
   return undefined
 }
 
-/** Split into { number: lines[] } by "## 3. Location" headings. */
+/** Split into { '3': lines[] } by "## 3. Location" and "## 9b. Photo notes" headings. */
 function sections(markdown) {
   const out = {}
   let current = null
   for (const line of markdown.split('\n')) {
-    const heading = line.match(/^##\s+(\d+)\./)
+    const heading = line.match(/^##\s+(\d+[a-z]?)\./i)
     if (heading) {
-      current = Number(heading[1])
+      current = heading[1].toLowerCase()
       out[current] = []
     } else if (current !== null) {
       out[current].push(line)
@@ -97,9 +97,20 @@ function numberedAfter(lines, after) {
   return out
 }
 
+/** { 'work-bridal-01.jpg': 'Bridal blouse, aari work, 12 days' } */
+function photoNotes(lines) {
+  const out = {}
+  for (const line of lines) {
+    const note = line.match(/^\s*-\s*([\w.-]+\.(?:jpg|jpeg|png|webp|avif))\s*:\s*(.*)$/i)
+    const text = note && clean(note[2])
+    if (text) out[note[1].toLowerCase()] = text
+  }
+  return out
+}
+
 export function readSheet(markdown) {
   const s = sections(markdown)
-  const get = (n, label) => field(s[n] ?? [], label)
+  const get = (n, label) => field(s[String(n)] ?? [], label)
 
   const branches = blocks(s[3] ?? [])
     .map((b) => ({
@@ -164,6 +175,8 @@ export function readSheet(markdown) {
     reviews,
 
     colours: get(9, 'If yes, colour names or codes'),
+
+    photoNotes: photoNotes(s['9b'] ?? []),
 
     okDemo: get(10, 'Owner agreed that we can prepare a demo website for them?'),
     okPhotos: get(10, 'OK to use their photos and logo in the demo?'),
@@ -307,7 +320,24 @@ function mediaFor(files, sheet) {
     return found.length ? found.map((s) => stems.get(s)) : fallback
   }
 
-  const work = numbered('work', ['work-01.jpg', 'work-02.jpg', 'work-03.jpg', 'work-04.jpg', 'work-05.jpg'])
+  // work-bridal-01.jpg keeps its category in its name; work-01.jpg has none.
+  // The fallback names carry categories, so the validator's "still to add"
+  // warning doubles as a shot list the team can photograph straight from.
+  const workStems = [...stems.keys()].filter((s) => /^work-(?:[a-z]+-)?\d+$/.test(s)).sort()
+  const work = workStems.length
+    ? workStems.map((s) => stems.get(s))
+    : [
+        'work-bridal-01.jpg',
+        'work-bridal-02.jpg',
+        'work-bridal-03.jpg',
+        'work-blouse-01.jpg',
+        'work-blouse-02.jpg',
+        'work-blouse-03.jpg',
+        'work-lehenga-01.jpg',
+        'work-lehenga-02.jpg',
+        'work-saree-01.jpg',
+        'work-kids-01.jpg',
+      ]
   const isVideo = (file) => /\.(mp4|webm)$/i.test(file ?? '')
   const video = has('video-01') ?? (isVideo(has('ai-hero')) ? has('ai-hero') : undefined)
   const hero = video
@@ -321,6 +351,7 @@ function mediaFor(files, sheet) {
     teamAtWork: has('team-at-work') ?? 'team-at-work.jpg',
     work,
     closeups: numbered('closeup', ['closeup-01.jpg', 'closeup-02.jpg']),
+    captions: sheet.photoNotes,
     ownerPhoto: yes(sheet.okOwnerPhoto) ? (has('owner') ?? 'owner.jpg') : undefined,
     logo: has('logo') ?? 'logo.png',
   }
@@ -471,6 +502,10 @@ export function toConfig(sheet, { slug, photoFiles }) {
       teamAtWork: media.teamAtWork,
       work: media.work,
       closeups: media.closeups,
+      // Only for photos this boutique actually has or expects.
+      captions: Object.fromEntries(
+        Object.entries(media.captions ?? {}).filter(([file]) => media.work.some((w) => w.toLowerCase() === file)),
+      ),
     },
     permissions: {
       showOwnerPhoto: yes(sheet.okOwnerPhoto),

@@ -97,6 +97,10 @@ export function themeStyle(
     '--c-accent': p.accent,
     '--c-dark': p.dark,
     '--c-light': p.light,
+    // A ground with a whisper of the brand in it. Photographs of cloth look
+    // dead on a page that is pure neutral, and wrong on one that is properly
+    // coloured; this sits between, and stays different for every boutique.
+    '--c-paper': mix(p.light, p.primary, 0.045),
     '--c-on-primary': p.onPrimary,
     '--c-on-accent': p.onAccent,
     '--c-primary-ink': p.primaryInk,

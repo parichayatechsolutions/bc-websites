@@ -124,8 +124,15 @@ export interface BoutiqueConfig {
     storefront?: PhotoFile
     interior?: PhotoFile[]
     teamAtWork?: PhotoFile
+    /**
+     * Their finished work. A file named work-<category>-<nn>.jpg carries its
+     * own category ("work-bridal-01.jpg" → Bridal), which is what the lookbook
+     * templates group by; a plain work-01.jpg has none.
+     */
     work: PhotoFile[]
     closeups?: PhotoFile[]
+    /** One line per photo, by file name: "Bridal blouse, aari work, 12 days". */
+    captions?: Record<PhotoFile, string>
   }
 
   permissions: {
