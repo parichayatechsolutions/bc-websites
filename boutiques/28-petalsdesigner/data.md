@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase custom blouses, bridal embroidery, gown rentals, and stylish modern portfolio with yellow & black signature branding
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Nagadevanahalli, Kengeri (Dodabasti Main Road near Harsha Dental Clinic); phone 8970998416 / 9611762694; 4.4 rating.

@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: Already have an auto-generated website (https://jasmine-boutique.grexa.site/), but it looks very poor and incomplete (e.g. broken counters '0.00' and '0+ Happy Customers'). High conversion chance for our custom, beautiful website.
 - What they want most from a website: A truly professional, elegant design celebrating 20 years of tailoring expertise instead of a generic template
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Established ~20 years in business (since 2006), designer wear specialist on 1st Main Rd, phone 9611188123, 4.3 rating with 22 reviews. Location ID: ChIJn31YsHM_rjsRukp4hSy65gg.

@@ -32,6 +32,7 @@ function entry(config) {
     places,
     featured: (config.services?.featured ?? []).slice(0, 3),
     rating: config.social?.googleRating,
+    sold: config.demo?.sold === true,
   }
 }
 

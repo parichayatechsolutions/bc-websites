@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their complete family collections (Men, Women, Kids), bridal rental wardrobe, and custom occasion wear
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Storefront photo captured directly (ADS - Anarghya Designer Studio, 1511/A 1st Cross Rd, Opposite to KHB Platinum, 2nd Block Nagadevanahalli); phone 8884878820; 4.4 rating.

@@ -14,15 +14,21 @@ export default function Dropdown({
   value,
   options,
   onChange,
+  display,
   anyLabel = 'All',
   className = '',
 }: {
-  /** Named for screen readers; the visible label sits above the button. */
+  /**
+   * What this filters by: "State", "Rating". Shown in the button until
+   * something is chosen, so the filters need no labels above them.
+   */
   label: string
   value: string
   options: string[]
   onChange: (value: string) => void
-  /** The first choice, which clears this level. */
+  /** How an option reads, when that differs from its value ("4.5" → "4.5 and above"). */
+  display?: (value: string) => string
+  /** The first option, which clears this filter. */
   anyLabel?: string
   className?: string
 }) {
@@ -32,6 +38,7 @@ export default function Dropdown({
   const [open, setOpen] = useState(false)
 
   const items = ['', ...options]
+  const read = (item: string) => (item ? (display ? display(item) : item) : anyLabel)
   const chosen = Math.max(items.indexOf(value), 0)
   const [active, setActive] = useState(chosen)
 
@@ -101,9 +108,11 @@ export default function Dropdown({
         aria-activedescendant={open ? `${id}-${active}` : undefined}
         onClick={() => (open ? setOpen(false) : show())}
         onKeyDown={onKeyDown}
-        className="flex min-h-11 w-full cursor-pointer items-center justify-between gap-2 rounded-lg border border-neutral-300 bg-white px-3 text-left text-base text-neutral-900 transition-colors duration-200 hover:border-neutral-500 focus:border-neutral-900 focus:outline-none"
+        className={`flex min-h-11 w-full cursor-pointer items-center justify-between gap-2 rounded-lg border bg-white px-3 text-left text-base transition-colors duration-200 hover:border-neutral-500 focus:outline-none ${
+          value ? 'border-neutral-900 font-medium text-neutral-900' : 'border-neutral-300 text-neutral-500'
+        }`}
       >
-        <span className="truncate">{value || anyLabel}</span>
+        <span className="truncate">{value ? read(value) : label}</span>
         <IconChevronDown
           size={18}
           stroke={1.75}
@@ -133,7 +142,7 @@ export default function Dropdown({
                 i === active ? 'bg-neutral-100' : ''
               } ${item === value ? 'text-neutral-900' : 'text-neutral-700'}`}
             >
-              <span className="truncate">{item || anyLabel}</span>
+              <span className="truncate">{read(item)}</span>
               {item === value && <IconCheck size={16} stroke={2} aria-hidden="true" className="shrink-0" />}
             </li>
           ))}

@@ -25,6 +25,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Aari & maggam hand embroidery',
     ],
     rating: 4.9,
+    sold: false,
   },
   {
     slug: '10-shantifashionnest',
@@ -46,6 +47,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom fit lehengas & anarkalis',
     ],
     rating: 4.7,
+    sold: false,
   },
   {
     slug: '11-sarikadesigner',
@@ -62,6 +64,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Bridal embroidery & alterations',
     ],
     rating: 4.5,
+    sold: false,
   },
   {
     slug: '12-shukradesigner',
@@ -83,6 +86,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom ethnic wear & flawless fitting',
     ],
     rating: 5,
+    sold: false,
   },
   {
     slug: '13-jasmineboutique',
@@ -104,6 +108,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom ethnic wear, lehengas & western gowns',
     ],
     rating: 4.3,
+    sold: false,
   },
   {
     slug: '14-nineplus',
@@ -125,6 +130,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom designer lehenga & ethnic wear tailoring',
     ],
     rating: 4.8,
+    sold: false,
   },
   {
     slug: '15-siricreations',
@@ -146,6 +152,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom designer blouses & saree pre-pleating',
     ],
     rating: 4.9,
+    sold: false,
   },
   {
     slug: '16-honeyboutique',
@@ -167,6 +174,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Flawless alterations & zero-alteration fitting',
     ],
     rating: 4.8,
+    sold: false,
   },
   {
     slug: '17-ayaanadesigners',
@@ -188,6 +196,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Bespoke blouse stitching & zari embroidery',
     ],
     rating: 4.5,
+    sold: false,
   },
   {
     slug: '18-anarghyadesigner',
@@ -209,6 +218,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom bridal lehengas, blouses & Indo-Western gowns',
     ],
     rating: 4.4,
+    sold: false,
   },
   {
     slug: '19-daarinaboutique',
@@ -225,6 +235,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Everyday salwar suits, kurtis & alterations',
     ],
     rating: 4.7,
+    sold: false,
   },
   {
     slug: '2-vastravinyasaki',
@@ -246,6 +257,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Handcrafted aari and maggam embroidery',
     ],
     rating: 4.7,
+    sold: false,
   },
   {
     slug: '20-kaladesigner',
@@ -267,6 +279,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Precision blouse fitting with zero alterations',
     ],
     rating: 5,
+    sold: false,
   },
   {
     slug: '21-dharyadesigner',
@@ -288,6 +301,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Designer gown & wedding wear rental collection',
     ],
     rating: 4.9,
+    sold: false,
   },
   {
     slug: '22-vinathicollections',
@@ -309,6 +323,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Readymade designer kurtis & family celebration wear',
     ],
     rating: 4.5,
+    sold: false,
   },
   {
     slug: '23-lalithaboutique',
@@ -330,6 +345,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Traditional pattu langa & everyday ethnic tailoring',
     ],
     rating: 4.2,
+    sold: false,
   },
   {
     slug: '24-houseoftaranga',
@@ -351,6 +367,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Aari & Maggam hand embroidery styling',
     ],
     rating: 4.2,
+    sold: false,
   },
   {
     slug: '25-gboutique',
@@ -372,6 +389,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom ethnic partywear & lehengas',
     ],
     rating: 4.8,
+    sold: false,
   },
   {
     slug: '26-adhruthfashion',
@@ -393,6 +411,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom ethnic lehengas & family celebration wear',
     ],
     rating: 4.3,
+    sold: false,
   },
   {
     slug: '27-houseofatelier',
@@ -414,6 +433,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom ethnic lehengas & bridal embroidery',
     ],
     rating: 4.6,
+    sold: false,
   },
   {
     slug: '28-petalsdesigner',
@@ -435,6 +455,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Rental collection of ready designer gowns & blouses',
     ],
     rating: 4.4,
+    sold: false,
   },
   {
     slug: '29-vinyasadesigner',
@@ -456,6 +477,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Precision-cut designer blouses with zero alteration guarantee',
     ],
     rating: 5,
+    sold: false,
   },
   {
     slug: '3-siddhiboutique',
@@ -472,6 +494,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom fit lehengas & gowns',
     ],
     rating: 4.8,
+    sold: false,
   },
   {
     slug: '4-shaaridesignerhouse',
@@ -493,6 +516,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Intricate aari & zardosi handwork',
     ],
     rating: 4.6,
+    sold: false,
   },
   {
     slug: '5-zivaboutique',
@@ -514,6 +538,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Indian fusion & festive wear',
     ],
     rating: 4.5,
+    sold: false,
   },
   {
     slug: '6-aadhyaboutique',
@@ -530,6 +555,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom fit lehengas & salwars',
     ],
     rating: 4.4,
+    sold: false,
   },
   {
     slug: '7-aishwaryafashion',
@@ -551,6 +577,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Alterations and quick turnaround tailoring',
     ],
     rating: 4.5,
+    sold: false,
   },
   {
     slug: '8-jhumkotashvi',
@@ -572,6 +599,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Aari and zardosi hand embroidery',
     ],
     rating: 4.3,
+    sold: false,
   },
   {
     slug: '9-anantharathna',
@@ -588,6 +616,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Aari & stone work embroidery',
     ],
     rating: 4.7,
+    sold: false,
   },
   {
     slug: 'sample-boutique',
@@ -605,5 +634,6 @@ export const DIRECTORY: IDirectoryEntry[] = [
     ],
     featured: ['Bridal maggam blouses', 'Designer lehengas', 'Pattu pavadai for kids'],
     rating: 4.8,
+    sold: false,
   },
 ]

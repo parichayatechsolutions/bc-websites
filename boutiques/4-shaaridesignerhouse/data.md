@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then good chance to make website
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): Showcase designer portfolio, attract bridal orders, professional web presence
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Prime spot near Hoysala Circle, active Instagram presence, solid 4.6 star rating

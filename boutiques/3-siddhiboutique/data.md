@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then good chance to make website
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): Showcase custom designs & saree upcycling, attract new customers in Kengeri
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Established since 2015, solid 4.8 star reputation, located near Vaastu Greens Apartments

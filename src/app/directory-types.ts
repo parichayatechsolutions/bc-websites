@@ -20,4 +20,6 @@ export interface IDirectoryEntry {
   places: IPlace[]
   featured: string[]
   rating?: number
+  /** They've bought their site. */
+  sold: boolean
 }

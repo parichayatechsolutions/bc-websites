@@ -8,8 +8,12 @@
 // than as a dropdown with one option in it, so the chain reads as
 // "Karnataka › Bengaluru › 560060 › Kengeri Satellite Town". Choosing
 // narrows the list as you go; there's nothing to submit.
+//
+// Under the place chain sit the two filters that aren't about place: how well
+// the boutique is rated, and whether they've bought their site.
 
 import { useMemo, useState } from 'react'
+import { IconSearch } from '@tabler/icons-react'
 import { Link } from 'react-router-dom'
 import { DESIGNS, designFor } from '../designs'
 import Dropdown from './Dropdown'
@@ -18,15 +22,24 @@ import type { IDirectoryEntry, IPlace } from './directory-types'
 
 type ILevel = keyof Pick<IPlace, 'state' | 'city' | 'pincode' | 'area'>
 
-const LEVELS: { key: ILevel; label: string }[] = [
-  { key: 'state', label: 'State' },
-  { key: 'city', label: 'City' },
-  { key: 'pincode', label: 'Pincode' },
-  { key: 'area', label: 'Area' },
+const LEVELS: { key: ILevel; label: string; anyLabel: string }[] = [
+  { key: 'state', label: 'State', anyLabel: 'All states' },
+  { key: 'city', label: 'City', anyLabel: 'All cities' },
+  { key: 'pincode', label: 'Pincode', anyLabel: 'All pincodes' },
+  { key: 'area', label: 'Area', anyLabel: 'All areas' },
 ]
 
-const FIELD =
-  'min-h-11 w-full rounded-lg border border-neutral-300 bg-white px-3 text-base text-neutral-900 transition-colors duration-200 hover:border-neutral-500 focus:border-neutral-900 focus:outline-none'
+/** Rating bands, widest last so "any" is the first choice. */
+const RATINGS = [
+  { id: '4.5', label: '4.5 and above', least: 4.5 },
+  { id: '4.0', label: '4.0 and above', least: 4.0 },
+  { id: '3.5', label: '3.5 and above', least: 3.5 },
+]
+
+const SOLD = [
+  { id: 'sold', label: 'Sold' },
+  { id: 'not', label: 'Not sold yet' },
+]
 
 const sorted = (values: string[]) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b))
 
@@ -36,6 +49,8 @@ const placeMatches = (place: IPlace, chosen: Partial<Record<ILevel, string>>, up
 
 export default function Directory() {
   const [chosen, setChosen] = useState<Partial<Record<ILevel, string>>>({})
+  const [rating, setRating] = useState('')
+  const [sold, setSold] = useState('')
   const [query, setQuery] = useState('')
 
   // Each level offers only what the levels above it leave, so a pincode never
@@ -50,13 +65,17 @@ export default function Directory() {
 
   const results = useMemo(() => {
     const words = query.trim().toLowerCase()
+    const least = RATINGS.find((r) => r.id === rating)?.least
     return DIRECTORY.filter((b) => {
       if (!b.places.some((p) => placeMatches(p, chosen))) return false
+      // A boutique with no rating yet isn't "above 4.5", so it drops out.
+      if (least !== undefined && !(b.rating && b.rating >= least)) return false
+      if (sold && b.sold !== (sold === 'sold')) return false
       if (!words) return true
       const haystack = [b.name, b.slug, ...b.places.flatMap((p) => [p.area, p.city, p.pincode])].join(' ').toLowerCase()
       return haystack.includes(words)
     }).sort((a, b) => a.name.localeCompare(b.name))
-  }, [chosen, query])
+  }, [chosen, rating, sold, query])
 
   // Choosing a level clears the narrower ones, which may no longer apply.
   function choose(level: ILevel, value: string) {
@@ -69,7 +88,7 @@ export default function Directory() {
     })
   }
 
-  const filtered = Object.keys(chosen).length > 0 || query.trim() !== ''
+  const filtered = Object.keys(chosen).length > 0 || rating !== '' || sold !== '' || query.trim() !== ''
   const where = LEVELS.map((l) => chosen[l.key]).filter(Boolean).at(-1)
 
   return (
@@ -84,58 +103,75 @@ export default function Directory() {
           </p>
         </header>
 
-        {/* Where */}
+        {/* Finding one */}
         <section aria-label="Find a boutique" className="mt-12 rounded-2xl border border-neutral-900/10 bg-white p-5 md:p-6">
-          <div className="grid grid-cols-2 gap-x-3 gap-y-4 md:flex md:flex-wrap md:items-end">
+          <div className="relative">
+            <IconSearch
+              size={19}
+              stroke={1.75}
+              aria-hidden="true"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"
+            />
+            <input
+              id="q"
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by boutique name"
+              aria-label="Search by boutique name"
+              className="min-h-12 w-full rounded-lg border border-neutral-300 bg-white pl-12 pr-4 text-base text-neutral-900 transition-colors duration-200 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-none"
+            />
+          </div>
+
+          {/* Place narrows left to right; the last two aren't about place. */}
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {options.map(({ key, values }, i) => {
-              const { label } = LEVELS[i]
+              const { label, anyLabel } = LEVELS[i]
               const value = chosen[key] ?? ''
               const only = values.length === 1 && !value ? values[0] : null
 
-              return (
-                <div key={key} className="contents md:flex md:items-end md:gap-3">
-                  {i > 0 && (
-                    <span className="hidden pb-3 text-neutral-300 md:inline" aria-hidden="true">
-                      ›
-                    </span>
-                  )}
-                  <div className="min-w-0 md:w-44">
-                    <span className="block text-xs text-neutral-500">{label}</span>
-                    {only ? (
-                      // Nothing to choose between: say what it is.
-                      <span className="mt-1 flex min-h-11 items-center px-0.5 text-base md:px-1">{only}</span>
-                    ) : (
-                      <Dropdown
-                        label={label}
-                        value={value}
-                        options={values}
-                        onChange={(next) => choose(key, next)}
-                        className="mt-1"
-                      />
-                    )}
-                  </div>
-                </div>
+              // Nothing to choose between: show what it is, plainly locked.
+              return only ? (
+                <p
+                  key={key}
+                  title={label}
+                  className="flex min-h-11 items-center truncate rounded-lg border border-neutral-200 bg-neutral-50 px-3 text-base text-neutral-600"
+                >
+                  {only}
+                </p>
+              ) : (
+                <Dropdown
+                  key={key}
+                  label={label}
+                  value={value}
+                  options={values}
+                  onChange={(next) => choose(key, next)}
+                  anyLabel={anyLabel}
+                />
               )
             })}
 
-            <div className="col-span-2 md:ml-auto">
-              <label htmlFor="q" className="block text-xs text-neutral-500">
-                Name
-              </label>
-              <input
-                id="q"
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search boutiques"
-                className={`mt-1 md:w-56 ${FIELD}`}
-              />
-            </div>
+            <Dropdown
+              label="Rating"
+              value={rating}
+              options={RATINGS.map((r) => r.id)}
+              display={(id) => RATINGS.find((r) => r.id === id)?.label ?? id}
+              onChange={setRating}
+              anyLabel="Any rating"
+            />
+            <Dropdown
+              label="Website"
+              value={sold}
+              options={SOLD.map((s) => s.id)}
+              display={(id) => SOLD.find((s) => s.id === id)?.label ?? id}
+              onChange={setSold}
+              anyLabel="Sold or not"
+            />
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-neutral-900/10 pt-4">
             <p className="text-neutral-600">
-              <span className="text-neutral-900">{results.length}</span>{' '}
+              <span className="font-medium text-neutral-900">{results.length}</span>{' '}
               {results.length === 1 ? 'boutique' : 'boutiques'}
               {where ? ` in ${where}` : ''}
             </p>
@@ -144,11 +180,13 @@ export default function Directory() {
                 type="button"
                 onClick={() => {
                   setChosen({})
+                  setRating('')
+                  setSold('')
                   setQuery('')
                 }}
-                className="cursor-pointer text-neutral-500 underline underline-offset-4 transition-colors duration-200 hover:text-neutral-900"
+                className="ml-auto cursor-pointer text-neutral-500 underline underline-offset-4 transition-colors duration-200 hover:text-neutral-900"
               >
-                Clear
+                Clear filters
               </button>
             )}
           </div>
@@ -189,7 +227,12 @@ function BoutiqueCard({ boutique }: { boutique: IDirectoryEntry }) {
       </span>
 
       <div className="flex flex-1 flex-col p-5">
-        <h2 className="font-app-display text-2xl font-medium leading-[1.15] tracking-tight">{boutique.name}</h2>
+        <div className="flex items-start justify-between gap-3">
+          <h2 className="font-app-display text-2xl font-medium leading-[1.15] tracking-tight">{boutique.name}</h2>
+          {boutique.sold && (
+            <span className="mt-1 shrink-0 rounded-full bg-neutral-900 px-2.5 py-0.5 text-xs text-white">Sold</span>
+          )}
+        </div>
 
         {place && (
           <p className="mt-2 text-neutral-600">

@@ -170,6 +170,8 @@ export function readSheet(markdown) {
     okOwnerPhoto: get(10, "OK to show the owner's photo?"),
     okPrices: get(10, 'OK to show prices on the site?'),
 
+    sold: get(11, 'Website sold?'),
+
     collectorNotes: {
       collectedBy: get(11, 'Collected by'),
       date: get(11, 'Date'),
@@ -476,6 +478,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
     },
     demo: {
       noindex: true,
+      sold: yes(sheet.sold),
       preparedBy: sheet.collectorNotes?.collectedBy,
     },
     collectorNotes: Object.values(sheet.collectorNotes ?? {}).some(Boolean) ? sheet.collectorNotes : undefined,

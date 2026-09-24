@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase portfolio, reach more customers along Gollahalli Road and Kengeri
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Prime spot at #27/7 H Gollahalli Road, strong 4.5 rating

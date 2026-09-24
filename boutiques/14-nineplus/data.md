@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their vast embroidery design catalog and attract bridal clients across Kengeri and RR Nagar
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Popular computer & hand embroidery designer boutique since 2015 on 80 Feet Road near Hoysala Circle; phone 9886364507; 4.8 rating with 40+ positive reviews.

@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase storefront, logo, bridal embroidery portfolio, kids dresses, and 5-star customer reputation with signature fuchsia pink theme
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: #90, 2nd Cross, 5th Main, Doddagollarahatti, Nagadevanahalli; phone 9483733781 / 9449392481; Instagram @vinyasa_boutique; 5.0 rating.

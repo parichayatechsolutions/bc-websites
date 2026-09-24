@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their curated saree collection, designer kurtis, and custom stitching service to university and Jnana Bharathi residents
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Ullal Main Road near Bangalore University, 16th Cross; phone 9686881202; Instagram @vinathii_collection; 4.5 rating.

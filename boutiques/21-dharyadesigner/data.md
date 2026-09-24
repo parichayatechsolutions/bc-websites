@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase luxury bridal couture portfolio, photoshoot gown rental collection, and attract high-end wedding clients across Bangalore
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: BDA Layout Jnanabharathi (Kuvempu Rd 2nd Block); phone 8073997076; @dharyadesignerstudio; Google share link https://share.google/3wWxaBfEvH3gVVebf; 4.9 rating.

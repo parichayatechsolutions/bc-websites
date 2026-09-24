@@ -203,7 +203,7 @@ const config: BoutiqueConfig = {
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
   },
   permissions: { showOwnerPhoto: true, showPrices: true },
-  demo: { noindex: true, preparedBy: 'Tech Team' },
+  demo: { noindex: true, sold: false, preparedBy: 'Tech Team' },
   collectorNotes: {
     collectedBy: 'Tech Team',
     date: '2026-09-22',

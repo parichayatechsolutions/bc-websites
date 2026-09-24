@@ -215,4 +215,5 @@ _Copy 3–5 good reviews from Google or Instagram. Use the customer's first name
 - Do they already have a website? Are they happy with it?:
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders):
 - Follow-up date:
+- Website sold? (yes / no):
 - Anything else we should know:

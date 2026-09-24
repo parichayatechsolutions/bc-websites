@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase bridal embroidery portfolio, custom Anarkalis, and attract customers near Kenchanapura Cross & Nagadevanahalli
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: #767, Near HP Petrol Bunk, Kenchanapura Cross, Nagadevanahalli; phone 9483733781; 5.0 rating.

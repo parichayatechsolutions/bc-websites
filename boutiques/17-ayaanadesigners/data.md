@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their bridal gown rental catalog, festive lehenga collections, and custom blouse tailoring portfolio
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Storefront photo captured directly (#624, 7th Main Rd, Punam Mahal Rd, Subhas Nagar Kengeri Satellite Town, Opposite Sankara Mata Arch); phone 9341197465 / 8095632050; 4.5 rating.

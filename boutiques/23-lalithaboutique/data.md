@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Build a professional digital presence reflecting 15 years of trusted tailoring mastery on Ullal Main Road
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Storefront photo captured directly (#29, G.R. Complex, Near Reliance Ullal Main Road, Jayanth Nagara Bengaluru-560056); phone 9632114548; 4.2 rating.

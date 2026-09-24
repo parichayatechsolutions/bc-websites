@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): Showcase custom designs, attract local customers in Kengeri
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Prime location next to IndusInd Bank in KHB Colony near Hoysala Circle

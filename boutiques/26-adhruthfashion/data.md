@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their ornate bridal embroidery, family combos, and royal temple blouse designs online
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: SMV Layout 5th Block, Jnana Ganga Nagar; Instagram @adhruthfashion; 4.3 rating. Logo artwork matched to royal gold and vermilion red.

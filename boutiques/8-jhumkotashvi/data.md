@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase handcrafted designer portfolio, attract bridal bookings
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Prime location at #104 Cellar Floor near Hoysala Circle Bus Stop, 80 Feet Road

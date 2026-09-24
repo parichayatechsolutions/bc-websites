@@ -172,4 +172,5 @@
 - Do they already have a website? Are they happy with it?: No website, only Instagram
 - What they want most from a website: More bridal bookings
 - Follow-up date: 2026-09-28
+- Website sold? (yes / no): no
 - Anything else we should know: Busy season is Oct–Feb, prefers WhatsApp over calls

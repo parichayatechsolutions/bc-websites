@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase custom designer blouses, ethnic collections, and attract clients from Vishweshwaraiah Layout, Nagadevanahalli, and Bangalore University campus
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Established ladies designer boutique and custom tailoring at No. 1817 Tusti, 1st Block, 1st Main Rd, Vishweshwaraiah Layout, Nagadevanahalli; next to Nandhini Parlour; phone 9980124423; 4.8 rating.

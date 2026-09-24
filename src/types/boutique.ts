@@ -136,6 +136,8 @@ export interface BoutiqueConfig {
   demo: {
     /** Keeps unsold demos out of Google. Set false only after the boutique signs. */
     noindex: boolean
+    /** The boutique has bought their site. Drives the demo directory's filter. */
+    sold: boolean
     preparedBy?: string
   }
 

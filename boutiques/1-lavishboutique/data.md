@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, good chance to convert if demo is presented
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): More bridal bookings, showcase stitched collections online
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Located near Hoysala Circle and Surana College, strong 4.9 rating on directories

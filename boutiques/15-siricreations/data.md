@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase their specialized saree crochet borders, bridal tassels, boutique catalog, and workshop training details
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Saree crochet border design and boutique store at EWS-352 Gandhi Nagar Kengeri Satellite Town; handles @siri_tassels / Siri.Tassels; phone 6360378960; 4.9 rating.

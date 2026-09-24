@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase contemporary designer wear, western gowns, and stylish boutique portfolio with yellow & charcoal signature theme
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Nagadevanahalli, Kengeri (Near HP Petrol Bunk); phone 7899024315; Instagram @houseofatelier_boutique; 4.6 rating.

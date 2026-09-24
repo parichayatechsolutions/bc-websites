@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Showcase bridal embroidery, reach clients across SMV Layout and Ullal Road
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Established boutique with 5-star customer reviews and bridal embroidery works; phone numbers 9480974763 / 8460455322.

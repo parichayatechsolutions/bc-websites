@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Professional digital portfolio, showcase bridal maggam work, expand customer base
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Prime location near BBMP Office on Kuvempu Road in Harsha Layout, high 4.7 rating

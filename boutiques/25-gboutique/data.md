@@ -186,4 +186,5 @@
 - Do they already have a website? Are they happy with it?: No website, if we convert then chance to website
 - What they want most from a website: Build a premium online showcase reflecting their signature Black & Gold aesthetic and expand client reach across Jnana Ganga Nagar & Bangalore University
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: Jnana Ganga Nagar; phone 9620861191; Instagram @g_boutique_89; Black and Gold theme; 4.8 rating.

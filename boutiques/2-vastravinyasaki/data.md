@@ -187,4 +187,5 @@
 - Do they already have a website? Are they happy with it?: No website, convert them to make website
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): Professional web presence, show stitched designer portfolio, attract bridal bookings
 - Follow-up date: 2026-09-29
+- Website sold? (yes / no): no
 - Anything else we should know: High 4.7 rating on directories with 100+ positive customer reviews
