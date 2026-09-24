@@ -11,7 +11,10 @@ export interface Branch {
   name: string
   address: string
   landmark?: string
+  /** The locality people search for, one name only: "Kengeri Satellite Town". Used by the demo directory's filters. */
+  area: string
   city: string
+  state: string
   pincode: string
   mapsUrl: string
   hours?: string

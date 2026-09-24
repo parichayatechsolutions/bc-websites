@@ -31,7 +31,9 @@
 - ★ Branch name / area: Hoysala Circle / Kengeri Satellite Town
 - ★ Full address: #342, Chirantana, 2nd Cross, 5th Main, Near Maple Bear Canadian Montessori & Hoysala Circle, Kengeri Satellite Town
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Maple Bear Canadian Montessori, Hoysala Circle area
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Shanti%20Fashion%20Nest%20HoysalaCircle%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sun 9:30am–8:00pm

@@ -31,7 +31,9 @@
 - ★ Branch name / area: Main Branch
 - ★ Full address: 12-3-45, First Floor, Temple Street
 - Landmark: Opposite City Bus Stand
+- ★ Area / locality: Temple Street
 - ★ City: Tirupati
+- ★ State: Andhra Pradesh
 - ★ Pincode: 517501
 - ★ Google Maps link: https://maps.google.com/?q=Tirupati
 - Opening hours: Mon–Sat 10am–8pm, Sun 11am–2pm

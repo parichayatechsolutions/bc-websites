@@ -31,7 +31,9 @@
 - ★ Branch name / area: Hoysala Circle / Kengeri Satellite Town
 - ★ Full address: 4th Cross, 1st A Main Road, Near Hoysala Circle, Kengeri Satellite Town
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Hoysala Circle, 1st A Main Road
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=shaari%20Designer%20house%20HoysalaCircle%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sun 11:00am–8:00pm

@@ -36,6 +36,17 @@
   --font-body: var(--f-body);
 }
 
+/* ── Our own pages ────────────────────────────────────────────
+   The demo directory and the design cards, which are Parichaya's pages
+   rather than a boutique's. One plain geometric sans throughout, headings
+   included: our chrome should stay quiet so the boutique's own typography
+   is what stands out. Boutique sites never use this — each design sets its
+   own pair on .boutique from src/theme/fonts.ts. */
+@theme {
+  --font-app: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-app-display: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
 /* ── Motion ───────────────────────────────────────────────────
    The CSS twin of src/motion/tokens.ts. Use `ease-stitch` with
    duration-200 (colour), duration-300 (small movement) or
@@ -136,6 +147,25 @@
 
   .section {
     padding-block: clamp(5rem, 12vw, 10rem);
+  }
+
+  /* Room above the first thing on an inner page. A navigation that floats
+     over the page takes no space of its own, so the page leaves it some; a
+     navigation that sits in the flow has already taken its own. SiteShell
+     sets data-nav from the navigation the design chose. */
+  .page-top {
+    padding-top: 4.5rem;
+  }
+  [data-nav='floating'] .page-top {
+    padding-top: 8.5rem;
+  }
+  @media (min-width: 768px) {
+    .page-top {
+      padding-top: 6rem;
+    }
+    [data-nav='floating'] .page-top {
+      padding-top: 10.5rem;
+    }
   }
 
   /* Temple-arch frame for photos. */

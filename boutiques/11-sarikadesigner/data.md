@@ -31,7 +31,9 @@
 - ★ Branch name / area: H Gollahalli Road / Kengeri
 - ★ Full address: #27/7, H Gollahalli Road, Kengeri, Bengaluru
 - Landmark (e.g. "opposite SBI, near bus stand"): H Gollahalli Road, Kengeri
+- ★ Area / locality: Kengeri
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Sarika%20Designer%20and%20bo%20Gollahalli%20Road%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sun 11:00am–9:00pm

@@ -31,7 +31,9 @@
 - ★ Branch name / area: KHB Colony / Kengeri Satellite Town
 - ★ Full address: 1st Main Road, Beside IndusInd Bank, KHB Colony, Near Hoysala Circle, Kengeri Satellite Town
 - Landmark (e.g. "opposite SBI, near bus stand"): Beside IndusInd Bank, near Hoysala Circle
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Ziva%20Boutique%20HoysalaCircle%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Wed, Fri–Sun 11:00am–9:00pm, Thu closed

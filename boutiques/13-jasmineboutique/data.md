@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Satellite Town / 1st Main Road
 - ★ Full address: 1st Floor, Shiva Jaya Nilaya, No. 1753/S, 1st Main Road, Opposite Stylish Furniture (near Dia Health), Stage 1, Kengeri Satellite Town, Bengaluru, Karnataka 560060
 - Landmark (e.g. "opposite SBI, near bus stand"): Opposite Stylish Furniture, near Dia Health
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/place/?q=place_id:ChIJn31YsHM_rjsRukp4hSy65gg
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:00pm, Sun closed

@@ -29,7 +29,9 @@ const config: BoutiqueConfig = {
       name: 'Main Branch',
       address: '12-3-45, First Floor, Temple Street',
       landmark: 'Opposite City Bus Stand',
+      area: 'Temple Street',
       city: 'Tirupati',
+      state: 'Andhra Pradesh',
       pincode: '517501',
       mapsUrl: 'https://maps.google.com/?q=Tirupati',
       hours: 'Mon–Sat 10am–8pm, Sun 11am–2pm',
@@ -91,6 +93,20 @@ const config: BoutiqueConfig = {
     { value: '8,000+', label: 'Garments delivered' },
     { value: '12', label: 'People on our team' },
   ],
+  reviews: [
+    {
+      name: 'Priya',
+      text: 'My wedding blouse fit perfectly on the first trial. The maggam work was even better than the sample.',
+    },
+    {
+      name: 'Swathi',
+      text: 'Got my daughter\'s pattu pavadai done in four days for her birthday. Beautiful finishing.',
+    },
+    {
+      name: 'Anusha',
+      text: 'They understood exactly what I showed them on Instagram and made it better.',
+    },
+  ],
   testimonials: [
     {
       name: 'Priya',
@@ -114,7 +130,16 @@ const config: BoutiqueConfig = {
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
   },
   permissions: { showOwnerPhoto: true, showPrices: true },
-  demo: { noindex: true },
+  demo: { noindex: true, preparedBy: 'Ravi' },
+  collectorNotes: {
+    collectedBy: 'Ravi',
+    date: '2026-09-21',
+    decisionMaker: 'Lakshmi Devi (owner)',
+    interestLevel: 'warm',
+    goal: 'More bridal bookings',
+    followUpDate: '2026-09-28',
+    notes: 'Busy season is Oct–Feb, prefers WhatsApp over calls',
+  },
 }
 
 export default config

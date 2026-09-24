@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Satellite Town
 - ★ Full address: 2nd Floor, K S H Arcade, Next to Surana College, Kommaghatta Main Road, Hoysala Circle, Kengeri Satellite Town
 - Landmark (e.g. "opposite SBI, near bus stand"): Next to Surana College, near Hoysala Circle
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Lavish%20Boutique%20HoysalaCircle%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–7:00pm, Sun closed

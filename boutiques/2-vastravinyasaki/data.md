@@ -31,7 +31,9 @@
 - ★ Branch name / area: Subhash Nagar / Kengeri Satellite Town
 - ★ Full address: Kalikamba Temple Road, Near Eesha Kids Preschool, Subhash Nagar, Kengeri Satellite Town
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Eesha Kids Preschool, Kalikamba Temple Road
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Vastra%20Vinyasaki%20Bout%20Subhash%20Nagar%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–7:30pm, Sun closed

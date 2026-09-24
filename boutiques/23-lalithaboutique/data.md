@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Bharathi / Ullal Main Road, Jayanth Nagara
 - ★ Full address: #29, G.R. Complex, Near Reliance, Ullal Main Road, Jayanth Nagara, Jnana Jyothi Nagar, Jnana Bharathi, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Reliance Fresh, Ullal Main Road
+- ★ Area / locality: Jnana Bharathi
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Lalitha%20Boutique%20Ullal%20Main%20Road%20University%20Jnana%20Bharathi%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Tue–Sun 10:00am–8:30pm, Mon 12:00pm–8:30pm

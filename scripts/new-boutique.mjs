@@ -4,11 +4,13 @@
 //
 //   npm run new-boutique "Sri Lakshmi Designers"
 //   → boutiques/sri-lakshmi-designers/data.md + photos/   (for the team)
-//   → src/sites/sri-lakshmi-designers/Site.tsx            (starter page)
+//
+// That's all a boutique needs. Its config.ts is generated from the filled
+// sheet, and the design its site opens in is picked in src/designs/catalog.ts.
 
-import { cpSync, existsSync, mkdirSync, renameSync } from 'node:fs'
+import { cpSync, existsSync, renameSync } from 'node:fs'
 import { join } from 'node:path'
-import { dataDir, dataRoot, siteDir, sitesRoot } from './lib/paths.mjs'
+import { dataDir, dataRoot, siteDir } from './lib/paths.mjs'
 
 const name = process.argv.slice(2).join(' ').trim()
 
@@ -37,12 +39,9 @@ if (existsSync(dataDir(slug)) || existsSync(siteDir(slug))) {
 
 cpSync(join(dataRoot, '_template'), dataDir(slug), { recursive: true })
 renameSync(join(dataDir(slug), 'sample-data-template.md'), join(dataDir(slug), 'data.md'))
-mkdirSync(siteDir(slug), { recursive: true })
-cpSync(join(sitesRoot, '_template', 'Site.tsx'), join(siteDir(slug), 'Site.tsx'))
 
-console.log(`Created boutiques/${slug}/ and src/sites/${slug}/`)
+console.log(`Created boutiques/${slug}/`)
 console.log(`  1. Fill in boutiques/${slug}/data.md`)
 console.log(`  2. Add the logo and photos to boutiques/${slug}/photos/`)
 console.log(`  3. npm run config -- ${slug}     (makes src/sites/${slug}/config.ts and checks it)`)
-console.log(`  4. Arrange src/sites/${slug}/Site.tsx to give it its own look`)
-console.log(`  5. npm run dev, then open http://localhost:3000/${slug}`)
+console.log(`  4. npm run dev, then open http://localhost:3000/${slug}/designs`)

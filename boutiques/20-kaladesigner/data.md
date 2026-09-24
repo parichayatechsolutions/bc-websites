@@ -31,7 +31,9 @@
 - ★ Branch name / area: Nagadevanahalli / Kenchanapura Cross
 - ★ Full address: #767, Near HP Petrol Bunk, Kenchanapura Cross, Nagadevanahalli, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near HP Petrol Bunk, Kenchanapura Cross
+- ★ Area / locality: Nagadevanahalli
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Kala%20Designer%20Boutique%20767%20Kenchanapura%20Cross%20Nagadevanahalli%20Bengaluru%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–9:00pm, Sun 11:00am–4:00pm

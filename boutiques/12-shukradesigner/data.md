@@ -31,7 +31,9 @@
 - ★ Branch name / area: SMV Layout / Vishweshwaraiah Layout, Ullal Road
 - ★ Full address: No. 800, Near BDA Park Road, 5th Block, SMV (Sir M. Visvesvaraya) Layout, Ullal Road, Vishweshwaraiah Layout, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near BDA Park Road & New Udupi Veg Hotel
+- ★ Area / locality: Vishweshwaraiah Layout
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Shukra%20Designer%20Boutique%20SMV%20Layout%20Ullal%20Road%20Bengaluru%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:30pm, Sun 10:30am–3:00pm

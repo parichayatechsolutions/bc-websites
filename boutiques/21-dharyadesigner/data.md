@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Bharathi / BDA Layout
 - ★ Full address: No. 194, 2nd Block, 2nd Cross, Kuvempu Road, Jnana Bharathi BDA Layout, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Kuvempu Road, 2nd Block BDA Layout
+- ★ Area / locality: Jnana Bharathi
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Dharya%20Designer%20Studio%20BDA%20Layout%20Jnanabharathi%20Jnana%20Bharathi%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–4:00pm

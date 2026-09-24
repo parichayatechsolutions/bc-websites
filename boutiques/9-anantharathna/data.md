@@ -31,7 +31,9 @@
 - ★ Branch name / area: Harsha Layout / Kengeri
 - ★ Full address: 1st Floor, KHR Complex, Near BBMP Office, Kuvempu Road, Kengeri
 - Landmark (e.g. "opposite SBI, near bus stand"): 1st Floor, KHR Complex, Near BBMP Office, Kuvempu Road
+- ★ Area / locality: Harsha Layout
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Anantharathna%20Boutique%20HarshaLayout%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:00pm, Sun 11:00am–2:00pm

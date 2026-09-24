@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kodipalya / Kengeri
 - ★ Full address: Shop No. 5, Kodipalya Main Road, Opposite Vaastu Greens Apartments, Sunkalpalya, Near Gudde Anjaneya Temple, Kengeri
 - Landmark (e.g. "opposite SBI, near bus stand"): Opposite Vaastu Greens Apartments, near Gudde Anjaneya Temple
+- ★ Area / locality: Kodipalya
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Siddhi%20Boutique%20Kodipalya%20rd%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–7:30pm, Sun 10:30am–1:00pm

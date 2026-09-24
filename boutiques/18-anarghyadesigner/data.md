@@ -31,7 +31,9 @@
 - ★ Branch name / area: Nagadevanahalli / 2nd Block
 - ★ Full address: No. 1511/A, 1st Cross Road, Opposite to KHB Platinum, 2nd Block, Nagadevanahalli, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Opposite KHB Platinum, 2nd Block
+- ★ Area / locality: Nagadevanahalli
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Anarghya%20Designer%20Studio%201511%2FA%201st%20Cross%20Road%20Nagadevanahalli%20Bengaluru%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:00pm, Sun closed

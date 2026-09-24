@@ -1,10 +1,11 @@
 // src/sections/index.ts
-// The component library. Every boutique's Site.tsx builds its site from these.
+// The component library. Every design in src/designs/ builds its pages from
+// these, and every boutique can be shown in every design.
 // Folders group components by the job they do; names describe the look, so a
 // new variant sits next to its siblings (hero/ArchHero, hero/SplitHero…).
 // Add every new component here with a one-line description.
 
-// Site structure: every Site.tsx renders one SiteShell with a nav, a footer and its pages
+// Site structure: every Design.tsx renders one SiteShell with a nav, a footer and its pages
 export { default as SiteShell } from '../app/SiteShell'
 export type { IPage } from '../app/SiteContext'
 
@@ -20,6 +21,9 @@ export { default as MinimalFooter } from './footer/MinimalFooter' // Light and c
 
 // Page openers
 export { default as ArchHero } from './hero/ArchHero' // Name over a temple-arch window that opens to full screen (pinned; page needs overlay)
+export { default as SplitHero } from './hero/SplitHero' // Light and editorial: name and invitation left, one tall photo right (not pinned)
+export { default as PosterHero } from './hero/PosterHero' // Name framed over a full-bleed photo like a printed invitation (not pinned)
+export { default as LedgerHero } from './hero/LedgerHero' // Name across the full width like a masthead, letterbox photo opening under it (not pinned)
 export { default as PageHeader } from './header/PageHeader' // Inner-page title and intro from the page definition, no image
 
 // Owner's story
@@ -27,15 +31,18 @@ export { default as InkStory } from './story/InkStory' // Owner's words ink in a
 
 // Their work
 export { default as RailGallery } from './gallery/RailGallery' // "Known for" + work photos sliding sideways on scroll (pinned on desktop)
+export { default as GridGallery } from './gallery/GridGallery' // Work in two quiet columns that drift at different speeds (not pinned)
 
 // How it's made
 export { default as StickyProcess } from './process/StickyProcess' // Five making steps with a photo that follows the active step
 
 // What they stitch
 export { default as ColumnServices } from './services/ColumnServices' // Services in grouped columns, optional starting prices
+export { default as ListServices } from './services/ListServices' // The same list run full width as ruled rows, group name in the margin
 
 // Reviews
 export { default as RatingReviews } from './reviews/RatingReviews' // Google rating with stars, three quotes, stats (dark)
+export { default as QuoteReviews } from './reviews/QuoteReviews' // One review set large, the rest beside it, rating as a plain line (light)
 
 // Contact
 export { default as WhatsAppForm } from './contact/WhatsAppForm' // Enquiry form that opens WhatsApp with the details written out

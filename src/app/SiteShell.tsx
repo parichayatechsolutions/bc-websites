@@ -9,7 +9,7 @@ import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { useLenis } from '../motion/SmoothScroll'
 import { ScrollTrigger } from '../motion/gsap'
 import { useBoutique } from './BoutiqueContext'
-import { SiteProvider, makeHref, useSite, type IPage } from './SiteContext'
+import { SiteProvider, makeHref, useSite, type INav, type IPage } from './SiteContext'
 
 function PageEffects() {
   const { boutique } = useBoutique()
@@ -43,7 +43,7 @@ function PageEffects() {
 
 function PageNotFound({ home }: { home: string }) {
   return (
-    <main className="section pt-40">
+    <main className="page-top section pt-0">
       <div className="wrap">
         <h1 className="t-1">This page doesn't exist</h1>
         <p className="mt-4 text-muted">The link may be old or mistyped.</p>
@@ -60,7 +60,7 @@ export default function SiteShell({
   footer: Footer,
   pages,
 }: {
-  nav: ComponentType
+  nav: INav
   footer: ComponentType
   /** In navigation order. The first is usually Home (path ''). */
   pages: IPage[]
@@ -69,19 +69,21 @@ export default function SiteShell({
 
   return (
     <SiteProvider value={{ pages, href }}>
-      <PageEffects />
-      <Nav />
-      <Routes>
-        {pages.map((page) =>
-          page.path ? (
-            <Route key={page.path} path={page.path} element={<main>{page.element}</main>} />
-          ) : (
-            <Route key="home" index element={<main>{page.element}</main>} />
-          ),
-        )}
-        <Route path="*" element={<PageNotFound home={href('')} />} />
-      </Routes>
-      <Footer />
+      <div data-nav={Nav.floating ? 'floating' : 'in-flow'}>
+        <PageEffects />
+        <Nav />
+        <Routes>
+          {pages.map((page) =>
+            page.path ? (
+              <Route key={page.path} path={page.path} element={<main>{page.element}</main>} />
+            ) : (
+              <Route key="home" index element={<main>{page.element}</main>} />
+            ),
+          )}
+          <Route path="*" element={<PageNotFound home={href('')} />} />
+        </Routes>
+        <Footer />
+      </div>
     </SiteProvider>
   )
 }

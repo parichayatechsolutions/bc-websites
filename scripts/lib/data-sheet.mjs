@@ -106,7 +106,9 @@ export function readSheet(markdown) {
       name: field(b, 'Branch name / area'),
       address: field(b, 'Full address'),
       landmark: field(b, 'Landmark'),
+      area: field(b, 'Area / locality'),
       city: field(b, 'City'),
+      state: field(b, 'State'),
       pincode: field(b, 'Pincode'),
       mapsUrl: field(b, 'Google Maps link'),
       hours: field(b, 'Opening hours'),
@@ -197,6 +199,12 @@ const list = (v) =>
     .split(/,|\/|\band\b/i)
     .map((x) => x.trim())
     .filter(Boolean)
+
+/**
+ * A place name written the same way every time, so that "Kengeri  Satellite Town."
+ * and "Kengeri Satellite Town" group together in the demo directory's filters.
+ */
+const place = (v) => (v ?? '').replace(/\s+/g, ' ').replace(/[.,;]+$/, '').trim()
 
 /** Free text split on commas only, since items may contain "and". */
 const commaList = (v) =>
@@ -364,13 +372,22 @@ export function toConfig(sheet, { slug, photoFiles }) {
     name: need(b.name, `branch ${i + 1} name / area`),
     address: need(b.address, `branch ${i + 1} full address`),
     landmark: b.landmark,
-    city: need(b.city, `branch ${i + 1} city`),
-    pincode: need(b.pincode, `branch ${i + 1} pincode`),
+    area: place(need(b.area, `branch ${i + 1} area / locality`)),
+    city: place(need(b.city, `branch ${i + 1} city`)),
+    state: place(need(b.state, `branch ${i + 1} state`)),
+    pincode: (b.pincode ?? '').replace(/\s+/g, ''),
     mapsUrl: need(b.mapsUrl, `branch ${i + 1} Google Maps link`),
     hours: b.hours,
     parking: b.parking ? yes(b.parking) : undefined,
   }))
   if (!branches.length) errors.push('Missing a branch: fill in at least "Branch 1 (main)"')
+  branches.forEach((b, i) => {
+    if (!b.pincode) errors.push(`Missing branch ${i + 1} pincode`)
+    // The area is what the demo directory groups boutiques by, so one name only.
+    if (b.area.includes('/') || b.area.includes(',')) {
+      warnings.push(`Branch ${i + 1} area "${b.area}" has more than one name in it. Write the one locality people know, and put the rest in "Landmark".`)
+    }
+  })
 
   const whatsapp = !sheet.whatsapp || /^same/i.test(sheet.whatsapp) ? phone : formatPhone(sheet.whatsapp)
 

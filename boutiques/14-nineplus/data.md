@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Satellite Town / 80 Feet Road
 - ★ Full address: #46, 1st Floor, 1st Main Road, 8th Cross, 80 Feet Road, Near Hoysala Circle, Opposite Matheshwari Textile, Kengeri Satellite Town, Bengaluru, Karnataka 560060
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Hoysala Circle, Opposite Matheshwari Textile
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Nine%20Plus%20Embroidery%201st%20Main%20Road%208th%20Cross%2080%20Feet%20Road%20Kengeri%20Satellite%20Town%20Bengaluru%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 8:30am–8:30pm, Sun closed

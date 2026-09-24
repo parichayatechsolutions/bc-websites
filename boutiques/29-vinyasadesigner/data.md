@@ -31,7 +31,9 @@
 - ★ Branch name / area: Doddagollarahatti / Nagadevanahalli
 - ★ Full address: #90, 2nd Cross, 5th Main, Doddagollarahatti, Nagadevanahalli, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Doddagollarahatti 5th Main / Opposite Vegetable Market
+- ★ Area / locality: Nagadevanahalli
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Vinyasa%20Designer%20Boutique%20Doddagollarahatti%20Nagadevanahalli%20Nagadevanahalli%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–9:00pm, Sun 10:30am–5:00pm

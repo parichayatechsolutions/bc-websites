@@ -14,6 +14,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { join } from 'node:path'
 import { readSheet, toConfig, toTs } from './lib/data-sheet.mjs'
 import { allSlugs, dataDir, siteDir } from './lib/paths.mjs'
+import { writeDirectory } from './lib/directory.mjs'
 import { validateBoutique } from './lib/validate.mjs'
 const HEADER = '// Generated from data.md by `npm run config`. Edit data.md and run it again; changes made here are overwritten.'
 
@@ -83,6 +84,13 @@ export default config
     for (const w of check.warnings) console.log(`    ! ${w}`)
     failed ||= check.errors.length > 0
   }
+}
+
+// The demo directory lists every boutique, so it is rebuilt whenever any
+// config changes.
+if (!dryRun) {
+  const listed = await writeDirectory()
+  console.log(`✓ src/app/directory-data.ts: ${listed} ${listed === 1 ? 'boutique' : 'boutiques'} listed`)
 }
 
 process.exit(failed ? 1 : 0)

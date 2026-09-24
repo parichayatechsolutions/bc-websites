@@ -1,9 +1,11 @@
-// src/sites/sample-boutique/Site.tsx
-// This boutique's site: its navigation, footer and pages, each page a list of
-// components from the library. The components read the boutique's details
-// from config.ts themselves, so this file only arranges them. A look the
-// library doesn't have yet is added as a new component in src/sections/,
-// never styled here.
+// src/designs/arch/Design.tsx
+// "Arch": the ceremonial one. The boutique's name stands over a temple-arch
+// window that opens onto their work as you scroll, their pieces then slide
+// past on the brand colour, and a running stitch sews the rest of the page
+// together. Dark, traditional, and the loudest design in the catalog.
+//
+// Signature motion: the arch opening (pinned), with the collection rail as
+// the second pinned moment. Nothing else moves on scroll.
 
 import { FONTS } from '../../theme/fonts'
 import {
@@ -44,7 +46,7 @@ const pages: IPage[] = [
   {
     path: 'about',
     label: 'About us',
-    intro: 'Twelve years of stitching for the brides and families of Tirupati.',
+    intro: 'Who we are, who stitches your clothes, and how a piece is made.',
     element: (
       <StitchLine>
         <PageHeader />
@@ -67,6 +69,6 @@ const pages: IPage[] = [
   },
 ]
 
-export default function Site() {
+export default function Design() {
   return <SiteShell nav={FloatingNav} footer={BrandFooter} pages={pages} />
 }

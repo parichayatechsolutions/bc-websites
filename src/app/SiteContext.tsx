@@ -2,7 +2,7 @@
 // The pages of the boutique's site, for navigation, footers and any component
 // that links between pages. Filled in by SiteShell from the boutique's Site.tsx.
 
-import { createContext, useContext, type ReactNode } from 'react'
+import { createContext, useContext, type ComponentType, type ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export interface IPage {
@@ -20,6 +20,12 @@ export interface IPage {
   overlay?: boolean
   element: ReactNode
 }
+
+/**
+ * A navigation component. `floating` means it sits over the page instead of
+ * taking space in the flow, so pages have to leave room for it (`.page-top`).
+ */
+export type INav = ComponentType & { floating?: boolean }
 
 interface ISiteContext {
   pages: IPage[]

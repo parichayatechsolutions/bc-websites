@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Railway Station Road
 - ★ Full address: Station Road, Near Kengeri Railway Station, Kengeri, Bengaluru
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Kengeri Railway Station
+- ★ Area / locality: Kengeri
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Aadhya%20Boutique%20Railway%20Station%20Kengeri%20Kengeri%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:00pm, Sun 11:00am–2:00pm

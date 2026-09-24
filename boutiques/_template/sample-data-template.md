@@ -35,12 +35,18 @@
 
 _Fill one block per branch. Copy the block if there are more branches._
 
+_"Area / locality" is how we group boutiques, so write the one name people use when
+they say where the shop is, spelled the same way every time: "Kengeri Satellite Town",
+not "Hoysala Circle / Kengeri Sat. Town". Put the smaller landmark in "Landmark"._
+
 ### Branch 1 (main)
 
 - ★ Branch name / area:
 - ★ Full address:
 - Landmark (e.g. "opposite SBI, near bus stand"):
+- ★ Area / locality (the one name people know it by, e.g. Kengeri Satellite Town):
 - ★ City:
+- ★ State:
 - ★ Pincode:
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link):
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed):
@@ -51,7 +57,9 @@ _Fill one block per branch. Copy the block if there are more branches._
 - Branch name / area:
 - Full address:
 - Landmark:
+- Area / locality:
 - City:
+- State:
 - Pincode:
 - Google Maps link:
 - Opening hours:

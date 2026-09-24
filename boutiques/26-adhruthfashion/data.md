@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Ganga Nagar / SMV Layout
 - ★ Full address: 5th Block, SMV Layout (Railway Layout), Jnana Ganga Nagar, Ullalu, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near SMV Layout 5th Block & Jnana Ganga Nagar
+- ★ Area / locality: Jnana Ganga Nagar
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Adhruth%20Fashion%20SMV%20Layout%20Jnana%20ganga%20nagar%20Jnana%20Ganga%20Nagar%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:30pm, Sun 11:00am–4:00pm

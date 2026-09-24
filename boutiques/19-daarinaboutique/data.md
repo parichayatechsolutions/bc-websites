@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kodipalya / Hemmigepura Main Road, Kengeri
 - ★ Full address: No. 45, Near Kamadhenu Enterprises, Hemmigepura Main Road, Kengeri Hobli, Kodipalya, Bengaluru, Karnataka 560060
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Kamadhenu Enterprises, Kodipalya
+- ★ Area / locality: Kodipalya
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Daarina%20Boutique%20Hemmigepura%20Main%20Road%20Kodipalya%20Kengeri%20Bengaluru%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–5:00pm

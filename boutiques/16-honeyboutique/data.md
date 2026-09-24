@@ -31,7 +31,9 @@
 - ★ Branch name / area: Nagadevanahalli / Vishweshwaraiah Layout
 - ★ Full address: No. 1817, 'Tusti', 1st Block, 1st Main Road, 10th Cross Road, Vishweshwaraiah Layout, Nagadevanahalli-Gnanabharathi, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Next to Nandhini Parlour
+- ★ Area / locality: Nagadevanahalli
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Honey%20Boutique%201817%201st%20Main%20Rd%20Vishweshwaraiah%20Layout%20Nagadevanahalli%20Bengaluru%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:30pm, Sun 10:30am–2:30pm

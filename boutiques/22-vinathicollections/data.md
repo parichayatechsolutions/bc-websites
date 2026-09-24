@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Bharathi / Ullal Main Road
 - ★ Full address: No. 3, 16th Cross, Ullal Main Road, Near Bangalore University, Jnana Bharathi, Ullalu, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Bangalore University, 16th Cross Ullal Main Road
+- ★ Area / locality: Jnana Bharathi
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Vinathi%20collections%20Boutique%20Ullal%20Main%20Road%20University%20Jnana%20Bharathi%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:00am–8:30pm, Sun 10:30am–2:30pm

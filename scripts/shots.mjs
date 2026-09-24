@@ -4,9 +4,10 @@
 // judged by looking at it rather than by reading code.
 //
 //   npm run dev                      (in another terminal)
-//   npm run shots                    → sample-boutique
-//   npm run shots -- priya-boutique  → just that one
-//   npm run shots -- priya-boutique/contact   → one page of it
+//   npm run shots                    → sample-boutique in every design
+//   npm run shots -- priya-boutique  → just that one, in its own design
+//   npm run shots -- priya-boutique/contact      → one page of it
+//   npm run shots -- priya-boutique/d/atelier    → it in one design
 //
 // Writes .shots/<slug>/<view>-<nn>.png for three views: desktop (1440×900),
 // mobile (390×844) and reduced-motion mobile. Also reports any page errors.
@@ -16,6 +17,7 @@ import { mkdirSync, rmSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import puppeteer from 'puppeteer-core'
+import { DESIGN_IDS } from '../src/designs/catalog.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const base = process.env.SHOTS_URL ?? 'http://localhost:3000'
@@ -27,7 +29,7 @@ const chrome =
   }[process.platform] ??
   '/usr/bin/google-chrome'
 
-const slugs = process.argv.slice(2).length ? process.argv.slice(2) : ['sample-boutique']
+const slugs = process.argv.slice(2).length ? process.argv.slice(2) : DESIGN_IDS.map((id) => `sample-boutique/d/${id}`)
 
 const VIEWS = [
   { name: 'desktop', width: 1440, height: 900, stops: 12 },

@@ -1,6 +1,6 @@
 // scripts/lib/validate.mjs
-// Checks one boutique: its config and page in src/sites/<slug>/, and its
-// data and photos in boutiques/<slug>/.
+// Checks one boutique: its config in src/sites/<slug>/, the design its site
+// opens in, and its data and photos in boutiques/<slug>/.
 //
 // Errors are things that would break the site or send customers to the wrong
 // place (bad phone number, broken map link). Warnings are things that make
@@ -10,7 +10,8 @@
 import { existsSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { dataDir, siteDir } from './paths.mjs'
+import { designFor } from '../../src/designs/catalog.ts'
+import { dataDir, designDir, siteDir } from './paths.mjs'
 
 const HEX = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i
 const URL = /^https?:\/\/[^\s]+\.[^\s]+$/i
@@ -65,7 +66,8 @@ export async function validateBoutique(slug) {
 
   // Identity
   err(config.slug === slug, `slug is "${config.slug}" but the folder is "${slug}"; they must match`)
-  err(existsSync(join(siteDir(slug), 'Site.tsx')), `No src/sites/${slug}/Site.tsx: copy src/sites/_template/Site.tsx and arrange the components`)
+  const design = designFor(slug)
+  err(existsSync(join(designDir(design), 'Design.tsx')), `Its site opens in the design "${design}", which isn't in src/designs/. Fix the line for this boutique in src/designs/catalog.ts.`)
   err(config.brand?.name?.trim(), 'Boutique name is empty')
   err(config.owner?.name?.trim(), 'Owner name is empty')
   err(HEX.test(config.brand?.colors?.primary ?? ''), `Primary colour "${config.brand?.colors?.primary}" is not a colour code like #7A1F2B`)
@@ -85,8 +87,13 @@ export async function validateBoutique(slug) {
   for (const [i, b] of (config.branches ?? []).entries()) {
     const which = `Branch ${i + 1}${b.name ? ` (${b.name})` : ''}`
     err(b.address?.trim(), `${which}: address is empty`)
+    err(b.area?.trim(), `${which}: area / locality is empty. The demo directory groups boutiques by it.`)
     err(b.city?.trim(), `${which}: city is empty`)
+    err(b.state?.trim(), `${which}: state is empty`)
     err(/^\d{6}$/.test(b.pincode ?? ''), `${which}: pincode "${b.pincode}" should be 6 digits`)
+    if (b.area) {
+      warn(!/[/,]/.test(b.area), `${which}: area "${b.area}" holds more than one name. Write the one locality people know; the rest belongs in "Landmark".`)
+    }
     err(URL.test(b.mapsUrl ?? ''), `${which}: Google Maps link "${b.mapsUrl ?? ''}" is not a link`)
     if (b.mapsUrl && URL.test(b.mapsUrl)) {
       warn(/google\.[a-z.]+\/maps|maps\.google|goo\.gl|maps\.app/i.test(b.mapsUrl), `${which}: map link doesn't look like Google Maps`)

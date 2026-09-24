@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "new-boutique": "node scripts/new-boutique.mjs",
-    "shots": "node scripts/shots.mjs",
+    "shots": "node --experimental-strip-types scripts/shots.mjs",
     "check": "node --experimental-strip-types scripts/validate.mjs && tsc -b && vite build",
     "config": "node --experimental-strip-types scripts/build-config.mjs",
     "validate": "node --experimental-strip-types scripts/validate.mjs"

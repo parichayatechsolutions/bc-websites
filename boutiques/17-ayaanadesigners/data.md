@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Satellite Town / Subhas Nagar
 - ★ Full address: #624, 7th Main Road, Punam Mahal Road, Subhas Nagar, Opposite Sankara Mata Arch, Kengeri Satellite Town, Bengaluru, Karnataka 560060
 - Landmark (e.g. "opposite SBI, near bus stand"): Opposite Sankara Mata Arch, Punam Mahal Road
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Ayaana%20Designers%20Punam%20Mahal%20Road%20Subhas%20Nagar%20Kengeri%20Satellite%20Town%20Bengaluru%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–4:00pm

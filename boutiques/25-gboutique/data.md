@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Ganga Nagar / Bangalore University
 - ★ Full address: 1st Main Road, Jnana Ganga Nagar, Near Bangalore University Campus, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Bangalore University, Jnana Ganga Nagar
+- ★ Area / locality: Jnana Ganga Nagar
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=G%20boutique%20Gnana%20Ganga%20Nagar%20Jnana%20Ganga%20Nagar%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–4:00pm

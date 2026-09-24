@@ -46,3 +46,6 @@ export default function FloatingNav() {
     </header>
   )
 }
+
+// Sits over the page rather than in the flow: pages leave room at the top.
+FloatingNav.floating = true

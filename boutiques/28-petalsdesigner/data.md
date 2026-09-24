@@ -31,7 +31,9 @@
 - ★ Branch name / area: Nagadevanahalli / Kengeri (Dodabasti Main Road)
 - ★ Full address: Parijatha Nilaya, #567, Dodabasti Main Road, Raju Badavane, Bhuvaneshwari Nagar, Nagadevanahalli, Kengeri, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Harsha Dental Clinic, Dodabasti Main Road
+- ★ Area / locality: Nagadevanahalli
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Petals%20designer%20studio%20Nagadevanahalli%2CKengeri%20Kengeri%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–5:00pm

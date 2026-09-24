@@ -31,7 +31,9 @@
 - ★ Branch name / area: Jnana Ganga Nagar / Ullal Main Road
 - ★ Full address: Ullal Main Road, Jnanajyothinagar, Srirama Layout, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
 - Landmark (e.g. "opposite SBI, near bus stand"): Near Bangalore University, Srirama Layout
+- ★ Area / locality: Jnana Ganga Nagar
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560056
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=HOuse%20Of%20Taranga%20Jnan%20ganga%20nagar%20Univeristy%20Jnana%20Ganga%20Nagar%20560056
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–8:30pm, Sun 11:00am–4:00pm

@@ -31,7 +31,9 @@
 - ★ Branch name / area: Kengeri Satellite Town / Gandhi Nagar
 - ★ Full address: EWS-352, 6th Main Road, Stage I, Gandhi Nagar, Kengeri Satellite Town, Bengaluru, Karnataka 560060
 - Landmark (e.g. "opposite SBI, near bus stand"): Near 6th Main Road, Gandhi Nagar Stage 1
+- ★ Area / locality: Kengeri Satellite Town
 - ★ City: Bengaluru
+- ★ State: Karnataka
 - ★ Pincode: 560060
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link): https://www.google.com/maps/search/?api=1&query=Siri%20Creations%20EWS-352%206th%20Main%20Rd%20Gandhi%20Nagar%20Kengeri%20Satellite%20Town%20Bengaluru%20560060
 - Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed): Mon–Sat 10:30am–5:30pm, Sun closed
