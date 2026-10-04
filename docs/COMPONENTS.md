@@ -99,6 +99,7 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | E | `later` picks that need new data-sheet fields first (**built 2026-10-04**) | fabric A, W · look A, Q · rental A, E · kids A, B · men B · emb K · saree A · alter B, C · gift A, H · class A, J · team A, B · blog A | 20 |
 | F | Two more per section, the most distinct of what was left (**built 2026-10-04**) | see the Status column | 64 |
 | G | Two more per section again (**built 2026-10-04**) | see the Status column | 64 |
+| H | Two more per section again, 31 sections (**built 2026-10-04**) | see the Status column | 62 |
 
 The wedding planner (wed A, Q) waits: its task dates would be wedding timelines in the boutique's name ("order the bridal blouse 8 weeks before") that the shop never set. It needs either the boutique's own lead times in the data sheet or copy the owner approves.
 
@@ -106,39 +107,39 @@ The wedding planner (wed A, Q) waits: its task dates would be wedding timelines 
 
 | # | Section | Group | Versions | Built | Close | Data | To build |
 |---|---|---|---|---|---|---|---|
-| 00 | [Navigation](#00-nav) | Site chrome | 26 | 8 | 1 | existing |  |
-| 01 | [Hero](#01-hero) | Page opener | 26 | 9 | 3 | existing |  |
-| 02 | [Gallery](#02-gallery) | Their work | 26 | 9 | 2 | existing |  |
-| 03 | [Testimonials](#03-reviews) | Trust | 26 | 8 | 1 | existing |  |
-| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 8 |  | existing |  |
-| 05 | [Services & prices](#05-services) | What they make | 26 | 8 | 1 | existing |  |
-| 06 | [Owner's story](#06-story) | About them | 26 | 7 | 1 | existing |  |
-| 07 | [Making process](#07-process) | About them | 26 | 7 | 1 | existing |  |
-| 08 | [FAQ](#08-faq) | Trust | 26 | 7 |  | existing |  |
-| 09 | [Instagram feed](#09-ig) | Their work | 26 | 7 |  | existing |  |
-| 10 | [Bridal packages](#10-bridal) | What they make | 26 | 7 |  | existing |  |
-| 11 | [Before / after alterations](#11-alt) | Their work | 26 | 7 |  | existing |  |
-| 12 | [Offers banner](#12-offer) | Bookings | 26 | 7 |  | existing |  |
-| 13 | [Trust badges](#13-trust) | Trust | 26 | 7 |  | existing |  |
-| 14 | [Location map](#14-map) | Bookings | 26 | 7 | 1 | existing |  |
-| 15 | [Footer](#15-footer) | Site chrome | 26 | 9 |  | existing |  |
-| 16 | [Fabric swatches](#16-fabric) | Speciality | 26 | 6 |  | existing |  |
-| 17 | [Blouse design picker](#17-blouse) | Speciality | 26 | 6 |  | none |  |
-| 18 | [Measurement guide](#18-measure) | Speciality | 26 | 6 |  | none |  |
-| 19 | [Lookbook](#19-look) | Speciality | 26 | 6 |  | existing |  |
-| 20 | [Rental collection](#20-rental) | Speciality | 26 | 6 |  | existing |  |
-| 21 | [Kids wear corner](#21-kids) | Speciality | 26 | 6 |  | existing |  |
-| 22 | [Men's tailoring](#22-men) | Speciality | 26 | 6 |  | existing |  |
-| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 6 |  | existing |  |
-| 24 | [Saree services](#24-saree) | Speciality | 26 | 6 |  | existing |  |
-| 25 | [Alterations price list](#25-alter) | Speciality | 26 | 6 |  | existing |  |
+| 00 | [Navigation](#00-nav) | Site chrome | 26 | 10 | 1 | existing |  |
+| 01 | [Hero](#01-hero) | Page opener | 26 | 11 | 3 | existing |  |
+| 02 | [Gallery](#02-gallery) | Their work | 26 | 11 | 2 | existing |  |
+| 03 | [Testimonials](#03-reviews) | Trust | 26 | 10 | 1 | existing |  |
+| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 10 |  | existing |  |
+| 05 | [Services & prices](#05-services) | What they make | 26 | 10 | 1 | existing |  |
+| 06 | [Owner's story](#06-story) | About them | 26 | 9 | 1 | existing |  |
+| 07 | [Making process](#07-process) | About them | 26 | 9 | 1 | existing |  |
+| 08 | [FAQ](#08-faq) | Trust | 26 | 9 |  | existing |  |
+| 09 | [Instagram feed](#09-ig) | Their work | 26 | 9 |  | existing |  |
+| 10 | [Bridal packages](#10-bridal) | What they make | 26 | 9 |  | existing |  |
+| 11 | [Before / after alterations](#11-alt) | Their work | 26 | 9 |  | existing |  |
+| 12 | [Offers banner](#12-offer) | Bookings | 26 | 9 |  | existing |  |
+| 13 | [Trust badges](#13-trust) | Trust | 26 | 9 |  | existing |  |
+| 14 | [Location map](#14-map) | Bookings | 26 | 9 | 1 | existing |  |
+| 15 | [Footer](#15-footer) | Site chrome | 26 | 11 |  | existing |  |
+| 16 | [Fabric swatches](#16-fabric) | Speciality | 26 | 8 |  | existing |  |
+| 17 | [Blouse design picker](#17-blouse) | Speciality | 26 | 8 |  | none |  |
+| 18 | [Measurement guide](#18-measure) | Speciality | 26 | 8 |  | none |  |
+| 19 | [Lookbook](#19-look) | Speciality | 26 | 8 |  | existing |  |
+| 20 | [Rental collection](#20-rental) | Speciality | 26 | 8 |  | existing |  |
+| 21 | [Kids wear corner](#21-kids) | Speciality | 26 | 8 |  | existing |  |
+| 22 | [Men's tailoring](#22-men) | Speciality | 26 | 8 |  | existing |  |
+| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 8 |  | existing |  |
+| 24 | [Saree services](#24-saree) | Speciality | 26 | 8 |  | existing |  |
+| 25 | [Alterations price list](#25-alter) | Speciality | 26 | 8 |  | existing |  |
 | 26 | [Trial & delivery tracker](#26-track) | Speciality | 26 |  |  | backend |  |
 | 27 | [Wedding planner](#27-wed) | Speciality | 26 |  |  | none |  |
-| 28 | [Gift voucher](#28-gift) | Speciality | 26 | 6 |  | existing |  |
-| 29 | [Classes & workshops](#29-class) | Speciality | 26 | 6 |  | existing |  |
-| 30 | [Team / tailors](#30-team) | Speciality | 26 | 6 |  | existing |  |
-| 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 5 |  | existing |  |
-| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 6 |  | existing |  |
+| 28 | [Gift voucher](#28-gift) | Speciality | 26 | 8 |  | existing |  |
+| 29 | [Classes & workshops](#29-class) | Speciality | 26 | 8 |  | existing |  |
+| 30 | [Team / tailors](#30-team) | Speciality | 26 | 8 |  | existing |  |
+| 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 7 |  | existing |  |
+| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 8 |  | existing |  |
 | 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 | 6 |  | existing |  |
 
 ### 00 nav
@@ -159,7 +160,7 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 | F | Side rail / tab bar | Icon rail down the left on desktop; app-style tab bar at the bottom on phones. |  |  |  |  |
 | G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  |  |  |  |
 | H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  |  | frosted glass (contrast over photos) |  |
-| I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  |  |  |  |
+| I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  | built: `nav/BrandNav` |  | keep |
 | J | Tab switcher | Pages as a segmented pill control; the active one fills. |  |  |  |  |
 | K | Icon nav | Icons with small labels; compact and scannable. |  | built: `nav/IconNav` |  | keep |
 | L | Masthead | Newspaper style: name set large, links in a ruled row under it. |  | built: `nav/MastheadNav` |  | keep |
@@ -172,7 +173,7 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 | S | Local-name strip | Slim dark strip with the name in the local language, above a clean nav. |  | built: `nav/LocalNav` |  | keep |
 | T | Outline pill links | Clear over the hero; links inside an outlined pill, WhatsApp as an outline circle. |  |  |  |  |
 | U | Dark luxe | Near-black bar with gold hairlines, a crown and an "Appointments" button. |  |  |  |  |
-| V | Thread progress | A thread with a needle under the nav shows how far down the page you are. |  |  |  |  |
+| V | Thread progress | A thread with a needle under the nav shows how far down the page you are. |  | built: `nav/ThreadNav` |  | keep |
 | W | Shrinking | Tall with a large logo at the top, shrinks to a compact bar as you scroll. |  | built: `nav/ShrinkNav` |  | keep |
 | X | Split menu | Menu slides in as half photo with tagline, half numbered links. |  |  |  |  |
 | Y | Circle menu | The menu grows as a circle from the button in brand colour. |  |  |  |  |
@@ -208,9 +209,9 @@ Lab motions: Letters rise, Letters blur in, Numbers count up, Photo settles, Pho
 | R | Jaali screen | Photo seen through a carved lattice in the brand colour; name on an arch-topped panel. |  |  |  |  |
 | S | Bento | Rounded tiles: name, big photo, rating, garments delivered. Modern and scannable. |  |  | rounded tiles (shape rule) | skip |
 | T | Since year | No photo. The founding year set enormous, name and tagline beneath. | yes |  |  |  |
-| U | Photo in letters | Dark. The name so large that the photo shows through the letters. |  |  |  |  |
+| U | Photo in letters | Dark. The name so large that the photo shows through the letters. |  | built: `hero/LettersHero` |  | keep |
 | V | Hanger rail | Garments hanging from a thread rail under the name, each labelled by kind. Suits rental boutiques. |  |  |  |  |
-| W | Swing tag | Full photo with a garment tag hanging from a gold string: name, rating, invitation. |  |  |  |  |
+| W | Swing tag | Full photo with a garment tag hanging from a gold string: name, rating, invitation. |  | built: `hero/TagHero` |  | keep |
 | X | Broadsheet | Newspaper front page: masthead name, dateline, tagline as headline, photo with caption. |  | close: `hero/LedgerHero` |  | keep |
 | Y | Photo slider | Three full photos you step through with arrows (never auto). Name and kind stay on top. |  |  |  |  |
 | Z | Spotlight | Dark stage. Name huge behind an arched photo lit from below, so the work stands in front of the name. |  |  | repeats a family built elsewhere | skip |
@@ -235,7 +236,7 @@ Lab motions: Filter / swap, Sways in, Photos wipe up, Photos settle, Drift, Zari
 | H | Card deck | Dark. Photos stacked like prints; next and previous deal the deck. |  |  |  |  |
 | I | Gallery wall | On the brand colour: photos in double gold frames hung salon-style at mixed sizes. |  | built: `gallery/WallGallery` |  | keep |
 | J | Index | Type-led list of what they make with tiny thumbnails and a WhatsApp button per row. Fine with few photos. | yes | built: `gallery/IndexGallery` |  | keep |
-| K | Accordion | Dark. One arched panel per category; tapping one widens it and narrows the rest. |  |  |  |  |
+| K | Accordion | Dark. One arched panel per category; tapping one widens it and narrows the rest. |  | built: `gallery/AccordionGallery` |  | keep |
 | L | Zig-zag rows | Photo and category alternate left and right, each with an "Ask about" button. |  | built: `gallery/ZigzagGallery` |  | keep |
 | M | Story circles | Round category bubbles with a gold ring, like highlights; tapping opens a full-screen viewer. |  |  |  |  |
 | N | Lightbox grid | Even square grid; tapping any photo opens it large with next and previous. |  | built: `gallery/LightboxGallery` |  | keep |
@@ -243,7 +244,7 @@ Lab motions: Filter / swap, Sways in, Photos wipe up, Photos settle, Drift, Zari
 | P | Sticky index | Title and current category stay put while photos scroll past (scroll inside the frame). |  |  | inner scroll; sticky on a real page |  |
 | Q | Diamond lattice | On the brand colour: photos cut into gold-edged diamonds, like a jaali. |  |  |  |  |
 | R | Contact sheet | Near-black film strips with sprocket holes, frame numbers and kind in gold. |  |  |  |  |
-| S | Workroom pinboard | Prints taped to a board at slight angles, labelled by kind. |  |  |  |  |
+| S | Workroom pinboard | Prints taped to a board at slight angles, labelled by kind. |  | built: `gallery/PinboardGallery` |  | keep |
 | T | Coverflow | Dark. Centre photo large, neighbours turned away in perspective; arrows step through. |  |  | 3D turn (check "no 3D") | skip |
 | U | Bento | Rounded tiles at mixed sizes with a kind label on each. |  |  | rounded tiles (shape rule) | skip |
 | V | Full-bleed stack | One full-width photo per category stacked down the page, each with an "Ask about" button. |  | built: `gallery/StackGallery` |  | keep |
@@ -277,11 +278,11 @@ Lab motions: Numbers count up, Stars fill in, Next review, Wipe in, Sways in.
 | M | Big numbers | Rating, review count and garments delivered set huge, one quote below. |  | built: `reviews/NumbersReviews` |  | keep |
 | N | Initial cards | Cards with a coloured initial for each customer, stars and review. |  |  |  |  |
 | O | Review deck | Dark. Reviews stacked like cards; arrows deal the next one. |  |  |  |  |
-| P | Newspaper | Customer reports in newspaper columns with drop caps and a headline quote. |  |  |  |  |
+| P | Newspaper | Customer reports in newspaper columns with drop caps and a headline quote. |  | built: `reviews/NewspaperReviews` |  | keep |
 | Q | Avatar picker | Row of customer initials; tapping one shows her review. |  |  |  |  |
 | R | Zari frames | On brand colour: reviews inside double gold frames. |  |  |  |  |
 | S | Ruled list | Calm, type-led rows: review on the left, name on the right. |  | built: `reviews/RuledReviews` |  | keep |
-| T | Arch quote | One review inside a brand-colour temple arch, with arrows. |  |  |  |  |
+| T | Arch quote | One review inside a brand-colour temple arch, with arrows. |  | built: `reviews/ArchReviews` |  | keep |
 | U | Bento | Rounded tiles: rating, three reviews, garments delivered. |  |  | rounded tiles (shape rule) | skip |
 | V | Scroll reader | Dark. Large reviews that light up as you scroll (scroll inside the frame). |  |  | inner scroll; sticky on a real page |  |
 | W | Stars first | Oversized five stars above each review. |  |  | stars on single reviews | skip |
@@ -300,7 +301,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | WhatsApp form | Name, number, need, date and note; send opens WhatsApp with it all written out. |  | built: `contact/WhatsAppForm` |  | keep |
-| B | Live preview | Form on the left, the WhatsApp message building itself in a phone chat on the right. |  |  |  |  |
+| B | Live preview | Form on the left, the WhatsApp message building itself in a phone chat on the right. |  | built: `contact/PreviewContact` |  | keep |
 | C | Quick picks | Two taps, no typing: what you are planning and when, then one big send button. |  | built: `contact/PicksContact` |  | keep |
 | D | Reach us trio | Three big cards: WhatsApp, Call, Visit, each with its number or area. |  | built: `contact/TrioContact` |  | keep |
 | E | Book a fitting | Day chips for the next week and a time of day; a summary card sends the request. |  | built: `contact/FittingContact` |  | keep |
@@ -316,7 +317,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | O | Call me back | On brand colour: name, number and a best time to call. |  | built: `contact/CallbackContact` |  | keep |
 | P | Big number | The WhatsApp number as the headline, with WhatsApp, Call, Visit and Copy. |  | built: `contact/NumberContact` |  | keep |
 | Q | Chat window | A chat that greets the visitor with what the boutique is known for, then quick replies. |  |  |  |  |
-| R | Wedding banner | Brand-colour band between zari borders: "Planning a wedding? Let's talk." |  |  |  |  |
+| R | Wedding banner | Brand-colour band between zari borders: "Planning a wedding? Let's talk." |  | built: `contact/WeddingContact` |  | keep |
 | S | Channel cards | Four cards: WhatsApp, Call, Instagram, Visit. |  |  |  |  |
 | T | Come and visit | Dark with a grid: open today, address, hours and a glowing map pin. |  |  |  |  |
 | U | Thumb bar | A bottom bar on phones (Call, Visit, WhatsApp) and a slim side rail on computers. |  |  |  |  |
@@ -338,7 +339,7 @@ Lab motions: Tap demo, Leaders draw, Wipe in.
 |---|---|---|---|---|---|---|
 | A | Columns + prices | Grouped columns with icons and the starting-price table. |  | built: `services/ColumnServices` |  | keep |
 | B | Rate card | A printed rate card: dotted leaders to each price, delivery and express, groups below. |  | close: `services/ListServices` |  | keep |
-| C | Price tiles + accordion | Three brand-colour price tiles, then groups that open to show every item. |  |  |  |  |
+| C | Price tiles + accordion | Three brand-colour price tiles, then groups that open to show every item. |  | built: `services/TilesServices` |  | keep |
 | D | Tailoring menu | Dark, framed like a restaurant menu with gold prices and a thread ornament. |  | built: `services/MenuServices` |  | keep |
 | E | Icon grid | Group tabs; each item is an icon tile that asks its price on WhatsApp. |  |  |  |  |
 | F | Three tiers | Simple, designer and bridal as pricing cards with what each includes. |  |  | needs per-item prices | skip |
@@ -360,7 +361,7 @@ Lab motions: Tap demo, Leaders draw, Wipe in.
 | V | Yes, we do that | Every item with a filled check, plus an "Ask anyway" card. |  | built: `services/YesServices` |  | keep |
 | W | Three-tap price | Pick garment and handwork; a WhatsApp message asks for the price. |  |  | needs per-item prices | skip |
 | X | Price questions | FAQ accordion answered with their real prices and delivery times. |  |  |  |  |
-| Y | Service cloud | Every service as a tappable pill at mixed sizes and colours. |  |  |  |  |
+| Y | Service cloud | Every service as a tappable pill at mixed sizes and colours. |  | built: `services/CloudServices` |  | keep |
 | Z | Spotlight | Dark stage; one starting price lit huge, chips to switch. |  |  | repeats a family built elsewhere | skip |
 
 ### 06 story
@@ -389,9 +390,9 @@ Lab motions: Words fill in, Wipe in, Seal turns, Tab demo.
 | N | Round seal | Portrait inside a slowly turning "Handmade since" seal. |  |  | turns continuously (nothing loops) | skip |
 | O | Meet the maker | Video slot with a play button beside her story. |  |  | needs a video clip |  |
 | P | Chapters | Numbered chapters: the beginning, the craft, today. |  |  |  |  |
-| Q | Designer card | An ID-style profile card with role, specialities, since. |  |  |  |  |
+| Q | Designer card | An ID-style profile card with role, specialities, since. |  | built: `story/CardStory` |  | keep |
 | R | Word by word | Her opening line fills in word by word. |  |  |  |  |
-| S | Story tabs | Tabs for Our story, Our promise, Our workroom. |  |  |  |  |
+| S | Story tabs | Tabs for Our story, Our promise, Our workroom. |  | built: `story/TabsStory` |  | keep |
 | T | Dark luxe founder | Crown ornament, the founder's name large, gold rule. |  |  |  |  |
 | U | Bento | Portrait, quote, year, rating and story tiles. |  |  | rounded tiles (shape rule) | skip |
 | V | Stitch line | Story paragraphs strung on a running-stitch thread. |  |  |  |  |
@@ -417,7 +418,7 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | E | Step viewer | Tabs for each step; a photo and text panel with Next. |  | built: `process/ViewerProcess` |  | keep |
 | F | Photo cards | Card per step with a photo and number tag. |  |  |  |  |
 | G | Day bars | Each step as a bar across their real delivery days. |  | built: `process/DaysProcess` |  | keep |
-| H | Zig-zag | Alternating photo and text rows with huge numbers. |  |  |  |  |
+| H | Zig-zag | Alternating photo and text rows with huge numbers. |  | built: `process/ZigzagProcess` |  | keep |
 | I | Arcade | On brand colour: six gold-edged temple arches, one per step, with Roman numerals and a zari base. |  | built: `process/ArcadeProcess` |  | keep |
 | J | Accordion | Numbered steps that open to explain. |  | built: `process/AccordionProcess` |  | keep |
 | K | Sticky intro | Heading stays put while the steps scroll past. |  |  | repeats a family built elsewhere | skip |
@@ -434,7 +435,7 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | V | Stitch line | Steps strung on a running stitch with a needle. |  |  |  |  |
 | W | Calendar | Day 1, the middle days and the last day as calendar cards. |  |  |  |  |
 | X | Medallions | Round icon medallions that lift on hover. |  |  | hover on something not clickable; hover on something not clickable | skip |
-| Y | Progress ring | A ring fills as you step through; numbered dots. |  |  |  |  |
+| Y | Progress ring | A ring fills as you step through; numbered dots. |  | built: `process/RingProcess` |  | keep |
 | Z | Spotlight | Dark stage, one step lit at a time with pips. |  |  | repeats a family built elsewhere | skip |
 
 ### 08 faq
@@ -451,7 +452,7 @@ Lab motions: Tap demo, Threads draw, Wipe in.
 | B | Sticky intro | Heading and WhatsApp stay put while the questions scroll. |  |  | repeats a family built elsewhere | skip |
 | C | Topic tabs | Prices, Timing, Ordering, Visiting tabs with answer cards. |  | built: `faq/TopicsFaq` |  | keep |
 | D | Dark accordion | Gold numerals and a soft glow on dark. |  |  |  |  |
-| E | Card grid | A card per question with a ringed icon and italic number. |  |  |  |  |
+| E | Card grid | A card per question with a ringed icon and italic number. |  | built: `faq/CardsFaq` |  | keep |
 | F | WhatsApp chat | Questions and answers as a WhatsApp conversation. |  | built: `faq/ChatFaq` |  | keep |
 | G | List + answer panel | Pick a question; the brand panel shows the answer. |  | built: `faq/PanelFaq` |  | keep |
 | H | Editorial rows | Large italic numbers, type-led rows. |  |  |  |  |
@@ -467,7 +468,7 @@ Lab motions: Tap demo, Threads draw, Wipe in.
 | R | Zari frame | Questions inside a double gold frame on brand colour. |  |  | repeats a family built elsewhere | skip |
 | S | Conversation | Question and answer bubbles, customer and boutique. |  |  |  |  |
 | T | Atelier | Dark luxe with Roman numerals and a crown. |  |  | repeats a family built elsewhere | skip |
-| U | Arch photo | Arched work photo beside the accordion. |  |  |  |  |
+| U | Arch photo | Arched work photo beside the accordion. |  | built: `faq/ArchFaq` |  | keep |
 | V | Stitch line | Questions strung on a running stitch. |  |  |  |  |
 | W | Owner answers | Answered by the owner, with her signature. |  |  | attributes answers to the owner | skip |
 | X | Question chips | Tap a question chip; the answer card changes. |  |  |  |  |
@@ -485,7 +486,7 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Profile + grid | Handle, follow button and a clean 3×3 grid. |  | built: `instagram/GridInstagram` |  | keep |
-| B | Phone profile | A phone showing their Instagram profile, beside the intro. |  |  |  |  |
+| B | Phone profile | A phone showing their Instagram profile, beside the intro. |  | built: `instagram/PhoneInstagram` |  | keep |
 | C | Masonry | Mixed-height posts in columns. |  | built: `instagram/MasonryInstagram` |  | keep |
 | D | Dark grid | 3×3 grid on dark with a gold glow. |  |  |  |  |
 | E | Reels strip | Tall reel cards that scroll sideways. |  |  |  |  |
@@ -493,7 +494,7 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 | G | Post rail | Full post cards with like, comment and caption. |  |  | fake likes and comments | skip |
 | H | Feature + four | One large post beside four smaller ones. |  | built: `instagram/FeatureInstagram` |  | keep |
 | I | Brand band | On brand colour; framed tiles and a zari base. |  |  |  |  |
-| J | Polaroids | Tilted instant photos with handwritten captions. |  |  |  |  |
+| J | Polaroids | Tilted instant photos with handwritten captions. |  | built: `instagram/PolaroidInstagram` |  | keep |
 | K | Arch windows | Posts inside gold-edged temple arches. |  | built: `instagram/ArchInstagram` |  | keep |
 | L | Film strip | Dark film reel of posts with sprocket edges. |  |  |  |  |
 | M | Single post | One large Instagram post beside the intro. |  | built: `instagram/SingleInstagram` |  | keep |
@@ -525,12 +526,12 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 | B | Dark collection | Dark luxe tiers with gold hairline frames and a crown. |  |  |  |  |
 | C | Compare table | What each package includes, side by side. |  | built: `bridal/CompareBridal` |  | keep |
 | D | Package tabs | Switch packages; one detailed panel with price and list. |  | built: `bridal/TabBridal` |  | keep |
-| E | Arch cards | Each package inside a gold-edged temple arch. |  |  |  |  |
+| E | Arch cards | Each package inside a gold-edged temple arch. |  | built: `bridal/ArchBridal` |  | keep |
 | F | Zari frame | On brand colour inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
 | G | Week-by-week plan | Suggested timeline from consult to final fit. |  |  | invents a timeline | skip |
 | H | Photo + list | Arched bridal photo beside a ruled package list. |  | built: `bridal/PhotoBridal` |  | keep |
 | I | Photo rail | Sideways package cards with photos. |  |  |  |  |
-| J | Accordion | Packages that open to show what is included. |  |  |  |  |
+| J | Accordion | Packages that open to show what is included. |  | built: `bridal/AccordionBridal` |  | keep |
 | K | Bridal menu | Dark framed menu with dotted leaders to each price. |  |  |  |  |
 | L | Invitation | A wedding-invite card inviting her to a consult. |  | built: `bridal/InviteBridal` |  | keep |
 | M | Big prices | Starting prices set huge in a ruled grid. |  | built: `bridal/PricesBridal` |  | keep |
@@ -564,7 +565,7 @@ Lab motions: Slider sweep, Tap demo, Wipe in.
 | D | Dark slider | Slider on dark with arrows to step through. |  | built: `alterations/DarkAlterations` |  | keep |
 | E | Tap toggle | Before / After switch over one large photo. |  | built: `alterations/ToggleAlterations` |  | keep |
 | F | Hover reveal | Hover a card to reveal the after photo. |  |  |  | skip |
-| G | Diagonal split | Each photo split on the bias, before and after. |  |  |  |  |
+| G | Diagonal split | Each photo split on the bias, before and after. |  | built: `alterations/DiagonalAlterations` |  | keep |
 | H | Pairs rail | Sideways before-after pairs. |  |  |  |  |
 | I | Brand band | On brand colour; pairs in gold frames with a zari base. |  |  |  |  |
 | J | Stacked | Before above, after below, with an arrow between. |  | built: `alterations/StackedAlterations` |  | keep |
@@ -580,7 +581,7 @@ Lab motions: Slider sweep, Tap demo, Wipe in.
 | T | Atelier | Dark luxe pairs with gold frames. |  |  | repeats a family built elsewhere | skip |
 | U | Upcycling | An old saree made into a lehenga, as a feature. |  |  |  |  |
 | V | Stitch line | Pairs strung on a running stitch. |  |  |  |  |
-| W | Slider + review | Slider beside a real Google review about fit. |  |  |  |  |
+| W | Slider + review | Slider beside a real Google review about fit. |  | built: `alterations/ReviewAlterations` |  | keep |
 | X | Category tabs | Tabs switch one large before-after panel. |  |  |  |  |
 | Y | Services + slider | Ruled services list with a sticky arched slider. |  |  |  |  |
 | Z | Spotlight | Dark stage, one pair lit at a time with pips. |  |  | repeats a family built elsewhere | skip |
@@ -610,7 +611,7 @@ Lab motions: Tap demo, Slides in, Wipe in.
 | M | Book by | "Book by" date with day tiles. |  | built: `offer/BookByOffer` |  | keep |
 | N | Bento | Photo and three offer tiles. |  |  | rounded tiles (shape rule) | skip |
 | O | Scrolling strip | Offers loop across a brand strip. Rule-breaking motion. |  |  | loops (forbidden) | skip |
-| P | Print ad | Framed like a newspaper advertisement. |  |  |  |  |
+| P | Print ad | Framed like a newspaper advertisement. |  | built: `offer/AdOffer` |  | keep |
 | Q | Tap to reveal | A gift card that reveals the offer on tap. |  |  |  |  |
 | R | Zari frame | Offer inside a double gold frame on brand colour. |  |  | repeats a family built elsewhere | skip |
 | S | Side tab | An "Offers" tab on the edge that slides a panel open. |  |  |  |  |
@@ -618,7 +619,7 @@ Lab motions: Tap demo, Slides in, Wipe in.
 | U | Photo overlay | Full-bleed photo with the offer over a dark fade. |  | built: `offer/OverlayOffer` |  | keep |
 | V | Rosette seal | A pleated rosette badge beside the offer. |  |  |  |  |
 | W | Owner note | A taped handwritten-style note from the owner. |  |  | speaks in the owner's name | skip |
-| X | Offer tabs | Festive, Wedding and Express tabs with a photo. |  |  |  |  |
+| X | Offer tabs | Festive, Wedding and Express tabs with a photo. |  | built: `offer/TabsOffer` |  | keep |
 | Y | What is included | Offer beside a checklist card. |  |  |  |  |
 | Z | Spotlight | Dark stage, one offer lit at a time. |  |  | repeats a family built elsewhere | skip |
 
@@ -641,7 +642,7 @@ Lab motions: Wipe in, Stars fill in.
 | G | Promise list | Six promises beside the rating. |  | built: `trust/PromiseTrust` |  | keep |
 | H | Rating card | Big Google rating card with stat boxes. |  |  |  |  |
 | I | Zari band | Brand band of badges between zari borders. |  |  |  |  |
-| J | Stamps | Tilted ink stamps. |  |  |  |  |
+| J | Stamps | Tilted ink stamps. |  | built: `trust/StampsTrust` |  | keep |
 | K | Arch badges | Badges inside temple arches. |  |  |  |  |
 | L | Certificate | A framed certificate of craft. |  |  | fake certificate | skip |
 | M | Six promises | Icon grid of what they never skip. |  |  |  |  |
@@ -652,7 +653,7 @@ Lab motions: Wipe in, Stars fill in.
 | R | Zari frame | Stats inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
 | S | Sticky intro | Stats stay put while promises scroll. |  |  | repeats a family built elsewhere | skip |
 | T | Atelier | Dark luxe promises with Roman numerals. |  |  | repeats a family built elsewhere | skip |
-| U | Photo overlay | Frosted badges over a work photo. |  |  | frosted glass (contrast over photos) |  |
+| U | Photo overlay | Frosted badges over a work photo. |  | built: `trust/PhotoTrust` | frosted glass (contrast over photos) | keep |
 | V | Timeline | Opened, reviews, garments, today. |  | built: `trust/TimelineTrust` |  | keep |
 | W | Fit guarantee | Owner-signed guarantee seal. |  |  | owner-signed guarantee | skip |
 | X | Promise accordion | Promises that open to explain. |  | built: `trust/AccordionTrust` |  | keep |
@@ -683,7 +684,7 @@ Lab motions: Wipe in, Zari draws.
 | L | Find us. | Huge type, details and map. |  | built: `visit/FindVisit` |  | keep |
 | M | Open-now pin | Map with an open or closed badge on top. |  |  |  |  |
 | N | Bento | Map, address, hours, pin and directions tiles. |  |  | rounded tiles (shape rule) | skip |
-| O | Map tabs | Switch between map, hours and contact. |  |  |  |  |
+| O | Map tabs | Switch between map, hours and contact. |  | built: `visit/TabsVisit` |  | keep |
 | P | Classified | Newspaper classified ad beside a mono map. |  |  |  |  |
 | Q | Phone map | A phone showing the map and a Start button. |  |  |  |  |
 | R | Visit pass | Ticket-style pass with the map as its stub. |  |  |  |  |
@@ -692,7 +693,7 @@ Lab motions: Wipe in, Zari draws.
 | U | Shopfront | Shop photo beside the map: "This is us". |  | built: `visit/ShopfrontVisit` |  | keep |
 | V | Your visit | What to expect on arrival, with the map. |  |  | invents what happens on arrival | skip |
 | W | Owner invite | A handwritten invitation beside the map. |  |  | speaks in the owner's name | skip |
-| X | Map + actions | Map with three action cards overlapping it. |  |  |  |  |
+| X | Map + actions | Map with three action cards overlapping it. |  | built: `visit/ActionsVisit` |  | keep |
 | Y | Slim line | One-line address with a slim map. |  | built: `visit/SlimVisit` |  | keep |
 | Z | Spotlight | Dark map with a glowing spotlight on the pin. |  |  | repeats a family built elsewhere | skip |
 
@@ -718,13 +719,13 @@ Lab motions: Name rises, Zari draws, Icons lift, Wipe in.
 | J | Numbers | Dark: rating, garments delivered and years as stat cards. |  |  |  |  |
 | K | Three cards | Brand colour with Visit, Chat and Follow cards. |  |  |  |  |
 | L | New designs | "Get new designs on WhatsApp" invitation beside the contact details. |  |  | promises a broadcast | skip |
-| M | Arch top | The footer rises in a great arch with the logo at its crown. |  |  |  |  |
+| M | Arch top | The footer rises in a great arch with the logo at its crown. |  | built: `footer/ArchFooter` |  | keep |
 | N | Split | Brand block with logo and tagline; light half with pages and contact. |  | built: `footer/SplitFooter` |  | keep |
 | O | Signature | "Stitched with care in the city" between thread lines. |  |  |  |  |
 | P | Sitemap | Five columns: about, pages, known for, starting prices, contact. |  | built: `footer/SitemapFooter` |  | keep |
 | Q | Thumb bar | Dark footer ending in a Call · Directions · WhatsApp bar. |  |  |  |  |
 | R | Receipt | Store details printed on a bill-book receipt. |  |  |  |  |
-| S | Social tiles | Four big tiles: WhatsApp, Instagram, Google, Call. |  |  |  |  |
+| S | Social tiles | Four big tiles: WhatsApp, Instagram, Google, Call. |  | built: `footer/TilesFooter` |  | keep |
 | T | Dark luxe | Near-black with gold hairlines, crown and "By appointment". |  |  |  |  |
 | U | Bento | Rounded tiles: logo, hours, address, WhatsApp, rating. |  |  | rounded tiles (shape rule) | skip |
 | V | Thread edge | A running-stitch border with a needle across the top. |  |  |  |  |
@@ -745,7 +746,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 |---|---|---|---|---|---|---|
 | A | Swatch book | Pinked squares in a grid with what each fabric is best for, and a send-your-fabric button. |  | built: `fabric/SwatchFabrics` |  | keep |
 | B | Fabric shelf | Dark. Bolts standing on a gold shelf; tap one to lift it and read about it. |  |  |  |  |
-| C | Swatch fan | Swatches fanned like a shade card; arrows or a tap bring one forward. |  |  |  |  |
+| C | Swatch fan | Swatches fanned like a shade card; arrows or a tap bring one forward. |  | built: `fabric/FanFabrics` |  | keep |
 | D | Guide + detail | Fabric list on the left, large swatch with feel, best for and care on the right. |  | built: `fabric/GuideFabrics` |  | keep |
 | E | By occasion | Wedding, reception, festival or every day; three suggested fabrics for each. |  |  |  |  |
 | F | Swatch tags | Each fabric on a punched swing tag with weight and best use. |  | built: `fabric/TagsFabrics` |  | keep |
@@ -758,7 +759,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | M | Feel scale | Fabrics plotted from sheer to heavy, matte to shiny, structured to flowing. | yes |  |  |  |
 | N | Bento | Big swatch, four small ones, title and a send-your-fabric tile. |  |  | rounded tiles (shape rule) | skip |
 | O | Swatch deck | Dark. Swatch cards stacked like prints; arrows deal the next one. |  |  |  |  |
-| P | Fabric notes | Magazine page: "Know your fabric" in two ruled columns. |  |  |  |  |
+| P | Fabric notes | Magazine page: "Know your fabric" in two ruled columns. |  | built: `fabric/NotesFabrics` |  | keep |
 | Q | Fabric finder | Two taps (occasion, feel) and a suggested fabric with an Ask button. |  |  |  |  |
 | R | Zari frame | Round swatches inside a double gold frame on brand colour. |  |  | repeats a family built elsewhere | skip |
 | S | Sticky intro | Intro stays put while fabric cards scroll past (scroll inside the frame). |  |  | inner scroll; sticky on a real page; repeats a family built elsewhere | skip |
@@ -792,7 +793,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | J | Spec sheet | Choices and starting prices as a dotted-leader spec sheet beside the diagrams. | yes |  |  |  |
 | K | Neck arches | Each neck inside a temple arch; a note on the one picked. | yes |  |  |  |
 | L | Sketchbook | Graph paper, diagrams drawn at an angle, handwritten notes. | yes |  |  |  |
-| M | Mix and match | Three dials for neck, back and sleeves, each with arrows. | yes |  |  |  |
+| M | Mix and match | Three dials for neck, back and sleeves, each with arrows. | yes | built: `blouse/DialsBlouse` |  | keep |
 | N | Bento | Big diagram, a tile per part with arrows, title and send tiles. | yes |  | rounded tiles (shape rule) | skip |
 | O | Design deck | Dark. Popular combinations stacked like cards; arrows deal the next. | yes |  |  |  |
 | P | Blouse notes | Magazine page of four popular combinations with diagrams. | yes |  |  |  |
@@ -802,7 +803,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | T | Atelier | Dark luxe list of necklines with Roman numerals and diagrams. | yes |  | repeats a family built elsewhere | skip |
 | U | Make it yours | A work photo beside the builder: start from a piece and change it. |  |  |  |  |
 | V | Stitch line | Four steps strung on a dashed thread; the picked step opens below. | yes |  |  |  |
-| W | Finishing touches | Tick-list of extras (piping, latkans, aari, maggam) beside the design. | yes |  |  |  |
+| W | Finishing touches | Tick-list of extras (piping, latkans, aari, maggam) beside the design. | yes | built: `blouse/ExtrasBlouse` |  | keep |
 | X | Neck guide | Accordion: what each neck does and what to wear it with. | yes | built: `blouse/GuideBlouse` |  | keep |
 | Y | Send a design | "Saw a design you love?" photo card beside a three-tap builder. | yes |  |  |  |
 | Z | Spotlight | Dark stage with one neckline lit large; chips to switch. | yes |  | repeats a family built elsewhere | skip |
@@ -824,12 +825,12 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | E | One at a time | Step through each measurement with its drawing and an input. | yes | built: `measure/StepMeasure` |  | keep |
 | F | Measurement card | A tailor's card with dashed blanks to fill in and send. | yes |  |  |  |
 | G | Cards | A card per measurement with its drawing; tap for how to take it. | yes |  |  |  |
-| H | Front and back | All the tape lines on the front and back, with a numbered key. | yes |  |  |  |
+| H | Front and back | All the tape lines on the front and back, with a numbered key. | yes | built: `measure/KeyMeasure` |  | keep |
 | I | Brand band | On brand colour between zari borders: chips and the drawing. | yes |  |  |  |
 | J | Before you measure | What you need and five tips. | yes | built: `measure/TipsMeasure` |  | keep |
 | K | Inches or cm | Unit switch and an input per measurement with usual values. | yes |  |  |  |
 | L | Notebook | Lined paper with handwritten entries you can fill in. | yes |  |  |  |
-| M | Stepper | Pick a measurement and set it with big plus and minus buttons. | yes |  |  |  |
+| M | Stepper | Pick a measurement and set it with big plus and minus buttons. | yes | built: `measure/StepperMeasure` |  | keep |
 | N | Bento | Drawing, how-to with arrows, title and send tiles. | yes |  | rounded tiles (shape rule) | skip |
 | O | Card deck | Dark. Measurement cards dealt one by one. | yes |  |  |  |
 | P | Fit notes | Magazine page: how to measure yourself, in two columns. | yes |  |  |  |
@@ -861,12 +862,12 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | E | Open book | A two-page spread with a spine shadow; arrows turn the page. |  |  |  |  |
 | F | Split viewer | Large photo beside a list of looks; tap one to swap the photo. |  | built: `lookbook/ViewerLookbook` |  | keep |
 | G | Hotspots | Tap dots on the photo to read about the neckline, sleeves and border. |  |  |  |  |
-| H | Offset grid | Three columns with the middle one dropped, each with an Ask button. |  |  |  |  |
+| H | Offset grid | Three columns with the middle one dropped, each with an Ask button. |  | built: `lookbook/OffsetLookbook` |  | keep |
 | I | Brand band | On brand colour between zari borders: looks in double gold frames. |  |  |  |  |
 | J | Index | Type-led list of looks; the one picked shows beside it. |  |  |  |  |
 | K | Arches | Five tall arched photos in a row with gold hairlines. |  | built: `lookbook/ArchesLookbook` |  | keep |
 | L | Mood board | Prints taped to a board with fabric swatches and handwritten names. |  |  |  |  |
-| M | Every function | Mehendi, sangeet, wedding and reception looks on a dashed thread. |  |  |  |  |
+| M | Every function | Mehendi, sangeet, wedding and reception looks on a dashed thread. |  | built: `lookbook/FunctionsLookbook` |  | keep |
 | N | Bento | Photo tiles at mixed sizes with title and lookbook tiles. |  |  | rounded tiles (shape rule) | skip |
 | O | Look deck | Dark. Photos stacked like prints; arrows deal the next one. |  |  |  |  |
 | P | Season's edit | Magazine page with a drop cap and three photos. |  |  |  |  |
@@ -898,7 +899,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | E | Check availability | Pick an outfit and your function date; WhatsApp asks if it is free. |  | built: `rental/AvailabilityRental` |  | keep |
 | F | Rent or stitch? | A side-by-side table to help decide, using their real delivery time and bridal price. |  | built: `rental/CompareRental` |  | keep |
 | G | Item detail | Large photo, thumbnails, what is included, sizes and a Check availability button. |  | built: `rental/DetailRental` |  | keep |
-| H | Wardrobe | Arched outfits inside a brand-colour wardrobe with a gold edge. |  |  |  |  |
+| H | Wardrobe | Arched outfits inside a brand-colour wardrobe with a gold edge. |  | built: `rental/WardrobeRental` |  | keep |
 | I | Brand band | On brand colour between zari borders: pieces in double gold frames. |  |  |  |  |
 | J | Index | Type-led list of everything to rent; the one picked shows beside it. |  | built: `rental/IndexRental` |  | keep |
 | K | Arches | Each piece in a temple arch with an Ask to rent link. |  |  |  |  |
@@ -914,7 +915,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | U | New in | Full-bleed photo with a "New in rental" badge. |  |  |  |  |
 | V | Rental timeline | Book, trial, pick up and return on a dashed thread with when each happens. |  |  |  |  |
 | W | Questions | Accordion of common renting questions. |  |  |  |  |
-| X | Rental pass | Pick a piece and date; a ticket-style trial pass fills in to send. |  |  |  |  |
+| X | Rental pass | Pick a piece and date; a ticket-style trial pass fills in to send. |  | built: `rental/PassRental` |  | keep |
 | Y | Story cards | Tall story-style cards that scroll sideways. |  |  |  |  |
 | Z | Spotlight | Dark stage with one arched piece lit; chips to switch. |  |  | repeats a family built elsewhere | skip |
 
@@ -932,12 +933,12 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | B | Mother and daughter | Two arched photos side by side for matching outfits. |  | built: `kids/MatchingKids` |  | keep |
 | C | Find by age | Pick an age; usual sizes and outfits that suit it. |  |  |  |  |
 | D | Birthday invitation | An invitation card on confetti: her birthday look, RSVP on WhatsApp. |  |  |  |  |
-| E | A year of firsts | Naming, annaprashana, first birthday and festivals on a ruled calendar strip. |  |  |  |  |
+| E | A year of firsts | Naming, annaprashana, first birthday and festivals on a ruled calendar strip. |  | built: `kids/FirstsKids` |  | keep |
 | F | Comfort is the work | A sticky headline and photo beside four numbered promises. |  |  |  |  |
 | G | Photo booth | Dark. Two tilted photo-booth strips, hers and his. |  |  |  |  |
 | H | The little edit | Four pieces in alternating editorial rows with what is included. |  | built: `kids/EditKids` |  | keep |
 | I | Kids index | A typeset index of every piece with ages and occasion. |  | built: `kids/IndexKids` |  | keep |
-| J | Clothesline | Prints pegged on a sagging line with handwritten names. |  |  |  |  |
+| J | Clothesline | Prints pegged on a sagging line with handwritten names. |  | built: `kids/ClotheslineKids` |  | keep |
 | K | Her colour | A large photo that tints as you pick a shade. |  |  |  |  |
 | L | Siblings | Brother and sister matching, two photos joined. |  |  |  |  |
 | M | Grows with her | The same outfit at 4 and at 6, let out at the seams. |  |  |  |  |
@@ -970,7 +971,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | C | Choose your fit | Slim, regular or relaxed shown as simple shapes with the ease. |  |  |  |  |
 | D | Men's index | A typeset index of every piece with time and occasion. | yes | built: `men/IndexMen` |  | keep |
 | E | The edit | Four pieces in alternating photo rows. |  | built: `men/EditMen` |  | keep |
-| F | Shirt details | Collar, cuff, pocket and fit chips build a shirt to send. |  |  |  |  |
+| F | Shirt details | Collar, cuff, pocket and fit chips build a shirt to send. |  | built: `men/ShirtMen` |  | keep |
 | G | The details | Six numbered details you cannot see. | yes |  |  |  |
 | H | Fabric notes | Which cloth for what, in ruled rows. | yes |  |  |  |
 | I | Monogram | Type his initials; they appear on a shirt cuff. |  |  |  |  |
@@ -985,7 +986,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | R | Hero | Dark. Full-bleed photo: cut for you, not for a size. |  |  |  |  |
 | S | Kurta and jacket | Pick colours for each; a simple drawing shows the pair. |  |  |  |  |
 | T | Ask the tailor | An interview with the owner, Q and A. |  |  |  |  |
-| U | East or West | Two panels, ethnic and western; tap one to widen it. |  |  |  |  |
+| U | East or West | Two panels, ethnic and western; tap one to widen it. |  | built: `men/EastWestMen` |  | keep |
 | V | How it works | Measure, cut, trial, finish on a dashed thread. |  |  |  |  |
 | W | Trouser break | No break, half break or full break drawn simply. |  |  |  |  |
 | X | Father and son | Dark. Matching outfits in two arched photos. |  |  |  |  |
@@ -1014,7 +1015,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | J | How heavy? | Dark. Light to bridal on a segmented control; the texture gets denser. | yes |  |  |  |
 | K | Plain to precious | The same blouse plain and with handwork; switch between them. |  | built: `handwork/PlainHandwork` |  | keep |
 | L | From the adda | Dark split: a texture full-bleed beside the karigar's words. | yes |  |  |  |
-| M | Texture study | One large and two small close-ups. | yes |  |  |  |
+| M | Texture study | One large and two small close-ups. | yes | built: `handwork/TextureHandwork` |  | keep |
 | N | What it is made of | Kundan, pearls, crystals and zari in a ruled list. | yes |  |  |  |
 | O | Look closer | Dark. A magnifying lens moves to the neckline, sleeve or border. |  |  |  |  |
 | P | Sampler | A cross-stitch sampler cloth with every kind of work. |  |  |  |  |
@@ -1023,7 +1024,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | S | Border strips | Each work as a long saree border with its time. |  |  |  |  |
 | T | Caring for handwork | Six numbered care notes. | yes | built: `handwork/CareHandwork` |  | keep |
 | U | Names in thread | Dark. Type your names and date; they appear stitched on a blouse back. | yes |  |  |  |
-| V | How it is done | Sketch, trace, frame, stitch, finish on a dashed thread. |  |  |  |  |
+| V | How it is done | Sketch, trace, frame, stitch, finish on a dashed thread. |  | built: `handwork/HowHandwork` |  | keep |
 | W | Wedding story motifs | Varmala, doli, names and more as a ruled list. | yes |  |  |  |
 | X | Mix two works | Pick two kinds of work and ask about the combination. |  |  |  |  |
 | Y | Send the design | Dashed photo card and what to send for a quick quote. | yes |  |  |  |
@@ -1050,7 +1051,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | I | Saree lengths | 5.5 m, 6.3 m or 9 yards: body, pallu and blouse piece as a bar. | yes | built: `saree/LengthsSaree` |  | keep |
 | J | Wedding week | Four ruled columns, one per function, with what each saree needs. | yes |  |  |  |
 | K | Finish the pallu | Kuchu, fringe, lace or plain; the pallu end changes. | yes |  |  |  |
-| L | Need it tomorrow? | Brand colour. Urgent asks with their real express time. | yes |  |  |  |
+| L | Need it tomorrow? | Brand colour. Urgent asks with their real express time. | yes | built: `saree/ExpressSaree` |  | keep |
 | M | What does it need? | Tick services for your saree and send them in one message. | yes | built: `saree/NeedsSaree` |  | keep |
 | N | Ready to drape | Dark. A full-bleed pallu photo with one clear promise. |  |  |  |  |
 | O | Draping appointment | Dark. Pick a day and time to come in and be draped. |  |  |  |  |
@@ -1060,7 +1061,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | S | Ask in one line | Large "I need…" lines, each a WhatsApp ask. | yes | built: `saree/AskSaree` |  | keep |
 | T | Saree doctor | Pick the problem; we explain the fix. | yes | built: `saree/DoctorSaree` |  | keep |
 | U | Saree rack | Sarees hanging from a rod with their names down the side. | yes |  |  |  |
-| V | Drop off, pick up | Three steps with their real opening hours. |  |  |  |  |
+| V | Drop off, pick up | Three steps with their real opening hours. |  | built: `saree/DropSaree` |  | keep |
 | W | Customer words | Their own Google reviews, saree ones first. | yes |  |  |  |
 | X | Many sarees | A counter and services for each; sends one message. | yes |  |  |  |
 | Y | Saree + blouse | One drop-off: blouse stitched and saree finished together. | yes |  |  |  |
@@ -1076,7 +1077,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Letter board | A black felt peg board with every alteration and price. | yes |  |  |  |
+| A | Letter board | A black felt peg board with every alteration and price. | yes | built: `alterations/BoardAlterations` |  | keep |
 | B | Printed price list | Two columns grouped by garment with dotted leaders. | yes | built: `alterations/RateAlterations` |  | keep |
 | C | Price estimate | Tick fixes; a live total and a send button. | yes | built: `alterations/EstimateAlterations` |  | keep |
 | D | Receipt | A thermal receipt with every rate and the express charge. | yes | built: `alterations/ReceiptAlterations` |  | keep |
@@ -1090,7 +1091,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | L | Is it fixable? | Accordion of common problems with prices in the row. | yes |  |  |  |
 | M | Bring these | Four numbered things to bring, beside a short intro. | yes |  |  |  |
 | N | Four common fixes | Alternating photo rows with what, how long and the price. |  |  |  |  |
-| O | Alter or new? | Dark. One, two or three fixes vs stitching a new blouse. | yes |  |  |  |
+| O | Alter or new? | Dark. One, two or three fixes vs stitching a new blouse. | yes | built: `alterations/OrNewAlterations` |  | keep |
 | P | Price ladder | Every fix as a bar, cheapest to dearest. | yes | built: `alterations/LadderAlterations` |  | keep |
 | Q | Quote builder | Garment and problem chips write a WhatsApp message. | yes |  |  |  |
 | R | Normal or express | Switch to see express timings and the real express charge. | yes |  |  |  |
@@ -1196,12 +1197,12 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | G | Gift tag | A kraft tag with a handwritten to and from. | yes |  |  |  |
 | H | What it buys | Four amounts, each with what it actually covers at their prices. | yes | built: `gift/BuysGift` |  | keep |
 | I | Folding card | A card that opens to show your message. | yes |  |  |  |
-| J | Gift a service | Services at their real prices as a ruled list. | yes |  |  |  |
+| J | Gift a service | Services at their real prices as a ruled list. | yes | built: `gift/ServiceGift` |  | keep |
 | K | E-voucher | Dark. A phone voucher with a QR-style code. | yes |  |  |  |
 | L | Wax-sealed letter | A handwritten letter with a wax seal of their initials. | yes |  |  |  |
 | M | Plastic card | A gift card with a chip that turns over on tap. | yes |  | 3D turn (check "no 3D"); 3D card flip | skip |
 | N | How it works | Three numbered steps in ruled rows. | yes |  |  |  |
-| O | Bulk gifting | A counter for team or wedding return gifts, with the total. | yes |  |  |  |
+| O | Bulk gifting | A counter for team or wedding return gifts, with the total. | yes | built: `gift/BulkGift` |  | keep |
 | P | WhatsApp or printed | Split screen: sent in minutes, or a printed card to collect. | yes |  |  |  |
 | Q | Questions | Gift voucher questions with short answers. | yes |  |  |  |
 | R | Ribbon banner | Brand colour with a gold ribbon and bow. | yes |  |  |  |
@@ -1234,7 +1235,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | H | Student work | Alternating photo rows with student quotes. |  |  |  |  |
 | I | Your teacher | The owner as teacher, with years and a quote. |  |  |  |  |
 | J | Enrol | Name, age, class and batch build a WhatsApp enrolment. | yes | built: `classes/EnrolClasses` |  | keep |
-| K | Workshop poster | Brand colour. A bold one-day workshop poster. | yes |  |  |  |
+| K | Workshop poster | Brand colour. A bold one-day workshop poster. | yes | built: `classes/PosterClasses` |  | keep |
 | L | Which class? | Three questions suggest a class. | yes |  |  |  |
 | M | What you will make | A piece for each week of the chosen class. |  |  |  |  |
 | N | Upcoming batches | The next four start dates with seats open. | yes | built: `classes/BatchesClasses` |  | keep |
@@ -1248,7 +1249,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | V | By the end | Six numbered outcomes. | yes |  |  |  |
 | W | Learn together | A sentence with an inline group counter. | yes |  |  |  |
 | X | Add to calendar | A real Google Calendar link for the next class. | yes | built: `classes/CalendarClasses` |  | keep |
-| Y | Glossary | A typeset glossary with pronunciation. | yes |  |  |  |
+| Y | Glossary | A typeset glossary with pronunciation. | yes | built: `classes/GlossaryClasses` |  | keep |
 | Z | Masterclass | Dark luxe. A bridal maggam masterclass over three weekends. | yes |  |  |  |
 
 ### 30 team
@@ -1269,7 +1270,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | F | Years between us | One huge combined number beside a dotted list of years. | yes | built: `team/YearsTeam` |  | keep |
 | G | By craft | A typeset index: each craft and who to ask for it. | yes | built: `team/CraftTeam` |  | keep |
 | H | A day in the workroom | Dark. The day from 7:30 to 8:00 as a ruled timeline. | yes |  |  |  |
-| I | Signatures | Each first name signed above a rule, with role in small caps. | yes |  |  |  |
+| I | Signatures | Each first name signed above a rule, with role in small caps. | yes | built: `team/SignaturesTeam` |  | keep |
 | J | One at a time | A large portrait with their own words; arrows step through. |  | built: `team/OneTeam` |  | keep |
 | K | Where we work | The cutting table, the machines and the adda, with who works at each. |  |  |  |  |
 | L | Tools of the trade | Dark luxe. The tool each person reaches for first. | yes |  |  |  |
@@ -1278,7 +1279,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | O | By the numbers | Dark. People, years, garments and rating in a ruled row. | yes |  |  |  |
 | P | Magazine cover | A full-bleed team photo as a cover with cover lines. |  |  |  |  |
 | Q | Who to ask | Pick what you need; the right person appears with a message button. |  |  |  |  |
-| R | Pull quote | Dark. One person's words over their portrait. |  |  |  |  |
+| R | Pull quote | Dark. One person's words over their portrait. |  | built: `team/QuoteTeam` |  | keep |
 | S | Thank-you note | A letter from the team, signed by everyone. | yes |  |  |  |
 | T | In conversation | The founder interviewed, answers drawn from her own story. | yes |  |  |  |
 | U | Group photo | A wide team photo with a from-left caption. |  |  |  |  |
@@ -1303,7 +1304,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | C | Browse by topic | Topics as large type; the list filters below. | yes |  |  |  |
 | D | Article page | A full reading page: headline, byline, drop cap and pull quote. |  |  |  |  |
 | E | Ten rules | Ten numbered workroom rules, each with why. | yes |  |  |  |
-| F | The long read | Dark. One story full-bleed over its photo. |  |  |  |  |
+| F | The long read | Dark. One story full-bleed over its photo. |  | built: `posts/LongPosts` |  | keep |
 | G | Ask the tailor | Customer questions with the boutique's answers. | yes |  |  |  |
 | H | Word of the week | Brand colour. One tailoring word set huge; arrows step through. | yes |  |  |  |
 | I | How to wear | One silk saree, three ways: blouse, jewellery and drape for each. |  |  |  |  |
@@ -1315,7 +1316,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | O | Tip of the day | One tip set large with its reason; arrows step through. | yes | built: `posts/TipPosts` |  | keep |
 | P | Contents | A two-column contents page grouped by topic. | yes | built: `posts/ContentsPosts` |  | keep |
 | Q | Search | Type to filter articles; asks on WhatsApp if nothing matches. | yes | built: `posts/SearchPosts` |  | keep |
-| R | Quick tips | A rail of ten-second tip cards. | yes |  |  |  |
+| R | Quick tips | A rail of ten-second tip cards. | yes | built: `posts/QuickPosts` |  | keep |
 | S | Which neck suits you? | Pick a face shape; the neck to try and to skip. | yes |  |  |  |
 | T | Reading progress | A long read in a scroll frame with a progress line and minutes left. | yes |  |  |  |
 | U | The column | The founder as columnist, with her latest pieces. |  |  |  |  |
@@ -1344,7 +1345,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | G | Open now | Reads the real opening hours: open now, or when we reply. | yes |  |  |  |
 | H | Side tab | A vertical tab on the right edge. | yes |  |  |  |
 | I | Gold ring | Dark page. A round button with a double gold ring. | yes |  |  |  |
-| J | Scroll ring | A progress ring around the button fills as you scroll. | yes |  |  |  |
+| J | Scroll ring | A progress ring around the button fills as you scroll. | yes | built: `contact/RingWhatsApp` |  | keep |
 | K | Tooltip | A dismissable bubble with a helpful nudge. | yes |  |  |  |
 | L | Contact dock | One button opens WhatsApp, call and directions. | yes | built: `contact/DockWhatsApp` |  | keep |
 | M | Book a fitting | Pick a day; the message books it. | yes |  |  |  |
@@ -1357,7 +1358,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | T | Send a photo | Saw a design you love? Send the photo. | yes |  |  |  |
 | U | Top banner | A sticky top strip with open-now status. | yes |  |  |  |
 | V | Who to talk to | Designer or front desk, each a chat. | yes |  |  |  |
-| W | Review + chat | A Google review above the chat button. | yes |  |  |  |
+| W | Review + chat | A Google review above the chat button. | yes | built: `contact/ReviewWhatsApp` |  | keep |
 | X | Price + ask | Blouses from ₹, joined to an Ask us button. | yes | built: `contact/PriceWhatsApp` |  | keep |
 | Y | Glass pill | A frosted-glass pill with a live dot. | yes |  | frosted glass (contrast over photos) |  |
 | Z | Personal stylist | Dark luxe concierge card from the owner. | yes |  |  |  |
@@ -1377,6 +1378,6 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | C | Split words | "Stitched / to fit." in giant type around a pill-shaped photo. |  | built: `hero/WordsHero` |  | keep |
 | D | Full bleed | A full-screen photo washed in the brand glow, title bottom-left. |  | built: `hero/FullBleedHero` |  | keep |
 | E | Marquee | Services drift behind the name in giant faint type. |  |  | loops | skip |
-| F | Triptych | Three arches of work above the headline. |  |  |  |  |
+| F | Triptych | Three arches of work above the headline. |  |  | near-duplicate of `hero/DoorsHero` | skip |
 | G | Founder | The owner in an arch beside her own words and signature. |  | built: `hero/FounderHero` |  | keep |
 | H | Minimal | Just the name, the tagline and a scroll cue over the glow. |  | built: `hero/MinimalHero` |  | keep |
