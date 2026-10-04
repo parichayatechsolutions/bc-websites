@@ -93,12 +93,19 @@ How they were picked:
 
 All three waves are built: the shortlist's 50 versions are in `src/sections/`. What's left is `later` (speciality sections) and anything you promote from the blank rows.
 
+| Wave | What | Versions | Count |
+|---|---|---|---|
+| D | `later` picks that need no new data (**built 2026-10-04**) | hero P · cine B, H · blouse A, C · measure A, B · saree M · men D · emb A | 10 |
+| E | `later` picks that need new data-sheet fields first | fabric A, W · look A, Q · rental A, E · kids A, B · men B · emb K · saree A · alter B, C · gift A, H · class A, J · team A, B · blog A | 20 |
+
+The wedding planner (wed A, Q) waits: its task dates would be wedding timelines in the boutique's name ("order the bridal blouse 8 weeks before") that the shop never set. It needs either the boutique's own lead times in the data sheet or copy the owner approves.
+
 ## Sections
 
 | # | Section | Group | Versions | Built | Close | Data | To build |
 |---|---|---|---|---|---|---|---|
 | 00 | [Navigation](#00-nav) | Site chrome | 26 | 4 | 1 | existing |  |
-| 01 | [Hero](#01-hero) | Page opener | 26 | 4 | 3 | existing |  |
+| 01 | [Hero](#01-hero) | Page opener | 26 | 5 | 3 | existing |  |
 | 02 | [Gallery](#02-gallery) | Their work | 26 | 5 | 2 | existing |  |
 | 03 | [Testimonials](#03-reviews) | Trust | 26 | 4 | 1 | existing |  |
 | 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 4 |  | existing |  |
@@ -114,14 +121,14 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | 14 | [Location map](#14-map) | Bookings | 26 | 3 | 1 | existing |  |
 | 15 | [Footer](#15-footer) | Site chrome | 26 | 5 |  | existing |  |
 | 16 | [Fabric swatches](#16-fabric) | Speciality | 26 |  |  | new |  |
-| 17 | [Blouse design picker](#17-blouse) | Speciality | 26 |  |  | none |  |
-| 18 | [Measurement guide](#18-measure) | Speciality | 26 |  |  | none |  |
+| 17 | [Blouse design picker](#17-blouse) | Speciality | 26 | 2 |  | none |  |
+| 18 | [Measurement guide](#18-measure) | Speciality | 26 | 2 |  | none |  |
 | 19 | [Lookbook](#19-look) | Speciality | 26 |  |  | new |  |
 | 20 | [Rental collection](#20-rental) | Speciality | 26 |  |  | new |  |
 | 21 | [Kids wear corner](#21-kids) | Speciality | 26 |  |  | new |  |
-| 22 | [Men's tailoring](#22-men) | Speciality | 26 |  |  | new |  |
-| 23 | [Embroidery types](#23-emb) | Speciality | 26 |  |  | new |  |
-| 24 | [Saree services](#24-saree) | Speciality | 26 |  |  | new |  |
+| 22 | [Men's tailoring](#22-men) | Speciality | 26 | 1 |  | new |  |
+| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 1 |  | new |  |
+| 24 | [Saree services](#24-saree) | Speciality | 26 | 1 |  | new |  |
 | 25 | [Alterations price list](#25-alter) | Speciality | 26 |  |  | new |  |
 | 26 | [Trial & delivery tracker](#26-track) | Speciality | 26 |  |  | backend |  |
 | 27 | [Wedding planner](#27-wed) | Speciality | 26 |  |  | none |  |
@@ -130,7 +137,7 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | 30 | [Team / tailors](#30-team) | Speciality | 26 |  |  | new |  |
 | 31 | [Blog / style tips](#31-blog) | Speciality | 26 |  |  | new |  |
 | 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 2 |  | existing |  |
-| 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 |  |  | existing |  |
+| 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 | 2 |  | existing |  |
 
 ### 00 nav
 
@@ -194,7 +201,7 @@ Lab motions: Letters rise, Letters blur in, Numbers count up, Photo settles, Pho
 | M | Rangoli ring | Round photo inside a thread ring with the name and year written around it. |  |  |  |  |
 | N | Certificate | No photo. A framed card with the name, local name and a rating seal, like a guild certificate. | yes |  |  |  |
 | O | Filmstrip | Full photo with a strip of thumbnails; tapping one swaps the main picture. |  |  |  |  |
-| P | Chat opener | Name beside a WhatsApp-style chat: quick replies (bridal blouse, lehenga, alterations) write the message for them. |  |  |  | later |
+| P | Chat opener | Name beside a WhatsApp-style chat: quick replies (bridal blouse, lehenga, alterations) write the message for them. |  | built: `hero/ChatHero` |  | keep |
 | Q | Diagonal cut | Brand colour with the photo sliced in on a diagonal; name stacked word by word. |  |  |  |  |
 | R | Jaali screen | Photo seen through a carved lattice in the brand colour; name on an arch-topped panel. |  |  |  |  |
 | S | Bento | Rounded tiles: name, big photo, rating, garments delivered. Modern and scannable. |  |  | rounded tiles (shape rule) | skip |
@@ -771,9 +778,9 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Builder | Neck, back and sleeve chips beside a live front and back diagram; sends the design on WhatsApp. | yes |  |  | later |
+| A | Builder | Neck, back and sleeve chips beside a live front and back diagram; sends the design on WhatsApp. | yes | built: `blouse/BuilderBlouse` |  | keep |
 | B | Four steps | Neck, back, sleeves, extras one step at a time with a progress bar. | yes |  |  |  |
-| C | Neck gallery | Every neck as a diagram card; back and sleeves in a bar underneath. | yes |  |  | later |
+| C | Neck gallery | Every neck as a diagram card; back and sleeves in a bar underneath. | yes | built: `blouse/NecksBlouse` |  | keep |
 | D | Design room | Dark. Large diagram in the middle with a front / back switch, options either side. | yes |  |  |  |
 | E | Part tabs | Underlined tabs for each part with option tiles; summary card beside. | yes |  |  |  |
 | F | Order slip | A ruled tailor's order slip with tick boxes, torn off and sent. | yes |  |  |  |
@@ -808,8 +815,8 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Guide + diagram | List of ten measurements; the blouse drawing shows where the tape goes and how to take it. | yes |  |  | later |
-| B | Fill in | Inputs for every measurement beside the drawing; units switch; sends on WhatsApp. | yes |  |  | later |
+| A | Guide + diagram | List of ten measurements; the blouse drawing shows where the tape goes and how to take it. | yes | built: `measure/GuideMeasure` |  | keep |
+| B | Fill in | Inputs for every measurement beside the drawing; units switch; sends on WhatsApp. | yes | built: `measure/FormMeasure` |  | keep |
 | C | Size chart | A general size chart in inches or centimetres; tap a row to highlight it. | yes |  |  |  |
 | D | Tape measure | Dark. A gold tape with each measurement marked on it; tap one to see how. | yes |  |  |  |
 | E | One at a time | Step through each measurement with its drawing and an input. | yes |  |  |  |
@@ -959,7 +966,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | A | Collar guide | Spread, button-down, mandarin and cutaway drawn as line art; pick one. |  |  |  |  |
 | B | Groom's wardrobe | Haldi, sangeet, wedding and reception, a look for each. |  |  |  | later |
 | C | Choose your fit | Slim, regular or relaxed shown as simple shapes with the ease. |  |  |  |  |
-| D | Men's index | A typeset index of every piece with time and occasion. | yes |  |  | later |
+| D | Men's index | A typeset index of every piece with time and occasion. | yes | built: `men/IndexMen` |  | keep |
 | E | The edit | Four pieces in alternating photo rows. |  |  |  |  |
 | F | Shirt details | Collar, cuff, pocket and fit chips build a shirt to send. |  |  |  |  |
 | G | The details | Six numbered details you cannot see. | yes |  |  |  |
@@ -993,7 +1000,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Eight kinds of handwork | Alternating texture and text rows: what each work is, how long, best for. | yes |  |  | later |
+| A | Eight kinds of handwork | Alternating texture and text rows: what each work is, how long, best for. | yes | built: `handwork/RowsHandwork` |  | keep |
 | B | How long it takes | Day bars for each work; tap to highlight. |  |  |  |  |
 | C | Which work for you? | Two questions (occasion, time) suggest a work. |  |  |  |  |
 | D | On the adda | The work stretched on a wooden adda frame; chips switch the stitch. |  |  |  |  |
@@ -1042,7 +1049,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | J | Wedding week | Four ruled columns, one per function, with what each saree needs. | yes |  |  |  |
 | K | Finish the pallu | Kuchu, fringe, lace or plain; the pallu end changes. | yes |  |  |  |
 | L | Need it tomorrow? | Brand colour. Urgent asks with their real express time. | yes |  |  |  |
-| M | What does it need? | Tick services for your saree and send them in one message. | yes |  |  | later |
+| M | What does it need? | Tick services for your saree and send them in one message. | yes | built: `saree/NeedsSaree` |  | keep |
 | N | Ready to drape | Dark. A full-bleed pallu photo with one clear promise. |  |  |  |  |
 | O | Draping appointment | Dark. Pick a day and time to come in and be draped. |  |  |  |  |
 | P | Season by season | Silk care for monsoon, after the rains, wedding season and summer. | yes |  |  |  |
@@ -1364,10 +1371,10 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Arch | Headline left, gold-framed arch photo right, live open-now chip. |  |  |  |  |
-| B | Monument | The boutique name huge and centred over a faded arch. |  |  |  | later |
+| B | Monument | The boutique name huge and centred over a faded arch. |  | built: `hero/MonumentHero` |  | keep |
 | C | Split words | "Stitched / to fit." in giant type around a pill-shaped photo. |  |  |  |  |
 | D | Full bleed | A full-screen photo washed in the brand glow, title bottom-left. |  |  |  |  |
 | E | Marquee | Services drift behind the name in giant faint type. |  |  |  |  |
 | F | Triptych | Three arches of work above the headline. |  |  |  |  |
 | G | Founder | The owner in an arch beside her own words and signature. |  |  |  |  |
-| H | Minimal | Just the name, the tagline and a scroll cue over the glow. |  |  |  | later |
+| H | Minimal | Just the name, the tagline and a scroll cue over the glow. |  | built: `hero/MinimalHero` |  | keep |

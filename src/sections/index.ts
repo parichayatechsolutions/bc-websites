@@ -33,6 +33,9 @@ export { default as LedgerHero } from './hero/LedgerHero' // Name across the ful
 export { default as MastheadHero } from './hero/MastheadHero' // No photo: the name as big as it fits on the brand colour, facts under a rule (not pinned)
 export { default as SareeHero } from './hero/SareeHero' // Photo on top, zari border, name on a brand-colour band like a pallu (not pinned)
 export { default as MosaicHero } from './hero/MosaicHero' // Six work photos in a grid with the name in a dark tile; shows range at once (not pinned)
+export { default as ChatHero } from './hero/ChatHero' // Name beside a WhatsApp-style chat; quick replies write her first message (not pinned)
+export { default as MonumentHero } from './hero/MonumentHero' // Dark: work in a tall arch, the name large beside it, gold rule (overlay-ready, not pinned)
+export { default as MinimalHero } from './hero/MinimalHero' // Dark: just the name centred, tagline, one button, scroll cue; no photos (overlay-ready)
 export { default as PageHeader } from './header/PageHeader' // Inner-page title and intro from the page definition, no image
 
 // Owner's story
@@ -116,3 +119,12 @@ export { default as CallWhatsAppBar } from './contact/CallWhatsAppBar' // Phones
 
 // Wrappers
 export { default as StitchLine } from '../motion/StitchLine' // Running stitch sewn down the left of the sections it wraps
+
+// Speciality (each shows only when their services say they do this work)
+export { default as BuilderBlouse } from './blouse/BuilderBlouse' // Pick neck, back and sleeves; live front and back drawings; send the design on WhatsApp
+export { default as NecksBlouse } from './blouse/NecksBlouse' // Every neckline as a drawn card with what it suits, then back and sleeves
+export { default as GuideMeasure } from './measure/GuideMeasure' // The ten blouse measurements; the drawing shows where the tape goes
+export { default as FormMeasure } from './measure/FormMeasure' // Fill in measurements (inches or cm) and send them on WhatsApp
+export { default as NeedsSaree } from './saree/NeedsSaree' // Tick the saree work you need (their own saree services) and send it in one message
+export { default as IndexMen } from './men/IndexMen' // Every men's piece as a ruled index row with a WhatsApp ask
+export { default as RowsHandwork } from './handwork/RowsHandwork' // The handwork they list, each explained: what it is and what it suits
