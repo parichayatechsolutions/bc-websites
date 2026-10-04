@@ -568,3 +568,15 @@ export { default as EssayPosts } from './posts/EssayPosts' // Style notes with p
 export { default as LeadPosts } from './posts/LeadPosts' // The newest note as a large lead, the next three in ruled columns
 export { default as StartPosts } from './posts/StartPosts' // "Start here": their first three notes kept in view beside the rest
 export { default as ProgressPosts } from './posts/ProgressPosts' // The newest note as a long read with a sticky progress line and minutes left
+
+// Wedding planner (undated; each shows only for a boutique that does bridal work)
+export { default as CardWedding } from './wedding/CardWedding' // The wedding wardrobe as an invitation: each function and what the bride often wears
+export { default as CountWedding } from './wedding/CountWedding' // Steppers per family member; the total outfits set huge, sent on WhatsApp
+export { default as FamilyWedding } from './wedding/FamilyWedding' // The bride with the family in a ring around her; tap one for what suits them
+export { default as ColoursWedding } from './wedding/ColoursWedding' // A palette strip for each function, in order
+export { default as BagWedding } from './wedding/BagWedding' // The wedding-day bag: a checklist of outfit savers to strike through
+export { default as GroupWedding } from './wedding/GroupWedding' // A drawn family WhatsApp group with the boutique in it; ask them to join
+export { default as SidesWedding } from './wedding/SidesWedding' // Bride’s side on paper, groom’s side on dark, from their services (needs a Men group)
+export { default as GuestWedding } from './wedding/GuestWedding' // Going as a guest: each relation and what usually suits, each an ask
+export { default as ReadyWedding } from './wedding/ReadyWedding' // How ready are you: an undated outfit checklist with a big percentage
+export { default as DateWedding } from './wedding/DateWedding' // Save the date: type names and date; a card fills in; start on the outfits
