@@ -7,6 +7,14 @@ import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import { rupees } from '../../app/text'
 import { describe, type IOption } from './blouseDrawing'
 
+/** Four classic combinations of neck, back and sleeves, with when each works: styling guidance, true of the cuts. */
+export const CLASSICS = [
+  { name: 'The everyday classic', neck: 'round', back: 'u', sleeve: 'elbow', note: 'Goes with any saree, from cotton to silk.' },
+  { name: 'The bridal back', neck: 'sweet', back: 'vb', sleeve: 'elbow', note: 'A soft front and a deep back for a tie or embroidery.' },
+  { name: 'Light for summer', neck: 'boat', back: 'win', sleeve: 'cap', note: 'Wide and airy, with a little coverage at the back.' },
+  { name: 'Clean and modern', neck: 'square', back: 'sq', sleeve: 'three', note: 'Straight lines that frame a necklace and back work.' },
+]
+
 export function useBlouse() {
   const { boutique } = useBoutique()
   const items = [...boutique.services.featured, ...boutique.services.groups.flatMap((g) => g.items)]

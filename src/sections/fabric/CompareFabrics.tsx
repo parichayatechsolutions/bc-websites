@@ -11,22 +11,7 @@ import { IconBrandWhatsapp } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
-import type { Fabric } from '../../types/boutique'
-
-// Weight, sheen, drape, each 1 (least) to 5 (most).
-const KINDS: { match: RegExp; scale: [number, number, number] }[] = [
-  { match: /banaras|brocade/i, scale: [4, 5, 2] },
-  { match: /velvet/i, scale: [5, 3, 2] },
-  { match: /silk|kanjiv|pattu|tussar|raw silk/i, scale: [3, 4, 3] },
-  { match: /georgette/i, scale: [2, 2, 5] },
-  { match: /chiffon/i, scale: [1, 2, 5] },
-  { match: /crepe/i, scale: [2, 2, 4] },
-  { match: /organza|tissue/i, scale: [1, 4, 1] },
-  { match: /net/i, scale: [1, 2, 3] },
-  { match: /linen/i, scale: [3, 1, 2] },
-  { match: /cotton|mul|khadi/i, scale: [3, 1, 2] },
-]
-const SCALES = ['Weight', 'Sheen', 'Drape']
+import { scaled, SCALES } from './fabricKinds'
 
 const PILL =
   'min-h-11 cursor-pointer rounded-full border border-ink/25 px-4 transition-[background-color,border-color,color] duration-200 ease-stitch hover:border-ink aria-pressed:border-primary-ink aria-pressed:bg-primary-ink aria-pressed:text-on-primary-ink'
@@ -43,10 +28,7 @@ function Dots({ n }: { n: number }) {
 
 export default function CompareFabrics() {
   const { boutique } = useBoutique()
-  const fabrics = (boutique.fabrics ?? [])
-    .map((f) => ({ fabric: f, scale: KINDS.find((k) => k.match.test(f.name))?.scale }))
-    .filter((f): f is { fabric: Fabric; scale: [number, number, number] } => Boolean(f.scale))
-    .slice(0, 8)
+  const fabrics = scaled(boutique.fabrics ?? []).slice(0, 8)
   const [picked, setPicked] = useState<[number, number]>([0, 1])
   if (fabrics.length < 2) return null
 
