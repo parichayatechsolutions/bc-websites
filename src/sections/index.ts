@@ -46,9 +46,26 @@ export { default as ListServices } from './services/ListServices' // The same li
 export { default as RatingReviews } from './reviews/RatingReviews' // Google rating with stars, three quotes, stats (dark)
 export { default as QuoteReviews } from './reviews/QuoteReviews' // One review set large, the rest beside it, rating as a plain line (light)
 
+// Trust (only facts from the boutique's data; each hides when the data is too thin)
+export { default as StatTrust } from './trust/StatTrust' // Band: rating, years, their numbers and delivery in a ruled row; numbers count up
+export { default as PromiseTrust } from './trust/PromiseTrust' // What a customer can count on (measure, delivery, handwork, payment, languages) beside the rating
+export { default as LineTrust } from './trust/LineTrust' // Band: one slim line of proof on paper, for just under the hero
+
+// Instagram (needs social.instagram; the posts are their work photos, linking to the profile)
+export { default as GridInstagram } from './instagram/GridInstagram' // Profile row with logo, handle and Follow, over a three-across grid
+export { default as StoriesInstagram } from './instagram/StoriesInstagram' // Ringed story circles from photo categories, then six pieces
+export { default as FeatureInstagram } from './instagram/FeatureInstagram' // One piece large with its caption and four beside it; fine with five photos
+
 // Contact
 export { default as WhatsAppForm } from './contact/WhatsAppForm' // Enquiry form that opens WhatsApp with the details written out
 export { default as StoreVisit } from './visit/StoreVisit' // Branches with address, hours, directions; WhatsApp and call
+export { default as MapVisit } from './visit/MapVisit' // Wide live map with the address card over its corner; buttons switch branches
+export { default as WaysVisit } from './visit/WaysVisit' // Three tappable cards (walk in, ask for the pin, call ahead) above the map
+export { default as ShopfrontVisit } from './visit/ShopfrontVisit' // Storefront photo in an arch beside the map: "this is us" (first branch; needs media.storefront)
+
+// Always within reach (place one in a design beside SiteShell, not in a page; not with a nav that has a phone dock)
+export { default as FloatingWhatsApp } from './contact/FloatingWhatsApp' // Round WhatsApp button in the bottom corner, after the hero
+export { default as CallWhatsAppBar } from './contact/CallWhatsAppBar' // Phones only: Call and WhatsApp halves across the bottom, after the hero
 
 // Wrappers
 export { default as StitchLine } from '../motion/StitchLine' // Running stitch sewn down the left of the sections it wraps

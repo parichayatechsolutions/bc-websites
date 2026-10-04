@@ -8,8 +8,9 @@
 //     wipe('[data-photo]', { trigger: root.current })
 //   })
 //
-// Selector strings inside `build` only match inside `scope`. Return a cleanup
-// function from `build` for anything GSAP doesn't revert by itself.
+// Selector strings inside `build` only match inside `scope`, and `build` is
+// skipped when the section rendered nothing. Return a cleanup function from
+// `build` for anything GSAP doesn't revert by itself.
 
 import type { RefObject } from 'react'
 import { gsap, MEDIA, useGSAP } from './gsap'
@@ -21,7 +22,9 @@ export function useMotion(
 ) {
   useGSAP(
     () => {
-      const mm = gsap.matchMedia(scope.current ?? undefined)
+      // A section that hid itself for lack of data has nothing to animate.
+      if (!scope.current) return
+      const mm = gsap.matchMedia(scope.current)
       mm.add({ motion: MEDIA.motion, desktop: MEDIA.desktop }, (context) => {
         const { motion, desktop } = context.conditions as { motion: boolean; desktop: boolean }
         if (!motion) return

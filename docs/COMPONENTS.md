@@ -87,7 +87,7 @@ How they were picked:
 
 | Wave | What | Versions | Count |
 |---|---|---|---|
-| A | Sections with no component yet that need no new data | trust A, G, Q · map A, F, U · ig A, F, H · wa A, D | 11 |
+| A | Sections with no component yet that need no new data (**built 2026-10-04**) | trust A, G, Q · map A, F, U · ig A, F, H · wa A, D | 11 |
 | B | Sections that need a new config field first (types, data sheet, parser, validator, sample-boutique), then their components | faq A, J, K · offer A, C, E · bridal A, D, W · alt A, C, M | 12 |
 | C | More versions of sections that already have components | hero D, E, F · gallery C, E, J, N · reviews D, F, S · contact C, D, E · services D, J, N · story B, E, F · process B, G, P · nav C, E, L · footer C, E | 27 |
 
@@ -106,12 +106,12 @@ Wave A first: it fills sections the library doesn't have at all and needs no dat
 | 06 | [Owner's story](#06-story) | About them | 26 |  | 1 | existing | 3 |
 | 07 | [Making process](#07-process) | About them | 26 |  | 1 | existing | 3 |
 | 08 | [FAQ](#08-faq) | Trust | 26 |  |  | new | 3 |
-| 09 | [Instagram feed](#09-ig) | Their work | 26 |  |  | existing | 3 |
+| 09 | [Instagram feed](#09-ig) | Their work | 26 | 3 |  | existing |  |
 | 10 | [Bridal packages](#10-bridal) | What they make | 26 |  |  | new | 3 |
 | 11 | [Before / after alterations](#11-alt) | Their work | 26 |  |  | new | 3 |
 | 12 | [Offers banner](#12-offer) | Bookings | 26 |  |  | new | 3 |
-| 13 | [Trust badges](#13-trust) | Trust | 26 |  |  | existing | 3 |
-| 14 | [Location map](#14-map) | Bookings | 26 |  | 1 | existing | 3 |
+| 13 | [Trust badges](#13-trust) | Trust | 26 | 3 |  | existing |  |
+| 14 | [Location map](#14-map) | Bookings | 26 | 3 | 1 | existing |  |
 | 15 | [Footer](#15-footer) | Site chrome | 26 | 3 |  | existing | 2 |
 | 16 | [Fabric swatches](#16-fabric) | Speciality | 26 |  |  | new |  |
 | 17 | [Blouse design picker](#17-blouse) | Speciality | 26 |  |  | none |  |
@@ -129,7 +129,7 @@ Wave A first: it fills sections the library doesn't have at all and needs no dat
 | 29 | [Classes & workshops](#29-class) | Speciality | 26 |  |  | new |  |
 | 30 | [Team / tailors](#30-team) | Speciality | 26 |  |  | new |  |
 | 31 | [Blog / style tips](#31-blog) | Speciality | 26 |  |  | new |  |
-| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 |  |  | existing | 2 |
+| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 2 |  | existing |  |
 | 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 |  |  | existing |  |
 
 ### 00 nav
@@ -475,14 +475,14 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Profile + grid | Handle, follow button and a clean 3×3 grid. |  |  |  | build |
+| A | Profile + grid | Handle, follow button and a clean 3×3 grid. |  | built: `instagram/GridInstagram` |  | keep |
 | B | Phone profile | A phone showing their Instagram profile, beside the intro. |  |  |  |  |
 | C | Masonry | Mixed-height posts in columns. |  |  |  |  |
 | D | Dark grid | 3×3 grid on dark with a gold glow. |  |  |  |  |
 | E | Reels strip | Tall reel cards that scroll sideways. |  |  |  |  |
-| F | Stories + grid | Story highlight circles for Bridal, Blouses, Kids and more. |  |  |  | build |
+| F | Stories + grid | Story highlight circles for Bridal, Blouses, Kids and more. |  | built: `instagram/StoriesInstagram` |  | keep |
 | G | Post rail | Full post cards with like, comment and caption. |  |  |  |  |
-| H | Feature + four | One large post beside four smaller ones. |  |  |  | build |
+| H | Feature + four | One large post beside four smaller ones. |  | built: `instagram/FeatureInstagram` |  | keep |
 | I | Brand band | On brand colour; framed tiles and a zari base. |  |  |  |  |
 | J | Polaroids | Tilted instant photos with handwritten captions. |  |  |  |  |
 | K | Arch windows | Posts inside gold-edged temple arches. |  |  |  |  |
@@ -623,13 +623,13 @@ Lab motions: Wipe in, Stars fill in.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Stat strip | Four ruled badges: rating, years, garments, delivery. |  |  |  | build |
+| A | Stat strip | Four ruled badges: rating, years, garments, delivery. |  | built: `trust/StatTrust` |  | keep |
 | B | Seal rings | Round seals with gold double rings. |  |  |  |  |
 | C | Scrolling strip | Badges loop across a brand strip. Rule-breaking motion. |  |  | loops (forbidden) | skip |
 | D | Dark numbers | Dark luxe with large gold numbers. |  |  |  |  |
 | E | Bento | Big rating tile with four stat tiles. |  |  | rounded tiles (shape rule) | skip |
 | F | Rosettes | Pleated rosette awards with ribbons. |  |  |  |  |
-| G | Promise list | Six promises beside the rating. |  |  |  | build |
+| G | Promise list | Six promises beside the rating. |  | built: `trust/PromiseTrust` |  | keep |
 | H | Rating card | Big Google rating card with stat boxes. |  |  |  |  |
 | I | Zari band | Brand band of badges between zari borders. |  |  |  |  |
 | J | Stamps | Tilted ink stamps. |  |  |  |  |
@@ -639,7 +639,7 @@ Lab motions: Wipe in, Stars fill in.
 | N | Google badge | A single Google rating badge. |  |  |  |  |
 | O | Counters | Dark counter tiles; numbers count up. |  |  |  |  |
 | P | By the numbers | Newspaper-style numbers in columns. |  |  |  |  |
-| Q | Chip row | A row of trust chips, for under the hero. |  |  |  | build |
+| Q | Chip row | A row of trust chips, for under the hero. |  | built: `trust/LineTrust` |  | keep |
 | R | Zari frame | Stats inside a double gold frame. |  |  |  |  |
 | S | Sticky intro | Stats stay put while promises scroll. |  |  |  |  |
 | T | Atelier | Dark luxe promises with Roman numerals. |  |  |  |  |
@@ -660,12 +660,12 @@ Lab motions: Wipe in, Zari draws.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Map + card | Framed live map with a floating address card. |  |  |  | build |
+| A | Map + card | Framed live map with a floating address card. |  | built: `visit/MapVisit` |  | keep |
 | B | Split details | Address, hours and phone beside a framed map. |  | close: `visit/StoreVisit` |  | keep |
 | C | Full-bleed | Edge-to-edge map with a card over it. |  |  |  |  |
 | D | Dark map | Night-toned map with gold details. |  |  |  |  |
 | E | Arch window | The map seen through a temple arch. |  |  |  |  |
-| F | Three ways | Walk in, ask for the pin, or call, above the map. |  |  |  | build |
+| F | Three ways | Walk in, ask for the pin, or call, above the map. |  | built: `visit/WaysVisit` |  | keep |
 | G | Hours board | Open now and weekly hours beside a dark map. |  |  |  |  |
 | H | Round medallion | Circular map framed with a gold ring. |  |  |  |  |
 | I | Zari band | Brand band with a map strip between zari borders. |  |  |  |  |
@@ -680,7 +680,7 @@ Lab motions: Wipe in, Zari draws.
 | R | Visit pass | Ticket-style pass with the map as its stub. |  |  |  |  |
 | S | Sticky details | Details stay put beside a tall map. |  |  |  |  |
 | T | Atelier | Dark luxe framed map, by appointment. |  |  |  |  |
-| U | Shopfront | Shop photo beside the map: "This is us". |  |  |  | build |
+| U | Shopfront | Shop photo beside the map: "This is us". |  | built: `visit/ShopfrontVisit` |  | keep |
 | V | Your visit | What to expect on arrival, with the map. |  |  |  |  |
 | W | Owner invite | A handwritten invitation beside the map. |  |  |  |  |
 | X | Map + actions | Map with three action cards overlapping it. |  |  |  |  |
@@ -1326,10 +1326,10 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Classic | A round WhatsApp button with a soft pulse. | yes |  |  | build |
+| A | Classic | A round WhatsApp button with a soft pulse. | yes | built: `contact/FloatingWhatsApp` |  | keep |
 | B | Owner pill | Pill with the owner's initial, online dot and reply time. | yes |  |  |  |
 | C | Chat window | Tap to open a mini chat with quick replies. | yes |  |  |  |
-| D | Call \| WhatsApp bar | A full-width bottom bar for phones. | yes |  |  | build |
+| D | Call \| WhatsApp bar | A full-width bottom bar for phones. | yes | built: `contact/CallWhatsAppBar` |  | keep |
 | E | Owner card | A card with the owner, status and a big button. | yes |  |  |  |
 | F | What do you need? | Topic list; each opens a ready-written message. | yes |  |  |  |
 | G | Open now | Reads the real opening hours: open now, or when we reply. | yes |  |  |  |

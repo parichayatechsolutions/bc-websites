@@ -59,6 +59,7 @@ Each boutique's `Site.tsx` picks a font pair from `src/theme/fonts.ts`: a displa
 
 - `.wrap` is the content column. Its extra left padding is the lane the running stitch sews down, so don't put content in it.
 - `.section` sets the vertical rhythm between sections. Don't add ad-hoc top or bottom padding.
+- `.band` is for a slim strip between sections (a row of facts under the hero) that shouldn't take a whole section's rhythm. Same rule: no ad-hoc padding on top of it.
 - **Shapes:** the temple arch (`.arch`) for photos, pills for buttons, circles for icon buttons. `rounded-2xl` only for small data blocks (the price table). No other radii, no drop shadows on cards, no gradient washes.
 - Numbered markers only for real sequences (the making process). Lists that aren't ordered don't get numbers.
 - Photos keep their frame's aspect ratio (`aspect-*` or fixed height), so the layout never jumps while images load.
@@ -199,3 +200,6 @@ Settled questions. Don't reopen these without a new reason; add new decisions at
 | 2026-10-04 | GSAP stays the only animation library; Framer Motion (suggested in the lab's README) rejected | Everything `alive.js` does is possible in GSAP; a second library adds weight to every phone page and a second reduced-motion path |
 | 2026-10-04 | The lab's allowed motions become shared moves in `src/motion/moves.ts`; its fade-ups, loops, curtain intro, grain, shimmer, background glows, heading drift and photo tilt are dropped | One implementation per move keeps every section's timing alike; the dropped ones are already forbidden above |
 | 2026-10-04 | A dev-only component lab at `/lab` draws any library component for any boutique at phone and desktop width | Components are built and checked on their own, with bad data, before any design depends on them |
+| 2026-10-04 | Trust, promise and proof components say only what the boutique's data says; no built-in claims, and they hide when the data is too thin | The lab filled gaps with "trial fitting included", "price agreed first" and a 4.9 rating; on a real site those are promises nobody made, to the boutique's own customers |
+| 2026-10-04 | Pills only for things you can tap; a row of facts is plain icon-and-text | Pills are the button shape, so pill-shaped facts look tappable and aren't |
+| 2026-10-04 | Sticky WhatsApp controls are placed once in a design, beside `SiteShell`, rather than in a page | They belong on every page; putting them in each page's list invites one page without |
