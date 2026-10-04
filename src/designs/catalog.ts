@@ -63,6 +63,21 @@ export const DESIGNS: IDesignMeta[] = [
     name: 'Trousseau',
     description: 'For brides. One photograph, then their bridal packages, a piece to ask about, and a dark printed menu of what they make. Couture type and a quiet, expensive pace.',
   },
+  {
+    id: 'jaali',
+    name: 'Jaali',
+    description: 'Ceremonial and carved. Their work seen through a lattice of the brand colour, then diamonds of work, packages in temple arches and reviews in gold frames.',
+  },
+  {
+    id: 'journal',
+    name: 'Journal',
+    description: 'A light magazine. Prints of their work laid beside the name, the work in spreads by kind, a lookbook cover and their style notes. For a boutique with good photographs.',
+  },
+  {
+    id: 'noir',
+    name: 'Noir',
+    description: 'Evening couture, dark from the first screen: gold-thread arches to their work, a deck of prints, a printed bridal menu and whether they’re open right now.',
+  },
 ]
 
 export const DESIGN_IDS = DESIGNS.map((d) => d.id)
