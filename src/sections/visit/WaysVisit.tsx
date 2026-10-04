@@ -11,7 +11,8 @@
 import type { Icon } from '@tabler/icons-react'
 import { IconArrowRight, IconBrandWhatsapp, IconPhone, IconRoute } from '@tabler/icons-react'
 import { telLink, useBoutique, whatsappLink } from '../../app/BoutiqueContext'
-import { BranchPicker, MapFrame, midSentence, useBranch } from './mapShared'
+import { midSentence } from '../../app/text'
+import { BranchPicker, MapFrame, useBranch } from './mapShared'
 
 interface IWay {
   icon: Icon

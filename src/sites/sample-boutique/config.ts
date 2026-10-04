@@ -88,6 +88,46 @@ const config: BoutiqueConfig = {
     express: '48 hours, ₹300 extra',
     paymentModes: ['Cash', 'UPI', 'Card'],
   },
+  bridalPackages: [
+    {
+      name: 'Muhurtham',
+      price: 12000,
+      includes: [
+        'Muhurtham blouse with maggam work',
+        'matching saree fall and pico',
+        '2 trial fittings',
+      ],
+    },
+    {
+      name: 'Wedding week',
+      price: 28000,
+      includes: [
+        'Muhurtham blouse',
+        'reception blouse',
+        'half-saree for the haldi',
+        '3 trial fittings',
+        'delivery a week before the wedding',
+      ],
+    },
+    {
+      name: 'Trousseau',
+      price: 45000,
+      includes: [
+        'Five blouses for the wedding functions',
+        'one lehenga',
+        'alterations for a year',
+        'a fitting at home',
+      ],
+    },
+  ],
+  offers: [
+    {
+      title: 'Free saree fall and pico with every bridal blouse booked this season',
+      detail: 'For bridal blouse orders placed at the store',
+      until: '2027-01-31',
+      code: 'BRIDALFALL',
+    },
+  ],
   stats: [
     { value: '12+', label: 'Years stitching' },
     { value: '8,000+', label: 'Garments delivered' },
@@ -121,6 +161,20 @@ const config: BoutiqueConfig = {
       text: 'They understood exactly what I showed them on Instagram and made it better.',
     },
   ],
+  faq: [
+    {
+      question: 'Can I bring my own fabric?',
+      answer: 'Yes. Bring it to your first fitting and we\'ll tell you if it suits the design you want.',
+    },
+    {
+      question: 'Do you stitch from a photo?',
+      answer: 'Yes. Send us the photo on WhatsApp and we\'ll tell you what it will take and what it will cost.',
+    },
+    {
+      question: 'How many trials will I need?',
+      answer: 'Usually one. Bridal blouses get two, so the fit is right before the handwork starts.',
+    },
+  ],
   media: {
     hero: { type: 'image', src: 'work-bridal-01.jpg' },
     storefront: 'storefront.jpg',
@@ -139,6 +193,9 @@ const config: BoutiqueConfig = {
       'work-kids-01.jpg',
     ],
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
+    alterations: [
+      { before: 'before-01.jpg', after: 'after-01.jpg' },
+    ],
     captions: {
       'work-bridal-01.jpg': 'Bridal blouse, aari and maggam, 14 days',
       'work-bridal-02.jpg': 'Reception lehenga, zardosi border, 21 days',
@@ -150,6 +207,7 @@ const config: BoutiqueConfig = {
       'work-lehenga-02.jpg': 'Reception lehenga, can-can volume, 16 days',
       'work-saree-01.jpg': 'Saree pre-pleating and fall stitching, 2 days',
       'work-kids-01.jpg': 'Pattu langa, zari border, 7 days',
+      'after-01.jpg': 'Blouse taken in at the waist and sleeves shortened, 2 days',
     },
   },
   permissions: { showOwnerPhoto: true, showPrices: true },

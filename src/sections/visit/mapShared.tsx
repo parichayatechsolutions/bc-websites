@@ -16,9 +16,6 @@ export function mapEmbedUrl(branch: Branch): string {
   return `https://maps.google.com/maps?q=${encodeURIComponent(place)}&z=15&output=embed`
 }
 
-/** "Opposite City Bus Stand" → "opposite City Bus Stand", to sit mid-sentence. */
-export const midSentence = (text: string) => text.charAt(0).toLowerCase() + text.slice(1)
-
 /** The live map, filling its frame. Give the frame a fixed aspect ratio. */
 export function MapFrame({ branch }: { branch: Branch }) {
   return (

@@ -14,11 +14,12 @@
 import { useRef } from 'react'
 import { IconBrandWhatsapp, IconDirections } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
+import { midSentence } from '../../app/text'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
 import { settle, wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
-import { MapFrame, midSentence } from './mapShared'
+import { MapFrame } from './mapShared'
 
 export default function ShopfrontVisit() {
   const { boutique } = useBoutique()

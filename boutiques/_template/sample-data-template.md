@@ -143,6 +143,33 @@ _Tick with `[x]`. Add anything missing under "Others"._
 - Express delivery time and extra charge:
 - Payment modes (cash / UPI / card):
 
+## 6b. Bridal packages (optional)
+
+_Only if they sell bridal packages. One block per package; copy the block for more._
+
+### Package 1
+
+- Package name (e.g. Signature bridal):
+- Starting price (₹):
+- What's included (separate with commas, e.g. muhurtham blouse, reception blouse, 2 trials):
+
+### Package 2
+
+- Package name:
+- Starting price (₹):
+- What's included:
+
+## 6c. Current offer (optional)
+
+_Only a real offer the owner is running now. The website hides it the day after the last day._
+
+### Offer 1
+
+- Offer (one line, e.g. 10% off bridal blouses booked before Diwali):
+- Conditions (optional):
+- Last day (e.g. 15 Nov 2026):
+- Code to show at the counter (optional):
+
 ## 7. Numbers to show on the website
 
 _Only what the owner is comfortable sharing publicly._
@@ -161,6 +188,17 @@ _Copy 3–5 good reviews from Google or Instagram. Use the customer's first name
 3. Name:  | Review:
 4. Name:  | Review:
 5. Name:  | Review:
+
+## 8b. Questions customers ask (optional)
+
+_The questions people ask most, with the owner's answers, in their words. Skip prices,
+delivery time and payment: the website answers those from section 6._
+
+1. Question:  | Answer:
+2. Question:  | Answer:
+3. Question:  | Answer:
+4. Question:  | Answer:
+5. Question:  | Answer:
 
 ## 9. Brand, logo and photos
 
@@ -195,6 +233,7 @@ _Copy 3–5 good reviews from Google or Instagram. Use the customer's first name
 | `team-at-work.jpg` | Tailors cutting, stitching, measuring | |
 | `work-01.jpg` … `work-10.jpg` | Finished garments: best blouses, lehengas, bridal work | ★ at least 5 |
 | `closeup-01.jpg` … | Close-ups of embroidery, stitching detail, fabrics | |
+| `before-01.jpg` + `after-01.jpg` … | The same garment before and after an alteration, same angle and light (only if they do alterations) | |
 | `video-01.mp4` … | Short 5–10 sec clips: stitching, fabric flowing, store walk-through | |
 
 - Can we also use photos from their Instagram? (yes / no):
@@ -218,6 +257,8 @@ them: `work-bridal-01.jpg`, `work-blouse-02.jpg`, `work-lehenga-01.jpg`,
 - work-lehenga-02.jpg:
 - work-saree-01.jpg:
 - work-kids-01.jpg:
+
+_Before and after photos can have a note too: `- after-01.jpg: Blouse taken in at the waist, 2 days`._
 
 ## 10. Permissions
 

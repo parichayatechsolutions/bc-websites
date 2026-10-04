@@ -39,6 +39,36 @@ export interface Stat {
   label: string
 }
 
+export interface Faq {
+  question: string
+  answer: string
+}
+
+/** A real offer the boutique is running. Hidden on the site after `until`. */
+export interface Offer {
+  /** One line: "10% off bridal blouses booked before Diwali". */
+  title: string
+  /** Conditions, in a sentence. */
+  detail?: string
+  /** Last day of the offer, yyyy-mm-dd. */
+  until?: string
+  /** A code to show at the counter. */
+  code?: string
+}
+
+export interface BridalPackage {
+  name: string
+  /** Starting price in rupees. Shown only when permissions.showPrices. */
+  price?: number
+  includes: string[]
+}
+
+/** The same garment before and after an alteration: before-01.jpg with after-01.jpg. */
+export interface AlterationPair {
+  before: PhotoFile
+  after: PhotoFile
+}
+
 export interface HeroMedia {
   type: 'image' | 'video'
   src: PhotoFile
@@ -115,9 +145,16 @@ export interface BoutiqueConfig {
     paymentModes?: string[]
   }
 
+  /** Bridal packages, in the order the boutique lists them. */
+  bridalPackages?: BridalPackage[]
+  /** Offers running now; the site hides any whose last day has passed. */
+  offers?: Offer[]
+
   stats?: Stat[]
   reviews?: Review[]
   testimonials?: Testimonial[]
+  /** Questions customers ask, with the owner's answers. */
+  faq?: Faq[]
 
   media: {
     hero: HeroMedia
@@ -131,6 +168,8 @@ export interface BoutiqueConfig {
      */
     work: PhotoFile[]
     closeups?: PhotoFile[]
+    /** Before and after pairs of their alterations. */
+    alterations?: AlterationPair[]
     /** One line per photo, by file name: "Bridal blouse, aari work, 12 days". */
     captions?: Record<PhotoFile, string>
   }

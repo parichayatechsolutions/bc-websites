@@ -21,6 +21,7 @@ import {
   IconUsers,
   type Icon,
 } from '@tabler/icons-react'
+import { joinList as list } from '../../app/text'
 import type { BoutiqueConfig } from '../../types/boutique'
 
 export interface IFact {
@@ -38,15 +39,6 @@ export interface IPromise {
 
 const STITCHING = /stitch|blouse|tailor|alteration|lehenga|salwar|churidar|kurti|anarkali|frock|gown|sherwani|kurta/i
 const HANDWORK = /aari|maggam|zardosi|zari|embroider|mirror|bead|stone|kantha|chikan|cutwork/i
-
-/**
- * "Telugu, English and Hindi". With `lower`, words after the first lose their
- * capital unless they're an abbreviation: "Cash, UPI and card".
- */
-function list(items: string[], lower = false): string {
-  const words = items.map((item, i) => (!lower || i === 0 || item === item.toUpperCase() ? item : item.toLowerCase()))
-  return words.length > 1 ? `${words.slice(0, -1).join(', ')} and ${words.at(-1)}` : words.join('')
-}
 
 function statIcon(label: string): Icon {
   if (/year/i.test(label)) return IconCalendarStar

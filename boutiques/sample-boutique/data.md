@@ -114,6 +114,35 @@
 - Express delivery time and extra charge: 48 hours, ₹300 extra
 - Payment modes: Cash, UPI, Card
 
+## 6b. Bridal packages (optional)
+
+### Package 1
+
+- Package name: Muhurtham
+- Starting price (₹): 12000
+- What's included: Muhurtham blouse with maggam work, matching saree fall and pico, 2 trial fittings
+
+### Package 2
+
+- Package name: Wedding week
+- Starting price (₹): 28000
+- What's included: Muhurtham blouse, reception blouse, half-saree for the haldi, 3 trial fittings, delivery a week before the wedding
+
+### Package 3
+
+- Package name: Trousseau
+- Starting price (₹): 45000
+- What's included: Five blouses for the wedding functions, one lehenga, alterations for a year, a fitting at home
+
+## 6c. Current offer (optional)
+
+### Offer 1
+
+- Offer: Free saree fall and pico with every bridal blouse booked this season
+- Conditions: For bridal blouse orders placed at the store
+- Last day: 31 Jan 2027
+- Code to show at the counter: BRIDALFALL
+
 ## 7. Numbers to show on the website
 
 - Years in business: 12+
@@ -128,6 +157,14 @@
 3. Name: Anusha | Review: They understood exactly what I showed them on Instagram and made it better.
 4. Name: NA | Review: NA
 5. Name: NA | Review: NA
+
+## 8b. Questions customers ask (optional)
+
+1. Question: Can I bring my own fabric? | Answer: Yes. Bring it to your first fitting and we'll tell you if it suits the design you want.
+2. Question: Do you stitch from a photo? | Answer: Yes. Send us the photo on WhatsApp and we'll tell you what it will take and what it will cost.
+3. Question: How many trials will I need? | Answer: Usually one. Bridal blouses get two, so the fit is right before the handwork starts.
+4. Question: NA | Answer: NA
+5. Question: NA | Answer: NA
 
 ## 9. Brand, logo and photos
 
@@ -168,6 +205,7 @@
 - work-lehenga-02.jpg: Reception lehenga, can-can volume, 16 days
 - work-saree-01.jpg: Saree pre-pleating and fall stitching, 2 days
 - work-kids-01.jpg: Pattu langa, zari border, 7 days
+- after-01.jpg: Blouse taken in at the waist and sleeves shortened, 2 days
 
 ## 10. Permissions
 

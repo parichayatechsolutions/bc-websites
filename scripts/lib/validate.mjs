@@ -38,6 +38,7 @@ function referencedPhotos(config) {
     ...(m.interior ?? []),
     ...(m.work ?? []),
     ...(m.closeups ?? []),
+    ...(m.alterations ?? []).flatMap((p) => [p.before, p.after]),
   ].filter(Boolean)
 }
 
@@ -114,6 +115,19 @@ export async function validateBoutique(slug) {
   const reviews = config.reviews ?? config.testimonials ?? []
   warn(reviews.length >= 3, `${reviews.length} customer reviews: 3 or more make the site more convincing`)
   warn((config.media?.work?.length ?? 0) >= 5, `${config.media?.work?.length ?? 0} work photos listed: 5 or more are recommended`)
+  if (config.bridalPackages?.some((p) => p.price) && !config.permissions?.showPrices) {
+    warnings.push('Bridal packages have prices, but permission to show prices is "no", so the prices are hidden')
+  }
+
+  // Offers: a stale offer on the site is a promise the shop won't keep
+  const today = new Date().toISOString().slice(0, 10)
+  for (const offer of config.offers ?? []) {
+    if (offer.until) {
+      err(/^\d{4}-\d{2}-\d{2}$/.test(offer.until), `Offer "${offer.title}": last day "${offer.until}" should be written yyyy-mm-dd`)
+      warn(offer.until >= today, `Offer "${offer.title}" ended on ${offer.until}. The site no longer shows it; remove it from data.md.`)
+    }
+  }
+
   if (config.owner?.photo && !config.permissions?.showOwnerPhoto) {
     warnings.push("An owner photo is listed but permission to show it is \"no\", so it won't be shown")
   }
@@ -148,6 +162,14 @@ export async function validateBoutique(slug) {
     // would be shown to their customers as theirs. That is not a warning.
     if (config.demo?.sold) errors.push(message)
     else warnings.push(message)
+  }
+
+  const lonely = files
+    .map((f) => f.match(/^(before|after)-(\d+)\./))
+    .filter(Boolean)
+    .filter(([, side, n]) => !files.some((g) => g.startsWith(`${side === 'before' ? 'after' : 'before'}-${n}.`)))
+  if (lonely.length) {
+    warnings.push(`Before and after photos come in pairs; these have no partner, so they aren't shown: ${lonely.map((m) => m.input).join(', ')}`)
   }
 
   for (const f of files) {

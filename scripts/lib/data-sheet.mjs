@@ -127,6 +127,29 @@ export function readSheet(markdown) {
     }))
     .filter((b) => Object.values(b).some(Boolean))
 
+  const packages = blocks(s['6b'] ?? [])
+    .map((b) => ({
+      name: field(b, 'Package name'),
+      price: field(b, 'Starting price (₹)'),
+      includes: field(b, "What's included"),
+    }))
+    .filter((p) => Object.values(p).some(Boolean))
+
+  const offers = blocks(s['6c'] ?? [])
+    .map((b) => ({
+      title: field(b, 'Offer'),
+      detail: field(b, 'Conditions'),
+      until: field(b, 'Last day'),
+      code: field(b, 'Code to show at the counter'),
+    }))
+    .filter((o) => Object.values(o).some(Boolean))
+
+  const faq = (s['8b'] ?? [])
+    .map((l) => l.match(/^\s*\d+\.\s*Question:\s*(.*?)\s*\|\s*Answer:\s*(.*)$/i))
+    .filter(Boolean)
+    .map((m) => ({ question: clean(m[1]), answer: clean(m[2]) }))
+    .filter((q) => q.question || q.answer)
+
   const reviews = (s[8] ?? [])
     .map((l) => l.match(/^\s*\d+\.\s*Name:\s*(.*?)\s*\|\s*Review:\s*(.*)$/i))
     .filter(Boolean)
@@ -168,11 +191,15 @@ export function readSheet(markdown) {
     express: get(6, 'Express delivery time and extra charge'),
     payment: get(6, 'Payment modes'),
 
+    packages,
+    offers,
+
     years: get(7, 'Years in business'),
     orders: get(7, 'Total customers / orders delivered'),
     teamSize: get(7, 'Team size'),
 
     reviews,
+    faq,
 
     colours: get(9, 'If yes, colour names or codes'),
 
@@ -241,6 +268,36 @@ export function formatPhone(v) {
   if (digits.length === 11 && digits.startsWith('0')) digits = digits.slice(1)
   if (digits.length === 10) return `+91 ${digits.slice(0, 5)} ${digits.slice(5)}`
   return v.trim()
+}
+
+const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+
+/**
+ * A date as yyyy-mm-dd, from the ways people write one: "2026-11-15",
+ * "15/11/2026" or "15-11-26" (day first, as in India), "15 Nov 2026",
+ * "Nov 15, 2026". Without a year, the next time that day comes round.
+ * Undefined when it can't be read, for the caller to report.
+ */
+export function parseDate(v, today = new Date()) {
+  if (!v) return undefined
+  const text = v.trim().toLowerCase().replace(/(\d)(st|nd|rd|th)\b/g, '$1')
+  let day, month, year
+  let m
+  if ((m = text.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/))) [, year, month, day] = m.map(Number)
+  else if ((m = text.match(/^(\d{1,2})[/.-](\d{1,2})(?:[/.-](\d{2,4}))?$/))) [day, month, year] = [Number(m[1]), Number(m[2]), m[3] && Number(m[3])]
+  else if ((m = text.match(/^(\d{1,2})\s+([a-z]+)\.?,?\s*(\d{4})?$/))) [day, month, year] = [Number(m[1]), MONTHS.indexOf(m[2].slice(0, 3)) + 1, m[3] && Number(m[3])]
+  else if ((m = text.match(/^([a-z]+)\.?\s+(\d{1,2}),?\s*(\d{4})?$/))) [month, day, year] = [MONTHS.indexOf(m[1].slice(0, 3)) + 1, Number(m[2]), m[3] && Number(m[3])]
+  else return undefined
+
+  if (year && year < 100) year += 2000
+  if (!year) {
+    year = today.getFullYear()
+    const thisYear = new Date(year, month - 1, day)
+    if (thisYear < new Date(today.getFullYear(), today.getMonth(), today.getDate())) year += 1
+  }
+  const date = new Date(year, month - 1, day)
+  if (!month || date.getMonth() !== month - 1 || date.getDate() !== day) return undefined
+  return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
 }
 
 /** "@priya.designs", "instagram.com/priya.designs" or a full link → a full https link. */
@@ -338,6 +395,16 @@ function mediaFor(files, sheet) {
         'work-saree-01.jpg',
         'work-kids-01.jpg',
       ]
+  // before-01.jpg goes with after-01.jpg. Until they've been photographed, a
+  // boutique that does alterations gets one named pair as its placeholder.
+  const pairs = [...stems.keys()]
+    .map((s) => s.match(/^before-(\d+)$/)?.[1])
+    .filter((n) => n && has(`after-${n}`))
+    .sort()
+    .map((n) => ({ before: has(`before-${n}`), after: has(`after-${n}`) }))
+  const altering = (sheet.stitched['Other services'] ?? []).some((item) => /alteration/i.test(item))
+  const alterations = pairs.length ? pairs : altering ? [{ before: 'before-01.jpg', after: 'after-01.jpg' }] : undefined
+
   const isVideo = (file) => /\.(mp4|webm)$/i.test(file ?? '')
   const video = has('video-01') ?? (isVideo(has('ai-hero')) ? has('ai-hero') : undefined)
   const hero = video
@@ -351,6 +418,7 @@ function mediaFor(files, sheet) {
     teamAtWork: has('team-at-work') ?? 'team-at-work.jpg',
     work,
     closeups: numbered('closeup', ['closeup-01.jpg', 'closeup-02.jpg']),
+    alterations,
     captions: sheet.photoNotes,
     ownerPhoto: yes(sheet.okOwnerPhoto) ? (has('owner') ?? 'owner.jpg') : undefined,
     logo: has('logo') ?? 'logo.png',
@@ -450,6 +518,24 @@ export function toConfig(sheet, { slug, photoFiles }) {
     sheet.teamSize && { value: sheet.teamSize, label: 'People on our team' },
   ].filter(Boolean)
 
+  const bridalPackages = (sheet.packages ?? []).map((p, i) => {
+    if (!p.name) warnings.push(`Bridal package ${i + 1} has no name, so it's left out`)
+    else if (!p.includes) warnings.push(`Bridal package "${p.name}" doesn't say what's included`)
+    return drop({ name: p.name, price: number(p.price), includes: commaList(p.includes) })
+  }).filter((p) => p.name)
+
+  const offers = (sheet.offers ?? []).map((o, i) => {
+    const until = parseDate(o.until)
+    if (!o.title) warnings.push(`Offer ${i + 1} has no one-line offer, so it's left out`)
+    else if (o.until && !until) warnings.push(`Offer "${o.title}": couldn't read the last day "${o.until}". Write it like 15 Nov 2026.`)
+    else if (!o.until) warnings.push(`Offer "${o.title}" has no last day, so it shows until someone removes it from data.md`)
+    return drop({ title: o.title, detail: o.detail, until, code: o.code })
+  }).filter((o) => o.title)
+
+  for (const q of sheet.faq ?? []) {
+    if (!q.question || !q.answer) warnings.push(`Question "${q.question ?? q.answer}" in section 8b has no ${q.question ? 'answer' : 'question'}, so it's left out`)
+  }
+
   const established = number(sheet.yearStarted)
   const media = mediaFor(photoFiles, sheet)
 
@@ -492,9 +578,12 @@ export function toConfig(sheet, { slug, photoFiles }) {
       express: sheet.express,
       paymentModes: list(sheet.payment),
     },
+    bridalPackages,
+    offers,
     stats,
     reviews: sheet.reviews,
     testimonials: sheet.reviews,
+    faq: (sheet.faq ?? []).filter((q) => q.question && q.answer),
     media: {
       hero: media.hero,
       storefront: media.storefront,
@@ -502,9 +591,12 @@ export function toConfig(sheet, { slug, photoFiles }) {
       teamAtWork: media.teamAtWork,
       work: media.work,
       closeups: media.closeups,
+      alterations: media.alterations,
       // Only for photos this boutique actually has or expects.
       captions: Object.fromEntries(
-        Object.entries(media.captions ?? {}).filter(([file]) => media.work.some((w) => w.toLowerCase() === file)),
+        Object.entries(media.captions ?? {}).filter(([file]) =>
+          [...media.work, ...(media.alterations ?? []).flatMap((p) => [p.before, p.after])].some((w) => w.toLowerCase() === file),
+        ),
       ),
     },
     permissions: {
