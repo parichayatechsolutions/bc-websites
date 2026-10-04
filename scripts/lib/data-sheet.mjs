@@ -219,6 +219,7 @@ export function readSheet(markdown) {
       nextBatch: 'Next batch starts',
       fee: 'Fee (₹)',
     }),
+    leadTimes: pairsOf(s['6i'] ?? [], 'Piece', 'Weeks'),
     team: blockFields(s['7b'] ?? [], {
       name: 'Name',
       role: 'Role',
@@ -619,6 +620,13 @@ export function toConfig(sheet, { slug, photoFiles }) {
     })
     .filter((c) => c.name)
 
+  const leadTimes = (sheet.leadTimes ?? [])
+    .map((l) => {
+      if (l.a && !number(l.b)) warnings.push(`Lead time for "${l.a}" in section 6i has no number of weeks, so it's left out`)
+      return { item: l.a, weeks: number(l.b) }
+    })
+    .filter((l) => l.item && l.weeks)
+
   // A team member's photo only with their yes; never a placeholder for a person who said no.
   const team = (sheet.team ?? [])
     .map((t, i) => {
@@ -694,6 +702,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
     rentals,
     fabrics,
     classes,
+    leadTimes,
     team,
     posts,
     stats,

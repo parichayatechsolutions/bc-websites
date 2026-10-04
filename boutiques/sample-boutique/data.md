@@ -192,6 +192,15 @@
 - Next batch starts: 7 Feb 2027
 - Fee (₹): 4500
 
+## 6i. Wedding lead times (optional)
+
+1. Piece: Bridal lehenga | Weeks before the wedding: 10
+2. Piece: Bridal blouse with maggam work | Weeks before the wedding: 8
+3. Piece: Family outfits | Weeks before the wedding: 6
+4. Piece: Designer blouse | Weeks before the wedding: 4
+5. Piece: Saree fall, pico and pleating | Weeks before the wedding: 1
+6. Piece: NA | Weeks before the wedding: NA
+
 ## 7. Numbers to show on the website
 
 - Years in business: 12+

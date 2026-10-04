@@ -228,6 +228,19 @@ _Only if they teach. One block per class; copy the block for more._
 - Next batch starts (e.g. 15 Nov 2026):
 - Fee (₹):
 
+## 6i. Wedding lead times (optional)
+
+_How many weeks before the wedding a customer should order each piece, in the owner's own
+numbers. Only fill this in if the owner gives them: the wedding planner on the site works
+out dates from these, so they're promises in the shop's name._
+
+1. Piece (e.g. Bridal blouse with maggam work):  | Weeks before the wedding:
+2. Piece:  | Weeks before the wedding:
+3. Piece:  | Weeks before the wedding:
+4. Piece:  | Weeks before the wedding:
+5. Piece:  | Weeks before the wedding:
+6. Piece:  | Weeks before the wedding:
+
 ## 7. Numbers to show on the website
 
 _Only what the owner is comfortable sharing publicly._

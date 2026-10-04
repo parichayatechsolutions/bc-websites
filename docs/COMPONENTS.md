@@ -105,8 +105,9 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | K | What was left that can be built honestly; the rest marked skip with a reason (**built 2026-10-04**) | see the Status column | 55 |
 | L | The last buildable versions outside the wedding planner (**built 2026-10-04**) | see the Status column | 51 |
 | M | The wedding planner's undated versions (**built 2026-10-04**) | see the Status column | 10 |
+| N | `leadTimes` (data sheet 6i), then the dated planner and wed Q (**built 2026-10-04**) | wed A, D, L, Q, X | 5 |
 
-The wedding planner's dated versions wait: their task dates would be wedding timelines in the boutique's name ("order the bridal blouse 8 weeks before") that the shop never set. They need either the boutique's own lead times in the data sheet or copy the owner approves. Its undated versions (wave M) are built.
+The wedding planner's undated versions are built (wave M). Its dated versions (wave N) work only from the shop's own lead times, data sheet section 6i, and hide without them.
 
 ## Sections
 
@@ -139,7 +140,7 @@ The wedding planner's dated versions wait: their task dates would be wedding tim
 | 24 | [Saree services](#24-saree) | Speciality | 26 | 21 |  | existing |  |
 | 25 | [Alterations price list](#25-alter) | Speciality | 26 | 16 |  | existing |  |
 | 26 | [Trial & delivery tracker](#26-track) | Speciality | 26 |  |  | backend |  |
-| 27 | [Wedding planner](#27-wed) | Speciality | 26 | 10 |  | none |  |
+| 27 | [Wedding planner](#27-wed) | Speciality | 26 | 15 |  | existing (`leadTimes` for dated versions) |  |
 | 28 | [Gift voucher](#28-gift) | Speciality | 26 | 17 |  | existing |  |
 | 29 | [Classes & workshops](#29-class) | Speciality | 26 | 13 |  | existing |  |
 | 30 | [Team / tailors](#30-team) | Speciality | 26 | 14 |  | existing |  |
@@ -1150,16 +1151,16 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Wedding planner** · Speciality · `is.wedA`–`is.wedZ` in `Speciality Preview.dc.html`
 
-Data: Interactive planner; no boutique data.
+Data: Interactive planner. Dated versions need `leadTimes` (data sheet 6i).
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Countdown plan | Pick the wedding date; each task gets its date, and overdue ones are flagged. | yes |  |  | later |
+| A | Countdown plan | Pick the wedding date; each task gets its date, and overdue ones are flagged. | yes | built: `wedding/PlanWedding` | | keep |
 | B | Wedding card | An invitation card listing the wardrobe plan in order. | yes | built: `wedding/CardWedding` |  | keep |
 | C | Six days, six looks | Alternating photo and text rows for each function, with its palette. |  |  | repeats `lookbook/FunctionsLookbook` and `bridal/CeremonyBridal` | skip |
-| D | Month by month | Three month calendars with every task marked. | yes |  | dated tasks; waits for the shop’s lead times | skip |
+| D | Month by month | Three month calendars with every task marked. | yes | built: `wedding/MonthsWedding` | | keep |
 | E | Count the looks | A huge outfit total beside a ruled list of family steppers. | yes | built: `wedding/CountWedding` |  | keep |
 | F | Family web | Bride in the centre, family around; tap one for their look. | yes | built: `wedding/FamilyWedding` |  | keep |
 | G | Colour story | A palette strip for each function. | yes | built: `wedding/ColoursWedding` |  | keep |
@@ -1167,19 +1168,19 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | I | The ribbon | Tasks tied along a flowing ribbon. | yes |  | repeats `wedding/ReadyWedding` | skip |
 | J | Bridal checklist | A ruled card with handwritten tasks to tick. | yes |  | repeats `wedding/ReadyWedding` | skip |
 | K | Wedding week | Five ruled columns, mehendi to reception, with time slots. | yes |  | the time slots would be invented | skip |
-| L | Counting down | Dark. Days to go set enormous, with the next three tasks. | yes |  | dated tasks; waits for the shop’s lead times | skip |
+| L | Counting down | Dark. Days to go set enormous, with the next three tasks. | yes | built: `wedding/LeftWedding` | | keep |
 | M | Bridal consult | Pick a consult type and a day to book. | yes |  | repeats `bridal/ConsultBridal` | skip |
 | N | Family group | A WhatsApp group preview: add us to your wedding group. | yes | built: `wedding/GroupWedding` |  | keep |
 | O | Wedding season | Busy months as a bar chart with your month marked. | yes |  | busy months would be invented | skip |
 | P | A bride's diary | Editorial diary entries from week 12 to the day. | yes |  | the diary entries would be invented | skip |
-| Q | Your ceremonies | Pick the ceremonies; the outfit list updates. | yes |  |  | later |
+| Q | Your ceremonies | Pick the ceremonies; the outfit list updates. | yes | built: `wedding/CeremoniesWedding` | | keep |
 | R | Both families | Split screen: bride side on paper, groom side on dark. | yes | built: `wedding/SidesWedding` |  | keep |
 | S | Hour by hour | Dark. The wedding day timeline and how we help. | yes |  | the day’s timeline would be invented | skip |
 | T | Three trials | Fitting dates as huge numerals in a ruled list. | yes |  | the trial dates would be invented | skip |
 | U | How ready are you? | A big percentage and thin progress line beside a ruled checklist. | yes | built: `wedding/ReadyWedding` |  | keep |
 | V | Going as a guest | Every relation with what to wear, as ruled editorial rows. | yes | built: `wedding/GuestWedding` |  | keep |
 | W | Myths, corrected | Myth or fact verdicts beside the real answer, in ruled rows. | yes |  | the verdicts would be ours, not theirs | skip |
-| X | Where should I be? | Dark. Slide weeks to go; see what to do now. | yes |  | dated tasks; waits for the shop’s lead times | skip |
+| X | Where should I be? | Dark. Slide weeks to go; see what to do now. | yes | built: `wedding/WhereWedding` | | keep |
 | Y | Planner notebook | A two-page notebook spread: to do and notes. | yes |  | notes can’t be saved on the site | skip |
 | Z | Save the date | Brand colour. Type your names and date. | yes | built: `wedding/DateWedding` |  | keep |
 

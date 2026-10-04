@@ -580,3 +580,8 @@ export { default as SidesWedding } from './wedding/SidesWedding' // Bride’s si
 export { default as GuestWedding } from './wedding/GuestWedding' // Going as a guest: each relation and what usually suits, each an ask
 export { default as ReadyWedding } from './wedding/ReadyWedding' // How ready are you: an undated outfit checklist with a big percentage
 export { default as DateWedding } from './wedding/DateWedding' // Save the date: type names and date; a card fills in; start on the outfits
+export { default as CeremoniesWedding } from './wedding/CeremoniesWedding' // Tick the ceremonies; the bride’s outfit list and count update
+export { default as PlanWedding } from './wedding/PlanWedding' // Pick the wedding date; each piece’s order-by date from their lead times (needs leadTimes)
+export { default as MonthsWedding } from './wedding/MonthsWedding' // Three month calendars marking each order-by day and the wedding (needs leadTimes)
+export { default as LeftWedding } from './wedding/LeftWedding' // Dark: days to go set huge with the next three pieces to order (needs leadTimes)
+export { default as WhereWedding } from './wedding/WhereWedding' // Dark: slide weeks to go; what should be ordered by now and what’s next (needs leadTimes)

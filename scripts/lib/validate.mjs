@@ -131,6 +131,9 @@ export async function validateBoutique(slug) {
     if (config.alterationPrices?.length) warnings.push('Alteration prices are listed, but permission to show prices is "no", so they are hidden')
     if (config.classes?.some((c) => c.fee)) warnings.push('Class fees are listed, but permission to show prices is "no", so they are hidden')
   }
+  for (const l of config.leadTimes ?? []) {
+    warn(l.weeks <= 52, `Lead time for "${l.item}" is ${l.weeks} weeks. Check it: the planner counts back from the wedding date.`)
+  }
   for (const c of config.classes ?? []) {
     if (c.nextBatch) warn(c.nextBatch >= new Date().toISOString().slice(0, 10), `Class "${c.name}": the next batch (${c.nextBatch}) has started. Update the date in data.md.`)
   }

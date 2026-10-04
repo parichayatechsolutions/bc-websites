@@ -4,9 +4,11 @@
 // and colours that suit it. General guidance, true of weddings, not of
 // any boutique; every section offers it as something to ask about.
 //
-// No dates and no schedule: the dated planner waits for the shop's own
-// lead times (DESIGN.md decision log).
+// Dates come only from the shop's own lead times (data sheet 6i, `leadTimes`):
+// how many weeks before the wedding to order each piece. Without them the
+// dated planner sections hide (DESIGN.md decision log).
 
+import { useBoutique } from '../../app/BoutiqueContext'
 import { useBridal } from '../bridal/bridalShared'
 
 export interface IFunction {
@@ -29,4 +31,33 @@ export const FUNCTIONS: IFunction[] = [
 /** Whether to show the planner at all: only for a boutique that does bridal work. */
 export function useWedding() {
   return useBridal()
+}
+
+const DAY = 24 * 60 * 60 * 1000
+
+/** Today at midnight, in the visitor's time zone. */
+export const today = () => new Date(new Date().toLocaleDateString('en-CA') + 'T00:00:00')
+
+/** A yyyy-mm-dd date at midnight. */
+export const asDate = (iso: string) => new Date(`${iso}T00:00:00`)
+
+export const longDate = (d: Date) => d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'long' })
+
+/** Whole days from today to a date (negative once it has passed). */
+export const daysUntil = (d: Date) => Math.round((d.getTime() - today().getTime()) / DAY)
+
+/**
+ * The shop's lead times, earliest order first, and for a wedding date the
+ * day each piece should be ordered by. Empty without lead times or bridal
+ * work, which is how the dated sections know to hide.
+ */
+export function useLeadTimes() {
+  const { boutique } = useBoutique()
+  const { doesBridal } = useBridal()
+  const items = doesBridal ? [...(boutique.leadTimes ?? [])].sort((a, b) => b.weeks - a.weeks) : []
+  return {
+    items,
+    /** Each piece with its order-by date for a wedding on `wedding`. */
+    plan: (wedding: Date) => items.map((l) => ({ ...l, by: new Date(wedding.getTime() - l.weeks * 7 * DAY) })),
+  }
 }

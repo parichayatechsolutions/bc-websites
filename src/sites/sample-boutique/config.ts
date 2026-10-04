@@ -186,6 +186,13 @@ const config: BoutiqueConfig = {
       fee: 4500,
     },
   ],
+  leadTimes: [
+    { item: 'Bridal lehenga', weeks: 10 },
+    { item: 'Bridal blouse with maggam work', weeks: 8 },
+    { item: 'Family outfits', weeks: 6 },
+    { item: 'Designer blouse', weeks: 4 },
+    { item: 'Saree fall, pico and pleating', weeks: 1 },
+  ],
   team: [
     {
       name: 'Ramesh',

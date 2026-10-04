@@ -94,6 +94,14 @@ export interface ClassCourse {
   fee?: number
 }
 
+/** How early to order a piece before a wedding, in the shop's own numbers. */
+export interface LeadTime {
+  /** "Bridal blouse with maggam work". */
+  item: string
+  /** Weeks before the wedding to order it. */
+  weeks: number
+}
+
 export interface TeamMember {
   name: string
   role: string
@@ -214,6 +222,8 @@ export interface BoutiqueConfig {
   rentals?: RentalPiece[]
   fabrics?: Fabric[]
   classes?: ClassCourse[]
+  /** How early to order each piece before a wedding; the dated wedding planner needs these. */
+  leadTimes?: LeadTime[]
   team?: TeamMember[]
   posts?: Post[]
 
