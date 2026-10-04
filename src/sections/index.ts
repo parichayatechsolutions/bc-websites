@@ -26,6 +26,8 @@ export { default as CallNav } from './nav/CallNav' // Solid bar ending in one sp
 export { default as SplitNav } from './nav/SplitNav' // Menu button on every screen; the menu slides in as half work photo, half pages
 export { default as PillsNav } from './nav/PillsNav' // Solid bar with the pages in one segmented pill, the current page filled
 export { default as CircleNav } from './nav/CircleNav' // Round menu button; the menu grows from it as a circle of brand colour
+export { default as BandNav } from './nav/BandNav' // Solid bar over a brand band with the rating, usual delivery and Book a fitting
+export { default as OutlineNav } from './nav/OutlineNav' // Clear over a dark hero: pages in one outlined pill, WhatsApp as an outlined circle
 
 // Footer (pick one)
 export { default as BrandFooter } from './footer/BrandFooter' // Brand colour, huge name, pages, contact icons
@@ -43,6 +45,8 @@ export { default as ReceiptFooter } from './footer/ReceiptFooter' // Footer as a
 export { default as CardFooter } from './footer/CardFooter' // Their visiting card front and back, then pages, contacts and credit
 export { default as MapFooter } from './footer/MapFooter' // Dark: a map tile with the logo pinned, every contact detail beside
 export { default as YearFooter } from './footer/YearFooter' // The founding year set huge beside the contact details
+export { default as ZariFooter } from './footer/ZariFooter' // Paper between double zari borders: Visit, logo, Talk to us
+export { default as CardsFooter } from './footer/CardsFooter' // Brand colour with Visit, Chat and Follow cards, then pages
 
 // Page openers
 export { default as ArchHero } from './hero/ArchHero' // Name over a temple-arch window that opens to full screen (pinned; page needs overlay)
@@ -70,6 +74,8 @@ export { default as SinceHero } from './hero/SinceHero' // No photo: the year th
 export { default as FilmHero } from './hero/FilmHero' // Dark: one large photo with a thumbnail strip to swap it; name beside the strip
 export { default as TunnelHero } from './hero/TunnelHero' // Dark: four gold-thread arches receding, their work in the innermost
 export { default as PrintsHero } from './hero/PrintsHero' // Three photo prints laid loosely beside the name
+export { default as DuotoneHero } from './hero/DuotoneHero' // Name a word to a line on the brand colour beside a duotone photo
+export { default as RingHero } from './hero/RingHero' // Round photo in a thread ring with the name and year written around it
 export { default as PageHeader } from './header/PageHeader' // Inner-page title and intro from the page definition, no image
 
 // Owner's story
@@ -87,6 +93,8 @@ export { default as PolaroidStory } from './story/PolaroidStory' // A tilted ins
 export { default as WordsStory } from './story/WordsStory' // The story’s first sentence large, coming into focus word by word
 export { default as JourneyStory } from './story/JourneyStory' // The start year, the story and today on a dashed thread (needs established)
 export { default as ArchStory } from './story/ArchStory' // Arched photo with a name plate beside the story, numbers in a ruled row
+export { default as ValuesStory } from './story/ValuesStory' // Three cards of what they stand by, from their data, under the story’s opening
+export { default as ChaptersStory } from './story/ChaptersStory' // The story’s paragraphs as numbered chapters (needs two or more)
 
 // Their work
 export { default as RailGallery } from './gallery/RailGallery' // "Known for" + work photos sliding sideways on scroll (pinned on desktop)
@@ -106,6 +114,8 @@ export { default as SheetGallery } from './gallery/SheetGallery' // Work printed
 export { default as CatalogueGallery } from './gallery/CatalogueGallery' // Catalogue grid: a kind label and an Ask about this link on every piece
 export { default as CirclesGallery } from './gallery/CirclesGallery' // Round gold-ringed bubbles per kind of work; tap one for its grid
 export { default as DiamondGallery } from './gallery/DiamondGallery' // On brand colour: work cut into gold-edged diamonds, like a jaali
+export { default as DeckGallery } from './gallery/DeckGallery' // Dark: work as a stack of prints dealt with arrows, kind and note beside
+export { default as SpreadGallery } from './gallery/SpreadGallery' // Kinds of work listed; choosing one lays out a three-photo spread
 
 // How it's made
 export { default as StickyProcess } from './process/StickyProcess' // Five making steps with a photo that follows the active step
@@ -139,6 +149,8 @@ export { default as BillServices } from './services/BillServices' // Dark: start
 export { default as MedallionServices } from './services/MedallionServices' // Starting prices in three gold-ringed medallions, groups in ruled columns
 export { default as IconServices } from './services/IconServices' // Group tabs; each item an icon tile that asks its price on WhatsApp
 export { default as QuestionsServices } from './services/QuestionsServices' // Prices and delivery as questions that open, from their data
+export { default as BandServices } from './services/BandServices' // Brand band between zari borders of starting-price pills (with permission)
+export { default as StickyServices } from './services/StickyServices' // Group cards of item chips beside a dark sticky price card
 
 // Reviews
 export { default as RatingReviews } from './reviews/RatingReviews' // Google rating with stars, three quotes, stats (dark)
@@ -156,6 +168,8 @@ export { default as ThreadReviews } from './reviews/ThreadReviews' // Reviews st
 export { default as InitialsReviews } from './reviews/InitialsReviews' // Row of customers’ initials; tap one to read her review
 export { default as NotesReviews } from './reviews/NotesReviews' // On brand colour: reviews as paper notes pinned at slight angles
 export { default as PraiseReviews } from './reviews/PraiseReviews' // Tabs for the fit, handwork, on time, filled from what reviews actually say
+export { default as GoogleReviews } from './reviews/GoogleReviews' // Initial-led review cards under the rating, with Read and Write a review
+export { default as FramesReviews } from './reviews/FramesReviews' // On brand colour between zari borders: reviews in double gold frames
 
 // Bridal (packages from bridalPackages; prices only with permission)
 export { default as TierBridal } from './bridal/TierBridal' // Packages as equal cards: price, what's included, ask; consult button under them
@@ -171,6 +185,8 @@ export { default as MenuBridal } from './bridal/MenuBridal' // Dark framed menu 
 export { default as IncludedBridal } from './bridal/IncludedBridal' // Package tabs over one list of everything, ticked or greyed per package
 export { default as CeremonyBridal } from './bridal/CeremonyBridal' // Tabs per ceremony, each the bride’s look for it (look-<function>-NN.jpg)
 export { default as EditBridal } from './bridal/EditBridal' // "The bridal edit": packages in magazine columns with a drop cap
+export { default as PassBridal } from './bridal/PassBridal' // Each bridal package as a ticket with an Ask stub
+export { default as DeckBridal } from './bridal/DeckBridal' // Bridal packages as a stack of cards dealt with arrows
 
 // Before and after (needs media.alterations: before-01.jpg with after-01.jpg)
 export { default as SliderAlterations } from './alterations/SliderAlterations' // One large drag-to-compare photo, previous/next for more pairs
@@ -186,6 +202,7 @@ export { default as TapedAlterations } from './alterations/TapedAlterations' // 
 export { default as ServicesAlterations } from './alterations/ServicesAlterations' // What they alter in a ruled list beside a sticky arched drag-to-compare
 export { default as DeckAlterations } from './alterations/DeckAlterations' // Before/after pairs as a stack of prints dealt with arrows
 export { default as BandAlterations } from './alterations/BandAlterations' // On brand colour between zari borders: pairs in gold frames
+export { default as StoryAlterations } from './alterations/StoryAlterations' // "A second life": one pair large as a cover story, others small
 
 // Offers (only offers running today; each hides on the day after its last day)
 export { default as StripOffer } from './offer/StripOffer' // Band: one offer in brand colour with its last day and a WhatsApp link
@@ -201,6 +218,8 @@ export { default as BarOffer } from './offer/BarOffer' // Closable offer bar pin
 export { default as RosetteOffer } from './offer/RosetteOffer' // A pleated rosette with the last day beside the offer and its code
 export { default as RevealOffer } from './offer/RevealOffer' // A gift card that slides open on tap to show the offer
 export { default as BandOffer } from './offer/BandOffer' // Brand band between zari borders: the offer, last day and rating
+export { default as TabOffer } from './offer/TabOffer' // An Offers tab on the left edge sliding out every offer (beside SiteShell)
+export { default as FestiveOffer } from './offer/FestiveOffer' // A festival offer under a drawn marigold garland (only festival offers)
 
 // Questions (their own from faq, then answers built from their data)
 export { default as AccordionFaq } from './faq/AccordionFaq' // Questions that open one at a time, heading beside them
@@ -216,6 +235,7 @@ export { default as ChipsFaq } from './faq/ChipsFaq' // Every question as a chip
 export { default as ColumnFaq } from './faq/ColumnFaq' // "Ask the tailor" newspaper column: questions and answers in two columns
 export { default as BrandFaq } from './faq/BrandFaq' // Questions that open on the brand colour, gold edges, zari foot
 export { default as ArchesFaq } from './faq/ArchesFaq' // Each question and answer inside a gold-edged temple arch
+export { default as DarkFaq } from './faq/DarkFaq' // Dark: questions that open beside a WhatsApp button
 
 // Trust (only facts from the boutique's data; each hides when the data is too thin)
 export { default as StatTrust } from './trust/StatTrust' // Band: rating, years, their numbers and delivery in a ruled row; numbers count up
@@ -231,6 +251,8 @@ export { default as RatingTrust } from './trust/RatingTrust' // The Google ratin
 export { default as ArchTrust } from './trust/ArchTrust' // Facts in a row of small temple arches, each with its icon
 export { default as PaperTrust } from './trust/PaperTrust' // "By the numbers" newspaper columns of their facts
 export { default as BandTrust } from './trust/BandTrust' // Brand band between zari borders of round fact badges
+export { default as PromisesTrust } from './trust/PromisesTrust' // Up to six data-backed promises in an icon grid
+export { default as CountersTrust } from './trust/CountersTrust' // Dark tiles of their facts, counting up once
 
 // Instagram (needs social.instagram; the posts are their work photos, linking to the profile)
 export { default as GridInstagram } from './instagram/GridInstagram' // Profile row with logo, handle and Follow, over a three-across grid
@@ -246,6 +268,7 @@ export { default as MagazineInstagram } from './instagram/MagazineInstagram' // 
 export { default as DeckInstagram } from './instagram/DeckInstagram' // Work as a stack of prints dealt with arrows, beside the handle and Follow
 export { default as BandInstagram } from './instagram/BandInstagram' // On brand colour: framed gold-edged tiles and a zari foot
 export { default as DarkInstagram } from './instagram/DarkInstagram' // Dark: a gapless three-by-three grid beside the handle and Follow
+export { default as FilmInstagram } from './instagram/FilmInstagram' // Dark: their work along a film strip with sprocket holes
 
 // Contact
 export { default as WhatsAppForm } from './contact/WhatsAppForm' // Enquiry form that opens WhatsApp with the details written out
@@ -262,6 +285,8 @@ export { default as StepsContact } from './contact/StepsContact' // How ordering
 export { default as ChatContact } from './contact/ChatContact' // A drawn chat greeting with what they’re known for, quick replies to WhatsApp
 export { default as OccasionContact } from './contact/OccasionContact' // Occasion tiles (wedding, festival, office…), each a ready-written WhatsApp
 export { default as CountdownContact } from './contact/CountdownContact' // Pick the wedding date; a gold seal shows the weeks to go (needs bridal work)
+export { default as CardContact } from './contact/CardContact' // One store card: map, address, hours, phone, directions, beside WhatsApp
+export { default as PassContact } from './contact/PassContact' // Pick a day and time; a fitting pass fills in, then ask on WhatsApp
 export { default as StoreVisit } from './visit/StoreVisit' // Branches with address, hours, directions; WhatsApp and call
 export { default as MapVisit } from './visit/MapVisit' // Wide live map with the address card over its corner; buttons switch branches
 export { default as WaysVisit } from './visit/WaysVisit' // Three tappable cards (walk in, ask for the pin, call ahead) above the map
@@ -276,6 +301,8 @@ export { default as MedallionVisit } from './visit/MedallionVisit' // The map as
 export { default as ClassifiedVisit } from './visit/ClassifiedVisit' // A double-ruled classified ad with the details beside a grey map
 export { default as BleedVisit } from './visit/BleedVisit' // The map edge to edge with an address card over its corner
 export { default as PassVisit } from './visit/PassVisit' // A ticket with the address and hours, the map as its stub
+export { default as StickyVisit } from './visit/StickyVisit' // A tall map beside sticky branch details; tap a branch to move the map
+export { default as BandVisit } from './visit/BandVisit' // Brand band between zari borders: address, hours and a map strip
 
 // Always within reach (place one in a design beside SiteShell, not in a page; not with a nav that has a phone dock)
 export { default as FloatingWhatsApp } from './contact/FloatingWhatsApp' // Round WhatsApp button in the bottom corner, after the hero
@@ -290,6 +317,8 @@ export { default as OwnerWhatsApp } from './contact/OwnerWhatsApp' // Floating p
 export { default as PhotoWhatsApp } from './contact/PhotoWhatsApp' // Floating "Saw a design you love? Send the photo" pill (beside SiteShell)
 export { default as NudgeWhatsApp } from './contact/NudgeWhatsApp' // Round WhatsApp button with a closable bubble naming what they’re known for
 export { default as TabWhatsApp } from './contact/TabWhatsApp' // A slim "WhatsApp us" tab on the right edge (beside SiteShell)
+export { default as FormWhatsApp } from './contact/FormWhatsApp' // Floating "Ask us" pill opening name and need fields (beside SiteShell)
+export { default as FittingWhatsApp } from './contact/FittingWhatsApp' // Floating "Book a fitting" pill opening a week of days (beside SiteShell)
 
 // Wrappers
 export { default as StitchLine } from '../motion/StitchLine' // Running stitch sewn down the left of the sections it wraps
@@ -307,6 +336,9 @@ export { default as SpecBlouse } from './blouse/SpecBlouse' // Neck, back and sl
 export { default as ArchBlouse } from './blouse/ArchBlouse' // Every neckline drawn inside a temple arch; tap one for what it suits
 export { default as TurnBlouse } from './blouse/TurnBlouse' // One large drawing with a Front/Back switch, choices beside
 export { default as NotesBlouse } from './blouse/NotesBlouse' // Four classic neck, back and sleeve combinations, drawn, each with an ask
+export { default as RoomBlouse } from './blouse/RoomBlouse' // Dark design room: large drawing in the middle, choices either side
+export { default as ChatBlouse } from './blouse/ChatBlouse' // A scripted chat asks neck, back, sleeves; quick replies; drawing at the end
+export { default as FaceBlouse } from './blouse/FaceBlouse' // Pick a face shape; the necklines to try and to skip, drawn
 export { default as GuideMeasure } from './measure/GuideMeasure' // The ten blouse measurements; the drawing shows where the tape goes
 export { default as FormMeasure } from './measure/FormMeasure' // Fill in measurements (inches or cm) and send them on WhatsApp
 export { default as ChartMeasure } from './measure/ChartMeasure' // General blouse size chart in inches or cm, labelled as starting points
@@ -319,6 +351,8 @@ export { default as TapeMeasure } from './measure/TapeMeasure' // Dark: measurem
 export { default as ProfileMeasure } from './measure/ProfileMeasure' // A fit profile card: name, ten fields, filled count, send on WhatsApp
 export { default as SizeMeasure } from './measure/SizeMeasure' // Tap a bust size for the usual under bust, shoulder, armhole, sleeve
 export { default as QuestionsMeasure } from './measure/QuestionsMeasure' // Questions about measuring yourself, answered (general advice)
+export { default as CardsMeasure } from './measure/CardsMeasure' // A card per measurement with its drawing; tap for how to take it
+export { default as DeckMeasure } from './measure/DeckMeasure' // Dark: measurement cards dealt one by one with drawing and how-to
 export { default as NeedsSaree } from './saree/NeedsSaree' // Tick the saree work you need (their own saree services) and send it in one message
 export { default as IndexMen } from './men/IndexMen' // Every men's piece as a ruled index row with a WhatsApp ask
 export { default as RowsHandwork } from './handwork/RowsHandwork' // The handwork they list, each explained: what it is and what it suits
@@ -334,6 +368,8 @@ export { default as ChaptersLookbook } from './lookbook/ChaptersLookbook' // Dar
 export { default as CoverLookbook } from './lookbook/CoverLookbook' // Dark magazine cover beside the list of looks; pick one for the cover
 export { default as BookLookbook } from './lookbook/BookLookbook' // Looks as an open book, two to a spread, arrows to turn
 export { default as MoodLookbook } from './lookbook/MoodLookbook' // Looks taped to a mood board among their fabric swatches
+export { default as DeckLookbook } from './lookbook/DeckLookbook' // Dark: looks as a stack of prints dealt with arrows
+export { default as BandLookbook } from './lookbook/BandLookbook' // On brand colour between zari borders: looks in double gold frames
 export { default as DrapesSaree } from './saree/DrapesSaree' // A photo row per saree drape with its note and a booking link (drape-<style>.jpg)
 export { default as LengthsSaree } from './saree/LengthsSaree' // Saree lengths as bars: body, pallu, blouse piece
 export { default as AskSaree } from './saree/AskSaree' // "I need…" lines, one WhatsApp ask per saree service
@@ -346,6 +382,8 @@ export { default as FallSaree } from './saree/FallSaree' // Pick the saree colou
 export { default as PalluSaree } from './saree/PalluSaree' // Kuchu, fringe, lace or plain: the pallu drawing changes (needs kuchu/tassels)
 export { default as IndexSaree } from './saree/IndexSaree' // Sarees by kind with care and which of their services each often needs
 export { default as CareSaree } from './saree/CareSaree' // Saree care cheat sheet: wash, iron and store per kind, in one table
+export { default as ManySaree } from './saree/ManySaree' // Count the sarees and tick the services; one WhatsApp message
+export { default as MapSaree } from './saree/MapSaree' // Tap body, border, pallu or blouse piece for their services on it
 export { default as GroomMen } from './men/GroomMen' // The groom's look for each function, in order (groom-<function>.jpg)
 export { default as EditMen } from './men/EditMen' // Their men's work (work-men-NN.jpg) in alternating rows on dark
 export { default as DressMen } from './men/DressMen' // What to wear for office, wedding guest, groom, reception (needs a Men group)
@@ -357,6 +395,8 @@ export { default as CollarMen } from './men/CollarMen' // Four collars drawn as 
 export { default as BreakMen } from './men/BreakMen' // No, half or full trouser break drawn simply (needs trousers)
 export { default as FitMen } from './men/FitMen' // Slim, regular, relaxed drawn as shirt shapes with the usual ease
 export { default as SuitingMen } from './men/SuitingMen' // Suiting weaves drawn as swatches (pinstripe, herringbone…) to ask about
+export { default as StepsMen } from './men/StepsMen' // Men’s tailoring in four steps on a thread, then their men’s pieces
+export { default as AlterMen } from './men/AlterMen' // Six quick men’s alterations, each a WhatsApp ask
 export { default as PlainHandwork } from './handwork/PlainHandwork' // The same blouse plain and with handwork, with a switch (plain-NN + worked-NN)
 export { default as ZonesHandwork } from './handwork/ZonesHandwork' // Where the work goes: neckline, sleeves, back, all over, lit on the drawing
 export { default as CompareHandwork } from './handwork/CompareHandwork' // Hand or machine compared; needs both in their services
@@ -368,6 +408,8 @@ export { default as MixHandwork } from './handwork/MixHandwork' // Pick two of t
 export { default as MotifsHandwork } from './handwork/MotifsHandwork' // Six classic motifs in alternating rows, each with an ask
 export { default as SpoolsHandwork } from './handwork/SpoolsHandwork' // A thread spool per kind of work they do; tap one to lift it and ask
 export { default as ZariHandwork } from './handwork/ZariHandwork' // Dark: zari colours (antique gold, silver, copper…) to pick and ask
+export { default as MaterialsHandwork } from './handwork/MaterialsHandwork' // Zari, sequins, beads, pearls, kundan, mirrors in a ruled list
+export { default as NamesHandwork } from './handwork/NamesHandwork' // Dark: type names and date; they appear across a drawn blouse back
 export { default as CornerKids } from './kids/CornerKids' // Kids' services, the ages they stitch for and their kids' work
 export { default as MatchingKids } from './kids/MatchingKids' // Matching outfits as arched pairs: mother and daughter, siblings (match-NN-a + b)
 export { default as IndexKids } from './kids/IndexKids' // Kids' pieces as a typeset index with ages and an ask per row
@@ -380,6 +422,8 @@ export { default as MiniMeKids } from './kids/MiniMeKids' // Matching pairs big 
 export { default as GrowthKids } from './kids/GrowthKids' // A measuring stick of ages; tap one for usual height, chest and length
 export { default as BoothKids } from './kids/BoothKids' // Dark: kids’ work as two tilted photo-booth strips
 export { default as OneKids } from './kids/OneKids' // Dark: one kids’ piece large with its note, arrows to step
+export { default as FabricsKids } from './kids/FabricsKids' // Fabrics that suit children with a softness line (needs a Kids group)
+export { default as InviteKids } from './kids/InviteKids' // A birthday invitation card on confetti with an RSVP on WhatsApp
 export { default as RateAlterations } from './alterations/RateAlterations' // Printed rate card of their alteration prices (needs prices permission)
 export { default as EstimateAlterations } from './alterations/EstimateAlterations' // Tick alterations, see the estimate from their rates, send on WhatsApp
 export { default as SearchAlterations } from './alterations/SearchAlterations' // Search their alteration rates; asks about what she typed
@@ -392,6 +436,8 @@ export { default as GarmentAlterations } from './alterations/GarmentAlterations'
 export { default as PinsAlterations } from './alterations/PinsAlterations' // Pins on a blouse drawing; tap one for that part’s prices (with permission)
 export { default as GridAlterations } from './alterations/GridAlterations' // Every alteration rate in one table, grouped by garment (with permission)
 export { default as QuoteAlterations } from './alterations/QuoteAlterations' // Garment and problem chips write the WhatsApp question
+export { default as PhoneAlterations } from './alterations/PhoneAlterations' // Alteration rates as a drawn phone settings screen (with permission)
+export { default as BringAlterations } from './alterations/BringAlterations' // Four numbered things to bring for an alteration
 export { default as BuilderGift } from './gift/BuilderGift' // Pick an amount and names; the voucher card fills in; request on WhatsApp
 export { default as BuysGift } from './gift/BuysGift' // Each voucher amount beside what it covers at their starting prices
 export { default as SentenceGift } from './gift/SentenceGift' // A voucher as one sentence with the blanks filled in place
@@ -404,6 +450,8 @@ export { default as EnvelopeGift } from './gift/EnvelopeGift' // Tap the sealed 
 export { default as PostcardGift } from './gift/PostcardGift' // A gift voucher as a postcard with their logo as the stamp
 export { default as TagGift } from './gift/TagGift' // Type To and From; they appear on a kraft gift tag
 export { default as NoteGift } from './gift/NoteGift' // Vouchers drawn as banknotes with guilloche lines, one per amount
+export { default as CardGift } from './gift/CardGift' // Write a message; tap the folding card to see it inside
+export { default as RibbonGift } from './gift/RibbonGift' // A brand band tied with a gold ribbon and bow: vouchers and amounts
 export { default as RailRental } from './rental/RailRental' // Rental pieces hanging from a rail with swing tags and "Ask to rent"
 export { default as AvailabilityRental } from './rental/AvailabilityRental' // Pick a rental piece and a date; asks on WhatsApp if it's free
 export { default as IndexRental } from './rental/IndexRental' // Rental pieces as a list; the chosen one's photo, sizes and rent beside it
@@ -416,6 +464,7 @@ export { default as ArchRental } from './rental/ArchRental' // Each rental piece
 export { default as DeckRental } from './rental/DeckRental' // Dark: rental pieces as a stack dealt with arrows, details beside (needs rentals)
 export { default as MagazineRental } from './rental/MagazineRental' // "Rent the look" magazine page: one piece large, the rest listed
 export { default as BandRental } from './rental/BandRental' // On brand colour between zari borders: pieces in gold frames
+export { default as StepsRental } from './rental/StepsRental' // How renting works in four steps, then the first pieces (needs rentals)
 export { default as SwatchFabrics } from './fabric/SwatchFabrics' // Fabrics they stock as pinked swatches with what each is best for
 export { default as BringFabric } from './fabric/BringFabric' // "Have your own fabric?" send-a-photo card, with their fabrics as quick links
 export { default as GuideFabrics } from './fabric/GuideFabrics' // Fabric list beside a large swatch with what it's best for
@@ -428,6 +477,8 @@ export { default as OccasionFabrics } from './fabric/OccasionFabrics' // Occasio
 export { default as CareFabrics } from './fabric/CareFabrics' // Tabs per fabric they stock with how to wash, iron and store it
 export { default as RollFabrics } from './fabric/RollFabrics' // Each fabric as the round end of a rolled bolt (needs fabrics)
 export { default as PinboardFabrics } from './fabric/PinboardFabrics' // Swatches taped to a workroom board with written names (needs fabrics)
+export { default as CompareFabrics } from './fabric/CompareFabrics' // Pick two fabrics; weight, sheen and drape as dot scales
+export { default as ShelfFabrics } from './fabric/ShelfFabrics' // Dark: fabric bolts on a gold shelf; tap one to lift it
 export { default as RosterTeam } from './team/RosterTeam' // The team as an editorial roster: name, role, years, a line (photos only with consent)
 export { default as FounderTeam } from './team/FounderTeam' // The founder and their story, with the team named beneath
 export { default as CraftTeam } from './team/CraftTeam' // Who does what: roles set large with names and years
@@ -440,6 +491,8 @@ export { default as AskTeam } from './team/AskTeam' // Pick what you need; the t
 export { default as HandsTeam } from './team/HandsTeam' // The people a piece passes through, in order, on a thread (needs three)
 export { default as ContributorsTeam } from './team/ContributorsTeam' // A magazine contributors page in two ruled columns
 export { default as ColophonTeam } from './team/ColophonTeam' // "Designed by…, cut by…, stitched by…" as one credit band
+export { default as NumbersTeam } from './team/NumbersTeam' // Dark band: people, years between them, year started, rating
+export { default as GroupTeam } from './team/GroupTeam' // The team photo wide with everyone’s name and role beneath (needs teamAtWork)
 export { default as CardsClasses } from './classes/CardsClasses' // Classes as cards: level, length, next batch, fee, ask to join
 export { default as EnrolClasses } from './classes/EnrolClasses' // Name, class and age group written into a WhatsApp enrolment
 export { default as BatchesClasses } from './classes/BatchesClasses' // Upcoming batches, soonest first, date set large
@@ -452,6 +505,7 @@ export { default as TeacherClasses } from './classes/TeacherClasses' // Meet the
 export { default as FinderClasses } from './classes/FinderClasses' // "How much have you stitched?" shows the classes at that level
 export { default as HeroClasses } from './classes/HeroClasses' // Workroom photo with the next class on a card over its foot
 export { default as TogetherClasses } from './classes/TogetherClasses' // "I’d like to join [class] with [− 2 +] friends", sent on WhatsApp
+export { default as CampClasses } from './classes/CampClasses' // A summer or holiday camp beside a workroom photo (only a camp class)
 export { default as JournalPosts } from './posts/JournalPosts' // Style notes under a ruled masthead: the newest as lead, the rest listed
 export { default as TipPosts } from './posts/TipPosts' // One style note at a time on the brand colour
 export { default as NotebookPosts } from './posts/NotebookPosts' // Style notes as a dated notebook page
@@ -462,3 +516,4 @@ export { default as QuickPosts } from './posts/QuickPosts' // Style notes as sho
 export { default as EssayPosts } from './posts/EssayPosts' // Style notes with photos as alternating photo-and-text rows
 export { default as LeadPosts } from './posts/LeadPosts' // The newest note as a large lead, the next three in ruled columns
 export { default as StartPosts } from './posts/StartPosts' // "Start here": their first three notes kept in view beside the rest
+export { default as ProgressPosts } from './posts/ProgressPosts' // The newest note as a long read with a sticky progress line and minutes left
