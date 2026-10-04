@@ -23,7 +23,7 @@ export interface IMove {
   delay?: number
 }
 
-function when({ trigger, delay = 0 }: IMove): gsap.TweenVars {
+function when({ trigger, delay = 0 }: IMove): { delay: number; scrollTrigger?: ScrollTrigger.Vars } {
   return trigger ? { delay, scrollTrigger: { trigger, start: TRIGGER.arrive, once: true } } : { delay }
 }
 
