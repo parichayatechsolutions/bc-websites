@@ -83,6 +83,14 @@
   opacity: 1;
   animation: stitch-draw 500ms var(--ease-stitch);
 }
+/* A photo swapped in place (a thumbnail picked) fades in over 700ms with
+   ease-stitch: `animate-[fade-in_700ms_var(--ease-stitch)]`. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 @keyframes stitch-draw {
   from {
     clip-path: inset(0 100% 0 0);
@@ -198,6 +206,15 @@
     background-position: center;
     background-repeat: repeat-x;
     background-size: auto 2px;
+  }
+}
+
+/* A navigation with a phone dock (DockNav) fixes a bar to the bottom of the
+   screen; the page keeps that much room at its end, so the dock never
+   covers the last lines of the footer. */
+@media (max-width: 767px) {
+  .boutique:has([data-thumb-dock]) {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
   }
 }
 

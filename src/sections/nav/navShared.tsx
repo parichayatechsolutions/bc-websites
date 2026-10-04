@@ -59,15 +59,15 @@ export function PageLinks({ className = '', linkClassName = '' }: { className?: 
   )
 }
 
-/** Menu button plus the full-screen menu it opens. Shown on phones only. */
-export function MobileMenu({ buttonClassName = '' }: { buttonClassName?: string }) {
-  const { boutique } = useBoutique()
-  const { pages, href } = useSite()
+/**
+ * Open state for a full-screen menu: closes when the page changes or on
+ * Escape, and freezes the page behind it while open.
+ */
+export function useMenuState() {
   const { pathname } = useLocation()
   const lenis = useLenis()
   const [open, setOpen] = useState(false)
 
-  // Close when the page changes; freeze the page behind the menu while open.
   useEffect(() => setOpen(false), [pathname])
   useEffect(() => {
     if (open) lenis?.stop()
@@ -78,6 +78,15 @@ export function MobileMenu({ buttonClassName = '' }: { buttonClassName?: string 
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open, lenis])
+
+  return [open, setOpen] as const
+}
+
+/** Menu button plus the full-screen menu it opens. Shown on phones only. */
+export function MobileMenu({ buttonClassName = '' }: { buttonClassName?: string }) {
+  const { boutique } = useBoutique()
+  const { pages, href } = useSite()
+  const [open, setOpen] = useMenuState()
 
   if (pages.length < 2) return null
 

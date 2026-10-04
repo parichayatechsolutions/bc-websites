@@ -88,31 +88,31 @@ How they were picked:
 | Wave | What | Versions | Count |
 |---|---|---|---|
 | A | Sections with no component yet that need no new data (**built 2026-10-04**) | trust A, G, Q · map A, F, U · ig A, F, H · wa A, D | 11 |
-| B | Sections that need a new config field first (types, data sheet, parser, validator, sample-boutique), then their components | faq A, J, K · offer A, C, E · bridal A, D, W · alt A, C, M | 12 |
-| C | More versions of sections that already have components | hero D, E, F · gallery C, E, J, N · reviews D, F, S · contact C, D, E · services D, J, N · story B, E, F · process B, G, P · nav C, E, L · footer C, E | 27 |
+| B | Sections that need a new config field first (types, data sheet, parser, validator, sample-boutique), then their components (**built 2026-10-04**: `faq`, `offers`, `bridalPackages`, `media.alterations`) | faq A, J, K · offer A, C, E · bridal A, D, W · alt A, C, M | 12 |
+| C | More versions of sections that already have components (**built 2026-10-04**) | hero D, E, F · gallery C, E, J, N · reviews D, F, S · contact C, D, E · services D, J, N · story B, E, F · process B, G, P · nav C, E, L · footer C, E | 27 |
 
-Wave A first: it fills sections the library doesn't have at all and needs no data-sheet changes, so every boutique benefits at once.
+All three waves are built: the shortlist's 50 versions are in `src/sections/`. What's left is `later` (speciality sections) and anything you promote from the blank rows.
 
 ## Sections
 
 | # | Section | Group | Versions | Built | Close | Data | To build |
 |---|---|---|---|---|---|---|---|
-| 00 | [Navigation](#00-nav) | Site chrome | 26 | 1 | 1 | existing | 3 |
-| 01 | [Hero](#01-hero) | Page opener | 26 | 1 | 3 | existing | 3 |
-| 02 | [Gallery](#02-gallery) | Their work | 26 | 1 | 2 | existing | 4 |
-| 03 | [Testimonials](#03-reviews) | Trust | 26 | 1 | 1 | existing | 3 |
-| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 1 |  | existing | 3 |
-| 05 | [Services & prices](#05-services) | What they make | 26 | 1 | 1 | existing | 3 |
-| 06 | [Owner's story](#06-story) | About them | 26 |  | 1 | existing | 3 |
-| 07 | [Making process](#07-process) | About them | 26 |  | 1 | existing | 3 |
-| 08 | [FAQ](#08-faq) | Trust | 26 |  |  | new | 3 |
+| 00 | [Navigation](#00-nav) | Site chrome | 26 | 4 | 1 | existing |  |
+| 01 | [Hero](#01-hero) | Page opener | 26 | 4 | 3 | existing |  |
+| 02 | [Gallery](#02-gallery) | Their work | 26 | 5 | 2 | existing |  |
+| 03 | [Testimonials](#03-reviews) | Trust | 26 | 4 | 1 | existing |  |
+| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 4 |  | existing |  |
+| 05 | [Services & prices](#05-services) | What they make | 26 | 4 | 1 | existing |  |
+| 06 | [Owner's story](#06-story) | About them | 26 | 3 | 1 | existing |  |
+| 07 | [Making process](#07-process) | About them | 26 | 3 | 1 | existing |  |
+| 08 | [FAQ](#08-faq) | Trust | 26 | 3 |  | existing |  |
 | 09 | [Instagram feed](#09-ig) | Their work | 26 | 3 |  | existing |  |
-| 10 | [Bridal packages](#10-bridal) | What they make | 26 |  |  | new | 3 |
-| 11 | [Before / after alterations](#11-alt) | Their work | 26 |  |  | new | 3 |
-| 12 | [Offers banner](#12-offer) | Bookings | 26 |  |  | new | 3 |
+| 10 | [Bridal packages](#10-bridal) | What they make | 26 | 3 |  | existing |  |
+| 11 | [Before / after alterations](#11-alt) | Their work | 26 | 3 |  | existing |  |
+| 12 | [Offers banner](#12-offer) | Bookings | 26 | 3 |  | existing |  |
 | 13 | [Trust badges](#13-trust) | Trust | 26 | 3 |  | existing |  |
 | 14 | [Location map](#14-map) | Bookings | 26 | 3 | 1 | existing |  |
-| 15 | [Footer](#15-footer) | Site chrome | 26 | 3 |  | existing | 2 |
+| 15 | [Footer](#15-footer) | Site chrome | 26 | 5 |  | existing |  |
 | 16 | [Fabric swatches](#16-fabric) | Speciality | 26 |  |  | new |  |
 | 17 | [Blouse design picker](#17-blouse) | Speciality | 26 |  |  | none |  |
 | 18 | [Measurement guide](#18-measure) | Speciality | 26 |  |  | none |  |
@@ -144,16 +144,16 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 |---|---|---|---|---|---|---|
 | A | Floating | Clear over the hero, solid once scrolled; full-screen menu on phones. |  | built: `nav/FloatingNav` |  | keep |
 | B | Crest | Info strip with phone, area and today's hours; logo centred between links; zari underline. |  | close: `nav/CenteredNav` |  | keep |
-| C | Pill + thumb dock | Floating pill bar on desktop; on phones a bottom dock with WhatsApp, Call and Menu. |  |  |  | build |
+| C | Pill + thumb dock | Floating pill bar on desktop; on phones a bottom dock with WhatsApp, Call and Menu. |  | built: `nav/DockNav` |  | keep |
 | D | Split centre logo | Solid bar, links split either side of a centred logo. |  |  |  |  |
-| E | Menu button | Just logo, WhatsApp and a "Menu" pill; opens a numbered full-screen menu with hours. |  |  |  | build |
+| E | Menu button | Just logo, WhatsApp and a "Menu" pill; opens a numbered full-screen menu with hours. |  | built: `nav/MenuNav` |  | keep |
 | F | Side rail / tab bar | Icon rail down the left on desktop; app-style tab bar at the bottom on phones. |  |  |  |  |
 | G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  |  |  |  |
 | H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  |  | frosted glass (contrast over photos) |  |
 | I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  |  |  |  |
 | J | Tab switcher | Pages as a segmented pill control; the active one fills. |  |  |  |  |
 | K | Icon nav | Icons with small labels; compact and scannable. |  |  |  |  |
-| L | Masthead | Newspaper style: name set large, links in a ruled row under it. |  |  |  | build |
+| L | Masthead | Newspaper style: name set large, links in a ruled row under it. |  | built: `nav/MastheadNav` |  | keep |
 | M | Arch tab | Logo and name hang from the top centre in an arch-shaped tab. |  |  |  |  |
 | N | Drawer | Menu slides in from the left with a photo header and hours. |  |  |  |  |
 | O | Work mega menu | Desktop "Our work" opens a panel of categories; phones get a grid sheet. |  |  |  |  |
@@ -182,9 +182,9 @@ Lab motions: Letters rise, Letters blur in, Numbers count up, Photo settles, Pho
 | A | Arch | Name over a temple arch that opens on scroll. |  | built: `hero/ArchHero` |  | keep |
 | B | Invitation | Full photo framed like a wedding card: name, local name, zari rule, rating. |  | close: `hero/PosterHero` |  | keep |
 | C | Lookbook split | Light. Name and facts left, three-photo collage right. |  | close: `hero/SplitHero` |  | keep |
-| D | Masthead | No photo at all. Name as big as the screen allows on the brand colour, facts underneath. | yes |  |  | build |
-| E | Saree border | Photo on top, a woven zari border, then the name on a band of brand colour like the pallu of a saree. |  |  |  | build |
-| F | Mosaic | Six photos in a grid with the name set into one tile. Shows range instantly. |  |  |  | build |
+| D | Masthead | No photo at all. Name as big as the screen allows on the brand colour, facts underneath. | yes | built: `hero/MastheadHero` |  | keep |
+| E | Saree border | Photo on top, a woven zari border, then the name on a band of brand colour like the pallu of a saree. |  | built: `hero/SareeHero` |  | keep |
+| F | Mosaic | Six photos in a grid with the name set into one tile. Shows range instantly. |  | built: `hero/MosaicHero` |  | keep |
 | G | Temple doors | Dark. Name above three arched doorways, each opening onto a piece of work. |  |  |  |  |
 | H | Vertical name | Name runs up a brand-colour strip on the left; photo fills the rest, a small card holds the invitation. |  |  |  |  |
 | I | Magazine cover | Full photo with the name as a masthead across the top and the rating as a cover line. |  |  |  |  |
@@ -218,18 +218,18 @@ Lab motions: Filter / swap, Sways in, Photos wipe up, Photos settle, Drift, Zari
 |---|---|---|---|---|---|---|
 | A | Category grid | Uneven hang on a warm ground, zari borders, filter rail that re-lays the grid. |  | built: `gallery/CategoryGrid` |  | keep |
 | B | Showcase rail | Dark. Tall arched cards sliding sideways with arrows; category in gold under each. |  | close: `gallery/RailGallery` |  | keep |
-| C | Feature + strip | One large piece with an "Ask about this piece" WhatsApp button, thumbnails underneath. |  |  |  | build |
+| C | Feature + strip | One large piece with an "Ask about this piece" WhatsApp button, thumbnails underneath. |  | built: `gallery/FeatureGallery` |  | keep |
 | D | Masonry | Three columns of photos at their natural heights, category and number under each. |  | close: `gallery/GridGallery` |  | keep |
-| E | Arch colonnade | One tall arch per category in a row, like a temple corridor. Count under each. |  |  |  | build |
+| E | Arch colonnade | One tall arch per category in a row, like a temple corridor. Count under each. |  | built: `gallery/ColonnadeGallery` |  | keep |
 | F | Lookbook spread | Category list on the left; choosing one lays out a three-photo magazine spread. |  |  |  |  |
 | G | Category tiles | Pick what you are planning from photo tiles; that category opens below. |  |  |  |  |
 | H | Card deck | Dark. Photos stacked like prints; next and previous deal the deck. |  |  |  |  |
 | I | Gallery wall | On the brand colour: photos in double gold frames hung salon-style at mixed sizes. |  |  |  |  |
-| J | Index | Type-led list of what they make with tiny thumbnails and a WhatsApp button per row. Fine with few photos. | yes |  |  | build |
+| J | Index | Type-led list of what they make with tiny thumbnails and a WhatsApp button per row. Fine with few photos. | yes | built: `gallery/IndexGallery` |  | keep |
 | K | Accordion | Dark. One arched panel per category; tapping one widens it and narrows the rest. |  |  |  |  |
 | L | Zig-zag rows | Photo and category alternate left and right, each with an "Ask about" button. |  |  |  |  |
 | M | Story circles | Round category bubbles with a gold ring, like highlights; tapping opens a full-screen viewer. |  |  |  |  |
-| N | Lightbox grid | Even square grid; tapping any photo opens it large with next and previous. |  |  |  | build |
+| N | Lightbox grid | Even square grid; tapping any photo opens it large with next and previous. |  | built: `gallery/LightboxGallery` |  | keep |
 | O | Numbered rail | Sideways rail with a big outlined number behind each piece. |  |  |  |  |
 | P | Sticky index | Title and current category stay put while photos scroll past (scroll inside the frame). |  |  | inner scroll; sticky on a real page |  |
 | Q | Diamond lattice | On the brand colour: photos cut into gold-edged diamonds, like a jaali. |  |  |  |  |
@@ -256,9 +256,9 @@ Lab motions: Numbers count up, Stars fill in, Next review, Wipe in, Sways in.
 | A | Rating, dark | Huge Google rating and stars, three quotes, stats underneath. |  | built: `reviews/RatingReviews` |  | keep |
 | B | One voice | One review set large with arrows; the others listed beside it to pick from. |  | close: `reviews/QuoteReviews` |  | keep |
 | C | Cards on brand | Brand colour with the rating, and review cards sliding sideways. |  |  |  |  |
-| D | Quote wall | Masonry of review cards on a warm ground. |  |  |  | build |
+| D | Quote wall | Masonry of review cards on a warm ground. |  | built: `reviews/WallReviews` |  | keep |
 | E | Centre quote | Big gold quote mark, one review centred, dots to switch. |  |  |  |  |
-| F | Rating seal | A round seal with the rating beside two reviews and a "Read all on Google" link. |  |  |  | build |
+| F | Rating seal | A round seal with the rating beside two reviews and a "Read all on Google" link. |  | built: `reviews/SealReviews` |  | keep |
 | G | Chat bubbles | Reviews shown as incoming chat messages with name and stars. |  |  |  |  |
 | H | Pinned notes | On brand colour: reviews as paper notes pinned at slight angles. |  |  |  |  |
 | I | Quote strip | Dark. Short quotes in pills on two rows; can scroll on a loop (rule-breaking motion). |  |  | loops (forbidden) | skip |
@@ -271,7 +271,7 @@ Lab motions: Numbers count up, Stars fill in, Next review, Wipe in, Sways in.
 | P | Newspaper | Customer reports in newspaper columns with drop caps and a headline quote. |  |  |  |  |
 | Q | Avatar picker | Row of customer initials; tapping one shows her review. |  |  |  |  |
 | R | Zari frames | On brand colour: reviews inside double gold frames. |  |  |  |  |
-| S | Ruled list | Calm, type-led rows: review on the left, name on the right. |  |  |  | build |
+| S | Ruled list | Calm, type-led rows: review on the left, name on the right. |  | built: `reviews/RuledReviews` |  | keep |
 | T | Arch quote | One review inside a brand-colour temple arch, with arrows. |  |  |  |  |
 | U | Bento | Rounded tiles: rating, three reviews, garments delivered. |  |  | rounded tiles (shape rule) | skip |
 | V | Scroll reader | Dark. Large reviews that light up as you scroll (scroll inside the frame). |  |  | inner scroll; sticky on a real page |  |
@@ -292,9 +292,9 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 |---|---|---|---|---|---|---|
 | A | WhatsApp form | Name, number, need, date and note; send opens WhatsApp with it all written out. |  | built: `contact/WhatsAppForm` |  | keep |
 | B | Live preview | Form on the left, the WhatsApp message building itself in a phone chat on the right. |  |  |  |  |
-| C | Quick picks | Two taps, no typing: what you are planning and when, then one big send button. |  |  |  | build |
-| D | Reach us trio | Three big cards: WhatsApp, Call, Visit, each with its number or area. |  |  |  | build |
-| E | Book a fitting | Day chips for the next week and a time of day; a summary card sends the request. |  |  |  | build |
+| C | Quick picks | Two taps, no typing: what you are planning and when, then one big send button. |  | built: `contact/PicksContact` |  | keep |
+| D | Reach us trio | Three big cards: WhatsApp, Call, Visit, each with its number or area. |  | built: `contact/TrioContact` |  | keep |
+| E | Book a fitting | Day chips for the next week and a time of day; a summary card sends the request. |  | built: `contact/FittingContact` |  | keep |
 | F | Floating button | The WhatsApp button that floats on every page; tapping opens three quick options. |  |  |  |  |
 | G | Bottom sheet | Dark. A "Contact us" button slides up a phone-style sheet of four options. |  |  |  |  |
 | H | Store card | Map preview with a pin, address, hours, phone and a Directions button. |  |  |  |  |
@@ -330,17 +330,17 @@ Lab motions: Tap demo, Leaders draw, Wipe in.
 | A | Columns + prices | Grouped columns with icons and the starting-price table. |  | built: `services/ColumnServices` |  | keep |
 | B | Rate card | A printed rate card: dotted leaders to each price, delivery and express, groups below. |  | close: `services/ListServices` |  | keep |
 | C | Price tiles + accordion | Three brand-colour price tiles, then groups that open to show every item. |  |  |  |  |
-| D | Tailoring menu | Dark, framed like a restaurant menu with gold prices and a thread ornament. |  |  |  | build |
+| D | Tailoring menu | Dark, framed like a restaurant menu with gold prices and a thread ornament. |  | built: `services/MenuServices` |  | keep |
 | E | Icon grid | Group tabs; each item is an icon tile that asks its price on WhatsApp. |  |  |  |  |
 | F | Three tiers | Simple, designer and bridal as pricing cards with what each includes. |  |  |  |  |
 | G | Tabs + price card | Underlined group tabs with a sticky brand-colour price card beside them. |  |  |  |  |
 | H | How long it takes | Normal and express shown as day bars, with starting prices under them. |  |  |  |  |
 | I | Swatch cards | One colour card per group: brand, accent, dark, paper. |  |  |  |  |
-| J | Big price | "Blouses stitched from ₹400" set enormous, other prices as pills. |  |  |  | build |
+| J | Big price | "Blouses stitched from ₹400" set enormous, other prices as pills. |  | built: `services/PriceServices` |  | keep |
 | K | Do we make it? | A search box that filters everything they stitch, each with an Ask button. |  |  |  |  |
 | L | Price medallions | Three gold-edged round medallions for the starting prices. |  |  |  |  |
 | M | Bill book | Dark. Prices printed on a torn-off receipt from their bill book. |  |  |  |  |
-| N | Known for | Their three "known for" specialities as big cards, other services below. |  |  |  | build |
+| N | Known for | Their three "known for" specialities as big cards, other services below. |  | built: `services/KnownServices` |  | keep |
 | O | Service rail | Sideways cards, one per item, with icons and Ask price. |  |  |  |  |
 | P | The index | Type-led numbered index of groups with counts. |  |  |  |  |
 | Q | Price estimate | Pick a garment and toggle express; a live estimate card updates. |  |  |  |  |
@@ -365,11 +365,11 @@ Lab motions: Words fill in, Wipe in, Seal turns, Tab demo.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Portrait + letter | Arched owner photo beside the story, signed with her name. |  | close: `story/InkStory` |  | keep |
-| B | Big quote | Her first line set large, with a small round portrait. |  |  |  | build |
+| B | Big quote | Her first line set large, with a small round portrait. |  | built: `story/QuoteStory` |  | keep |
 | C | Journey timeline | From the year they started to today, on a dashed thread. |  |  |  |  |
 | D | Arch portrait + numbers | Story with years, garments and rating under it; name tag on the photo. |  |  |  |  |
-| E | Dark editorial | Dark, huge faded year behind, two-column story with a drop cap. |  |  |  | build |
-| F | Letter | A taped handwritten-style note: "Dear customer…", signed. |  |  |  | build |
+| E | Dark editorial | Dark, huge faded year behind, two-column story with a drop cap. |  | built: `story/EditorialStory` |  | keep |
+| F | Letter | A taped handwritten-style note: "Dear customer…", signed. |  | built: `story/LetterStory` |  | keep |
 | G | Polaroid | Tilted polaroid of the owner, story and "known for" callout. |  |  |  |  |
 | H | Numbers first | Big stat column beside the story. |  |  |  |  |
 | I | Year block | Brand block with the start year huge; story beside it. |  |  |  |  |
@@ -402,12 +402,12 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Numbered grid | Six steps with icons and large thread-colour numbers. |  |  |  |  |
-| B | Thread line | Round icon steps joined by a dashed thread. |  |  |  | build |
+| B | Thread line | Round icon steps joined by a dashed thread. |  | built: `process/ThreadProcess` |  | keep |
 | C | Photo rows | A photo per step with the day it happens. |  |  |  |  |
 | D | Dark grid | Gold numerals on a dark ruled grid. |  |  |  |  |
 | E | Step viewer | Tabs for each step; a photo and text panel with Next. |  |  |  |  |
 | F | Photo cards | Card per step with a photo and number tag. |  |  |  |  |
-| G | Day bars | Each step as a bar across their real delivery days. |  |  |  | build |
+| G | Day bars | Each step as a bar across their real delivery days. |  | built: `process/DaysProcess` |  | keep |
 | H | Zig-zag | Alternating photo and text rows with huge numbers. |  |  |  |  |
 | I | Arcade | On brand colour: six gold-edged temple arches, one per step, with Roman numerals and a zari base. |  |  |  |  |
 | J | Accordion | Numbered steps that open to explain. |  |  |  |  |
@@ -416,7 +416,7 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | M | Checklist + bring | Tick-list of steps beside a "What to bring" card. |  |  |  |  |
 | N | Bento | Colour tiles of mixed sizes, one per step. |  |  | rounded tiles (shape rule) | skip |
 | O | Photo rail | Sideways cards with photos and big numbers. |  |  |  |  |
-| P | Type index | Type-led numbered list, very editorial. |  |  |  | build |
+| P | Type index | Type-led numbered list, very editorial. |  | built: `process/IndexProcess` |  | keep |
 | Q | Order tracker | A delivery-style tracker showing where an order is. |  |  |  |  |
 | R | Zari frame | Six steps inside a double gold frame. |  |  |  |  |
 | S | Video + steps | A "watch it being made" video slot beside the steps. |  |  | needs a video clip |  |
@@ -432,13 +432,13 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 
 **FAQ** · Trust · `is.faqA`–`is.faqZ` in `Section Preview.dc.html`
 
-Data: **New field:** `faq` (question and answer), or built-in answers drawn from pricing and delivery.
+Data: `faq` (data sheet 8b), plus answers built from pricing, delivery, payment and branches.
 
 Lab motions: Tap demo, Threads draw, Wipe in.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Accordion | Numbered questions that open, on a lattice ground. |  |  |  | build |
+| A | Accordion | Numbered questions that open, on a lattice ground. |  | built: `faq/AccordionFaq` |  | keep |
 | B | Sticky intro | Heading and WhatsApp stay put while the questions scroll. |  |  |  |  |
 | C | Topic tabs | Prices, Timing, Ordering, Visiting tabs with answer cards. |  |  |  |  |
 | D | Dark accordion | Gold numerals and a soft glow on dark. |  |  |  |  |
@@ -447,8 +447,8 @@ Lab motions: Tap demo, Threads draw, Wipe in.
 | G | List + answer panel | Pick a question; the brand panel shows the answer. |  |  |  |  |
 | H | Editorial rows | Large italic numbers, type-led rows. |  |  |  |  |
 | I | Brand accordion | On brand colour with gold edges and a zari base. |  |  |  |  |
-| J | Quick facts | Four price and delivery facts above the accordion. |  |  |  | build |
-| K | Two columns | Question left, answer right, ruled rows. |  |  |  | build |
+| J | Quick facts | Four price and delivery facts above the accordion. |  | built: `faq/FactsFaq` |  | keep |
+| K | Two columns | Question left, answer right, ruled rows. |  | built: `faq/RowsFaq` |  | keep |
 | L | Arch cards | Each question inside a gold-edged temple arch. |  |  |  |  |
 | M | Big numbers | Price and delivery answers set huge, others below. |  |  |  |  |
 | N | Bento | Colour tiles of mixed sizes, one per question. |  |  | rounded tiles (shape rule) | skip |
@@ -506,16 +506,16 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 
 **Bridal packages** · What they make · `is.bridalA`–`is.bridalZ` in `Section Preview.dc.html`
 
-Data: **New field:** bridal packages (name, what's included, price).
+Data: `bridalPackages` (data sheet 6b). The consult version needs only bridal work in their services.
 
 Lab motions: Wipe in, Tap demo, Zari draws.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Three tiers | Essential, Signature and Trousseau cards; the middle one raised and in brand colour. |  |  |  | build |
+| A | Three tiers | Essential, Signature and Trousseau cards; the middle one raised and in brand colour. |  | built: `bridal/TierBridal` |  | keep |
 | B | Dark collection | Dark luxe tiers with gold hairline frames and a crown. |  |  |  |  |
 | C | Compare table | What each package includes, side by side. |  |  |  |  |
-| D | Package tabs | Switch packages; one detailed panel with price and list. |  |  |  | build |
+| D | Package tabs | Switch packages; one detailed panel with price and list. |  | built: `bridal/TabBridal` |  | keep |
 | E | Arch cards | Each package inside a gold-edged temple arch. |  |  |  |  |
 | F | Zari frame | On brand colour inside a double gold frame. |  |  |  |  |
 | G | Week-by-week plan | Suggested timeline from consult to final fit. |  |  |  |  |
@@ -534,7 +534,7 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 | T | Bridal pass | Ticket-style passes with a code and Reserve button. |  |  |  |  |
 | U | What is included | Tabs tick and grey out items per package. |  |  |  |  |
 | V | Arched stories | Photo cards with arched tops and prices. |  |  |  |  |
-| W | Owner consult | The owner invites brides to a one-to-one consult. |  |  |  | build |
+| W | Owner consult | The owner invites brides to a one-to-one consult. |  | built: `bridal/ConsultBridal` |  | keep |
 | X | Ceremony tabs | Wedding, Reception, Engagement, Haldi looks. |  |  |  |  |
 | Y | Wedding countdown | Pick the date; a seal shows weeks to go with advice. |  |  |  |  |
 | Z | Spotlight | Dark stage, one package lit at a time with pips. |  |  |  |  |
@@ -543,15 +543,15 @@ Lab motions: Wipe in, Tap demo, Zari draws.
 
 **Before / after alterations** · Their work · `is.altA`–`is.altZ` in `Section Preview.dc.html`
 
-Data: **New photos:** before/after pairs, named by file like the work categories (`before-01.jpg`, `after-01.jpg`).
+Data: `media.alterations`, from photos `before-01.jpg` + `after-01.jpg`; notes in 9b become captions.
 
 Lab motions: Slider sweep, Tap demo, Wipe in.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Drag slider | One large photo; drag across to compare before and after. |  |  |  | build |
+| A | Drag slider | One large photo; drag across to compare before and after. |  | built: `alterations/SliderAlterations` |  | keep |
 | B | Arch slider + tabs | Arched slider with Blouse, Lehenga, Kurti and Upcycle tabs. |  |  |  |  |
-| C | Pairs grid | Before and after side by side for each alteration. |  |  |  | build |
+| C | Pairs grid | Before and after side by side for each alteration. |  | built: `alterations/PairsAlterations` |  | keep |
 | D | Dark slider | Slider on dark with arrows to step through. |  |  |  |  |
 | E | Tap toggle | Before / After switch over one large photo. |  |  |  |  |
 | F | Hover reveal | Hover a card to reveal the after photo. |  |  |  | skip |
@@ -561,7 +561,7 @@ Lab motions: Slider sweep, Tap demo, Wipe in.
 | J | Stacked | Before above, after below, with an arrow between. |  |  |  |  |
 | K | Arch pairs | Pairs inside tall temple arches. |  |  |  |  |
 | L | Taped polaroids | Pairs pinned with tape and handwritten captions. |  |  |  |  |
-| M | What we fix | Alteration services list beside a slider. |  |  |  | build |
+| M | What we fix | Alteration services list beside a slider. |  | built: `alterations/ListAlterations` |  | keep |
 | N | Bento | Slider, after photos and a services tile. |  |  | rounded tiles (shape rule) | skip |
 | O | Pair deck | Stacked pairs dealt with arrows. |  |  |  |  |
 | P | A Second Life | Magazine cover story with a drop cap. |  |  |  |  |
@@ -580,17 +580,17 @@ Lab motions: Slider sweep, Tap demo, Wipe in.
 
 **Offers banner** · Bookings · `is.offerA`–`is.offerZ` in `Section Preview.dc.html`
 
-Data: **New field:** offers (text, valid till).
+Data: `offers` (data sheet 6c): offer, conditions, last day, code.
 
 Lab motions: Tap demo, Slides in, Wipe in.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Top strip | Slim announcement bar across the top of the page. |  |  |  | build |
+| A | Top strip | Slim announcement bar across the top of the page. |  | built: `offer/StripOffer` |  | keep |
 | B | Rotating pill | A floating pill that steps through offers. |  |  |  | skip |
-| C | Photo card | Photo beside the offer and a WhatsApp button. |  |  |  | build |
+| C | Photo card | Photo beside the offer and a WhatsApp button. |  | built: `offer/PhotoOffer` |  | keep |
 | D | Dark framed band | Dark luxe with double gold hairlines. |  |  |  |  |
-| E | Coupon ticket | Perforated coupon with a code to show at the counter. |  |  |  | build |
+| E | Coupon ticket | Perforated coupon with a code to show at the counter. |  | built: `offer/CouponOffer` |  | keep |
 | F | Pop-up | A modal offer over the page, with close. |  |  | pop-up over content | skip |
 | G | Sticky bar | Dismissible bar pinned to the bottom of the screen. |  |  |  |  |
 | H | Three offers | Festive, wedding season and express as cards. |  |  |  |  |
@@ -699,9 +699,9 @@ Lab motions: Name rises, Zari draws, Icons lift, Wipe in.
 |---|---|---|---|---|---|---|
 | A | Brand footer | Brand colour, logo, the name at full size, pages, contact icons. |  | built: `footer/BrandFooter` |  | keep |
 | B | Columns | Dark with a zari edge: about, pages, visit and contact columns. |  | built: `footer/ColumnsFooter` |  | keep |
-| C | Grand sign-off | Dark and centred: logo, huge name, local name, WhatsApp, Call, Directions. |  |  |  | build |
+| C | Grand sign-off | Dark and centred: logo, huge name, local name, WhatsApp, Call, Directions. |  | built: `footer/SignoffFooter` |  | keep |
 | D | Minimal | Light and centred: logo, name, pages, icons. |  | built: `footer/MinimalFooter` |  | keep |
-| E | Big invitation | A brand-colour "Planning something? Let's talk." card above a compact row. |  |  |  | build |
+| E | Big invitation | A brand-colour "Planning something? Let's talk." card above a compact row. |  | built: `footer/InviteFooter` |  | keep |
 | F | Map + info | Dark: a map tile with the logo pinned, full contact details beside it. |  |  |  |  |
 | G | Hours board | Open or closed today and the weekly hours next to the logo and a WhatsApp button. |  |  |  |  |
 | H | Double zari | Paper ground between double zari borders; visit, logo, talk-to-us columns. |  |  |  |  |

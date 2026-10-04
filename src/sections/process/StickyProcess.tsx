@@ -7,29 +7,8 @@ import { useRef, useState } from 'react'
 import { useBoutique } from '../../app/BoutiqueContext'
 import Media from '../../components/Media'
 import { EASE, gsap, MEDIA, SCRUB, ScrollTrigger, useGSAP } from '../../motion/gsap'
+import { STEPS } from './steps'
 
-const STEPS = [
-  {
-    title: 'Consultation',
-    body: 'Bring your fabric, a photo you love, or just an idea. We sketch the design with you and suggest what will suit the occasion.',
-  },
-  {
-    title: 'Measurements',
-    body: 'Every measurement is taken by hand and kept under your name, so your next order starts from a perfect fit.',
-  },
-  {
-    title: 'Cutting',
-    body: 'Your pattern is drafted to your own measurements, not a standard size, and cut by the master tailor.',
-  },
-  {
-    title: 'Stitching and handwork',
-    body: 'The garment is stitched, then embroidered by hand wherever the design calls for it.',
-  },
-  {
-    title: 'Trial and finishing',
-    body: 'You try it on. We adjust until it sits exactly right, then press it and pack it for you.',
-  },
-]
 
 export default function StickyProcess() {
   const { boutique } = useBoutique()
