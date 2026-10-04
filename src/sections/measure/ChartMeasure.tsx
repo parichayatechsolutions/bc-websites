@@ -11,18 +11,7 @@ import { useState } from 'react'
 import { IconBrandWhatsapp } from '@tabler/icons-react'
 import Button from '../../components/Button'
 import { useBlouse } from '../blouse/blouseShared'
-import { useSendMeasurements } from './measureShared'
-
-// Bust, under bust, shoulder, armhole, sleeve round, in inches.
-const SIZES = [
-  [32, 27, 13.5, 14, 10.5],
-  [34, 29, 14, 15, 11],
-  [36, 31, 14.5, 16, 11.5],
-  [38, 33, 15, 17, 12],
-  [40, 35, 15.5, 18, 12.5],
-  [42, 37, 16, 19, 13],
-]
-const HEADS = ['Bust', 'Under bust', 'Shoulder', 'Armhole', 'Sleeve round']
+import { SIZE_HEADS as HEADS, SIZES, useSendMeasurements } from './measureShared'
 
 export default function ChartMeasure() {
   const { stitchesBlouses } = useBlouse()

@@ -30,6 +30,21 @@ export const MEASURES: IMeasure[] = [
   { id: 'length', name: 'Blouse length', how: 'From the shoulder down to where the blouse ends.', tape: 'M 162 36 L 162 141' },
 ]
 
+/**
+ * A general blouse size chart: bust, under bust, shoulder, armhole and
+ * sleeve round, in inches. Common starting points, labelled as such
+ * wherever they're shown.
+ */
+export const SIZES = [
+  [32, 27, 13.5, 14, 10.5],
+  [34, 29, 14, 15, 11],
+  [36, 31, 14.5, 16, 11.5],
+  [38, 33, 15, 17, 12],
+  [40, 35, 15.5, 18, 12.5],
+  [42, 37, 16, 19, 13],
+]
+export const SIZE_HEADS = ['Bust', 'Under bust', 'Shoulder', 'Armhole', 'Sleeve round']
+
 /** The blouse with one measurement's tape line drawn on it, front or back as the measurement needs. */
 export function TapeDrawing({ measure }: { measure: IMeasure }) {
   return (
