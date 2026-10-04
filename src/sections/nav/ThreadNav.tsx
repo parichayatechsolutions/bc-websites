@@ -47,7 +47,7 @@ export default function ThreadNav() {
           </div>
         </div>
       </div>
-      <div className="relative h-3 border-t border-ink/10" aria-hidden="true">
+      <div className="relative h-3 overflow-hidden border-t border-ink/10" aria-hidden="true">
         <div data-progress className="invisible absolute inset-x-0 top-1 flex origin-left items-center">
           <span className="flex-1 border-t-2 border-dashed border-thread" />
           <IconNeedle size={14} stroke={1.75} className="-ml-1 shrink-0 rotate-45 text-thread" />

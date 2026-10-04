@@ -24,12 +24,12 @@ export default function CardFooter() {
     <footer className="border-t border-ink/10 bg-paper pt-16 pb-10 text-ink">
       <div className="mx-auto max-w-[1200px] px-5 md:px-10">
         <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2">
-          <div className="flex aspect-[7/4] flex-col items-center justify-center gap-3 rounded-2xl bg-primary p-6 text-center text-on-primary">
+          <div className="flex min-h-48 min-w-0 flex-col items-center justify-center gap-3 rounded-2xl bg-primary p-6 text-center text-on-primary">
             <Logo className="h-14 w-14 rounded-full bg-light" />
             <p className="t-3 text-balance">{brand.name}</p>
             {line && <p className="t-small max-w-[30ch] opacity-85">{line}</p>}
           </div>
-          <div className="flex aspect-[7/4] flex-col justify-center rounded-2xl border border-ink/15 bg-light p-6">
+          <div className="flex min-h-48 min-w-0 flex-col justify-center rounded-2xl border border-ink/15 bg-light p-6 break-words">
             <p className="font-semibold">{owner.name}</p>
             {owner.role && <p className="t-small text-muted">{owner.role}</p>}
             <div className="t-small mt-4 space-y-1">

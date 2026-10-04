@@ -46,7 +46,7 @@ export default function BarOffer() {
       {offer && !closed && (
         <aside
           aria-label="Offer"
-          className="pointer-events-auto mx-auto flex max-w-3xl items-center gap-3 rounded-full bg-primary py-2 pr-2 pl-5 text-on-primary md:gap-5 md:pl-7"
+          className="pointer-events-auto mx-auto flex max-w-3xl items-center gap-3 rounded-2xl bg-primary py-2 pr-2 pl-5 text-on-primary md:gap-5 md:pl-7"
         >
           <p className="min-w-0 flex-1 py-1 leading-snug">
             <span className="font-semibold">{offer.title}</span>

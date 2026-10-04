@@ -31,7 +31,7 @@ export default function FanFabrics() {
                 <li
                   key={f.name}
                   className="absolute bottom-0 left-1/2 w-32 origin-bottom transition-transform duration-300 ease-stitch md:w-40"
-                  style={{ transform: `translateX(-50%) rotate(${on ? 0 : (i - mid) * 9}deg) translateY(${on ? -16 : 0}px)`, zIndex: on ? 20 : i }}
+                  style={{ transform: `translateX(-50%) translateX(${on ? 0 : (i - mid) * 22}px) rotate(${on ? 0 : (i - mid) * 14}deg) translateY(${on ? -16 : 0}px)`, zIndex: on ? 20 : i }}
                 >
                   <button type="button" onClick={() => setActive(i)} aria-pressed={on} aria-label={f.name} className="block w-full cursor-pointer border-4 border-light bg-paper">
                     <span className="block aspect-[2/3] overflow-hidden">

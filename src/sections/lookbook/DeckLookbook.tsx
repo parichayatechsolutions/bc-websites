@@ -30,7 +30,7 @@ export default function DeckLookbook() {
   const step = (by: number) => setTop((top + by + looks.length) % looks.length)
 
   return (
-    <section id="lookbook" className="section bg-dark text-light">
+    <section id="lookbook" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-6">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm">

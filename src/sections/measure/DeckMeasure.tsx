@@ -25,7 +25,7 @@ export default function DeckMeasure() {
   const step = (by: number) => setTop((top + by + MEASURES.length) % MEASURES.length)
 
   return (
-    <section id="measure" className="section bg-dark text-light">
+    <section id="measure" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <h2 className="t-1 max-w-[10ch] text-balance">One at a time</h2>

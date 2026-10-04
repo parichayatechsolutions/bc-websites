@@ -28,7 +28,7 @@ export default function DeckGallery() {
   const step = (by: number) => setTop((top + by + photos.length) % photos.length)
 
   return (
-    <section id="work" className="section bg-dark text-light">
+    <section id="work" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-6">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">

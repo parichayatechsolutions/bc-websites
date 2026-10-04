@@ -24,7 +24,7 @@ export default function DeckAlterations() {
   const step = (by: number) => setTop((top + by + pairs.length) % pairs.length)
 
   return (
-    <section id="alterations" className="section">
+    <section id="alterations" className="section overflow-x-clip">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-7">
           <div className="relative aspect-[4/3] w-full">

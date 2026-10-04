@@ -19,7 +19,13 @@ const CRAFTS = [
 export default function ColophonTeam() {
   const { boutique } = useBoutique()
   const team = boutique.team ?? []
-  const credits = CRAFTS.map((c) => ({ verb: c.verb, people: team.filter((p) => c.match.test(p.role)).map((p) => p.name) })).filter((c) => c.people.length)
+  // Each person is credited once, for the first craft their role names.
+  const used = new Set<string>()
+  const credits = CRAFTS.map((c) => {
+    const people = team.filter((p) => !used.has(p.name) && c.match.test(p.role)).map((p) => p.name)
+    people.forEach((n) => used.add(n))
+    return { verb: c.verb, people }
+  }).filter((c) => c.people.length)
   if (credits.length < 2) return null
 
   return (

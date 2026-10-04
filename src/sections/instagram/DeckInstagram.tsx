@@ -26,7 +26,7 @@ export default function DeckInstagram() {
   const step = (by: number) => setTop((top + by + photos.length) % photos.length)
 
   return (
-    <section id="instagram" className="section">
+    <section id="instagram" className="section overflow-x-clip">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <h2 className="t-1 max-w-[10ch] text-balance">More on Instagram</h2>

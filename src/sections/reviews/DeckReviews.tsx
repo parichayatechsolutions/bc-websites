@@ -23,7 +23,7 @@ export default function DeckReviews() {
   const step = (by: number) => setTop((top + by + shown.length) % shown.length)
 
   return (
-    <section id="reviews" className="section bg-dark text-light">
+    <section id="reviews" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <h2 className="t-1 max-w-[10ch] text-balance">What customers say</h2>

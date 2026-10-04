@@ -11,7 +11,7 @@ import { IconBrandWhatsapp } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 
 const PARTS = [
-  { id: 'body', name: 'Body', match: /pleat|drap|polish|iron|press/i, d: 'M 10 10 L 290 10 L 290 98 L 10 98 Z' },
+  { id: 'body', name: 'Body', match: /pleat|drap|polish|iron|\bpress/i, d: 'M 10 10 L 290 10 L 290 98 L 10 98 Z' },
   { id: 'border', name: 'Border', match: /fall|pico|border|lace/i, d: 'M 10 98 L 290 98 L 290 116 L 10 116 Z' },
   { id: 'pallu', name: 'Pallu', match: /kuchu|tassel|fringe|pallu/i, d: 'M 290 10 L 390 10 L 390 116 L 290 116 Z' },
   { id: 'blouse', name: 'Blouse piece', match: /blouse/i, d: 'M 10 126 L 110 126 L 110 156 L 10 156 Z' },

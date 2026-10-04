@@ -25,7 +25,7 @@ export default function DeckBlouse() {
   const step = (by: number) => setTop((top + by + CLASSICS.length) % CLASSICS.length)
 
   return (
-    <section id="blouse" className="section bg-dark text-light">
+    <section id="blouse" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="relative grid md:col-span-7">
           {CLASSICS.map((l, i) => {

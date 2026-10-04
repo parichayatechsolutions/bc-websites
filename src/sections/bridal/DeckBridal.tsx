@@ -24,7 +24,7 @@ export default function DeckBridal() {
   const step = (by: number) => setTop((top + by + packages.length) % packages.length)
 
   return (
-    <section id="bridal" className="section">
+    <section id="bridal" className="section overflow-x-clip">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <h2 className="t-1 max-w-[10ch] text-balance">Bridal packages</h2>

@@ -37,7 +37,7 @@ export default function GarmentAlterations() {
               type="button"
               onClick={() => setIndex(i)}
               aria-pressed={i === index}
-              className="t-1 cursor-pointer text-ink/35 transition-colors duration-200 ease-stitch hover:text-ink aria-pressed:text-primary-ink"
+              className="t-1 cursor-pointer text-muted transition-colors duration-200 ease-stitch hover:text-ink aria-pressed:text-primary-ink"
             >
               {g.name}
             </button>

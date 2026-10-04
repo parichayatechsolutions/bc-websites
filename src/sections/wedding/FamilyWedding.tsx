@@ -45,7 +45,7 @@ export default function FamilyWedding() {
   return (
     <section id="wedding-family" className="section">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
-        <div className="md:col-span-7">
+        <div className="order-2 md:order-none md:col-span-7">
           {/* A ring on a computer; a simple wrap of chips on a phone. */}
           <div className="relative hidden aspect-square md:block" role="group" aria-label="Family">
             <span aria-hidden="true" className="absolute inset-[14%] rounded-full border-2 border-dashed border-thread" />

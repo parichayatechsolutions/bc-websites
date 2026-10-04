@@ -26,7 +26,7 @@ export default function DeckFabrics() {
   const step = (by: number) => setTop((top + by + fabrics.length) % fabrics.length)
 
   return (
-    <section id="fabrics" className="section bg-dark text-light">
+    <section id="fabrics" className="section overflow-x-clip bg-dark text-light">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-6">
           <div className="relative mx-auto aspect-square w-full max-w-xs">

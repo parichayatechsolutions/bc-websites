@@ -34,7 +34,8 @@ export default function FinderFabrics() {
   const { boutique } = useBoutique()
   const fabrics = scaled(boutique.fabrics ?? [])
   const [occasion, setOccasion] = useState(0)
-  const [feel, setFeel] = useState(0)
+  // Start on a feel that some of their fabrics have, so the first view isn't empty.
+  const [feel, setFeel] = useState(() => Math.max(0, FEELS.findIndex((f) => fabrics.some((x) => f.fits(x.scale)))))
   if (fabrics.length < 2) return null
 
   const o = OCCASIONS[occasion]

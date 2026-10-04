@@ -23,7 +23,7 @@ export default function PassRental() {
         <h2 className="t-1 max-w-[12ch] text-balance">Rent for the day</h2>
         <ul className="mt-12 grid gap-5 lg:grid-cols-2">
           {pieces.map((p) => (
-            <li key={p.name} className="grid grid-cols-[6rem_1fr] overflow-hidden rounded-2xl border border-ink/20 sm:grid-cols-[7rem_1fr_auto]">
+            <li key={p.name} className="grid grid-cols-[6rem_1fr] overflow-hidden rounded-2xl border border-ink/20 sm:grid-cols-[7rem_1fr_10rem]">
               <div className="row-span-2 bg-paper sm:row-span-1">
                 <Media file={p.photo} alt={p.name} />
               </div>
@@ -34,7 +34,7 @@ export default function PassRental() {
               <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t-2 border-dashed border-ink/25 px-5 py-3 sm:flex-col sm:items-start sm:justify-center sm:border-t-0 sm:border-l-2 sm:py-5">
                 {showPrices && p.pricePerDay && (
                   <p>
-                    <span className="t-2 tabular-nums">{rupees(p.pricePerDay)}</span>
+                    <span className="t-3 tabular-nums">{rupees(p.pricePerDay)}</span>
                     <span className="t-small text-muted"> a day</span>
                   </p>
                 )}

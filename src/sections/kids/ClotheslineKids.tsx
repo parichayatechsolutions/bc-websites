@@ -36,8 +36,8 @@ export default function ClotheslineKids() {
       <div className="wrap">
         <h2 className="t-1 max-w-[12ch] text-balance">For little ones</h2>
         <div className="relative mt-14">
-          <span aria-hidden="true" className="absolute inset-x-0 top-2 border-t-2 border-thread" />
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-14 md:grid-cols-4">
+          <span aria-hidden="true" className={`absolute top-2 left-0 border-t-2 border-thread ${photos.length > 1 ? 'right-0' : 'w-60'}`} />
+          <ul className={`grid gap-x-6 gap-y-14 ${photos.length > 1 ? 'grid-cols-2 md:grid-cols-4' : 'max-w-60'}`}>
             {photos.map((f, i) => (
               <li key={f} data-outfit className={`relative flex flex-col items-center ${i % 2 ? 'md:mt-6' : ''}`}>
                 {/* The peg: two slats of wood over the line. */}

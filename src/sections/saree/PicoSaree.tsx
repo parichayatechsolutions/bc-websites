@@ -14,7 +14,8 @@ const CLOTH = { fill: 'color-mix(in oklab, var(--c-primary) 22%, var(--c-light))
 const LINE = { stroke: 'var(--c-primary-ink)' }
 
 // A ragged edge with threads hanging from it, on a 200 × 120 grid.
-const RAW_EDGE = Array.from({ length: 21 }, (_, i) => `${i * 10} ${86 + (i % 3) * 3 - (i % 2) * 2}`).join(' L ')
+// Right to left, so the outline closes back at the top-left corner.
+const RAW_EDGE = Array.from({ length: 21 }, (_, i) => `${200 - i * 10} ${86 + (i % 3) * 3 - (i % 2) * 2}`).join(' L ')
 const THREADS = Array.from({ length: 9 }, (_, i) => `M ${12 + i * 22} ${88} q 3 10 -2 ${16 + (i % 3) * 5}`).join(' ')
 // A tight zigzag along a rolled edge.
 const PICO = Array.from({ length: 40 }, (_, i) => `${i * 5} ${i % 2 ? 80 : 90}`).join(' L ')

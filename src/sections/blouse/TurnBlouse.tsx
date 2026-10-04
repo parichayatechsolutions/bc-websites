@@ -26,7 +26,7 @@ export default function TurnBlouse() {
   return (
     <section id="blouse" className="section">
       <div className="wrap grid gap-12 md:grid-cols-12 md:gap-16">
-        <div className="md:col-span-7">
+        <div className="order-2 md:order-none md:col-span-7">
           <div className="flex justify-center">
             <div className="inline-flex rounded-full border border-ink/25 p-1" role="group" aria-label="Show">
               {SIDES.map((side, i) => (

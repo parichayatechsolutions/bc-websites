@@ -4,8 +4,9 @@
 // (Lab: hero U, "Photo in letters".)
 //
 // The letters are real text (the photo is a background clipped to them),
-// so it reads to screen readers and search. Where clipping isn't supported
-// the name falls back to the accent colour. Sized by length; overlay-ready.
+// so it reads to screen readers and search. Without a photo, where clipping
+// isn't supported, or if the photo fails to load, the name is in the accent
+// colour. Sized by length; overlay-ready.
 //
 // Motion: the name rises once. Reduced motion: in place.
 
@@ -36,8 +37,9 @@ export default function LettersHero() {
         {since && <p className="t-small text-light/70">{since}</p>}
         <h1
           data-hero-name
-          className="t-hero mt-4 bg-cover bg-center text-balance text-accent-on-dark supports-[background-clip:text]:bg-clip-text supports-[background-clip:text]:text-transparent"
-          style={{ ...fitDisplay(brand.name, 16, 13), lineHeight: 0.88, ...(src ? { backgroundImage: `url(${src})` } : {}) }}
+          className={`t-hero mt-4 bg-cover bg-center text-balance text-accent-on-dark ${src ? 'supports-[background-clip:text]:bg-clip-text supports-[background-clip:text]:text-transparent' : ''}`}
+          // The accent colour under the photo keeps the letters readable if the photo fails to load.
+          style={{ ...fitDisplay(brand.name, 16, 13), lineHeight: 0.88, ...(src ? { backgroundImage: `url(${src})`, backgroundColor: 'var(--c-accent-on-dark)' } : {}) }}
         >
           {brand.name}
         </h1>
