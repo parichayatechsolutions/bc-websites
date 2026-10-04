@@ -33,8 +33,8 @@ export default function QuoteReviews() {
         </div>
 
         {lead && (
-          <figure className="mt-14 max-w-[26ch]">
-            <blockquote className="t-2 text-balance">“{lead.text}”</blockquote>
+          <figure className="mt-14">
+            <blockquote className="t-2 max-w-[26ch] text-balance">“{lead.text}”</blockquote>
             <figcaption className="mt-5 text-muted">{lead.name}</figcaption>
           </figure>
         )}

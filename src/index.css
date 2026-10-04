@@ -171,6 +171,12 @@
   .page-top {
     padding-top: 4.5rem;
   }
+  /* For an opener that starts with a full-width photo: flush under a nav in
+     the flow, so no stripe of page shows above the photo, but still clear of
+     a floating one. */
+  .page-top.is-flush {
+    padding-top: 0;
+  }
   [data-nav='floating'] .page-top {
     padding-top: 8.5rem;
   }

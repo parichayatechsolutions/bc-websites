@@ -37,7 +37,7 @@ export default function MosaicHero() {
   })
 
   return (
-    <section ref={root} id="top" className="page-top pb-1">
+    <section ref={root} id="top" className="page-top is-flush pb-1">
       <div className="grid grid-cols-2 gap-1 px-1 md:auto-rows-[minmax(18rem,42svh)] md:grid-cols-4">
         <div className="col-span-2 flex flex-col justify-between gap-8 bg-dark p-6 text-light md:p-10">
           {since && <p className="t-small text-light/70">{since}</p>}

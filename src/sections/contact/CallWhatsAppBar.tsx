@@ -32,10 +32,10 @@ export default function CallWhatsAppBar() {
       >
         <div className="grid grid-cols-2 gap-3">
           <Button href={telLink(boutique.contact.phone)} variant="outline-dark" icon={IconPhone} className="px-4">
-            Call us
+            Call
           </Button>
           <Button href={whatsappLink(boutique)} variant="primary" icon={IconBrandWhatsapp} className="px-4">
-            WhatsApp us
+            WhatsApp
           </Button>
         </div>
       </div>

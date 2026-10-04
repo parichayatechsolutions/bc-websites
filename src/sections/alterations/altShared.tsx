@@ -72,7 +72,9 @@ export function Compare({ pair, caption, className = '' }: { pair: AlterationPai
  * show it can be dragged. Call inside useMotion. (Lab motion: "Slider sweep".)
  */
 export function sweep(trigger: gsap.DOMTarget) {
-  return gsap.to('[data-compare]', {
+  // fromTo, not to: GSAP can't read a custom property's starting value, so
+  // it would sweep from 0 and come to rest at the far edge.
+  return gsap.fromTo('[data-compare]', { '--x': '50%' }, {
     '--x': '64%',
     duration: DURATION.base,
     ease: EASE.morph,

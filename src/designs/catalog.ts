@@ -43,9 +43,39 @@ export const DESIGNS: IDesignMeta[] = [
     name: 'Ledger',
     description: 'Type first. The name across the full width like a masthead, the facts in a line under it, and the work in a grid. Modern and plain-spoken.',
   },
+  {
+    id: 'pallu',
+    name: 'Pallu',
+    description: 'Built like the end of a saree: their work, a woven zari border, then the name on a band of brand colour. Warm and festive, with an arch for every kind of work they make.',
+  },
+  {
+    id: 'mosaic',
+    name: 'Mosaic',
+    description: 'Range at first sight. Six pieces and the name in one grid, prices up front, and WhatsApp in a dock under the thumb. Young, quick and made for phones.',
+  },
+  {
+    id: 'gazette',
+    name: 'Gazette',
+    description: 'Set like a newspaper: the name as the front-page headline, and everything after it in ruled columns. Needs no photographs, so it suits a boutique that hasn’t shared any yet.',
+  },
+  {
+    id: 'trousseau',
+    name: 'Trousseau',
+    description: 'For brides. One photograph, then their bridal packages, a piece to ask about, and a dark printed menu of what they make. Couture type and a quiet, expensive pace.',
+  },
 ]
 
 export const DESIGN_IDS = DESIGNS.map((d) => d.id)
+
+/**
+ * The designs an unassigned boutique's own address can open in, chosen by
+ * its slug. Frozen to the first five on purpose: the choice is a hash over
+ * this list, so adding a design here moves nearly every unassigned boutique
+ * to a different design overnight. Newer designs are on every card wall and
+ * can be given to a boutique in ASSIGNED; add one here only when that
+ * reshuffle is wanted.
+ */
+const ROTATION = ['vitrine', 'arch', 'atelier', 'poster', 'ledger']
 
 /**
  * Boutiques whose design has been settled — usually because the owner picked
@@ -71,7 +101,7 @@ function hash(text: string): number {
 export function designFor(slug: string): string {
   const chosen = ASSIGNED[slug]
   if (chosen && DESIGN_IDS.includes(chosen)) return chosen
-  return DESIGN_IDS[hash(slug) % DESIGN_IDS.length]
+  return ROTATION[hash(slug) % ROTATION.length]
 }
 
 export const isDesign = (id: string | undefined): id is string => Boolean(id && DESIGN_IDS.includes(id))

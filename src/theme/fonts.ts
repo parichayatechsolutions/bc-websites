@@ -42,4 +42,32 @@ export const FONTS = {
     body: 'DM Sans',
     href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&family=DM+Serif+Display&display=swap',
   },
+
+  /** A sturdy Devanagari-ready serif with a clean geometric sans, both from the Indian Type Foundry. Warm and festive without being heavy: the saree-border designs. */
+  lailaPoppins: {
+    display: 'Laila',
+    body: 'Poppins',
+    href: 'https://fonts.googleapis.com/css2?family=Laila:wght@600&family=Poppins:wght@300;400;600&display=swap',
+  },
+
+  /** A bold, high-contrast display serif with a friendly grotesque. Confident and young, for a boutique that leads with range and price. */
+  yesevaWork: {
+    display: 'Yeseva One',
+    body: 'Work Sans',
+    href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&family=Yeseva+One&display=swap',
+  },
+
+  /** A dark, newsy display serif with a plain modern sans. Reads like a well-set newspaper: the type-led design for boutiques with few photographs. */
+  gloockFigtree: {
+    display: 'Gloock',
+    body: 'Figtree',
+    href: 'https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&family=Gloock&display=swap',
+  },
+
+  /** A couture Didone with a tight modern sans. Fashion-magazine luxury, for the bridal design. */
+  bodoniInter: {
+    display: 'Bodoni Moda',
+    body: 'Inter Tight',
+    href: 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Inter+Tight:wght@300;400;600&display=swap',
+  },
 } satisfies Record<string, IFontPair>

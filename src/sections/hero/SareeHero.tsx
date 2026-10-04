@@ -35,8 +35,8 @@ export default function SareeHero() {
   })
 
   return (
-    <section ref={root} id="top" className="page-top">
-      <figure data-hero-photo className="relative h-[46svh] overflow-hidden bg-paper md:h-[60vh]">
+    <section ref={root} id="top" className="page-top is-flush">
+      <figure data-hero-photo className="relative h-[42svh] overflow-hidden bg-paper md:h-[50vh]">
         <div data-hero-drift className="absolute inset-x-0 -top-[6%] h-[112%]">
           <Media file={media.hero.src} poster={media.hero.poster} alt={`Work by ${brand.name}`} priority />
         </div>
@@ -47,7 +47,7 @@ export default function SareeHero() {
         <div className="wrap grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
             {since && <p className="t-small opacity-80">{since}</p>}
-            <h1 data-hero-name className="t-hero mt-4 max-w-[14ch] text-balance" style={fitDisplay(brand.name, 9, 8)}>
+            <h1 data-hero-name className="t-hero mt-4 max-w-[14ch] text-balance" style={fitDisplay(brand.name, 12, 8)}>
               {brand.name}
             </h1>
             {brand.tagline && <p className="t-lead mt-5 max-w-[30ch] opacity-90">{brand.tagline}</p>}
