@@ -105,6 +105,7 @@ export { default as JourneyStory } from './story/JourneyStory' // The start year
 export { default as ArchStory } from './story/ArchStory' // Arched photo with a name plate beside the story, numbers in a ruled row
 export { default as ValuesStory } from './story/ValuesStory' // Three cards of what they stand by, from their data, under the story’s opening
 export { default as ChaptersStory } from './story/ChaptersStory' // The story’s paragraphs as numbered chapters (needs two or more)
+export { default as MakerStory } from './story/MakerStory' // A clip of the owner (tap to play) beside her story (needs maker.mp4 and permission)
 
 // Their work
 export { default as RailGallery } from './gallery/RailGallery' // "Known for" + work photos sliding sideways on scroll (pinned on desktop)
@@ -143,6 +144,7 @@ export { default as PatternProcess } from './process/PatternProcess' // Making s
 export { default as CalendarProcess } from './process/CalendarProcess' // Day 1, in between and the delivery day as calendar pages (needs deliveryDays)
 export { default as GridProcess } from './process/GridProcess' // Making steps in a grid with large thread-colour numbers and icons
 export { default as DarkProcess } from './process/DarkProcess' // Dark: making steps on a ruled grid with gold numerals
+export { default as VideoProcess } from './process/VideoProcess' // A workroom clip (tap to play) beside the numbered steps (needs workroom.mp4)
 
 // What they stitch
 export { default as ColumnServices } from './services/ColumnServices' // Services in grouped columns, optional starting prices
@@ -576,6 +578,7 @@ export { default as EssayPosts } from './posts/EssayPosts' // Style notes with p
 export { default as LeadPosts } from './posts/LeadPosts' // The newest note as a large lead, the next three in ruled columns
 export { default as StartPosts } from './posts/StartPosts' // "Start here": their first three notes kept in view beside the rest
 export { default as ProgressPosts } from './posts/ProgressPosts' // The newest note as a long read with a sticky progress line and minutes left
+export { default as TipsPosts } from './posts/TipsPosts' // Dark: one-minute tip clips as titled cards in a grid (needs tip-NN.mp4)
 
 // Wedding planner (undated; each shows only for a boutique that does bridal work)
 export { default as CardWedding } from './wedding/CardWedding' // The wedding wardrobe as an invitation: each function and what the bride often wears

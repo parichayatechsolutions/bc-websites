@@ -212,6 +212,13 @@ export async function validateBoutique(slug) {
     if (/\s|[A-Z]/.test(f)) warnings.push(`"${f}": use lowercase names without spaces, as in the shot list`)
   }
 
+  if (config.media?.makerVideo && !config.permissions?.showOwnerPhoto) {
+    warnings.push(`${config.media.makerVideo} shows the owner, but permission to show the owner is "no", so it's hidden`)
+  }
+  for (const tip of config.media?.tipVideos ?? []) {
+    warn(config.media?.captions?.[tip], `${tip} has no note in 9b, so its card has no title. Add a line like: - ${tip}: How to measure your blouse`)
+  }
+
   // Launch safety
   warn(config.demo?.noindex === true, 'demo.noindex is off: this site can appear on Google. Only do this after the boutique has signed')
 

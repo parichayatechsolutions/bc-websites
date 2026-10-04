@@ -308,6 +308,11 @@
 - worked-01.jpg: The same blouse with aari work on the neck and sleeves
 - match-01-a.jpg: Mother's pattu saree blouse
 - match-01-b.jpg: Daughter's matching pattu langa
+- maker.mp4: Lakshmi on how she started stitching from home
+- workroom.mp4: Aari work on a bridal blouse, on the frame
+- tip-01.mp4: How to measure your blouse in a minute
+- tip-02.mp4: Pinning saree pleats so they stay
+- tip-03.mp4: Caring for silk after the wedding
 
 ## 10. Permissions
 

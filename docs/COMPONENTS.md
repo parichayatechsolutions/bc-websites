@@ -107,6 +107,7 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | M | The wedding planner's undated versions (**built 2026-10-04**) | see the Status column | 10 |
 | N | `leadTimes` (data sheet 6i), then the dated planner and wed Q (**built 2026-10-04**) | wed A, D, L, Q, X | 5 |
 | O | Opening hours read day by day (`branch.week`, from the sheet's free-text hours), then the open-now versions (**built 2026-10-04**) | nav G, contact I, T, map G, M, footer G, wa G, U | 8 |
+| P | Clips by name (`maker.mp4`, `workroom.mp4`, `tip-NN.mp4`), then the video versions (**built 2026-10-04**) | story O, process S, blog N | 3 |
 
 The wedding planner's undated versions are built (wave M). Its dated versions (wave N) work only from the shop's own lead times, data sheet section 6i, and hide without them.
 
@@ -120,8 +121,8 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 03 | [Testimonials](#03-reviews) | Trust | 26 | 17 | 1 | existing |  |
 | 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 19 |  | existing |  |
 | 05 | [Services & prices](#05-services) | What they make | 26 | 17 | 1 | existing |  |
-| 06 | [Owner's story](#06-story) | About them | 26 | 15 | 1 | existing |  |
-| 07 | [Making process](#07-process) | About them | 26 | 13 | 1 | existing |  |
+| 06 | [Owner's story](#06-story) | About them | 26 | 16 | 1 | existing |  |
+| 07 | [Making process](#07-process) | About them | 26 | 14 | 1 | existing |  |
 | 08 | [FAQ](#08-faq) | Trust | 26 | 14 |  | existing |  |
 | 09 | [Instagram feed](#09-ig) | Their work | 26 | 14 |  | existing |  |
 | 10 | [Bridal packages](#10-bridal) | What they make | 26 | 15 |  | existing |  |
@@ -145,7 +146,7 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 28 | [Gift voucher](#28-gift) | Speciality | 26 | 17 |  | existing |  |
 | 29 | [Classes & workshops](#29-class) | Speciality | 26 | 13 |  | existing |  |
 | 30 | [Team / tailors](#30-team) | Speciality | 26 | 14 |  | existing |  |
-| 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 14 |  | existing |  |
+| 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 15 |  | existing |  |
 | 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 16 |  | existing |  |
 | 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 | 6 |  | existing |  |
 
@@ -395,7 +396,7 @@ Lab motions: Words fill in, Wipe in, Seal turns, Tab demo.
 | L | Zari frame | Story inside a double gold frame on brand colour. |  |  | repeats a family built elsewhere | skip |
 | M | Values | Three promise cards: made to measure, handwork, on time. |  | built: `story/ValuesStory` |  | keep |
 | N | Round seal | Portrait inside a slowly turning "Handmade since" seal. |  |  | turns continuously (nothing loops) | skip |
-| O | Meet the maker | Video slot with a play button beside her story. |  |  | needs a video clip | skip |
+| O | Meet the maker | Video slot with a play button beside her story. |  | built: `story/MakerStory` | | keep |
 | P | Chapters | Numbered chapters: the beginning, the craft, today. |  | built: `story/ChaptersStory` |  | keep |
 | Q | Designer card | An ID-style profile card with role, specialities, since. |  | built: `story/CardStory` |  | keep |
 | R | Word by word | Her opening line fills in word by word. |  | built: `story/WordsStory` |  | keep |
@@ -436,7 +437,7 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | P | Type index | Type-led numbered list, very editorial. |  | built: `process/IndexProcess` |  | keep |
 | Q | Order tracker | A delivery-style tracker showing where an order is. |  |  | needs an order backend | skip |
 | R | Zari frame | Six steps inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
-| S | Video + steps | A "watch it being made" video slot beside the steps. |  |  | needs a video clip | skip |
+| S | Video + steps | A "watch it being made" video slot beside the steps. |  | built: `process/VideoProcess` | | keep |
 | T | Atelier method | Dark luxe with Roman numerals and a crown. |  |  | repeats the dark-luxe family built elsewhere | skip |
 | U | Arch viewer | Tap a step; the arched photo beside it changes. |  | close: `process/StickyProcess` |  | keep |
 | V | Stitch line | Steps strung on a running stitch with a needle. |  |  | the `StitchLine` wrapper does this for any section | skip |
@@ -1319,7 +1320,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | K | Start here | Three essentials kept in view beside everything else. | yes | built: `posts/StartPosts` |  | keep |
 | L | Tips on WhatsApp | A monthly WhatsApp tip sign-up with sample messages. | yes |  | promises a monthly message | skip |
 | M | Notebook | Handwritten tips on ruled cream paper. | yes | built: `posts/NotebookPosts` |  | keep |
-| N | One-minute tips | Dark. A rail of short video cards. |  |  | needs a video clip | skip |
+| N | One-minute tips | Dark. A rail of short video cards. |  | built: `posts/TipsPosts` | | keep |
 | O | Tip of the day | One tip set large with its reason; arrows step through. | yes | built: `posts/TipPosts` |  | keep |
 | P | Contents | A two-column contents page grouped by topic. | yes | built: `posts/ContentsPosts` |  | keep |
 | Q | Search | Type to filter articles; asks on WhatsApp if nothing matches. | yes | built: `posts/SearchPosts` |  | keep |

@@ -103,7 +103,7 @@ function numberedAfter(lines, after) {
 function photoNotes(lines) {
   const out = {}
   for (const line of lines) {
-    const note = line.match(/^\s*-\s*([\w.-]+\.(?:jpg|jpeg|png|webp|avif))\s*:\s*(.*)$/i)
+    const note = line.match(/^\s*-\s*([\w.-]+\.(?:jpg|jpeg|png|webp|avif|mp4|webm))\s*:\s*(.*)$/i)
     const text = note && clean(note[2])
     if (text) out[note[1].toLowerCase()] = text
   }
@@ -457,6 +457,8 @@ function mediaFor(files, sheet) {
       .map((n) => ({ first: byStem.get(firstOf(n)), second: byStem.get(secondOf(n)) }))
 
   const isVideo = (file) => /\.(mp4|webm)$/i.test(file ?? '')
+  /** A clip by name, from the folder or a 9b note; only if it's a video file. */
+  const clip = (stem) => (isVideo(byStem.get(stem)) ? byStem.get(stem) : undefined)
   const video = has('video-01') ?? (isVideo(has('ai-hero')) ? has('ai-hero') : undefined)
   const hero = video
     ? { type: 'video', src: video, poster: has('ai-hero-poster') ?? work[0] }
@@ -475,6 +477,9 @@ function mediaFor(files, sheet) {
     groom: named(/^groom-[a-z]+(-\d+)?$/),
     handworkPairs: paired(/^plain-(\d+)$/, (n) => `plain-${n}`, (n) => `worked-${n}`),
     matching: paired(/^match-(\d+)-a$/, (n) => `match-${n}-a`, (n) => `match-${n}-b`),
+    makerVideo: clip('maker'),
+    workroomVideo: clip('workroom'),
+    tipVideos: named(/^tip-\d+$/).filter(isVideo),
     captions: sheet.photoNotes,
     ownerPhoto: yes(sheet.okOwnerPhoto) ? (has('owner') ?? 'owner.jpg') : undefined,
     logo: has('logo') ?? 'logo.png',
@@ -728,6 +733,9 @@ export function toConfig(sheet, { slug, photoFiles }) {
       groom: media.groom,
       handworkPairs: media.handworkPairs,
       matching: media.matching,
+      makerVideo: media.makerVideo,
+      workroomVideo: media.workroomVideo,
+      tipVideos: media.tipVideos,
       // Only for photos this boutique actually has or expects.
       captions: Object.fromEntries(
         Object.entries(media.captions ?? {}).filter(([file]) =>
@@ -738,6 +746,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
             ...media.drapes,
             ...media.groom,
             ...[...media.handworkPairs, ...media.matching].flatMap((p) => [p.first, p.second]),
+            ...[media.makerVideo, media.workroomVideo, ...media.tipVideos].filter(Boolean),
           ].some((w) => w.toLowerCase() === file),
         ),
       ),

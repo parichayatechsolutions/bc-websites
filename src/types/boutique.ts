@@ -272,6 +272,12 @@ export interface BoutiqueConfig {
     handworkPairs?: PhotoPair[]
     /** Matching outfits, mother and daughter or siblings: match-01-a.jpg with match-01-b.jpg. */
     matching?: PhotoPair[]
+    /** The owner talking about her work, maker.mp4. Shown only with permission to show the owner. */
+    makerVideo?: PhotoFile
+    /** Hands at work in the workroom, workroom.mp4. */
+    workroomVideo?: PhotoFile
+    /** One-minute tips, tip-01.mp4…, each titled by its photo note. */
+    tipVideos?: PhotoFile[]
     /** One line per photo, by file name: "Bridal blouse, aari work, 12 days". */
     captions?: Record<PhotoFile, string>
   }

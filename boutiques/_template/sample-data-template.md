@@ -345,6 +345,9 @@ per note. A photo for a note is `post-01.jpg`, `post-02.jpg`… in the same orde
 | `match-01-a.jpg` + `match-01-b.jpg` … | Matching outfits worn together: mother and daughter, or siblings | |
 | `rental-01.jpg` …, `fabric-01.jpg` …, `team-01.jpg` …, `post-01.jpg` … | One per rental piece, fabric, team member (with their yes) and style note, in the order listed in 6f, 6g, 7b and 8c | |
 | `video-01.mp4` … | Short 5–10 sec clips: stitching, fabric flowing, store walk-through | |
+| `maker.mp4` | The owner, 30–60 sec, saying how she started and what she loves making (only with permission) | |
+| `workroom.mp4` | Hands at work, 20–40 sec: cutting, stitching, aari on the frame. No faces needed | |
+| `tip-01.mp4` … | One-minute tips from the owner or a tailor: measuring, pinning pleats, caring for silk. Give each a note in 9b; it's the title | |
 
 - Can we also use photos from their Instagram? (yes / no):
 
@@ -370,6 +373,7 @@ them: `work-bridal-01.jpg`, `work-blouse-02.jpg`, `work-lehenga-01.jpg`,
 
 _Before and after photos can have a note too: `- after-01.jpg: Blouse taken in at the waist, 2 days`.
 So can looks, drapes, groom looks and handwork pairs: `- look-sangeet-01.jpg: Lehenga for the sangeet, mirror work`.
+Clips too, and a tip's note is its title: `- tip-01.mp4: How to measure your blouse in a minute`.
 A photo listed here that hasn't been taken yet shows as a labelled placeholder until it's added._
 
 ## 10. Permissions

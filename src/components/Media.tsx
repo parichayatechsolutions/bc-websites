@@ -14,6 +14,7 @@ export default function Media({
   alt = '',
   className = '',
   priority = false,
+  controls = false,
 }: {
   file?: PhotoFile
   /** Still frame for a video, also shown when the video file is missing. */
@@ -21,9 +22,21 @@ export default function Media({
   alt?: string
   className?: string
   priority?: boolean
+  /**
+   * For a clip she chooses to watch (a maker's story, a tip): it doesn't
+   * play until she taps it, has the browser's controls, and never loops.
+   * Without it a video plays muted on its own, as backgrounds do.
+   */
+  controls?: boolean
 }) {
   const { photo } = useBoutique()
   const src = photo(file)
+
+  if (file && src && isVideo(file) && controls) {
+    return (
+      <video className={`h-full w-full bg-dark object-cover ${className}`} src={src} poster={photo(poster)} controls preload="metadata" playsInline aria-label={alt || undefined} />
+    )
+  }
 
   if (file && src && isVideo(file)) {
     return (
