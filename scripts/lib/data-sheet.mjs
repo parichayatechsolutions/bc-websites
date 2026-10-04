@@ -8,6 +8,8 @@
 // ticks can be [x] or [X]. Anything it can't make sense of is reported, never
 // guessed silently.
 
+import { parseHours } from './hours.mjs'
+
 // ─── Reading the sheet ───────────────────────────────────────
 
 const EMPTY = /^(na|n\/a|nil|none|-|–|—|not applicable|\?)?$/i
@@ -533,11 +535,15 @@ export function toConfig(sheet, { slug, photoFiles }) {
     pincode: (b.pincode ?? '').replace(/\s+/g, ''),
     mapsUrl: need(b.mapsUrl, `branch ${i + 1} Google Maps link`),
     hours: b.hours,
+    week: parseHours(b.hours),
     parking: b.parking ? yes(b.parking) : undefined,
   }))
   if (!branches.length) errors.push('Missing a branch: fill in at least "Branch 1 (main)"')
   branches.forEach((b, i) => {
     if (!b.pincode) errors.push(`Missing branch ${i + 1} pincode`)
+    if (b.hours && !b.week) {
+      warnings.push(`Branch ${i + 1} opening hours "${b.hours}" couldn't be read day by day, so "open now" won't show. Write every day, like: Mon–Sat 10am–8pm, Sun closed`)
+    }
     // The area is what the demo directory groups boutiques by, so one name only.
     if (b.area.includes('/') || b.area.includes(',')) {
       warnings.push(`Branch ${i + 1} area "${b.area}" has more than one name in it. Write the one locality people know, and put the rest in "Landmark".`)

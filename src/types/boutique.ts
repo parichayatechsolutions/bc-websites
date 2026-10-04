@@ -17,8 +17,23 @@ export interface Branch {
   state: string
   pincode: string
   mapsUrl: string
+  /** As written: "Mon–Sat 10am–8pm, Sun closed". */
   hours?: string
+  /**
+   * The same hours day by day, Monday first, read from `hours` by the
+   * parser: 24-hour "10:00" to "20:00", or null for a closed day. Missing
+   * when the hours couldn't be read for every day, so nothing shows "open
+   * now" from a guess.
+   */
+  week?: (DayHours | null)[]
   parking?: boolean
+}
+
+export interface DayHours {
+  /** 24-hour "10:30". */
+  open: string
+  /** 24-hour "20:30". */
+  close: string
 }
 
 export interface ServiceGroup {

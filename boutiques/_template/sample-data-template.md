@@ -49,7 +49,7 @@ not "Hoysala Circle / Kengeri Sat. Town". Put the smaller landmark in "Landmark"
 - ★ State:
 - ★ Pincode:
 - ★ Google Maps link (open the shop in Google Maps → Share → Copy link):
-- Opening hours (e.g. Mon–Sat 10am–8pm, Sun closed):
+- Opening hours (every day, e.g. Mon–Sat 10am–8pm, Sun closed):
 - Parking available? (yes / no):
 
 ### Branch 2

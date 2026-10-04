@@ -103,6 +103,11 @@ export async function validateBoutique(slug) {
     if (b.area) {
       warn(!/[/,]/.test(b.area), `${which}: area "${b.area}" holds more than one name. Write the one locality people know; the rest belongs in "Landmark".`)
     }
+    if (b.week) {
+      err(b.week.length === 7 && b.week.every((d) => d === null || (d.open < d.close && /^\d{2}:\d{2}$/.test(d.open))), `${which}: the day-by-day opening hours are malformed. Re-run: npm run config`)
+    } else if (b.hours) {
+      warn(false, `${which}: opening hours "${b.hours}" aren't written for every day, so "open now" won't show. Write e.g. Mon–Sat 10am–8pm, Sun closed`)
+    }
     err(URL.test(b.mapsUrl ?? ''), `${which}: Google Maps link "${b.mapsUrl ?? ''}" is not a link`)
     if (b.mapsUrl && URL.test(b.mapsUrl)) {
       warn(/google\.[a-z.]+\/maps|maps\.google|goo\.gl|maps\.app/i.test(b.mapsUrl), `${which}: map link doesn't look like Google Maps`)

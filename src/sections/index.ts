@@ -29,6 +29,7 @@ export { default as CircleNav } from './nav/CircleNav' // Round menu button; the
 export { default as BandNav } from './nav/BandNav' // Solid bar over a brand band with the rating, usual delivery and Book a fitting
 export { default as OutlineNav } from './nav/OutlineNav' // Clear over a dark hero: pages in one outlined pill, WhatsApp as an outlined circle
 export { default as ArchNav } from './nav/ArchNav' // Slim bar with the logo and name hanging from its centre in an arch-shaped tab
+export { default as OpenNav } from './nav/OpenNav' // Brand strip with open-now status and rating over a solid bar (reads branch hours)
 
 // Footer (pick one)
 export { default as BrandFooter } from './footer/BrandFooter' // Brand colour, huge name, pages, contact icons
@@ -52,6 +53,7 @@ export { default as NumbersFooter } from './footer/NumbersFooter' // Dark: their
 export { default as SignatureFooter } from './footer/SignatureFooter' // "Stitched in" their city between two running stitches, centred
 export { default as ThumbFooter } from './footer/ThumbFooter' // Dark footer ending in a Call · Directions · WhatsApp bar
 export { default as ThreadFooter } from './footer/ThreadFooter' // A running stitch sewn across the top with a needle, then the footer
+export { default as HoursFooter } from './footer/HoursFooter' // Footer with open-now and the week beside the logo and WhatsApp
 
 // Page openers
 export { default as ArchHero } from './hero/ArchHero' // Name over a temple-arch window that opens to full screen (pinned; page needs overlay)
@@ -298,6 +300,8 @@ export { default as OccasionContact } from './contact/OccasionContact' // Occasi
 export { default as CountdownContact } from './contact/CountdownContact' // Pick the wedding date; a gold seal shows the weeks to go (needs bridal work)
 export { default as CardContact } from './contact/CardContact' // One store card: map, address, hours, phone, directions, beside WhatsApp
 export { default as PassContact } from './contact/PassContact' // Pick a day and time; a fitting pass fills in, then ask on WhatsApp
+export { default as HoursContact } from './contact/HoursContact' // Dark hours board: open now set large, the week with today marked, WhatsApp and Call
+export { default as VisitContact } from './contact/VisitContact' // Dark grid: open today, address, hours and the map, then directions
 export { default as SheetContact } from './contact/SheetContact' // Dark: one Contact us button sliding up a sheet of four ways in
 export { default as StoreVisit } from './visit/StoreVisit' // Branches with address, hours, directions; WhatsApp and call
 export { default as MapVisit } from './visit/MapVisit' // Wide live map with the address card over its corner; buttons switch branches
@@ -317,6 +321,8 @@ export { default as StickyVisit } from './visit/StickyVisit' // A tall map besid
 export { default as BandVisit } from './visit/BandVisit' // Brand band between zari borders: address, hours and a map strip
 export { default as DarkVisit } from './visit/DarkVisit' // Dark: the map in night tones in a gold frame, details beside
 export { default as PhoneVisit } from './visit/PhoneVisit' // A drawn phone showing the map with a big Start button
+export { default as HoursVisit } from './visit/HoursVisit' // Open now and the week beside a night-toned map, branch buttons
+export { default as OpenVisit } from './visit/OpenVisit' // The map with an open-now badge pinned over its corner
 
 // Always within reach (place one in a design beside SiteShell, not in a page; not with a nav that has a phone dock)
 export { default as FloatingWhatsApp } from './contact/FloatingWhatsApp' // Round WhatsApp button in the bottom corner, after the hero
@@ -333,6 +339,8 @@ export { default as NudgeWhatsApp } from './contact/NudgeWhatsApp' // Round What
 export { default as TabWhatsApp } from './contact/TabWhatsApp' // A slim "WhatsApp us" tab on the right edge (beside SiteShell)
 export { default as FormWhatsApp } from './contact/FormWhatsApp' // Floating "Ask us" pill opening name and need fields (beside SiteShell)
 export { default as FittingWhatsApp } from './contact/FittingWhatsApp' // Floating "Book a fitting" pill opening a week of days (beside SiteShell)
+export { default as OpenWhatsApp } from './contact/OpenWhatsApp' // Floating WhatsApp pill reading the real hours: open now, or when it opens (beside SiteShell)
+export { default as StatusWhatsApp } from './contact/StatusWhatsApp' // Slim band with open-now status and a WhatsApp link, for under the nav
 
 // Wrappers
 export { default as StitchLine } from '../motion/StitchLine' // Running stitch sewn down the left of the sections it wraps

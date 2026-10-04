@@ -106,6 +106,7 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | L | The last buildable versions outside the wedding planner (**built 2026-10-04**) | see the Status column | 51 |
 | M | The wedding planner's undated versions (**built 2026-10-04**) | see the Status column | 10 |
 | N | `leadTimes` (data sheet 6i), then the dated planner and wed Q (**built 2026-10-04**) | wed A, D, L, Q, X | 5 |
+| O | Opening hours read day by day (`branch.week`, from the sheet's free-text hours), then the open-now versions (**built 2026-10-04**) | nav G, contact I, T, map G, M, footer G, wa G, U | 8 |
 
 The wedding planner's undated versions are built (wave M). Its dated versions (wave N) work only from the shop's own lead times, data sheet section 6i, and hide without them.
 
@@ -113,11 +114,11 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 
 | # | Section | Group | Versions | Built | Close | Data | To build |
 |---|---|---|---|---|---|---|---|
-| 00 | [Navigation](#00-nav) | Site chrome | 26 | 17 | 1 | existing |  |
+| 00 | [Navigation](#00-nav) | Site chrome | 26 | 18 | 1 | existing |  |
 | 01 | [Hero](#01-hero) | Page opener | 26 | 20 | 3 | existing |  |
 | 02 | [Gallery](#02-gallery) | Their work | 26 | 18 | 2 | existing |  |
 | 03 | [Testimonials](#03-reviews) | Trust | 26 | 17 | 1 | existing |  |
-| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 17 |  | existing |  |
+| 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 19 |  | existing |  |
 | 05 | [Services & prices](#05-services) | What they make | 26 | 17 | 1 | existing |  |
 | 06 | [Owner's story](#06-story) | About them | 26 | 15 | 1 | existing |  |
 | 07 | [Making process](#07-process) | About them | 26 | 13 | 1 | existing |  |
@@ -127,8 +128,8 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 11 | [Before / after alterations](#11-alt) | Their work | 26 | 14 |  | existing |  |
 | 12 | [Offers banner](#12-offer) | Bookings | 26 | 15 |  | existing |  |
 | 13 | [Trust badges](#13-trust) | Trust | 26 | 15 |  | existing |  |
-| 14 | [Location map](#14-map) | Bookings | 26 | 17 | 1 | existing |  |
-| 15 | [Footer](#15-footer) | Site chrome | 26 | 21 |  | existing |  |
+| 14 | [Location map](#14-map) | Bookings | 26 | 19 | 1 | existing |  |
+| 15 | [Footer](#15-footer) | Site chrome | 26 | 22 |  | existing |  |
 | 16 | [Fabric swatches](#16-fabric) | Speciality | 26 | 18 |  | existing |  |
 | 17 | [Blouse design picker](#17-blouse) | Speciality | 26 | 20 |  | none |  |
 | 18 | [Measurement guide](#18-measure) | Speciality | 26 | 16 |  | none |  |
@@ -145,7 +146,7 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 29 | [Classes & workshops](#29-class) | Speciality | 26 | 13 |  | existing |  |
 | 30 | [Team / tailors](#30-team) | Speciality | 26 | 14 |  | existing |  |
 | 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 14 |  | existing |  |
-| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 14 |  | existing |  |
+| 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 16 |  | existing |  |
 | 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 | 6 |  | existing |  |
 
 ### 00 nav
@@ -164,7 +165,7 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 | D | Split centre logo | Solid bar, links split either side of a centred logo. |  |  | repeats `nav/CenteredNav` | skip |
 | E | Menu button | Just logo, WhatsApp and a "Menu" pill; opens a numbered full-screen menu with hours. |  | built: `nav/MenuNav` |  | keep |
 | F | Side rail / tab bar | Icon rail down the left on desktop; app-style tab bar at the bottom on phones. |  |  | repeats `nav/DockNav` | skip |
-| G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  | built: `nav/OpenNav` | | keep |
 | H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  |  | frosted glass (contrast over photos) | skip |
 | I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  | built: `nav/BrandNav` |  | keep |
 | J | Tab switcher | Pages as a segmented pill control; the active one fills. |  | built: `nav/PillsNav` |  | keep |
@@ -314,7 +315,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | F | Floating button | The WhatsApp button that floats on every page; tapping opens three quick options. |  |  | repeats `contact/DockWhatsApp` | skip |
 | G | Bottom sheet | Dark. A "Contact us" button slides up a phone-style sheet of four options. |  | built: `contact/SheetContact` |  | keep |
 | H | Store card | Map preview with a pin, address, hours, phone and a Directions button. |  | built: `contact/CardContact` |  | keep |
-| I | Hours board | Dark. Open or closed today, the weekly hours, WhatsApp and Call. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| I | Hours board | Dark. Open or closed today, the weekly hours, WhatsApp and Call. |  | built: `contact/HoursContact` | | keep |
 | J | Scan to chat | Dark. The number set large with a copy button and a QR-style code to scan. |  |  | needs a QR library | skip |
 | K | How ordering works | Three icon steps joined by a thread: send a photo, we suggest, come for a fitting. |  | built: `contact/StepsContact` |  | keep |
 | L | Occasion picker | Tiles for wedding, reception, festival and more; the message is written for you. |  | built: `contact/OccasionContact` |  | keep |
@@ -325,7 +326,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | Q | Chat window | A chat that greets the visitor with what the boutique is known for, then quick replies. |  | built: `contact/ChatContact` |  | keep |
 | R | Wedding banner | Brand-colour band between zari borders: "Planning a wedding? Let's talk." |  | built: `contact/WeddingContact` |  | keep |
 | S | Channel cards | Four cards: WhatsApp, Call, Instagram, Visit. |  |  | repeats `contact/TrioContact` | skip |
-| T | Come and visit | Dark with a grid: open today, address, hours and a glowing map pin. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| T | Come and visit | Dark with a grid: open today, address, hours and a glowing map pin. |  | built: `contact/VisitContact` | | keep |
 | U | Thumb bar | A bottom bar on phones (Call, Visit, WhatsApp) and a slim side rail on computers. |  |  | repeats `contact/CallWhatsAppBar` | skip |
 | V | Visiting card | A business card that turns over on tap to show numbers, address and hours. |  |  | 3D turn (check "no 3D"); 3D card flip | skip |
 | W | Wedding countdown | Pick the wedding date; a gold-edged seal shows the weeks to go. |  | built: `contact/CountdownContact` |  | keep |
@@ -682,13 +683,13 @@ Lab motions: Wipe in, Zari draws.
 | D | Dark map | Night-toned map with gold details. |  | built: `visit/DarkVisit` |  | keep |
 | E | Arch window | The map seen through a temple arch. |  | built: `visit/ArchVisit` |  | keep |
 | F | Three ways | Walk in, ask for the pin, or call, above the map. |  | built: `visit/WaysVisit` |  | keep |
-| G | Hours board | Open now and weekly hours beside a dark map. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| G | Hours board | Open now and weekly hours beside a dark map. |  | built: `visit/HoursVisit` | | keep |
 | H | Round medallion | Circular map framed with a gold ring. |  | built: `visit/MedallionVisit` |  | keep |
 | I | Zari band | Brand band with a map strip between zari borders. |  | built: `visit/BandVisit` |  | keep |
 | J | Postcard | "Wish you were here" postcard with a map stamp. |  | built: `visit/PostcardVisit` |  | keep |
 | K | Zari frame | Map inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
 | L | Find us. | Huge type, details and map. |  | built: `visit/FindVisit` |  | keep |
-| M | Open-now pin | Map with an open or closed badge on top. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| M | Open-now pin | Map with an open or closed badge on top. |  | built: `visit/OpenVisit` | | keep |
 | N | Bento | Map, address, hours, pin and directions tiles. |  |  | rounded tiles (shape rule) | skip |
 | O | Map tabs | Switch between map, hours and contact. |  | built: `visit/TabsVisit` |  | keep |
 | P | Classified | Newspaper classified ad beside a mono map. |  | built: `visit/ClassifiedVisit` |  | keep |
@@ -719,7 +720,7 @@ Lab motions: Name rises, Zari draws, Icons lift, Wipe in.
 | D | Minimal | Light and centred: logo, name, pages, icons. |  | built: `footer/MinimalFooter` |  | keep |
 | E | Big invitation | A brand-colour "Planning something? Let's talk." card above a compact row. |  | built: `footer/InviteFooter` |  | keep |
 | F | Map + info | Dark: a map tile with the logo pinned, full contact details beside it. |  | built: `footer/MapFooter` |  | keep |
-| G | Hours board | Open or closed today and the weekly hours next to the logo and a WhatsApp button. |  |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| G | Hours board | Open or closed today and the weekly hours next to the logo and a WhatsApp button. |  | built: `footer/HoursFooter` | | keep |
 | H | Double zari | Paper ground between double zari borders; visit, logo, talk-to-us columns. |  | built: `footer/ZariFooter` |  | keep |
 | I | Outline name | The boutique name set edge to edge in outlined letters along the bottom. |  | built: `footer/OutlineFooter` |  | keep |
 | J | Numbers | Dark: rating, garments delivered and years as stat cards. |  | built: `footer/NumbersFooter` |  | keep |
@@ -1348,7 +1349,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | D | Call \| WhatsApp bar | A full-width bottom bar for phones. | yes | built: `contact/CallWhatsAppBar` |  | keep |
 | E | Owner card | A card with the owner, status and a big button. | yes | built: `contact/OwnerWhatsApp` |  | keep |
 | F | What do you need? | Topic list; each opens a ready-written message. | yes | built: `contact/TopicsWhatsApp` |  | keep |
-| G | Open now | Reads the real opening hours: open now, or when we reply. | yes |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| G | Open now | Reads the real opening hours: open now, or when we reply. | yes | built: `contact/OpenWhatsApp` | | keep |
 | H | Side tab | A vertical tab on the right edge. | yes | built: `contact/TabWhatsApp` |  | keep |
 | I | Gold ring | Dark page. A round button with a double gold ring. | yes |  | repeats `contact/FloatingWhatsApp` | skip |
 | J | Scroll ring | A progress ring around the button fills as you scroll. | yes | built: `contact/RingWhatsApp` |  | keep |
@@ -1362,7 +1363,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | R | Any language | Greeting in English, Kannada, Hindi, Tamil, Telugu. | yes | built: `contact/LanguageWhatsApp` |  | keep |
 | S | Quick form | Name and need build the WhatsApp message. | yes | built: `contact/FormWhatsApp` |  | keep |
 | T | Send a photo | Saw a design you love? Send the photo. | yes | built: `contact/PhotoWhatsApp` |  | keep |
-| U | Top banner | A sticky top strip with open-now status. | yes |  | needs structured opening hours; `branches[].hours` is free text | skip |
+| U | Top banner | A sticky top strip with open-now status. | yes | built: `contact/StatusWhatsApp` | | keep |
 | V | Who to talk to | Designer or front desk, each a chat. | yes |  | one number; the split would be invented | skip |
 | W | Review + chat | A Google review above the chat button. | yes | built: `contact/ReviewWhatsApp` |  | keep |
 | X | Price + ask | Blouses from ₹, joined to an Ask us button. | yes | built: `contact/PriceWhatsApp` |  | keep |
