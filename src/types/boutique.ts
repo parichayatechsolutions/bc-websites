@@ -63,6 +63,62 @@ export interface BridalPackage {
   includes: string[]
 }
 
+export interface AlterationPrice {
+  item: string
+  price: number
+}
+
+/** A piece they rent out. Its photo is rental-<nn>.jpg, by its place in the data sheet. */
+export interface RentalPiece {
+  name: string
+  pricePerDay?: number
+  sizes?: string
+  photo: PhotoFile
+}
+
+/** A fabric they stock. Its photo is fabric-<nn>.jpg, by its place in the data sheet. */
+export interface Fabric {
+  name: string
+  bestFor?: string
+  photo: PhotoFile
+}
+
+export interface ClassCourse {
+  name: string
+  level?: string
+  /** "6 weeks", "3 Saturdays". */
+  length?: string
+  /** First day of the next batch, yyyy-mm-dd. Hidden once it has passed. */
+  nextBatch?: string
+  /** Fee in rupees. Shown only when permissions.showPrices. */
+  fee?: number
+}
+
+export interface TeamMember {
+  name: string
+  role: string
+  years?: number
+  /** One line about them, as they or the owner put it. */
+  line?: string
+  /** Only when the person agreed to their photo being shown. Never generated. */
+  photo?: PhotoFile
+}
+
+/** A style note written for the boutique. Its photo is post-<nn>.jpg. */
+export interface Post {
+  title: string
+  /** yyyy-mm-dd */
+  date?: string
+  text: string
+  photo?: PhotoFile
+}
+
+/** Two photos shown together: plain-01.jpg with worked-01.jpg, match-01-a.jpg with match-01-b.jpg. */
+export interface PhotoPair {
+  first: PhotoFile
+  second: PhotoFile
+}
+
 /** The same garment before and after an alteration: before-01.jpg with after-01.jpg. */
 export interface AlterationPair {
   before: PhotoFile
@@ -136,6 +192,8 @@ export interface BoutiqueConfig {
     /** The top three things the boutique is known for, shown first. */
     featured: string[]
     groups: ServiceGroup[]
+    /** "1 to 14 years": the ages they stitch children's wear for. */
+    kidsAges?: string
   }
 
   pricing?: {
@@ -149,6 +207,15 @@ export interface BoutiqueConfig {
   bridalPackages?: BridalPackage[]
   /** Offers running now; the site hides any whose last day has passed. */
   offers?: Offer[]
+  /** Their alteration rates. Shown only when permissions.showPrices. */
+  alterationPrices?: AlterationPrice[]
+  /** Present when they sell gift vouchers; amounts in rupees (may be empty). */
+  giftVouchers?: { amounts: number[] }
+  rentals?: RentalPiece[]
+  fabrics?: Fabric[]
+  classes?: ClassCourse[]
+  team?: TeamMember[]
+  posts?: Post[]
 
   stats?: Stat[]
   reviews?: Review[]
@@ -170,6 +237,16 @@ export interface BoutiqueConfig {
     closeups?: PhotoFile[]
     /** Before and after pairs of their alterations. */
     alterations?: AlterationPair[]
+    /** Looks by occasion: look-<occasion>-<nn>.jpg ("look-sangeet-01.jpg"). */
+    looks?: PhotoFile[]
+    /** Saree drapes: drape-<style>.jpg ("drape-nivi.jpg"). */
+    drapes?: PhotoFile[]
+    /** A groom's look per function: groom-<function>.jpg ("groom-sangeet.jpg"). */
+    groom?: PhotoFile[]
+    /** The same blouse plain and with handwork: plain-01.jpg with worked-01.jpg. */
+    handworkPairs?: PhotoPair[]
+    /** Matching outfits, mother and daughter or siblings: match-01-a.jpg with match-01-b.jpg. */
+    matching?: PhotoPair[]
     /** One line per photo, by file name: "Bridal blouse, aari work, 12 days". */
     captions?: Record<PhotoFile, string>
   }

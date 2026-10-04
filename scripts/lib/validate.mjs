@@ -39,6 +39,14 @@ function referencedPhotos(config) {
     ...(m.work ?? []),
     ...(m.closeups ?? []),
     ...(m.alterations ?? []).flatMap((p) => [p.before, p.after]),
+    ...(m.looks ?? []),
+    ...(m.drapes ?? []),
+    ...(m.groom ?? []),
+    ...[...(m.handworkPairs ?? []), ...(m.matching ?? [])].flatMap((p) => [p.first, p.second]),
+    ...(config.rentals ?? []).map((r) => r.photo),
+    ...(config.fabrics ?? []).map((f) => f.photo),
+    ...(config.team ?? []).map((t) => t.photo),
+    ...(config.posts ?? []).map((p) => p.photo),
   ].filter(Boolean)
 }
 
@@ -119,6 +127,14 @@ export async function validateBoutique(slug) {
     warnings.push('Bridal packages have prices, but permission to show prices is "no", so the prices are hidden')
   }
 
+  if (!config.permissions?.showPrices) {
+    if (config.alterationPrices?.length) warnings.push('Alteration prices are listed, but permission to show prices is "no", so they are hidden')
+    if (config.classes?.some((c) => c.fee)) warnings.push('Class fees are listed, but permission to show prices is "no", so they are hidden')
+  }
+  for (const c of config.classes ?? []) {
+    if (c.nextBatch) warn(c.nextBatch >= new Date().toISOString().slice(0, 10), `Class "${c.name}": the next batch (${c.nextBatch}) has started. Update the date in data.md.`)
+  }
+
   // Offers: a stale offer on the site is a promise the shop won't keep
   const today = new Date().toISOString().slice(0, 10)
   for (const offer of config.offers ?? []) {
@@ -154,6 +170,13 @@ export async function validateBoutique(slug) {
 
   if (stillMissing.length) {
     warnings.push(`Photos still to add to boutiques/${slug}/photos/: ${stillMissing.join(', ')}. Prompts for stand-ins: npm run prompts -- ${slug}`)
+  }
+
+  // A generated stand-in may stand in for work, never for a person.
+  const people = (config.team ?? []).map((t) => t.photo).filter(Boolean)
+  const fakePeople = covered.filter((f) => people.includes(f) || f === config.owner?.photo)
+  if (fakePeople.length) {
+    errors.push(`${fakePeople.join(', ')} ${fakePeople.length === 1 ? 'is a photo of a person standing in as a generated image' : 'are photos of people standing in as generated images'}. Remove the ai- file; a person's photo must be real.`)
   }
 
   if (covered.length) {

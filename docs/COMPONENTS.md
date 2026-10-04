@@ -96,7 +96,7 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | Wave | What | Versions | Count |
 |---|---|---|---|
 | D | `later` picks that need no new data (**built 2026-10-04**) | hero P · cine B, H · blouse A, C · measure A, B · saree M · men D · emb A | 10 |
-| E | `later` picks that need new data-sheet fields first | fabric A, W · look A, Q · rental A, E · kids A, B · men B · emb K · saree A · alter B, C · gift A, H · class A, J · team A, B · blog A | 20 |
+| E | `later` picks that need new data-sheet fields first (**built 2026-10-04**) | fabric A, W · look A, Q · rental A, E · kids A, B · men B · emb K · saree A · alter B, C · gift A, H · class A, J · team A, B · blog A | 20 |
 
 The wedding planner (wed A, Q) waits: its task dates would be wedding timelines in the boutique's name ("order the bridal blouse 8 weeks before") that the shop never set. It needs either the boutique's own lead times in the data sheet or copy the owner approves.
 
@@ -120,22 +120,22 @@ The wedding planner (wed A, Q) waits: its task dates would be wedding timelines 
 | 13 | [Trust badges](#13-trust) | Trust | 26 | 3 |  | existing |  |
 | 14 | [Location map](#14-map) | Bookings | 26 | 3 | 1 | existing |  |
 | 15 | [Footer](#15-footer) | Site chrome | 26 | 5 |  | existing |  |
-| 16 | [Fabric swatches](#16-fabric) | Speciality | 26 |  |  | new |  |
+| 16 | [Fabric swatches](#16-fabric) | Speciality | 26 | 2 |  | existing |  |
 | 17 | [Blouse design picker](#17-blouse) | Speciality | 26 | 2 |  | none |  |
 | 18 | [Measurement guide](#18-measure) | Speciality | 26 | 2 |  | none |  |
-| 19 | [Lookbook](#19-look) | Speciality | 26 |  |  | new |  |
-| 20 | [Rental collection](#20-rental) | Speciality | 26 |  |  | new |  |
-| 21 | [Kids wear corner](#21-kids) | Speciality | 26 |  |  | new |  |
-| 22 | [Men's tailoring](#22-men) | Speciality | 26 | 1 |  | new |  |
-| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 1 |  | new |  |
-| 24 | [Saree services](#24-saree) | Speciality | 26 | 1 |  | new |  |
-| 25 | [Alterations price list](#25-alter) | Speciality | 26 |  |  | new |  |
+| 19 | [Lookbook](#19-look) | Speciality | 26 | 2 |  | existing |  |
+| 20 | [Rental collection](#20-rental) | Speciality | 26 | 2 |  | existing |  |
+| 21 | [Kids wear corner](#21-kids) | Speciality | 26 | 2 |  | existing |  |
+| 22 | [Men's tailoring](#22-men) | Speciality | 26 | 2 |  | existing |  |
+| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 2 |  | existing |  |
+| 24 | [Saree services](#24-saree) | Speciality | 26 | 2 |  | existing |  |
+| 25 | [Alterations price list](#25-alter) | Speciality | 26 | 2 |  | existing |  |
 | 26 | [Trial & delivery tracker](#26-track) | Speciality | 26 |  |  | backend |  |
 | 27 | [Wedding planner](#27-wed) | Speciality | 26 |  |  | none |  |
-| 28 | [Gift voucher](#28-gift) | Speciality | 26 |  |  | new |  |
-| 29 | [Classes & workshops](#29-class) | Speciality | 26 |  |  | new |  |
-| 30 | [Team / tailors](#30-team) | Speciality | 26 |  |  | new |  |
-| 31 | [Blog / style tips](#31-blog) | Speciality | 26 |  |  | new |  |
+| 28 | [Gift voucher](#28-gift) | Speciality | 26 | 2 |  | existing |  |
+| 29 | [Classes & workshops](#29-class) | Speciality | 26 | 2 |  | existing |  |
+| 30 | [Team / tailors](#30-team) | Speciality | 26 | 2 |  | existing |  |
+| 31 | [Blog / style tips](#31-blog) | Speciality | 26 | 1 |  | existing |  |
 | 32 | [Sticky WhatsApp button](#32-wa) | Speciality | 26 | 2 |  | existing |  |
 | 33 | [Cinematic hero · Velvet Night](#33-cine) | Speciality | 8 | 2 |  | existing |  |
 
@@ -735,13 +735,13 @@ Lab motions: Name rises, Zari draws, Icons lift, Wipe in.
 
 **Fabric swatches** · Speciality · `is.fabricA`–`is.fabricZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** fabrics they stock (name, photo).
+Data: `fabrics` (data sheet 6g), photos `fabric-NN.jpg`. "Bring your own" needs no data.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Swatch book | Pinked squares in a grid with what each fabric is best for, and a send-your-fabric button. |  |  |  | later |
+| A | Swatch book | Pinked squares in a grid with what each fabric is best for, and a send-your-fabric button. |  | built: `fabric/SwatchFabrics` |  | keep |
 | B | Fabric shelf | Dark. Bolts standing on a gold shelf; tap one to lift it and read about it. |  |  |  |  |
 | C | Swatch fan | Swatches fanned like a shade card; arrows or a tap bring one forward. |  |  |  |  |
 | D | Guide + detail | Fabric list on the left, large swatch with feel, best for and care on the right. |  |  |  |  |
@@ -763,7 +763,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | T | Atelier | Dark luxe list with Roman numerals, round swatches and a crown. |  |  |  |  |
 | U | Design + fabric | A work photo with swatch dots; ask the price of that design in the fabric picked. |  |  |  |  |
 | V | Roll ends | Each fabric shown as the end of a rolled bolt. |  |  |  |  |
-| W | Bring your own | A dashed "send a photo of your fabric" card beside quick fabric links. | yes |  |  | later |
+| W | Bring your own | A dashed "send a photo of your fabric" card beside quick fabric links. | yes | built: `fabric/BringFabric` |  | keep |
 | X | Care guide | Fabric tabs with how to wash, iron and store each one. |  |  |  |  |
 | Y | Fabric + shade | Pick a fabric and a shade; the large swatch recolours. |  |  |  |  |
 | Z | Spotlight | Dark stage with one round swatch lit in the centre; chips to switch. |  |  |  |  |
@@ -846,13 +846,13 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Lookbook** · Speciality · `is.lookA`–`is.lookZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** looks grouped by occasion (photo file names).
+Data: `media.looks`, from photos `look-<occasion>-NN.jpg` (or named in the 9b notes).
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Editorial spread | One tall photo and two smaller ones, switched by chapter: bridal, celebrations, festive. |  |  |  | later |
+| A | Editorial spread | One tall photo and two smaller ones, switched by chapter: bridal, celebrations, festive. |  | built: `lookbook/SpreadLookbook` |  | keep |
 | B | Chapters | Dark. One full-bleed photo per chapter with the chapter name set large. |  |  |  |  |
 | C | Page rail | Tall looks that scroll sideways with big look numbers. |  |  |  |  |
 | D | Cover + contents | Dark. A magazine cover beside a numbered list of looks. |  |  |  |  |
@@ -868,7 +868,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | N | Bento | Photo tiles at mixed sizes with title and lookbook tiles. |  |  | rounded tiles (shape rule) | skip |
 | O | Look deck | Dark. Photos stacked like prints; arrows deal the next one. |  |  |  |  |
 | P | Season's edit | Magazine page with a drop cap and three photos. |  |  |  |  |
-| Q | By occasion | Occasion chips filter the looks. |  |  |  | later |
+| Q | By occasion | Occasion chips filter the looks. |  | built: `lookbook/OccasionLookbook` |  | keep |
 | R | Zari frame | One look at a time inside a double gold frame on brand colour. |  |  |  |  |
 | S | Sticky intro | Intro stays put while a staggered grid scrolls (scroll inside the frame). |  |  | inner scroll; sticky on a real page |  |
 | T | Atelier | Dark luxe grid with Roman numerals and hairline frames. |  |  |  |  |
@@ -883,17 +883,17 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Rental collection** · Speciality · `is.rentalA`–`is.rentalZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** rental pieces with a price per day.
+Data: `rentals` (data sheet 6f), photos `rental-NN.jpg`.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Hanger rail | Outfits hanging from a gold rail with swing tags and an Ask to rent link. |  |  |  | later |
+| A | Hanger rail | Outfits hanging from a gold rail with swing tags and an Ask to rent link. |  | built: `rental/RailRental` |  | keep |
 | B | For her, him, kids | Women, men and kids chips filter the rental grid. |  |  |  |  |
 | C | How it works | Four steps (check date, trial, pick up, bring back) above featured pieces. |  |  |  |  |
 | D | Showroom | Dark. One arched piece lit from below with what is included; arrows step through. |  |  |  |  |
-| E | Check availability | Pick an outfit and your function date; WhatsApp asks if it is free. |  |  |  | later |
+| E | Check availability | Pick an outfit and your function date; WhatsApp asks if it is free. |  | built: `rental/AvailabilityRental` |  | keep |
 | F | Rent or stitch? | A side-by-side table to help decide, using their real delivery time and bridal price. |  |  |  |  |
 | G | Item detail | Large photo, thumbnails, what is included, sizes and a Check availability button. |  |  |  |  |
 | H | Wardrobe | Arched outfits inside a brand-colour wardrobe with a gold edge. |  |  |  |  |
@@ -920,14 +920,14 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Kids wear corner** · Speciality · `is.kidsA`–`is.kidsZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** kids' work (file-name category) and age range.
+Data: Kids group in services, `services.kidsAges` (section 5), photos `work-kids-NN.jpg`; matching pairs `match-NN-a/b.jpg`.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Who's it for | Big round avatar buttons for girls, boys, babies and family; a shelf of matching pieces. |  |  |  | later |
-| B | Mother and daughter | Two arched photos side by side for matching outfits. |  |  |  | later |
+| A | Who's it for | Big round avatar buttons for girls, boys, babies and family; a shelf of matching pieces. |  | built: `kids/CornerKids` |  | keep |
+| B | Mother and daughter | Two arched photos side by side for matching outfits. |  | built: `kids/MatchingKids` |  | keep |
 | C | Find by age | Pick an age; usual sizes and outfits that suit it. |  |  |  |  |
 | D | Birthday invitation | An invitation card on confetti: her birthday look, RSVP on WhatsApp. |  |  |  |  |
 | E | A year of firsts | Naming, annaprashana, first birthday and festivals on a ruled calendar strip. |  |  |  |  |
@@ -957,14 +957,14 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Men's tailoring** · Speciality · `is.menA`–`is.menZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** men's services and prices.
+Data: Men group in services; groom looks from photos `groom-<function>.jpg`.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Collar guide | Spread, button-down, mandarin and cutaway drawn as line art; pick one. |  |  |  |  |
-| B | Groom's wardrobe | Haldi, sangeet, wedding and reception, a look for each. |  |  |  | later |
+| B | Groom's wardrobe | Haldi, sangeet, wedding and reception, a look for each. |  | built: `men/GroomMen` |  | keep |
 | C | Choose your fit | Slim, regular or relaxed shown as simple shapes with the ease. |  |  |  |  |
 | D | Men's index | A typeset index of every piece with time and occasion. | yes | built: `men/IndexMen` |  | keep |
 | E | The edit | Four pieces in alternating photo rows. |  |  |  |  |
@@ -994,7 +994,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Embroidery types** · Speciality · `is.embA`–`is.embZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** embroidery types they do (maggam, zardosi…) with photos.
+Data: Their handwork services; plain/worked pairs from photos `plain-NN.jpg` + `worked-NN.jpg`.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
@@ -1010,7 +1010,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | H | Six motifs | Alternating rows for mango, peacock, lotus and more. |  |  |  |  |
 | I | Where it goes | Neckline, sleeves, back or all over, shown on the blouse drawing. | yes |  |  |  |
 | J | How heavy? | Dark. Light to bridal on a segmented control; the texture gets denser. | yes |  |  |  |
-| K | Plain to precious | The same blouse plain and with handwork; switch between them. |  |  |  | later |
+| K | Plain to precious | The same blouse plain and with handwork; switch between them. |  | built: `handwork/PlainHandwork` |  | keep |
 | L | From the adda | Dark split: a texture full-bleed beside the karigar's words. | yes |  |  |  |
 | M | Texture study | One large and two small close-ups. | yes |  |  |  |
 | N | What it is made of | Kundan, pearls, crystals and zari in a ruled list. | yes |  |  |  |
@@ -1031,13 +1031,13 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Saree services** · Speciality · `is.sareeA`–`is.sareeZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** saree services (fall and pico, pre-pleating, kuchu) and prices.
+Data: Their saree services; drapes from photos `drape-<style>.jpg`.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Six ways to wear it | Alternating photo rows for each drape, with a booking link. |  |  |  | later |
+| A | Six ways to wear it | Alternating photo rows for each drape, with a booking link. |  | built: `saree/DrapesSaree` |  | keep |
 | B | How long it takes | Each service with its usual time as a pill. | yes |  |  |  |
 | C | Pre-pleating | Arched photo with the three steps: pleats, pallu, pinned. |  |  |  |  |
 | D | Fall matching | Pick your saree colour; a matching fall shows along the hem. | yes |  |  |  |
@@ -1068,15 +1068,15 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Alterations price list** · Speciality · `is.alterA`–`is.alterZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** alteration price list.
+Data: `alterationPrices` (data sheet 6d), shown only with prices permission.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Letter board | A black felt peg board with every alteration and price. | yes |  |  |  |
-| B | Printed price list | Two columns grouped by garment with dotted leaders. | yes |  |  | later |
-| C | Price estimate | Tick fixes; a live total and a send button. | yes |  |  | later |
+| B | Printed price list | Two columns grouped by garment with dotted leaders. | yes | built: `alterations/RateAlterations` |  | keep |
+| C | Price estimate | Tick fixes; a live total and a send button. | yes | built: `alterations/EstimateAlterations` |  | keep |
 | D | Receipt | A thermal receipt with every rate and the express charge. | yes |  |  |  |
 | E | What we fix | Each problem struck through beside the result and its price. | yes |  |  |  |
 | F | Garment tabs | Blouse, kurti, lehenga, pants and kids tabs with their fixes. | yes |  |  |  |
@@ -1179,20 +1179,20 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Gift voucher** · Speciality · `is.giftA`–`is.giftZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** voucher amounts. Requests go to WhatsApp; no payment flow.
+Data: `giftVouchers` (data sheet 6e). "What it buys" also needs starting prices.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Voucher builder | Amount and names; the voucher card updates live. | yes |  |  | later |
+| A | Voucher builder | Amount and names; the voucher card updates live. | yes | built: `gift/BuilderGift` |  | keep |
 | B | Envelope | Tap the sealed envelope; the voucher slides out. | yes |  |  |  |
 | C | In one sentence | A large sentence you fill in: amount, for and from. | yes |  |  |  |
 | D | Any amount | Dark. Slide from ₹500 to ₹20,000; it says what that covers. | yes |  |  |  |
 | E | For the occasion | Occasions as large type; the card wording updates beside them. | yes |  |  |  |
 | F | Bank note | A banknote-style voucher with guilloche patterns. | yes |  |  |  |
 | G | Gift tag | A kraft tag with a handwritten to and from. | yes |  |  |  |
-| H | What it buys | Four amounts, each with what it actually covers at their prices. | yes |  |  | later |
+| H | What it buys | Four amounts, each with what it actually covers at their prices. | yes | built: `gift/BuysGift` |  | keep |
 | I | Folding card | A card that opens to show your message. | yes |  |  |  |
 | J | Gift a service | Services at their real prices as a ruled list. | yes |  |  |  |
 | K | E-voucher | Dark. A phone voucher with a QR-style code. | yes |  |  |  |
@@ -1216,13 +1216,13 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Classes & workshops** · Speciality · `is.classA`–`is.classZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** classes (name, dates, fee).
+Data: `classes` (data sheet 6h).
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Course cards | Six classes with level, length and next batch date. | yes |  |  | later |
+| A | Course cards | Six classes with level, length and next batch date. | yes | built: `classes/CardsClasses` |  | keep |
 | B | Timetable | A week grid of classes by time slot. | yes |  |  |  |
 | C | Seats left | Dark. Chairs light up for seats still open in the next batch. | yes |  |  |  |
 | D | Syllabus | Pick a class; week-by-week modules open up. | yes |  |  |  |
@@ -1231,7 +1231,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | G | Certificate | A completion certificate with your name typed in. | yes |  |  |  |
 | H | Student work | Alternating photo rows with student quotes. |  |  |  |  |
 | I | Your teacher | The owner as teacher, with years and a quote. |  |  |  |  |
-| J | Enrol | Name, age, class and batch build a WhatsApp enrolment. | yes |  |  | later |
+| J | Enrol | Name, age, class and batch build a WhatsApp enrolment. | yes | built: `classes/EnrolClasses` |  | keep |
 | K | Workshop poster | Brand colour. A bold one-day workshop poster. | yes |  |  |  |
 | L | Which class? | Three questions suggest a class. | yes |  |  |  |
 | M | What you will make | A piece for each week of the chosen class. |  |  |  |  |
@@ -1253,14 +1253,14 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Team / tailors** · Speciality · `is.teamA`–`is.teamZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** team members (name, role, photo permission).
+Data: `team` (data sheet 7b); photos `team-NN.jpg` only with each person's yes.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Editorial roster | Alternating portrait and bio rows with large names, years and a line about each person. |  |  |  | later |
-| B | Founder letter | The founder in an arch, her own words, her signature and the team named below. |  |  |  | later |
+| A | Editorial roster | Alternating portrait and bio rows with large names, years and a line about each person. |  | built: `team/RosterTeam` |  | keep |
+| B | Founder letter | The founder in an arch, her own words, her signature and the team named below. |  | built: `team/FounderTeam` |  | keep |
 | C | Five stages | Tall portraits on a rail, one per stage of the making. |  |  |  |  |
 | D | Hands | Dark. A large and two small close-ups of hands at work. |  |  |  |  |
 | E | Contributors page | A magazine contributors page in two ruled columns. |  |  |  |  |
@@ -1290,13 +1290,13 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 **Blog / style tips** · Speciality · `is.blogA`–`is.blogZ` in `Speciality Preview.dc.html`
 
-Data: **New data:** posts, which someone has to write.
+Data: `posts` (data sheet 8c), written or approved by the boutique.
 
 Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | The Journal | A masthead, a lead story with photo, then a ruled list of the rest. |  |  |  | later |
+| A | The Journal | A masthead, a lead story with photo, then a ruled list of the rest. |  | built: `posts/JournalPosts` |  | keep |
 | B | Style notes | A large lead with photo and three stories in ruled columns below. |  |  |  |  |
 | C | Browse by topic | Topics as large type; the list filters below. | yes |  |  |  |
 | D | Article page | A full reading page: headline, byline, drop cap and pull quote. |  |  |  |  |

@@ -45,3 +45,24 @@ export function photoCategories(files: PhotoFile[]): string[] {
   }
   return found.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
 }
+
+/**
+ * The label a photo carries after its prefix: photoTag('look-sangeet-01.jpg',
+ * 'look') → "Sangeet"; photoTag('drape-nivi.jpg', 'drape') → "Nivi".
+ */
+export function photoTag(file: PhotoFile, prefix: string): string | undefined {
+  const found = file.match(new RegExp(`^${prefix}-([a-z]+)(?:-\\d+)?\\.`, 'i'))
+  return found ? found[1].charAt(0).toUpperCase() + found[1].slice(1).toLowerCase() : undefined
+}
+
+/** Wedding functions in the order they happen, for sorting looks and groom outfits. */
+const FUNCTIONS = ['roka', 'engagement', 'mehendi', 'haldi', 'sangeet', 'muhurtham', 'wedding', 'reception', 'festival', 'party', 'office']
+
+/** Sorts photo files by the function in their name, unknown ones last. */
+export function byFunction(files: PhotoFile[], prefix: string): PhotoFile[] {
+  const rank = (f: PhotoFile) => {
+    const at = FUNCTIONS.indexOf((photoTag(f, prefix) ?? '').toLowerCase())
+    return at === -1 ? FUNCTIONS.length : at
+  }
+  return [...files].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
+}

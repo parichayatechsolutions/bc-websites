@@ -53,6 +53,7 @@ const config: BoutiqueConfig = {
           'Designer blouse',
           'Bridal blouse',
           'Saree fall and pico',
+          'Saree pre-pleating and draping',
           'Salwar and churidar',
           'Anarkali',
           'Lehenga',
@@ -64,6 +65,10 @@ const config: BoutiqueConfig = {
         items: ['Pattu pavadai and langa', 'Frocks'],
       },
       {
+        title: 'Men',
+        items: ['Kurta and pyjama', 'Sherwani'],
+      },
+      {
         title: 'Handwork',
         items: ['Aari work', 'Maggam work', 'Zardosi', 'Mirror, bead and stone work'],
       },
@@ -71,12 +76,14 @@ const config: BoutiqueConfig = {
         title: 'Services',
         items: [
           'Alterations',
+          'Fabric sales',
           'Bridal packages',
           'Custom design consultation',
           'Express and urgent stitching',
         ],
       },
     ],
+    kidsAges: '1 to 14 years',
   },
   pricing: {
     startingAt: [
@@ -126,6 +133,83 @@ const config: BoutiqueConfig = {
       detail: 'For bridal blouse orders placed at the store',
       until: '2027-01-31',
       code: 'BRIDALFALL',
+    },
+  ],
+  alterationPrices: [
+    { item: 'Blouse fitting, taken in or let out', price: 150 },
+    { item: 'Sleeve length shortened', price: 100 },
+    { item: 'Saree fall and pico', price: 200 },
+    { item: 'Lehenga waist adjusted', price: 350 },
+    { item: 'Hooks or zip replaced', price: 80 },
+  ],
+  giftVouchers: {
+    amounts: [1000, 2500, 5000, 10000],
+  },
+  rentals: [
+    {
+      name: 'Red bridal lehenga with zardosi border',
+      pricePerDay: 2500,
+      sizes: '32 to 38',
+      photo: 'rental-01.jpg',
+    },
+    {
+      name: 'Gold tissue half-saree',
+      pricePerDay: 1500,
+      sizes: '30 to 36',
+      photo: 'rental-02.jpg',
+    },
+  ],
+  fabrics: [
+    {
+      name: 'Kanchi pattu',
+      bestFor: 'bridal blouses and half-sarees',
+      photo: 'fabric-01.jpg',
+    },
+    { name: 'Raw silk', bestFor: 'designer blouses', photo: 'fabric-02.jpg' },
+    {
+      name: 'Banarasi brocade',
+      bestFor: 'lehengas and reception blouses',
+      photo: 'fabric-03.jpg',
+    },
+    {
+      name: 'Cotton silk',
+      bestFor: 'everyday blouses and kurtis',
+      photo: 'fabric-04.jpg',
+    },
+  ],
+  classes: [
+    {
+      name: 'Blouse stitching for beginners',
+      level: 'Beginner',
+      length: '6 weeks, Saturday mornings',
+      nextBatch: '2027-02-07',
+      fee: 4500,
+    },
+  ],
+  team: [
+    {
+      name: 'Ramesh',
+      role: 'Master tailor',
+      years: 11,
+      line: 'Cuts every bridal blouse himself.',
+    },
+    {
+      name: 'Kavitha',
+      role: 'Aari and maggam artist',
+      years: 7,
+      line: 'Does the fine handwork on necklines and sleeves.',
+    },
+  ],
+  posts: [
+    {
+      title: 'Which neck suits a broad shoulder',
+      date: '2026-10-01',
+      text: 'A boat neck widens the shoulder line, so go for a deep U or a sweetheart instead. They draw the eye down and balance the shoulders.',
+    },
+    {
+      title: 'Bring your saree to the first fitting',
+      date: '2026-09-15',
+      text: 'We match the blouse to the saree\'s border and colour, so the two look made together. Bring it, or a clear photo in daylight.',
     },
   ],
   stats: [
@@ -196,6 +280,20 @@ const config: BoutiqueConfig = {
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
+    looks: [
+      'look-haldi-01.jpg',
+      'look-reception-01.jpg',
+      'look-sangeet-01.jpg',
+      'look-wedding-01.jpg',
+    ],
+    drapes: ['drape-bengali.jpg', 'drape-nivi.jpg'],
+    groom: ['groom-sangeet.jpg', 'groom-wedding.jpg'],
+    handworkPairs: [
+      { first: 'plain-01.jpg', second: 'worked-01.jpg' },
+    ],
+    matching: [
+      { first: 'match-01-a.jpg', second: 'match-01-b.jpg' },
+    ],
     captions: {
       'work-bridal-01.jpg': 'Bridal blouse, aari and maggam, 14 days',
       'work-bridal-02.jpg': 'Reception lehenga, zardosi border, 21 days',
@@ -208,6 +306,18 @@ const config: BoutiqueConfig = {
       'work-saree-01.jpg': 'Saree pre-pleating and fall stitching, 2 days',
       'work-kids-01.jpg': 'Pattu langa, zari border, 7 days',
       'after-01.jpg': 'Blouse taken in at the waist and sleeves shortened, 2 days',
+      'look-wedding-01.jpg': 'Muhurtham look, maggam blouse with a Kanchi pattu saree',
+      'look-sangeet-01.jpg': 'Light lehenga for the sangeet, mirror work',
+      'look-reception-01.jpg': 'Reception blouse with a brocade lehenga',
+      'look-haldi-01.jpg': 'Yellow half-saree for the haldi',
+      'drape-nivi.jpg': 'Nivi drape, pre-pleated',
+      'drape-bengali.jpg': 'Bengali drape with a box-pleated pallu',
+      'groom-sangeet.jpg': 'Kurta with a brocade jacket',
+      'groom-wedding.jpg': 'Ivory sherwani with zari work',
+      'plain-01.jpg': 'The blouse before handwork',
+      'worked-01.jpg': 'The same blouse with aari work on the neck and sleeves',
+      'match-01-a.jpg': 'Mother\'s pattu saree blouse',
+      'match-01-b.jpg': 'Daughter\'s matching pattu langa',
     },
   },
   permissions: { showOwnerPhoto: true, showPrices: true },

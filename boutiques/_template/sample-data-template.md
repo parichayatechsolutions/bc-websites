@@ -102,6 +102,8 @@ _Tick with `[x]`. Add anything missing under "Others"._
 - [ ] Frocks
 - [ ] Kids ethnic wear
 
+- Ages they stitch for (e.g. 1 to 14 years):
+
 **Men**
 
 - [ ] Kurta / pyjama
@@ -170,6 +172,62 @@ _Only a real offer the owner is running now. The website hides it the day after 
 - Last day (e.g. 15 Nov 2026):
 - Code to show at the counter (optional):
 
+## 6d. Alteration prices (optional)
+
+_Their usual rates. Shown only if the owner agrees to show prices (section 10)._
+
+1. Alteration:  | Price (₹):
+2. Alteration:  | Price (₹):
+3. Alteration:  | Price (₹):
+4. Alteration:  | Price (₹):
+5. Alteration:  | Price (₹):
+6. Alteration:  | Price (₹):
+
+## 6e. Gift vouchers (optional)
+
+- Do they sell gift vouchers? (yes / no):
+- Voucher amounts (₹, separate with commas, e.g. 1000, 2000, 5000):
+
+## 6f. Rental collection (optional)
+
+_Only if they rent outfits. One block per piece; copy the block for more. Photograph
+each piece as `rental-01.jpg`, `rental-02.jpg`… in the same order._
+
+### Piece 1
+
+- Name (e.g. Red bridal lehenga):
+- Rent per day (₹):
+- Sizes:
+
+### Piece 2
+
+- Name:
+- Rent per day (₹):
+- Sizes:
+
+## 6g. Fabrics they stock (optional)
+
+_Only if they sell fabric. Photograph a swatch of each as `fabric-01.jpg`, `fabric-02.jpg`… in the same order._
+
+1. Fabric:  | Best for:
+2. Fabric:  | Best for:
+3. Fabric:  | Best for:
+4. Fabric:  | Best for:
+5. Fabric:  | Best for:
+6. Fabric:  | Best for:
+
+## 6h. Classes and workshops (optional)
+
+_Only if they teach. One block per class; copy the block for more._
+
+### Class 1
+
+- Class name (e.g. Blouse stitching for beginners):
+- Level (beginner / intermediate / advanced):
+- Length (e.g. 6 weeks):
+- Next batch starts (e.g. 15 Nov 2026):
+- Fee (₹):
+
 ## 7. Numbers to show on the website
 
 _Only what the owner is comfortable sharing publicly._
@@ -178,6 +236,28 @@ _Only what the owner is comfortable sharing publicly._
 - Total customers / orders delivered (approx.):
 - Team size (tailors + staff):
 - Any awards, press, or celebrity customers:
+
+## 7b. Team (optional)
+
+_The people who make the clothes, only those who agree to be on the website. One block
+per person; copy for more. Photograph each as `team-01.jpg`, `team-02.jpg`… in the same
+order, and only if they said yes to their photo. Never use a generated picture of a person._
+
+### Person 1
+
+- Name:
+- Role (e.g. Master tailor, Aari artist):
+- Years with the boutique:
+- One line about them (in their or the owner's words):
+- Photo OK? (yes / no):
+
+### Person 2
+
+- Name:
+- Role:
+- Years with the boutique:
+- One line about them:
+- Photo OK? (yes / no):
 
 ## 8. Customer reviews
 
@@ -199,6 +279,17 @@ delivery time and payment: the website answers those from section 6._
 3. Question:  | Answer:
 4. Question:  | Answer:
 5. Question:  | Answer:
+
+## 8c. Style notes (optional)
+
+_Short tips the boutique wants to share, written by them or approved by them. One block
+per note. A photo for a note is `post-01.jpg`, `post-02.jpg`… in the same order._
+
+### Note 1
+
+- Title (e.g. Which neck suits a broad shoulder):
+- Date (e.g. 1 Oct 2026):
+- Text (2–4 lines):
 
 ## 9. Brand, logo and photos
 
@@ -234,6 +325,12 @@ delivery time and payment: the website answers those from section 6._
 | `work-01.jpg` … `work-10.jpg` | Finished garments: best blouses, lehengas, bridal work | ★ at least 5 |
 | `closeup-01.jpg` … | Close-ups of embroidery, stitching detail, fabrics | |
 | `before-01.jpg` + `after-01.jpg` … | The same garment before and after an alteration, same angle and light (only if they do alterations) | |
+| `look-<occasion>-01.jpg` … | Finished looks by occasion: `look-wedding-01.jpg`, `look-sangeet-01.jpg`, `look-reception-01.jpg`, `look-haldi-01.jpg`, `look-festival-01.jpg` | |
+| `drape-<style>.jpg` | A saree draped in each style they offer: `drape-nivi.jpg`, `drape-bengali.jpg`, `drape-gujarati.jpg` | |
+| `groom-<function>.jpg` | A groom's outfit for each function: `groom-haldi.jpg`, `groom-sangeet.jpg`, `groom-wedding.jpg`, `groom-reception.jpg` | |
+| `plain-01.jpg` + `worked-01.jpg` … | The same blouse plain and with their handwork, same angle | |
+| `match-01-a.jpg` + `match-01-b.jpg` … | Matching outfits worn together: mother and daughter, or siblings | |
+| `rental-01.jpg` …, `fabric-01.jpg` …, `team-01.jpg` …, `post-01.jpg` … | One per rental piece, fabric, team member (with their yes) and style note, in the order listed in 6f, 6g, 7b and 8c | |
 | `video-01.mp4` … | Short 5–10 sec clips: stitching, fabric flowing, store walk-through | |
 
 - Can we also use photos from their Instagram? (yes / no):
@@ -258,7 +355,9 @@ them: `work-bridal-01.jpg`, `work-blouse-02.jpg`, `work-lehenga-01.jpg`,
 - work-saree-01.jpg:
 - work-kids-01.jpg:
 
-_Before and after photos can have a note too: `- after-01.jpg: Blouse taken in at the waist, 2 days`._
+_Before and after photos can have a note too: `- after-01.jpg: Blouse taken in at the waist, 2 days`.
+So can looks, drapes, groom looks and handwork pairs: `- look-sangeet-01.jpg: Lehenga for the sangeet, mirror work`.
+A photo listed here that hasn't been taken yet shows as a labelled placeholder until it's added._
 
 ## 10. Permissions
 

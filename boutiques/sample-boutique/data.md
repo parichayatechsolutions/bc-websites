@@ -58,7 +58,7 @@
 - [x] Designer blouse
 - [x] Bridal blouse
 - [x] Saree fall and pico
-- [ ] Saree pre-pleating / draping
+- [x] Saree pre-pleating / draping
 - [x] Salwar / churidar
 - [ ] Kurti
 - [x] Anarkali
@@ -73,10 +73,12 @@
 - [x] Frocks
 - [ ] Kids ethnic wear
 
+- Ages they stitch for (e.g. 1 to 14 years): 1 to 14 years
+
 **Men**
 
-- [ ] Kurta / pyjama
-- [ ] Sherwani
+- [x] Kurta / pyjama
+- [x] Sherwani
 - [ ] Shirts / trousers
 
 **Embroidery and handwork**
@@ -91,7 +93,7 @@
 **Other services**
 
 - [x] Alterations
-- [ ] Fabric sales
+- [x] Fabric sales
 - [ ] Readymade garments for sale
 - [x] Bridal packages
 - [x] Custom design consultation
@@ -143,12 +145,77 @@
 - Last day: 31 Jan 2027
 - Code to show at the counter: BRIDALFALL
 
+## 6d. Alteration prices (optional)
+
+1. Alteration: Blouse fitting, taken in or let out | Price (₹): 150
+2. Alteration: Sleeve length shortened | Price (₹): 100
+3. Alteration: Saree fall and pico | Price (₹): 200
+4. Alteration: Lehenga waist adjusted | Price (₹): 350
+5. Alteration: Hooks or zip replaced | Price (₹): 80
+6. Alteration: NA | Price (₹): NA
+
+## 6e. Gift vouchers (optional)
+
+- Do they sell gift vouchers? (yes / no): yes
+- Voucher amounts (₹, separate with commas, e.g. 1000, 2000, 5000): 1000, 2500, 5000, 10000
+
+## 6f. Rental collection (optional)
+
+### Piece 1
+
+- Name: Red bridal lehenga with zardosi border
+- Rent per day (₹): 2500
+- Sizes: 32 to 38
+
+### Piece 2
+
+- Name: Gold tissue half-saree
+- Rent per day (₹): 1500
+- Sizes: 30 to 36
+
+## 6g. Fabrics they stock (optional)
+
+1. Fabric: Kanchi pattu | Best for: bridal blouses and half-sarees
+2. Fabric: Raw silk | Best for: designer blouses
+3. Fabric: Banarasi brocade | Best for: lehengas and reception blouses
+4. Fabric: Cotton silk | Best for: everyday blouses and kurtis
+5. Fabric: NA | Best for: NA
+6. Fabric: NA | Best for: NA
+
+## 6h. Classes and workshops (optional)
+
+### Class 1
+
+- Class name: Blouse stitching for beginners
+- Level: Beginner
+- Length: 6 weeks, Saturday mornings
+- Next batch starts: 7 Feb 2027
+- Fee (₹): 4500
+
 ## 7. Numbers to show on the website
 
 - Years in business: 12+
 - Total customers / orders delivered (approx.): 8,000+
 - Team size (tailors + staff): 12
 - Any awards, press, or celebrity customers: NA
+
+## 7b. Team (optional)
+
+### Person 1
+
+- Name: Ramesh
+- Role: Master tailor
+- Years with the boutique: 11
+- One line about them: Cuts every bridal blouse himself.
+- Photo OK? (yes / no): no
+
+### Person 2
+
+- Name: Kavitha
+- Role: Aari and maggam artist
+- Years with the boutique: 7
+- One line about them: Does the fine handwork on necklines and sleeves.
+- Photo OK? (yes / no): no
 
 ## 8. Customer reviews
 
@@ -165,6 +232,20 @@
 3. Question: How many trials will I need? | Answer: Usually one. Bridal blouses get two, so the fit is right before the handwork starts.
 4. Question: NA | Answer: NA
 5. Question: NA | Answer: NA
+
+## 8c. Style notes (optional)
+
+### Note 1
+
+- Title: Which neck suits a broad shoulder
+- Date: 1 Oct 2026
+- Text: A boat neck widens the shoulder line, so go for a deep U or a sweetheart instead. They draw the eye down and balance the shoulders.
+
+### Note 2
+
+- Title: Bring your saree to the first fitting
+- Date: 15 Sep 2026
+- Text: We match the blouse to the saree's border and colour, so the two look made together. Bring it, or a clear photo in daylight.
 
 ## 9. Brand, logo and photos
 
@@ -206,6 +287,18 @@
 - work-saree-01.jpg: Saree pre-pleating and fall stitching, 2 days
 - work-kids-01.jpg: Pattu langa, zari border, 7 days
 - after-01.jpg: Blouse taken in at the waist and sleeves shortened, 2 days
+- look-wedding-01.jpg: Muhurtham look, maggam blouse with a Kanchi pattu saree
+- look-sangeet-01.jpg: Light lehenga for the sangeet, mirror work
+- look-reception-01.jpg: Reception blouse with a brocade lehenga
+- look-haldi-01.jpg: Yellow half-saree for the haldi
+- drape-nivi.jpg: Nivi drape, pre-pleated
+- drape-bengali.jpg: Bengali drape with a box-pleated pallu
+- groom-sangeet.jpg: Kurta with a brocade jacket
+- groom-wedding.jpg: Ivory sherwani with zari work
+- plain-01.jpg: The blouse before handwork
+- worked-01.jpg: The same blouse with aari work on the neck and sleeves
+- match-01-a.jpg: Mother's pattu saree blouse
+- match-01-b.jpg: Daughter's matching pattu langa
 
 ## 10. Permissions
 

@@ -128,3 +128,23 @@ export { default as FormMeasure } from './measure/FormMeasure' // Fill in measur
 export { default as NeedsSaree } from './saree/NeedsSaree' // Tick the saree work you need (their own saree services) and send it in one message
 export { default as IndexMen } from './men/IndexMen' // Every men's piece as a ruled index row with a WhatsApp ask
 export { default as RowsHandwork } from './handwork/RowsHandwork' // The handwork they list, each explained: what it is and what it suits
+export { default as SpreadLookbook } from './lookbook/SpreadLookbook' // Lookbook in chapters by occasion: one tall photo and two small (look-<occasion>-NN.jpg)
+export { default as OccasionLookbook } from './lookbook/OccasionLookbook' // Occasion chips filter a grid of looks, each with "Ask for this look"
+export { default as DrapesSaree } from './saree/DrapesSaree' // A photo row per saree drape with its note and a booking link (drape-<style>.jpg)
+export { default as GroomMen } from './men/GroomMen' // The groom's look for each function, in order (groom-<function>.jpg)
+export { default as PlainHandwork } from './handwork/PlainHandwork' // The same blouse plain and with handwork, with a switch (plain-NN + worked-NN)
+export { default as CornerKids } from './kids/CornerKids' // Kids' services, the ages they stitch for and their kids' work
+export { default as MatchingKids } from './kids/MatchingKids' // Matching outfits as arched pairs: mother and daughter, siblings (match-NN-a + b)
+export { default as RateAlterations } from './alterations/RateAlterations' // Printed rate card of their alteration prices (needs prices permission)
+export { default as EstimateAlterations } from './alterations/EstimateAlterations' // Tick alterations, see the estimate from their rates, send on WhatsApp
+export { default as BuilderGift } from './gift/BuilderGift' // Pick an amount and names; the voucher card fills in; request on WhatsApp
+export { default as BuysGift } from './gift/BuysGift' // Each voucher amount beside what it covers at their starting prices
+export { default as RailRental } from './rental/RailRental' // Rental pieces hanging from a rail with swing tags and "Ask to rent"
+export { default as AvailabilityRental } from './rental/AvailabilityRental' // Pick a rental piece and a date; asks on WhatsApp if it's free
+export { default as SwatchFabrics } from './fabric/SwatchFabrics' // Fabrics they stock as pinked swatches with what each is best for
+export { default as BringFabric } from './fabric/BringFabric' // "Have your own fabric?" send-a-photo card, with their fabrics as quick links
+export { default as RosterTeam } from './team/RosterTeam' // The team as an editorial roster: name, role, years, a line (photos only with consent)
+export { default as FounderTeam } from './team/FounderTeam' // The founder and their story, with the team named beneath
+export { default as CardsClasses } from './classes/CardsClasses' // Classes as cards: level, length, next batch, fee, ask to join
+export { default as EnrolClasses } from './classes/EnrolClasses' // Name, class and age group written into a WhatsApp enrolment
+export { default as JournalPosts } from './posts/JournalPosts' // Style notes under a ruled masthead: the newest as lead, the rest listed

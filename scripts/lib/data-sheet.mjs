@@ -150,6 +150,19 @@ export function readSheet(markdown) {
     .map((m) => ({ question: clean(m[1]), answer: clean(m[2]) }))
     .filter((q) => q.question || q.answer)
 
+  /** "1. Fabric: Kanchi silk | Best for: bridal blouses" → ['Kanchi silk', 'bridal blouses'], keeping each line's place. */
+  const pairsOf = (lines, a, b) =>
+    lines
+      .map((l) => l.match(new RegExp(`^\\s*(\\d+)\\.\\s*${a}[^:|]*:\\s*(.*?)\\s*\\|\\s*${b}[^:]*:\\s*(.*)$`, 'i')))
+      .filter(Boolean)
+      .map((m) => ({ n: Number(m[1]), a: clean(m[2]), b: clean(m[3]) }))
+      .filter((x) => x.a || x.b)
+
+  const blockFields = (lines, labels) =>
+    blocks(lines)
+      .map((b) => Object.fromEntries(Object.entries(labels).map(([key, label]) => [key, field(b, label)])))
+      .filter((x) => Object.values(x).some(Boolean))
+
   const reviews = (s[8] ?? [])
     .map((l) => l.match(/^\s*\d+\.\s*Name:\s*(.*?)\s*\|\s*Review:\s*(.*)$/i))
     .filter(Boolean)
@@ -182,6 +195,7 @@ export function readSheet(markdown) {
 
     stitched: ticked(s[5] ?? []),
     others: get(5, 'Others'),
+    kidsAges: get(5, 'Ages they stitch for'),
     topThree: numberedAfter(s[5] ?? [], 'Top 3 things'),
 
     priceSimple: get(6, 'Starting price for a simple blouse'),
@@ -193,6 +207,26 @@ export function readSheet(markdown) {
 
     packages,
     offers,
+    alterationPrices: pairsOf(s['6d'] ?? [], 'Alteration', 'Price'),
+    vouchers: get('6e', 'Do they sell gift vouchers?'),
+    voucherAmounts: get('6e', 'Voucher amounts'),
+    rentals: blockFields(s['6f'] ?? [], { name: 'Name', price: 'Rent per day (₹)', sizes: 'Sizes' }),
+    fabrics: pairsOf(s['6g'] ?? [], 'Fabric', 'Best for'),
+    classes: blockFields(s['6h'] ?? [], {
+      name: 'Class name',
+      level: 'Level',
+      length: 'Length',
+      nextBatch: 'Next batch starts',
+      fee: 'Fee (₹)',
+    }),
+    team: blockFields(s['7b'] ?? [], {
+      name: 'Name',
+      role: 'Role',
+      years: 'Years with the boutique',
+      line: 'One line about them',
+      photoOk: 'Photo OK?',
+    }),
+    posts: blockFields(s['8c'] ?? [], { title: 'Title', date: 'Date', text: 'Text' }),
 
     years: get(7, 'Years in business'),
     orders: get(7, 'Total customers / orders delivered'),
@@ -405,6 +439,20 @@ function mediaFor(files, sheet) {
   const altering = (sheet.stitched['Other services'] ?? []).some((item) => /alteration/i.test(item))
   const alterations = pairs.length ? pairs : altering ? [{ before: 'before-01.jpg', after: 'after-01.jpg' }] : undefined
 
+  // Photo-name sections come from the folder and from files named in the
+  // photo notes (9b), so a planned shot shows as a placeholder until it's
+  // taken. A real file wins over a note of the same name.
+  const byStem = new Map(Object.keys(sheet.photoNotes ?? {}).map((f) => [f.replace(/\.[^.]+$/, ''), f]))
+  for (const [stem, file] of stems) byStem.set(stem, file)
+  const named = (re) => [...byStem.keys()].filter((stem) => re.test(stem)).sort().map((stem) => byStem.get(stem))
+  /** Two photos that go together by number: plain-01 with worked-01. */
+  const paired = (pattern, firstOf, secondOf) =>
+    [...byStem.keys()]
+      .map((stem) => stem.match(pattern)?.[1])
+      .filter((n) => n && byStem.has(secondOf(n)))
+      .sort()
+      .map((n) => ({ first: byStem.get(firstOf(n)), second: byStem.get(secondOf(n)) }))
+
   const isVideo = (file) => /\.(mp4|webm)$/i.test(file ?? '')
   const video = has('video-01') ?? (isVideo(has('ai-hero')) ? has('ai-hero') : undefined)
   const hero = video
@@ -419,6 +467,11 @@ function mediaFor(files, sheet) {
     work,
     closeups: numbered('closeup', ['closeup-01.jpg', 'closeup-02.jpg']),
     alterations,
+    looks: named(/^look-[a-z]+-\d+$/),
+    drapes: named(/^drape-[a-z]+(-\d+)?$/),
+    groom: named(/^groom-[a-z]+(-\d+)?$/),
+    handworkPairs: paired(/^plain-(\d+)$/, (n) => `plain-${n}`, (n) => `worked-${n}`),
+    matching: paired(/^match-(\d+)-a$/, (n) => `match-${n}-a`, (n) => `match-${n}-b`),
     captions: sheet.photoNotes,
     ownerPhoto: yes(sheet.okOwnerPhoto) ? (has('owner') ?? 'owner.jpg') : undefined,
     logo: has('logo') ?? 'logo.png',
@@ -432,7 +485,7 @@ const drop = (obj) => {
     for (const [k, v] of Object.entries(obj)) {
       const value = drop(v)
       if (value === undefined) continue
-      if (Array.isArray(value) && value.length === 0 && !['testimonials', 'reviews', 'work'].includes(k)) continue
+      if (Array.isArray(value) && value.length === 0 && !['testimonials', 'reviews', 'work', 'amounts'].includes(k)) continue
       if (value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length === 0) continue
       out[k] = value
     }
@@ -532,6 +585,62 @@ export function toConfig(sheet, { slug, photoFiles }) {
     return drop({ title: o.title, detail: o.detail, until, code: o.code })
   }).filter((o) => o.title)
 
+  // Numbered photos for items listed in the sheet: rental-01.jpg for the first piece.
+  const fileByStem = new Map(photoFiles.map((f) => [f.replace(/\.[^.]+$/, ''), f]))
+  const nn = (i) => String(i + 1).padStart(2, '0')
+  const photoFor = (stem) => fileByStem.get(stem) ?? `${stem}.jpg`
+
+  const alterationPrices = (sheet.alterationPrices ?? [])
+    .map((a) => {
+      if (a.a && !number(a.b)) warnings.push(`Alteration "${a.a}" in section 6d has no price, so it's left out`)
+      return { item: a.a, price: number(a.b) }
+    })
+    .filter((a) => a.item && a.price)
+
+  const giftVouchers = yes(sheet.vouchers) ? { amounts: commaList(sheet.voucherAmounts).map(number).filter(Boolean) } : undefined
+
+  const rentals = (sheet.rentals ?? [])
+    .map((r, i) => {
+      if (!r.name) warnings.push(`Rental piece ${i + 1} has no name, so it's left out`)
+      return drop({ name: r.name, pricePerDay: number(r.price), sizes: r.sizes, photo: photoFor(`rental-${nn(i)}`) })
+    })
+    .filter((r) => r.name)
+
+  const fabrics = (sheet.fabrics ?? [])
+    .filter((f) => f.a)
+    .map((f) => drop({ name: f.a, bestFor: f.b, photo: photoFor(`fabric-${String(f.n).padStart(2, '0')}`) }))
+
+  const classes = (sheet.classes ?? [])
+    .map((c, i) => {
+      const nextBatch = parseDate(c.nextBatch)
+      if (!c.name) warnings.push(`Class ${i + 1} has no name, so it's left out`)
+      else if (c.nextBatch && !nextBatch) warnings.push(`Class "${c.name}": couldn't read the next batch date "${c.nextBatch}". Write it like 15 Nov 2026.`)
+      return drop({ name: c.name, level: c.level, length: c.length, nextBatch, fee: number(c.fee) })
+    })
+    .filter((c) => c.name)
+
+  // A team member's photo only with their yes; never a placeholder for a person who said no.
+  const team = (sheet.team ?? [])
+    .map((t, i) => {
+      if (!t.name || !t.role) warnings.push(`Team member ${i + 1} needs both a name and a role, so they're left out`)
+      return drop({
+        name: t.name,
+        role: t.role,
+        years: number(t.years),
+        line: t.line,
+        photo: yes(t.photoOk) ? photoFor(`team-${nn(i)}`) : undefined,
+      })
+    })
+    .filter((t) => t.name && t.role)
+
+  const posts = (sheet.posts ?? [])
+    .map((p, i) => {
+      if (!p.title || !p.text) warnings.push(`Style note ${i + 1} needs a title and text, so it's left out`)
+      const date = parseDate(p.date)
+      return drop({ title: p.title, date, text: p.text, photo: fileByStem.get(`post-${nn(i)}`) })
+    })
+    .filter((p) => p.title && p.text)
+
   for (const q of sheet.faq ?? []) {
     if (!q.question || !q.answer) warnings.push(`Question "${q.question ?? q.answer}" in section 8b has no ${q.question ? 'answer' : 'question'}, so it's left out`)
   }
@@ -571,7 +680,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
       googleRating: number(sheet.googleRating),
       googleReviewCount: number(sheet.googleReviews),
     },
-    services: { featured: sheet.topThree, groups },
+    services: { featured: sheet.topThree, groups, kidsAges: sheet.kidsAges },
     pricing: {
       startingAt: prices,
       deliveryDays: number(sheet.delivery),
@@ -580,6 +689,13 @@ export function toConfig(sheet, { slug, photoFiles }) {
     },
     bridalPackages,
     offers,
+    alterationPrices,
+    giftVouchers,
+    rentals,
+    fabrics,
+    classes,
+    team,
+    posts,
     stats,
     reviews: sheet.reviews,
     testimonials: sheet.reviews,
@@ -592,10 +708,22 @@ export function toConfig(sheet, { slug, photoFiles }) {
       work: media.work,
       closeups: media.closeups,
       alterations: media.alterations,
+      looks: media.looks,
+      drapes: media.drapes,
+      groom: media.groom,
+      handworkPairs: media.handworkPairs,
+      matching: media.matching,
       // Only for photos this boutique actually has or expects.
       captions: Object.fromEntries(
         Object.entries(media.captions ?? {}).filter(([file]) =>
-          [...media.work, ...(media.alterations ?? []).flatMap((p) => [p.before, p.after])].some((w) => w.toLowerCase() === file),
+          [
+            ...media.work,
+            ...(media.alterations ?? []).flatMap((p) => [p.before, p.after]),
+            ...media.looks,
+            ...media.drapes,
+            ...media.groom,
+            ...[...media.handworkPairs, ...media.matching].flatMap((p) => [p.first, p.second]),
+          ].some((w) => w.toLowerCase() === file),
         ),
       ),
     },
