@@ -174,14 +174,16 @@ _Only a real offer the owner is running now. The website hides it the day after 
 
 ## 6d. Alteration prices (optional)
 
-_Their usual rates. Shown only if the owner agrees to show prices (section 10)._
+_Their usual rates. Shown only if the owner agrees to show prices (section 10). Days is how
+long the fix usually takes; fill it in only if the owner gives it, because the site shows
+when it would be ready._
 
-1. Alteration:  | Price (₹):
-2. Alteration:  | Price (₹):
-3. Alteration:  | Price (₹):
-4. Alteration:  | Price (₹):
-5. Alteration:  | Price (₹):
-6. Alteration:  | Price (₹):
+1. Alteration:  | Price (₹):  | Days:
+2. Alteration:  | Price (₹):  | Days:
+3. Alteration:  | Price (₹):  | Days:
+4. Alteration:  | Price (₹):  | Days:
+5. Alteration:  | Price (₹):  | Days:
+6. Alteration:  | Price (₹):  | Days:
 
 ## 6e. Gift vouchers (optional)
 
@@ -240,6 +242,19 @@ out dates from these, so they're promises in the shop's name._
 4. Piece:  | Weeks before the wedding:
 5. Piece:  | Weeks before the wedding:
 6. Piece:  | Weeks before the wedding:
+
+## 6j. How long work usually takes (optional)
+
+_Handwork and saree work, in the owner's own numbers: how many days each usually takes.
+Write the work the way it's listed in section 5 (Aari work, Maggam work, Saree fall and pico).
+Only fill this in if the owner gives the numbers: the site shows them as usual times._
+
+1. Work (e.g. Maggam work on a blouse):  | Days:
+2. Work:  | Days:
+3. Work:  | Days:
+4. Work:  | Days:
+5. Work:  | Days:
+6. Work:  | Days:
 
 ## 7. Numbers to show on the website
 

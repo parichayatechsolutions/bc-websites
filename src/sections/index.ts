@@ -165,6 +165,8 @@ export { default as QuestionsServices } from './services/QuestionsServices' // P
 export { default as BandServices } from './services/BandServices' // Brand band between zari borders of starting-price pills (with permission)
 export { default as StickyServices } from './services/StickyServices' // Group cards of item chips beside a dark sticky price card
 export { default as SwatchServices } from './services/SwatchServices' // Each service group on its own colour card, like a shade card
+export { default as EstimateServices } from './services/EstimateServices' // Pick a garment, switch on express: a brand card shows the starting price and when it's ready (with permission)
+export { default as AskServices } from './services/AskServices' // Garment, then handwork, then send: a price asked on WhatsApp in three taps; no prices needed
 
 // Reviews
 export { default as RatingReviews } from './reviews/RatingReviews' // Google rating with stars, three quotes, stats (dark)
@@ -424,6 +426,7 @@ export { default as UnderSaree } from './saree/UnderSaree' // Petticoat, shapewe
 export { default as RackSaree } from './saree/RackSaree' // Their drapes as strips hanging from a rod, names down the side
 export { default as BothSaree } from './saree/BothSaree' // Bring the saree and its blouse piece together: two columns of services
 export { default as WaysSaree } from './saree/WaysSaree' // One silk saree three ways: blouse, jewellery and drape for each
+export { default as TimesSaree } from './saree/TimesSaree' // Each saree job with its usual days in ruled rows, each an ask (needs 6j work times)
 export { default as GroomMen } from './men/GroomMen' // The groom's look for each function, in order (groom-<function>.jpg)
 export { default as EditMen } from './men/EditMen' // Their men's work (work-men-NN.jpg) in alternating rows on dark
 export { default as DressMen } from './men/DressMen' // What to wear for office, wedding guest, groom, reception (needs a Men group)
@@ -459,6 +462,8 @@ export { default as HeavyHandwork } from './handwork/HeavyHandwork' // Dark: lig
 export { default as SamplerHandwork } from './handwork/SamplerHandwork' // A framed sampler cloth with a drawn square of each work they do
 export { default as WeddingHandwork } from './handwork/WeddingHandwork' // Wedding scenes to work into a bridal blouse, each an ask
 export { default as ColourHandwork } from './handwork/ColourHandwork' // Pick the fabric colour; thread colours that suit it appear
+export { default as DaysHandwork } from './handwork/DaysHandwork' // Each handwork as a bar as long as its usual days; tap one to ask (needs 6j work times)
+export { default as BorderHandwork } from './handwork/BorderHandwork' // Each handwork as a drawn saree border with its usual days, each an ask (needs 6j work times)
 export { default as CornerKids } from './kids/CornerKids' // Kids' services, the ages they stitch for and their kids' work
 export { default as MatchingKids } from './kids/MatchingKids' // Matching outfits as arched pairs: mother and daughter, siblings (match-NN-a + b)
 export { default as IndexKids } from './kids/IndexKids' // Kids' pieces as a typeset index with ages and an ask per row
@@ -492,6 +497,8 @@ export { default as PhoneAlterations } from './alterations/PhoneAlterations' // 
 export { default as BringAlterations } from './alterations/BringAlterations' // Four numbered things to bring for an alteration
 export { default as FixableAlterations } from './alterations/FixableAlterations' // "Is it fixable?": each rate as a question that opens, price in the row
 export { default as ExpressAlterations } from './alterations/ExpressAlterations' // A Usual/Express switch over their rates (needs both times)
+export { default as QuickAlterations } from './alterations/QuickAlterations' // Alterations with their usual days, sorted quickest or cheapest first (needs days in 6d)
+export { default as ReadyAlterations } from './alterations/ReadyAlterations' // Tap a fix; a calendar tile shows the day it's usually ready if brought in today (needs days in 6d)
 export { default as BuilderGift } from './gift/BuilderGift' // Pick an amount and names; the voucher card fills in; request on WhatsApp
 export { default as BuysGift } from './gift/BuysGift' // Each voucher amount beside what it covers at their starting prices
 export { default as SentenceGift } from './gift/SentenceGift' // A voucher as one sentence with the blanks filled in place

@@ -209,7 +209,12 @@ export function readSheet(markdown) {
 
     packages,
     offers,
-    alterationPrices: pairsOf(s['6d'] ?? [], 'Alteration', 'Price'),
+    // Two columns, or three when the shop gives how long each fix usually takes.
+    alterationPrices: (s['6d'] ?? [])
+      .map((l) => l.match(/^\s*(\d+)\.\s*Alteration[^:|]*:\s*(.*?)\s*\|\s*Price[^:]*:\s*(.*?)\s*(?:\|\s*(?:Days|Ready)[^:]*:\s*(.*))?$/i))
+      .filter(Boolean)
+      .map((m) => ({ n: Number(m[1]), a: clean(m[2]), b: clean(m[3]), c: clean(m[4] ?? '') }))
+      .filter((x) => x.a || x.b),
     vouchers: get('6e', 'Do they sell gift vouchers?'),
     voucherAmounts: get('6e', 'Voucher amounts'),
     rentals: blockFields(s['6f'] ?? [], { name: 'Name', price: 'Rent per day (₹)', sizes: 'Sizes' }),
@@ -222,6 +227,7 @@ export function readSheet(markdown) {
       fee: 'Fee (₹)',
     }),
     leadTimes: pairsOf(s['6i'] ?? [], 'Piece', 'Weeks'),
+    workTimes: pairsOf(s['6j'] ?? [], 'Work', 'Days'),
     team: blockFields(s['7b'] ?? [], {
       name: 'Name',
       role: 'Role',
@@ -605,7 +611,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
   const alterationPrices = (sheet.alterationPrices ?? [])
     .map((a) => {
       if (a.a && !number(a.b)) warnings.push(`Alteration "${a.a}" in section 6d has no price, so it's left out`)
-      return { item: a.a, price: number(a.b) }
+      return drop({ item: a.a, price: number(a.b), days: number(a.c) })
     })
     .filter((a) => a.item && a.price)
 
@@ -637,6 +643,13 @@ export function toConfig(sheet, { slug, photoFiles }) {
       return { item: l.a, weeks: number(l.b) }
     })
     .filter((l) => l.item && l.weeks)
+
+  const workTimes = (sheet.workTimes ?? [])
+    .map((w) => {
+      if (w.a && !number(w.b)) warnings.push(`"${w.a}" in section 6j has no number of days, so it's left out`)
+      return { item: w.a, days: number(w.b) }
+    })
+    .filter((w) => w.item && w.days)
 
   // A team member's photo only with their yes; never a placeholder for a person who said no.
   const team = (sheet.team ?? [])
@@ -714,6 +727,7 @@ export function toConfig(sheet, { slug, photoFiles }) {
     fabrics,
     classes,
     leadTimes,
+    workTimes,
     team,
     posts,
     stats,

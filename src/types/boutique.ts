@@ -81,6 +81,8 @@ export interface BridalPackage {
 export interface AlterationPrice {
   item: string
   price: number
+  /** How many days the fix usually takes, in the shop's own numbers. */
+  days?: number
 }
 
 /** A piece they rent out. Its photo is rental-<nn>.jpg, by its place in the data sheet. */
@@ -107,6 +109,13 @@ export interface ClassCourse {
   nextBatch?: string
   /** Fee in rupees. Shown only when permissions.showPrices. */
   fee?: number
+}
+
+/** How long a piece of work usually takes, in the shop's own numbers: "Aari work", 10. */
+export interface WorkTime {
+  /** "Aari work", "Saree fall and pico". */
+  item: string
+  days: number
 }
 
 /** How early to order a piece before a wedding, in the shop's own numbers. */
@@ -239,6 +248,8 @@ export interface BoutiqueConfig {
   classes?: ClassCourse[]
   /** How early to order each piece before a wedding; the dated wedding planner needs these. */
   leadTimes?: LeadTime[]
+  /** How long handwork and saree work usually take (6j); the time sections need these. */
+  workTimes?: WorkTime[]
   team?: TeamMember[]
   posts?: Post[]
 

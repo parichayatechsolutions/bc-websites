@@ -139,6 +139,12 @@ export async function validateBoutique(slug) {
   for (const l of config.leadTimes ?? []) {
     warn(l.weeks <= 52, `Lead time for "${l.item}" is ${l.weeks} weeks. Check it: the planner counts back from the wedding date.`)
   }
+  for (const w of config.workTimes ?? []) {
+    warn(w.days <= 90, `"${w.item}" takes ${w.days} days in section 6j. Check it: the site shows it as the usual time.`)
+  }
+  for (const a of config.alterationPrices ?? []) {
+    if (a.days) warn(a.days <= 30, `Alteration "${a.item}" takes ${a.days} days. Check it: the site shows when it would be ready.`)
+  }
   for (const c of config.classes ?? []) {
     if (c.nextBatch) warn(c.nextBatch >= new Date().toISOString().slice(0, 10), `Class "${c.name}": the next batch (${c.nextBatch}) has started. Update the date in data.md.`)
   }

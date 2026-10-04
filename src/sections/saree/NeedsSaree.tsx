@@ -2,7 +2,7 @@
 // "What does your saree need?" Their saree services as a tick list (fall
 // and pico, pre-pleating, kuchu…); she ticks what she wants and sends it in
 // one message. (Lab: saree M, "What does it need?", without the lab's
-// per-service times, which the config doesn't hold.)
+// per-service times: TimesSaree shows those, from the shop's own numbers.)
 //
 // The list is their own services that mention a saree job; hides with
 // fewer than two. No motion.

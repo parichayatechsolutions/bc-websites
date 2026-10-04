@@ -87,3 +87,18 @@ export function useOpenState(branch?: Branch): IOpenState | undefined {
   }, [])
   return branch?.week ? openState(branch.week, now) : undefined
 }
+
+/**
+ * The shop's date `days` from today, moved on to the next day the branch is
+ * open when its week is known. The date is noon UTC on that calendar day:
+ * format it with `timeZone: 'UTC'` so it reads the same everywhere.
+ */
+export function readyBy(days: number, week?: (DayHours | null)[], at = new Date()): Date {
+  const iso = at.toLocaleDateString('en-CA', { timeZone: SHOP_ZONE })
+  const date = new Date(`${iso}T12:00:00Z`)
+  date.setUTCDate(date.getUTCDate() + days)
+  if (week?.some(Boolean)) {
+    while (!week[(date.getUTCDay() + 6) % 7]) date.setUTCDate(date.getUTCDate() + 1)
+  }
+  return date
+}

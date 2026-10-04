@@ -145,11 +145,11 @@ const config: BoutiqueConfig = {
     },
   ],
   alterationPrices: [
-    { item: 'Blouse fitting, taken in or let out', price: 150 },
-    { item: 'Sleeve length shortened', price: 100 },
-    { item: 'Saree fall and pico', price: 200 },
-    { item: 'Lehenga waist adjusted', price: 350 },
-    { item: 'Hooks or zip replaced', price: 80 },
+    { item: 'Blouse fitting, taken in or let out', price: 150, days: 2 },
+    { item: 'Sleeve length shortened', price: 100, days: 1 },
+    { item: 'Saree fall and pico', price: 200, days: 2 },
+    { item: 'Lehenga waist adjusted', price: 350, days: 3 },
+    { item: 'Hooks or zip replaced', price: 80, days: 1 },
   ],
   giftVouchers: {
     amounts: [1000, 2500, 5000, 10000],
@@ -201,6 +201,14 @@ const config: BoutiqueConfig = {
     { item: 'Family outfits', weeks: 6 },
     { item: 'Designer blouse', weeks: 4 },
     { item: 'Saree fall, pico and pleating', weeks: 1 },
+  ],
+  workTimes: [
+    { item: 'Aari work', days: 10 },
+    { item: 'Maggam work', days: 14 },
+    { item: 'Zardosi', days: 18 },
+    { item: 'Mirror, bead and stone work', days: 8 },
+    { item: 'Saree fall and pico', days: 2 },
+    { item: 'Saree pre-pleating and draping', days: 1 },
   ],
   team: [
     {

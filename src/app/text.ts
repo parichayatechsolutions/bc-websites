@@ -19,3 +19,6 @@ export const capitalise = (text: string) => text.charAt(0).toUpperCase() + text.
 
 /** ₹12,000 */
 export const rupees = (n: number) => `₹${n.toLocaleString('en-IN')}`
+
+/** 1 → "Usually 1 day"; the shop's own time for a piece of work, never a promise. */
+export const usually = (days: number) => `Usually ${days} ${days === 1 ? 'day' : 'days'}`

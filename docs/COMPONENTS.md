@@ -108,8 +108,9 @@ All three waves are built: the shortlist's 50 versions are in `src/sections/`. W
 | N | `leadTimes` (data sheet 6i), then the dated planner and wed Q (**built 2026-10-04**) | wed A, D, L, Q, X | 5 |
 | O | Opening hours read day by day (`branch.week`, from the sheet's free-text hours), then the open-now versions (**built 2026-10-04**) | nav G, contact I, T, map G, M, footer G, wa G, U | 8 |
 | P | Clips by name (`maker.mp4`, `workroom.mp4`, `tip-NN.mp4`), then the video versions (**built 2026-10-04**) | story O, process S, blog N | 3 |
+| Q | Usual days: a Days column on alteration rows (6d) and work times (6j, `workTimes`), then the time versions; and two price asks that never needed per-item prices (**built 2026-10-04**) | services Q, W, emb B, S, saree B, alter H, X | 7 |
 
-The wedding planner's undated versions are built (wave M). Its dated versions (wave N) work only from the shop's own lead times, data sheet section 6i, and hide without them.
+The wedding planner's undated versions are built (wave M). Its dated versions (wave N) work only from the shop's own lead times, data sheet section 6i, and hide without them. Likewise the time versions (wave Q) show only the shop's own days, from 6d and 6j, always as "usually".
 
 ## Sections
 
@@ -120,7 +121,7 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 02 | [Gallery](#02-gallery) | Their work | 26 | 18 | 2 | existing |  |
 | 03 | [Testimonials](#03-reviews) | Trust | 26 | 17 | 1 | existing |  |
 | 04 | [WhatsApp contact](#04-contact) | Bookings | 26 | 19 |  | existing |  |
-| 05 | [Services & prices](#05-services) | What they make | 26 | 17 | 1 | existing |  |
+| 05 | [Services & prices](#05-services) | What they make | 26 | 19 | 1 | existing |  |
 | 06 | [Owner's story](#06-story) | About them | 26 | 16 | 1 | existing |  |
 | 07 | [Making process](#07-process) | About them | 26 | 14 | 1 | existing |  |
 | 08 | [FAQ](#08-faq) | Trust | 26 | 14 |  | existing |  |
@@ -138,9 +139,9 @@ The wedding planner's undated versions are built (wave M). Its dated versions (w
 | 20 | [Rental collection](#20-rental) | Speciality | 26 | 13 |  | existing |  |
 | 21 | [Kids wear corner](#21-kids) | Speciality | 26 | 17 |  | existing |  |
 | 22 | [Men's tailoring](#22-men) | Speciality | 26 | 18 |  | existing |  |
-| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 19 |  | existing |  |
-| 24 | [Saree services](#24-saree) | Speciality | 26 | 21 |  | existing |  |
-| 25 | [Alterations price list](#25-alter) | Speciality | 26 | 16 |  | existing |  |
+| 23 | [Embroidery types](#23-emb) | Speciality | 26 | 21 |  | existing (`workTimes` for time versions) |  |
+| 24 | [Saree services](#24-saree) | Speciality | 26 | 22 |  | existing (`workTimes` for time versions) |  |
+| 25 | [Alterations price list](#25-alter) | Speciality | 26 | 18 |  | existing (days in 6d for time versions) |  |
 | 26 | [Trial & delivery tracker](#26-track) | Speciality | 26 |  |  | backend |  |
 | 27 | [Wedding planner](#27-wed) | Speciality | 26 | 15 |  | existing (`leadTimes` for dated versions) |  |
 | 28 | [Gift voucher](#28-gift) | Speciality | 26 | 17 |  | existing |  |
@@ -166,7 +167,7 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 | D | Split centre logo | Solid bar, links split either side of a centred logo. |  |  | repeats `nav/CenteredNav` | skip |
 | E | Menu button | Just logo, WhatsApp and a "Menu" pill; opens a numbered full-screen menu with hours. |  | built: `nav/MenuNav` |  | keep |
 | F | Side rail / tab bar | Icon rail down the left on desktop; app-style tab bar at the bottom on phones. |  |  | repeats `nav/DockNav` | skip |
-| G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  | built: `nav/OpenNav` | | keep |
+| G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  | built: `nav/OpenNav` |  | keep |
 | H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  |  | frosted glass (contrast over photos) | skip |
 | I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  | built: `nav/BrandNav` |  | keep |
 | J | Tab switcher | Pages as a segmented pill control; the active one fills. |  | built: `nav/PillsNav` |  | keep |
@@ -316,7 +317,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | F | Floating button | The WhatsApp button that floats on every page; tapping opens three quick options. |  |  | repeats `contact/DockWhatsApp` | skip |
 | G | Bottom sheet | Dark. A "Contact us" button slides up a phone-style sheet of four options. |  | built: `contact/SheetContact` |  | keep |
 | H | Store card | Map preview with a pin, address, hours, phone and a Directions button. |  | built: `contact/CardContact` |  | keep |
-| I | Hours board | Dark. Open or closed today, the weekly hours, WhatsApp and Call. |  | built: `contact/HoursContact` | | keep |
+| I | Hours board | Dark. Open or closed today, the weekly hours, WhatsApp and Call. |  | built: `contact/HoursContact` |  | keep |
 | J | Scan to chat | Dark. The number set large with a copy button and a QR-style code to scan. |  |  | needs a QR library | skip |
 | K | How ordering works | Three icon steps joined by a thread: send a photo, we suggest, come for a fitting. |  | built: `contact/StepsContact` |  | keep |
 | L | Occasion picker | Tiles for wedding, reception, festival and more; the message is written for you. |  | built: `contact/OccasionContact` |  | keep |
@@ -327,7 +328,7 @@ Lab motions: Tap demo, Typing, Button sheen, Wipe in.
 | Q | Chat window | A chat that greets the visitor with what the boutique is known for, then quick replies. |  | built: `contact/ChatContact` |  | keep |
 | R | Wedding banner | Brand-colour band between zari borders: "Planning a wedding? Let's talk." |  | built: `contact/WeddingContact` |  | keep |
 | S | Channel cards | Four cards: WhatsApp, Call, Instagram, Visit. |  |  | repeats `contact/TrioContact` | skip |
-| T | Come and visit | Dark with a grid: open today, address, hours and a glowing map pin. |  | built: `contact/VisitContact` | | keep |
+| T | Come and visit | Dark with a grid: open today, address, hours and a glowing map pin. |  | built: `contact/VisitContact` |  | keep |
 | U | Thumb bar | A bottom bar on phones (Call, Visit, WhatsApp) and a slim side rail on computers. |  |  | repeats `contact/CallWhatsAppBar` | skip |
 | V | Visiting card | A business card that turns over on tap to show numbers, address and hours. |  |  | 3D turn (check "no 3D"); 3D card flip | skip |
 | W | Wedding countdown | Pick the wedding date; a gold-edged seal shows the weeks to go. |  | built: `contact/CountdownContact` |  | keep |
@@ -361,13 +362,13 @@ Lab motions: Tap demo, Leaders draw, Wipe in.
 | N | Known for | Their three "known for" specialities as big cards, other services below. |  | built: `services/KnownServices` |  | keep |
 | O | Service rail | Sideways cards, one per item, with icons and Ask price. |  |  | a sideways rail would scroll the page on a phone | skip |
 | P | The index | Type-led numbered index of groups with counts. |  |  | repeats `services/ListServices` | skip |
-| Q | Price estimate | Pick a garment and toggle express; a live estimate card updates. |  |  | needs per-item prices | skip |
+| Q | Price estimate | Pick a garment and toggle express; a live estimate card updates. |  | built: `services/EstimateServices` |  | keep |
 | R | Price band | Brand band between zari borders with two rows of priced pills. |  | built: `services/BandServices` |  | keep |
 | S | Sticky price card | Dark price card fixed beside group cards full of item chips. |  | built: `services/StickyServices` |  | keep |
 | T | Atelier list | Dark luxe: gold-ringed group icons, ruled prices, crown ornament. |  |  | repeats the dark-luxe family built elsewhere | skip |
 | U | Bento | Rounded tiles: heading, three prices, delivery, express, four groups. |  |  | rounded tiles (shape rule) | skip |
 | V | Yes, we do that | Every item with a filled check, plus an "Ask anyway" card. |  | built: `services/YesServices` |  | keep |
-| W | Three-tap price | Pick garment and handwork; a WhatsApp message asks for the price. |  |  | needs per-item prices | skip |
+| W | Three-tap price | Pick garment and handwork; a WhatsApp message asks for the price. |  | built: `services/AskServices` |  | keep |
 | X | Price questions | FAQ accordion answered with their real prices and delivery times. |  | built: `services/QuestionsServices` |  | keep |
 | Y | Service cloud | Every service as a tappable pill at mixed sizes and colours. |  | built: `services/CloudServices` |  | keep |
 | Z | Spotlight | Dark stage; one starting price lit huge, chips to switch. |  |  | repeats a family built elsewhere | skip |
@@ -396,7 +397,7 @@ Lab motions: Words fill in, Wipe in, Seal turns, Tab demo.
 | L | Zari frame | Story inside a double gold frame on brand colour. |  |  | repeats a family built elsewhere | skip |
 | M | Values | Three promise cards: made to measure, handwork, on time. |  | built: `story/ValuesStory` |  | keep |
 | N | Round seal | Portrait inside a slowly turning "Handmade since" seal. |  |  | turns continuously (nothing loops) | skip |
-| O | Meet the maker | Video slot with a play button beside her story. |  | built: `story/MakerStory` | | keep |
+| O | Meet the maker | Video slot with a play button beside her story. |  | built: `story/MakerStory` |  | keep |
 | P | Chapters | Numbered chapters: the beginning, the craft, today. |  | built: `story/ChaptersStory` |  | keep |
 | Q | Designer card | An ID-style profile card with role, specialities, since. |  | built: `story/CardStory` |  | keep |
 | R | Word by word | Her opening line fills in word by word. |  | built: `story/WordsStory` |  | keep |
@@ -437,7 +438,7 @@ Lab motions: Step demo, Thread draws, Wipe in, Medallions lift.
 | P | Type index | Type-led numbered list, very editorial. |  | built: `process/IndexProcess` |  | keep |
 | Q | Order tracker | A delivery-style tracker showing where an order is. |  |  | needs an order backend | skip |
 | R | Zari frame | Six steps inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
-| S | Video + steps | A "watch it being made" video slot beside the steps. |  | built: `process/VideoProcess` | | keep |
+| S | Video + steps | A "watch it being made" video slot beside the steps. |  | built: `process/VideoProcess` |  | keep |
 | T | Atelier method | Dark luxe with Roman numerals and a crown. |  |  | repeats the dark-luxe family built elsewhere | skip |
 | U | Arch viewer | Tap a step; the arched photo beside it changes. |  | close: `process/StickyProcess` |  | keep |
 | V | Stitch line | Steps strung on a running stitch with a needle. |  |  | the `StitchLine` wrapper does this for any section | skip |
@@ -572,7 +573,7 @@ Lab motions: Slider sweep, Tap demo, Wipe in.
 | C | Pairs grid | Before and after side by side for each alteration. |  | built: `alterations/PairsAlterations` |  | keep |
 | D | Dark slider | Slider on dark with arrows to step through. |  | built: `alterations/DarkAlterations` |  | keep |
 | E | Tap toggle | Before / After switch over one large photo. |  | built: `alterations/ToggleAlterations` |  | keep |
-| F | Hover reveal | Hover a card to reveal the after photo. |  |  |  | skip |
+| F | Hover reveal | Hover a card to reveal the after photo. |  |  | hover only; nothing to tap on a phone | skip |
 | G | Diagonal split | Each photo split on the bias, before and after. |  | built: `alterations/DiagonalAlterations` |  | keep |
 | H | Pairs rail | Sideways before-after pairs. |  |  | a sideways rail would scroll the page on a phone | skip |
 | I | Brand band | On brand colour; pairs in gold frames with a zari base. |  | built: `alterations/BandAlterations` |  | keep |
@@ -605,7 +606,7 @@ Lab motions: Tap demo, Slides in, Wipe in.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Top strip | Slim announcement bar across the top of the page. |  | built: `offer/StripOffer` |  | keep |
-| B | Rotating pill | A floating pill that steps through offers. |  |  |  | skip |
+| B | Rotating pill | A floating pill that steps through offers. |  |  | loops (forbidden) | skip |
 | C | Photo card | Photo beside the offer and a WhatsApp button. |  | built: `offer/PhotoOffer` |  | keep |
 | D | Dark framed band | Dark luxe with double gold hairlines. |  |  | repeats the dark-luxe family built elsewhere | skip |
 | E | Coupon ticket | Perforated coupon with a code to show at the counter. |  | built: `offer/CouponOffer` |  | keep |
@@ -684,13 +685,13 @@ Lab motions: Wipe in, Zari draws.
 | D | Dark map | Night-toned map with gold details. |  | built: `visit/DarkVisit` |  | keep |
 | E | Arch window | The map seen through a temple arch. |  | built: `visit/ArchVisit` |  | keep |
 | F | Three ways | Walk in, ask for the pin, or call, above the map. |  | built: `visit/WaysVisit` |  | keep |
-| G | Hours board | Open now and weekly hours beside a dark map. |  | built: `visit/HoursVisit` | | keep |
+| G | Hours board | Open now and weekly hours beside a dark map. |  | built: `visit/HoursVisit` |  | keep |
 | H | Round medallion | Circular map framed with a gold ring. |  | built: `visit/MedallionVisit` |  | keep |
 | I | Zari band | Brand band with a map strip between zari borders. |  | built: `visit/BandVisit` |  | keep |
 | J | Postcard | "Wish you were here" postcard with a map stamp. |  | built: `visit/PostcardVisit` |  | keep |
 | K | Zari frame | Map inside a double gold frame. |  |  | repeats a family built elsewhere | skip |
 | L | Find us. | Huge type, details and map. |  | built: `visit/FindVisit` |  | keep |
-| M | Open-now pin | Map with an open or closed badge on top. |  | built: `visit/OpenVisit` | | keep |
+| M | Open-now pin | Map with an open or closed badge on top. |  | built: `visit/OpenVisit` |  | keep |
 | N | Bento | Map, address, hours, pin and directions tiles. |  |  | rounded tiles (shape rule) | skip |
 | O | Map tabs | Switch between map, hours and contact. |  | built: `visit/TabsVisit` |  | keep |
 | P | Classified | Newspaper classified ad beside a mono map. |  | built: `visit/ClassifiedVisit` |  | keep |
@@ -721,7 +722,7 @@ Lab motions: Name rises, Zari draws, Icons lift, Wipe in.
 | D | Minimal | Light and centred: logo, name, pages, icons. |  | built: `footer/MinimalFooter` |  | keep |
 | E | Big invitation | A brand-colour "Planning something? Let's talk." card above a compact row. |  | built: `footer/InviteFooter` |  | keep |
 | F | Map + info | Dark: a map tile with the logo pinned, full contact details beside it. |  | built: `footer/MapFooter` |  | keep |
-| G | Hours board | Open or closed today and the weekly hours next to the logo and a WhatsApp button. |  | built: `footer/HoursFooter` | | keep |
+| G | Hours board | Open or closed today and the weekly hours next to the logo and a WhatsApp button. |  | built: `footer/HoursFooter` |  | keep |
 | H | Double zari | Paper ground between double zari borders; visit, logo, talk-to-us columns. |  | built: `footer/ZariFooter` |  | keep |
 | I | Outline name | The boutique name set edge to edge in outlined letters along the bottom. |  | built: `footer/OutlineFooter` |  | keep |
 | J | Numbers | Dark: rating, garments delivered and years as stat cards. |  | built: `footer/NumbersFooter` |  | keep |
@@ -1012,7 +1013,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Eight kinds of handwork | Alternating texture and text rows: what each work is, how long, best for. | yes | built: `handwork/RowsHandwork` |  | keep |
-| B | How long it takes | Day bars for each work; tap to highlight. |  |  | no time per work in the data | skip |
+| B | How long it takes | Day bars for each work; tap to highlight. |  | built: `handwork/DaysHandwork` |  | keep |
 | C | Which work for you? | Two questions (occasion, time) suggest a work. |  | built: `handwork/ChooseHandwork` |  | keep |
 | D | On the adda | The work stretched on a wooden adda frame; chips switch the stitch. |  | built: `handwork/AddaHandwork` |  | keep |
 | E | Handwork index | A typeset index with a small round texture for each work. | yes |  | repeats `handwork/RowsHandwork` | skip |
@@ -1029,7 +1030,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | P | Sampler | A cross-stitch sampler cloth with every kind of work. |  | built: `handwork/SamplerHandwork` |  | keep |
 | Q | Hand or machine? | Side-by-side table of look, time, detail, feel and cost. |  | built: `handwork/CompareHandwork` |  | keep |
 | R | Zari colours | Dark luxe. Antique gold, bright gold, silver, copper, rose gold. | yes | built: `handwork/ZariHandwork` |  | keep |
-| S | Border strips | Each work as a long saree border with its time. |  |  | no time per work in the data | skip |
+| S | Border strips | Each work as a long saree border with its time. |  | built: `handwork/BorderHandwork` |  | keep |
 | T | Caring for handwork | Six numbered care notes. | yes | built: `handwork/CareHandwork` |  | keep |
 | U | Names in thread | Dark. Type your names and date; they appear stitched on a blouse back. | yes | built: `handwork/NamesHandwork` |  | keep |
 | V | How it is done | Sketch, trace, frame, stitch, finish on a dashed thread. |  | built: `handwork/HowHandwork` |  | keep |
@@ -1049,7 +1050,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
 | A | Six ways to wear it | Alternating photo rows for each drape, with a booking link. |  | built: `saree/DrapesSaree` |  | keep |
-| B | How long it takes | Each service with its usual time as a pill. | yes |  | no time per service in the data | skip |
+| B | How long it takes | Each service with its usual time as a pill. | yes | built: `saree/TimesSaree` |  | keep |
 | C | Pre-pleating | Arched photo with the three steps: pleats, pallu, pinned. |  | built: `saree/PleatSaree` |  | keep |
 | D | Fall matching | Pick your saree colour; a matching fall shows along the hem. | yes | built: `saree/FallSaree` |  | keep |
 | E | What pico does | A frayed raw edge beside a neat picoed edge. | yes | built: `saree/PicoSaree` |  | keep |
@@ -1092,7 +1093,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | E | What we fix | Each problem struck through beside the result and its price. | yes |  | needs a problem for each fix | skip |
 | F | Garment tabs | Blouse, kurti, lehenga, pants and kids tabs with their fixes. | yes |  | repeats `alterations/GarmentAlterations` | skip |
 | G | Tap the blouse | Numbered pins on a blouse drawing; tap one for its price. | yes | built: `alterations/PinsAlterations` |  | keep |
-| H | Quickest first | Sort by time or by price. | yes |  | no time per fix in the data | skip |
+| H | Quickest first | Sort by time or by price. | yes | built: `alterations/QuickAlterations` |  | keep |
 | I | From ₹ | The lowest price set huge beside a ruled list of every fix. | yes | built: `alterations/FromAlterations` |  | keep |
 | J | Search | Type sleeve, hook or length to filter the list. | yes | built: `alterations/SearchAlterations` |  | keep |
 | K | Pick the garment | Garment names as large type; the fixes for the one picked below. | yes | built: `alterations/GarmentAlterations` |  | keep |
@@ -1108,7 +1109,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | U | Split-flap board | An airport-style board of fixes, prices and times. | yes |  | repeats `alterations/BoardAlterations` | skip |
 | V | The rate card | A printed rate card on cream, grouped by garment. | yes |  | repeats `alterations/RateAlterations` | skip |
 | W | On your phone | The price list as a phone settings screen. | yes | built: `alterations/PhoneAlterations` |  | keep |
-| X | Ready on | Pick a fix; a calendar tile shows when it will be ready. | yes |  | no time per fix in the data | skip |
+| X | Ready on | Pick a fix; a calendar tile shows when it will be ready. | yes | built: `alterations/ReadyAlterations` |  | keep |
 | Y | How we price | Four things that change the price, explained. | yes |  | claims about how they price | skip |
 | Z | Bridal alterations | Dark luxe. Heavy and heirloom pieces handled by the master tailor. | yes |  | claims a master tailor | skip |
 
@@ -1122,32 +1123,32 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Progress bar | A bar with eight stage icons and the current step below. | yes |  |  | skip |
-| B | Order history | A courier-style timeline, newest first, with dates. | yes |  |  | skip |
-| C | Check your order | Enter the order number from your bill; a status card appears. | yes |  |  | skip |
-| D | Where it is now | The current stage set huge, with trial and ready dates. | yes |  |  | skip |
-| E | Dated stages | Every stage as a ruled row; the current one in italics. | yes |  |  | skip |
-| F | The line | A metro line with stops; a needle rides to the current one. | yes |  |  | skip |
-| G | Thread line | Thread unwinds from a spool to the needle as work progresses. | yes |  |  | skip |
-| H | Workroom board | Your order card moving across To start, On the machine, Trial, Ready. | yes |  |  | skip |
-| I | Calendar | Ordered, trial and ready dates marked on a month. | yes |  |  | skip |
-| J | WhatsApp updates | Every stage as a message from the boutique. | yes |  |  | skip |
-| K | Trial countdown | Dark. Days, hours and minutes to the trial fitting. | yes |  |  | skip |
-| L | Order card | A cream order card with dotted leaders. | yes |  |  | skip |
-| M | Progress | A big percentage and thin line beside the stage list. | yes |  |  | skip |
-| N | Now and next | Split: the current stage on dark, coming dates on light. | yes |  |  | skip |
-| O | A letter | A handwritten update from the workroom. | yes |  |  | skip |
-| P | Trial checklist | What we check at the trial; tick anything to adjust. | yes |  |  | skip |
-| Q | Move my trial | Pick a new day and time near the trial date. | yes |  |  | skip |
-| R | It's ready! | Brand colour. A collect code, hours and area. | yes |  |  | skip |
-| S | Day plan | A bar chart of each stage across the days, with today marked. | yes |  |  | skip |
-| T | Dates to remember | Trial, ready and last-fix dates as huge numerals. | yes |  |  | skip |
-| U | In one sentence | A large sentence: your blouse is being stitched; trial on a date. | yes |  |  | skip |
-| V | Family orders | Bride, mother, sister and niece, each with progress. | yes |  |  | skip |
-| W | How did we do? | Stars, then a Google review or a private note. | yes |  |  | skip |
-| X | Honest update | On time or running late, with the new date. | yes |  |  | skip |
-| Y | Workroom photo | Dark. A full-bleed photo of the current stage. |  |  |  | skip |
-| Z | Progress photos | Photos for each stage; ones to come are greyed out. |  |  |  | skip |
+| A | Progress bar | A bar with eight stage icons and the current step below. | yes |  | needs an order backend | skip |
+| B | Order history | A courier-style timeline, newest first, with dates. | yes |  | needs an order backend | skip |
+| C | Check your order | Enter the order number from your bill; a status card appears. | yes |  | needs an order backend | skip |
+| D | Where it is now | The current stage set huge, with trial and ready dates. | yes |  | needs an order backend | skip |
+| E | Dated stages | Every stage as a ruled row; the current one in italics. | yes |  | needs an order backend | skip |
+| F | The line | A metro line with stops; a needle rides to the current one. | yes |  | needs an order backend | skip |
+| G | Thread line | Thread unwinds from a spool to the needle as work progresses. | yes |  | needs an order backend | skip |
+| H | Workroom board | Your order card moving across To start, On the machine, Trial, Ready. | yes |  | needs an order backend | skip |
+| I | Calendar | Ordered, trial and ready dates marked on a month. | yes |  | needs an order backend | skip |
+| J | WhatsApp updates | Every stage as a message from the boutique. | yes |  | needs an order backend | skip |
+| K | Trial countdown | Dark. Days, hours and minutes to the trial fitting. | yes |  | needs an order backend | skip |
+| L | Order card | A cream order card with dotted leaders. | yes |  | needs an order backend | skip |
+| M | Progress | A big percentage and thin line beside the stage list. | yes |  | needs an order backend | skip |
+| N | Now and next | Split: the current stage on dark, coming dates on light. | yes |  | needs an order backend | skip |
+| O | A letter | A handwritten update from the workroom. | yes |  | needs an order backend | skip |
+| P | Trial checklist | What we check at the trial; tick anything to adjust. | yes |  | needs an order backend | skip |
+| Q | Move my trial | Pick a new day and time near the trial date. | yes |  | needs an order backend | skip |
+| R | It's ready! | Brand colour. A collect code, hours and area. | yes |  | needs an order backend | skip |
+| S | Day plan | A bar chart of each stage across the days, with today marked. | yes |  | needs an order backend | skip |
+| T | Dates to remember | Trial, ready and last-fix dates as huge numerals. | yes |  | needs an order backend | skip |
+| U | In one sentence | A large sentence: your blouse is being stitched; trial on a date. | yes |  | needs an order backend | skip |
+| V | Family orders | Bride, mother, sister and niece, each with progress. | yes |  | needs an order backend | skip |
+| W | How did we do? | Stars, then a Google review or a private note. | yes |  | needs an order backend | skip |
+| X | Honest update | On time or running late, with the new date. | yes |  | needs an order backend | skip |
+| Y | Workroom photo | Dark. A full-bleed photo of the current stage. |  |  | needs an order backend | skip |
+| Z | Progress photos | Photos for each stage; ones to come are greyed out. |  |  | needs an order backend | skip |
 
 ### 27 wed
 
@@ -1159,10 +1160,10 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 
 | | Version | Look | No photos | Status | Watch | Plan |
 |---|---|---|---|---|---|---|
-| A | Countdown plan | Pick the wedding date; each task gets its date, and overdue ones are flagged. | yes | built: `wedding/PlanWedding` | | keep |
+| A | Countdown plan | Pick the wedding date; each task gets its date, and overdue ones are flagged. | yes | built: `wedding/PlanWedding` |  | keep |
 | B | Wedding card | An invitation card listing the wardrobe plan in order. | yes | built: `wedding/CardWedding` |  | keep |
 | C | Six days, six looks | Alternating photo and text rows for each function, with its palette. |  |  | repeats `lookbook/FunctionsLookbook` and `bridal/CeremonyBridal` | skip |
-| D | Month by month | Three month calendars with every task marked. | yes | built: `wedding/MonthsWedding` | | keep |
+| D | Month by month | Three month calendars with every task marked. | yes | built: `wedding/MonthsWedding` |  | keep |
 | E | Count the looks | A huge outfit total beside a ruled list of family steppers. | yes | built: `wedding/CountWedding` |  | keep |
 | F | Family web | Bride in the centre, family around; tap one for their look. | yes | built: `wedding/FamilyWedding` |  | keep |
 | G | Colour story | A palette strip for each function. | yes | built: `wedding/ColoursWedding` |  | keep |
@@ -1170,19 +1171,19 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | I | The ribbon | Tasks tied along a flowing ribbon. | yes |  | repeats `wedding/ReadyWedding` | skip |
 | J | Bridal checklist | A ruled card with handwritten tasks to tick. | yes |  | repeats `wedding/ReadyWedding` | skip |
 | K | Wedding week | Five ruled columns, mehendi to reception, with time slots. | yes |  | the time slots would be invented | skip |
-| L | Counting down | Dark. Days to go set enormous, with the next three tasks. | yes | built: `wedding/LeftWedding` | | keep |
+| L | Counting down | Dark. Days to go set enormous, with the next three tasks. | yes | built: `wedding/LeftWedding` |  | keep |
 | M | Bridal consult | Pick a consult type and a day to book. | yes |  | repeats `bridal/ConsultBridal` | skip |
 | N | Family group | A WhatsApp group preview: add us to your wedding group. | yes | built: `wedding/GroupWedding` |  | keep |
 | O | Wedding season | Busy months as a bar chart with your month marked. | yes |  | busy months would be invented | skip |
 | P | A bride's diary | Editorial diary entries from week 12 to the day. | yes |  | the diary entries would be invented | skip |
-| Q | Your ceremonies | Pick the ceremonies; the outfit list updates. | yes | built: `wedding/CeremoniesWedding` | | keep |
+| Q | Your ceremonies | Pick the ceremonies; the outfit list updates. | yes | built: `wedding/CeremoniesWedding` |  | keep |
 | R | Both families | Split screen: bride side on paper, groom side on dark. | yes | built: `wedding/SidesWedding` |  | keep |
 | S | Hour by hour | Dark. The wedding day timeline and how we help. | yes |  | the day’s timeline would be invented | skip |
 | T | Three trials | Fitting dates as huge numerals in a ruled list. | yes |  | the trial dates would be invented | skip |
 | U | How ready are you? | A big percentage and thin progress line beside a ruled checklist. | yes | built: `wedding/ReadyWedding` |  | keep |
 | V | Going as a guest | Every relation with what to wear, as ruled editorial rows. | yes | built: `wedding/GuestWedding` |  | keep |
 | W | Myths, corrected | Myth or fact verdicts beside the real answer, in ruled rows. | yes |  | the verdicts would be ours, not theirs | skip |
-| X | Where should I be? | Dark. Slide weeks to go; see what to do now. | yes | built: `wedding/WhereWedding` | | keep |
+| X | Where should I be? | Dark. Slide weeks to go; see what to do now. | yes | built: `wedding/WhereWedding` |  | keep |
 | Y | Planner notebook | A two-page notebook spread: to do and notes. | yes |  | notes can’t be saved on the site | skip |
 | Z | Save the date | Brand colour. Type your names and date. | yes | built: `wedding/DateWedding` |  | keep |
 
@@ -1320,7 +1321,7 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | K | Start here | Three essentials kept in view beside everything else. | yes | built: `posts/StartPosts` |  | keep |
 | L | Tips on WhatsApp | A monthly WhatsApp tip sign-up with sample messages. | yes |  | promises a monthly message | skip |
 | M | Notebook | Handwritten tips on ruled cream paper. | yes | built: `posts/NotebookPosts` |  | keep |
-| N | One-minute tips | Dark. A rail of short video cards. |  | built: `posts/TipsPosts` | | keep |
+| N | One-minute tips | Dark. A rail of short video cards. |  | built: `posts/TipsPosts` |  | keep |
 | O | Tip of the day | One tip set large with its reason; arrows step through. | yes | built: `posts/TipPosts` |  | keep |
 | P | Contents | A two-column contents page grouped by topic. | yes | built: `posts/ContentsPosts` |  | keep |
 | Q | Search | Type to filter articles; asks on WhatsApp if nothing matches. | yes | built: `posts/SearchPosts` |  | keep |
@@ -1350,21 +1351,21 @@ Lab motions: Wipe in, Tap demo, Threads draw.
 | D | Call \| WhatsApp bar | A full-width bottom bar for phones. | yes | built: `contact/CallWhatsAppBar` |  | keep |
 | E | Owner card | A card with the owner, status and a big button. | yes | built: `contact/OwnerWhatsApp` |  | keep |
 | F | What do you need? | Topic list; each opens a ready-written message. | yes | built: `contact/TopicsWhatsApp` |  | keep |
-| G | Open now | Reads the real opening hours: open now, or when we reply. | yes | built: `contact/OpenWhatsApp` | | keep |
+| G | Open now | Reads the real opening hours: open now, or when we reply. | yes | built: `contact/OpenWhatsApp` |  | keep |
 | H | Side tab | A vertical tab on the right edge. | yes | built: `contact/TabWhatsApp` |  | keep |
 | I | Gold ring | Dark page. A round button with a double gold ring. | yes |  | repeats `contact/FloatingWhatsApp` | skip |
 | J | Scroll ring | A progress ring around the button fills as you scroll. | yes | built: `contact/RingWhatsApp` |  | keep |
 | K | Tooltip | A dismissable bubble with a helpful nudge. | yes | built: `contact/NudgeWhatsApp` |  | keep |
 | L | Contact dock | One button opens WhatsApp, call and directions. | yes | built: `contact/DockWhatsApp` |  | keep |
 | M | Book a fitting | Pick a day; the message books it. | yes | built: `contact/FittingWhatsApp` |  | keep |
-| N | Marquee strip | A moving bottom strip: now booking wedding season. | yes |  |  | skip |
-| O | Spinning badge | Rotating circular text around the button. | yes |  |  | skip |
+| N | Marquee strip | A moving bottom strip: now booking wedding season. | yes |  | loops (forbidden) | skip |
+| O | Spinning badge | Rotating circular text around the button. | yes |  | loops (forbidden) | skip |
 | P | Slots left | Bridal slots left this month. | yes |  | fake slots left | skip |
 | Q | Typing | The owner "typing…", then a greeting. | yes |  | fake typing | skip |
 | R | Any language | Greeting in English, Kannada, Hindi, Tamil, Telugu. | yes | built: `contact/LanguageWhatsApp` |  | keep |
 | S | Quick form | Name and need build the WhatsApp message. | yes | built: `contact/FormWhatsApp` |  | keep |
 | T | Send a photo | Saw a design you love? Send the photo. | yes | built: `contact/PhotoWhatsApp` |  | keep |
-| U | Top banner | A sticky top strip with open-now status. | yes | built: `contact/StatusWhatsApp` | | keep |
+| U | Top banner | A sticky top strip with open-now status. | yes | built: `contact/StatusWhatsApp` |  | keep |
 | V | Who to talk to | Designer or front desk, each a chat. | yes |  | one number; the split would be invented | skip |
 | W | Review + chat | A Google review above the chat button. | yes | built: `contact/ReviewWhatsApp` |  | keep |
 | X | Price + ask | Blouses from ₹, joined to an Ask us button. | yes | built: `contact/PriceWhatsApp` |  | keep |

@@ -2,7 +2,7 @@
 // The kinds of handwork they do, each explained: what the work is and what
 // it suits, in alternating rows, so a customer can tell aari from maggam
 // before she asks. (Lab: emb A, "Kinds of handwork", without the lab's
-// times per work, which the config doesn't hold, and without textures,
+// times per work (DaysHandwork shows the shop's own), and without textures,
 // since a photo matched to the wrong work would mislead.)
 //
 // Only the works in their own services; the explanations are general craft

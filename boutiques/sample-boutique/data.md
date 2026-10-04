@@ -147,12 +147,12 @@
 
 ## 6d. Alteration prices (optional)
 
-1. Alteration: Blouse fitting, taken in or let out | Price (₹): 150
-2. Alteration: Sleeve length shortened | Price (₹): 100
-3. Alteration: Saree fall and pico | Price (₹): 200
-4. Alteration: Lehenga waist adjusted | Price (₹): 350
-5. Alteration: Hooks or zip replaced | Price (₹): 80
-6. Alteration: NA | Price (₹): NA
+1. Alteration: Blouse fitting, taken in or let out | Price (₹): 150 | Days: 2
+2. Alteration: Sleeve length shortened | Price (₹): 100 | Days: 1
+3. Alteration: Saree fall and pico | Price (₹): 200 | Days: 2
+4. Alteration: Lehenga waist adjusted | Price (₹): 350 | Days: 3
+5. Alteration: Hooks or zip replaced | Price (₹): 80 | Days: 1
+6. Alteration: NA | Price (₹): NA | Days: NA
 
 ## 6e. Gift vouchers (optional)
 
@@ -200,6 +200,15 @@
 4. Piece: Designer blouse | Weeks before the wedding: 4
 5. Piece: Saree fall, pico and pleating | Weeks before the wedding: 1
 6. Piece: NA | Weeks before the wedding: NA
+
+## 6j. How long work usually takes (optional)
+
+1. Work: Aari work | Days: 10
+2. Work: Maggam work | Days: 14
+3. Work: Zardosi | Days: 18
+4. Work: Mirror, bead and stone work | Days: 8
+5. Work: Saree fall and pico | Days: 2
+6. Work: Saree pre-pleating and draping | Days: 1
 
 ## 7. Numbers to show on the website
 
