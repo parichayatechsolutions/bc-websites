@@ -18,4 +18,4 @@ export const MEDIA = {
 }
 
 export { Flip, gsap, ScrollTrigger, SplitText, useGSAP }
-export { DURATION, EASE, SCRUB, STAGGER } from './tokens'
+export { DURATION, EASE, SCRUB, STAGGER, TRIGGER } from './tokens'

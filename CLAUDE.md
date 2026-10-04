@@ -18,7 +18,7 @@ Read `docs/DESIGN.md`. It holds the colour roles, type scale, motion budget, hov
 - A new config field means changing all of these together: `src/types/boutique.ts`, the data sheet template, the parser (`scripts/lib/data-sheet.mjs`), the validator (`scripts/lib/validate.mjs`), and `sample-boutique`.
 - Every component must handle missing and extreme data: no photos, long names (40+ characters), pale or dark brand colours, one branch or five.
 - Brand colour for text and icons uses the contrast-safe roles (`text-primary-ink`, `text-accent-on-dark`, …), never `text-primary` / `text-accent`.
-- Motion values come from `src/motion/tokens.ts` (GSAP) or `ease-stitch` (CSS). Import GSAP from `src/motion/gsap.ts`. Wrap animations in `gsap.matchMedia()` with `MEDIA.motion`.
+- Motion values come from `src/motion/tokens.ts` (GSAP) or `ease-stitch` (CSS). Import GSAP from `src/motion/gsap.ts`. Wrap animations in `gsap.matchMedia()` with `MEDIA.motion` (`useMotion` does this). Shared moves (wipe, settle, draw, count up…) come from `src/motion/moves.ts`. GSAP is the only animation library.
 - Hover only on clickable things and photos. One `Magnetic` per screen.
 - Reuse `Button`, `Media`, `Logo`, `Magnetic` and `StitchLine`, and Tabler icons. Don't add another UI, icon or animation library.
 - Phone first (390px). WhatsApp is the primary action.
@@ -26,12 +26,13 @@ Read `docs/DESIGN.md`. It holds the colour roles, type scale, motion budget, hov
 ## Commands
 
 ```bash
-npm run dev                          # http://localhost:3000 (demo list), /<slug> (one boutique)
+npm run dev                          # http://localhost:3000 (demo list), /<slug> (one boutique), /lab (component lab)
 npm run config -- <slug>             # data.md → config.ts, then validates it (--dry-run to preview)
 npm run validate                     # check every boutique's data and photos
 npm run check                        # validate + type check + production build
 npm run shots                        # screenshots of sample-boutique → .shots/
 npm run shots -- <slug>              # screenshots of one boutique
+npm run shots -- lab/<job>/<Name>/<slug>  # screenshots of one component, e.g. lab/hero/ArchHero/sample-boutique
 npm run new-boutique "Name"          # boutiques/<slug>/ (data.md, photos/) + src/sites/<slug>/Site.tsx
 VITE_TENANT=<slug> npm run build     # one boutique's site, for its own domain
 ```
@@ -44,9 +45,12 @@ VITE_TENANT=<slug> npm run build     # one boutique's site, for its own domain
 
 - `src/types/boutique.ts`: the config contract
 - `src/theme/theme.ts`: palette derivation, contrast safety, `fitDisplay`
-- `src/motion/`: tokens, GSAP setup, smooth scroll, stitch line, magnetic
+- `src/motion/`: tokens, GSAP setup, `useMotion`, shared moves, smooth scroll, stitch line, magnetic
 - `src/components/`: Button, Media, Logo
 - `src/sections/`: the component library, one folder per job (hero/, gallery/, reviews/…); `index.ts` is the catalog
+- `src/app/lab/`: the dev-only component lab at `/lab`; reads the catalog from `src/sections/index.ts`
+- `docs/BoutiqueComponentLab/`: the design lab (open `Component Library.dc.html`), the source of new component versions
+- `docs/COMPONENTS.md`: every lab section and version, with status and plan
 - `src/theme/fonts.ts`: approved font pairs
 - `src/sites/<slug>/Site.tsx`: a boutique's page, composed from the library
 - `src/sites/<slug>/config.ts`: a boutique's details, generated from its data.md

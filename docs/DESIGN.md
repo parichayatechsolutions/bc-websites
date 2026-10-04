@@ -73,13 +73,14 @@ Scroll-driven motion has to *mean* something: reveal the work, show progress, or
 
 ### Timing
 
-All GSAP values come from `src/motion/tokens.ts` (`EASE`, `DURATION`, `STAGGER`, `SCRUB`). CSS transitions use `ease-stitch` with `duration-200` (colour), `duration-300` (small movement) or `duration-700` (photos). A new animation that needs a value not in the tokens is probably the wrong animation.
+All GSAP values come from `src/motion/tokens.ts` (`EASE`, `DURATION`, `STAGGER`, `SCRUB`, `TRIGGER`). CSS transitions use `ease-stitch` with `duration-200` (colour), `duration-300` (small movement) or `duration-700` (photos). A new animation that needs a value not in the tokens is probably the wrong animation.
 
 ### Rules
 
 - Import GSAP only from `src/motion/gsap.ts`, never from `'gsap'` directly.
 - Wrap every GSAP animation in `gsap.matchMedia()` with `MEDIA.motion`, and return `mm.revert()` from `useGSAP`.
-- Build in `useGSAP` with a `scope`. Never animate from `useEffect`.
+- Build in `useGSAP` with a `scope`. Never animate from `useEffect`. `useMotion(root, build)` does all three of these for you.
+- Supporting moves (wipe, settle, draw, count up, sway, stars, drift, letters rise or blur in) come from `src/motion/moves.ts`, not written again inside a section.
 - At most two pinned sections per page (heritage: the hero and the collection).
 - Arrivals last 1.1s at most. Nothing loops except video.
 
@@ -130,6 +131,8 @@ Use these; don't recreate them inside a section.
 | `Magnetic` | `motion/Magnetic.tsx` | Cursor pull for the main CTA. |
 | `StitchLine` | `motion/StitchLine.tsx` | The running stitch around a run of sections. |
 | `SmoothScroll` | `motion/SmoothScroll.tsx` | Lenis, already wrapping every page. |
+| `useMotion` | `motion/useMotion.ts` | `useGSAP` + scope + `matchMedia(MEDIA.motion)` + revert, in one call. |
+| Moves | `motion/moves.ts` | The shared supporting moves: `rise`, `blurIn`, `countUp`, `settle`, `wipe`, `draw`, `sway`, `starsIn`, `drift`. |
 | `fitDisplay` | `theme/theme.ts` | Size for text whose length varies. |
 | Icons | `@tabler/icons-react` | The only icon set. `stroke={1.5}` in text, `1.75` in buttons. |
 
@@ -140,9 +143,12 @@ Use these; don't recreate them inside a section.
 3. Decide what it does with missing data: return `null`, or drop the missing parts.
 4. Use the colour roles, type scale, `.wrap` and `.section`, the building blocks, and the motion tokens.
 5. Add it to `src/sections/index.ts` with a one-line description of its look, and note if it's pinned or a signature motion.
-6. Try it in `src/sites/sample-boutique/Site.tsx`, then run the definition of done below.
+6. Look at it in the lab (`/lab` in `npm run dev`) with `sample-boutique` and a boutique with a long name or pale colours, then use it in a design and run the definition of done below.
+7. If it's a version from the design lab, mark it `built` in `docs/COMPONENTS.md`.
 
 A new component must be *actually* different from its siblings (layout, rhythm, motion), not an existing one with different spacing.
+
+New versions come from the design lab in `docs/BoutiqueComponentLab/` (34 sections, 26 versions each). `docs/COMPONENTS.md` lists them all with what each needs and what in it breaks these rules; pick from there rather than inventing a look.
 
 ## Composing a boutique's page
 
@@ -189,3 +195,7 @@ Settled questions. Don't reopen these without a new reason; add new decisions at
 | 2026-09-24 | Photo categories come from the file name (`work-bridal-01.jpg`), never from the service groups | Every boutique's ticked groups come out identical (Women, Kids, Handwork, Services), so grouping by them would give 500 identical grids |
 | 2026-09-24 | Generated photos are named `ai-*` and stand in for the real file of the same name; a **sold** boutique with any left is a validator error | Demos can't wait for photographs, but a paying boutique must never show customers work it didn't make |
 | 2026-09-24 | No generated photograph of a person, ever | A generated "owner" is a picture of someone who doesn't exist presented as a real, named woman |
+| 2026-10-04 | The design lab (`docs/BoutiqueComponentLab/`) is the menu for new components; versions are ported into `src/sections/` and planned in `docs/COMPONENTS.md` | 866 versions can't all be built or kept working; each one ported has to meet this document, so it's chosen, not copied wholesale |
+| 2026-10-04 | GSAP stays the only animation library; Framer Motion (suggested in the lab's README) rejected | Everything `alive.js` does is possible in GSAP; a second library adds weight to every phone page and a second reduced-motion path |
+| 2026-10-04 | The lab's allowed motions become shared moves in `src/motion/moves.ts`; its fade-ups, loops, curtain intro, grain, shimmer, background glows, heading drift and photo tilt are dropped | One implementation per move keeps every section's timing alike; the dropped ones are already forbidden above |
+| 2026-10-04 | A dev-only component lab at `/lab` draws any library component for any boutique at phone and desktop width | Components are built and checked on their own, with bad data, before any design depends on them |

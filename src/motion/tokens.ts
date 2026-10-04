@@ -23,10 +23,21 @@ export const DURATION = {
   slow: 1.1,
 } as const
 
-/** Stagger between letters or words in a text reveal. */
+/** Stagger between letters or words in a text reveal, or things arriving in turn. */
 export const STAGGER = {
   letters: 0.035,
   words: 0.1,
+  /** Photos, frames, stars or lines that arrive one after another. */
+  items: 0.08,
+} as const
+
+/**
+ * Where a scroll-started animation begins. `arrive`: when the top of the
+ * element is 85% of the way down the screen, so it plays as it comes into
+ * view rather than after the visitor has already read past it.
+ */
+export const TRIGGER = {
+  arrive: 'top 85%',
 } as const
 
 /**

@@ -4,15 +4,22 @@
 //   /<slug>/designs        that boutique in each of our designs, as cards
 //   /<slug>/d/<design>     that boutique in one design — the link we send them
 //   /<slug>                the same site in the design settled for them
+//   /lab                   every library component, any boutique (dev only)
 // Single-boutique mode (VITE_TENANT=<slug>): "/" is that boutique's site, used
 // when building a signed boutique for its own domain.
 
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import BoutiquePage from './BoutiquePage'
 import DesignChooser from './DesignChooser'
 import Directory from './Directory'
 
 const tenant = import.meta.env.VITE_TENANT as string | undefined
+
+// The component lab is for our team while building. Production builds drop
+// it, so it never ships to a boutique's site.
+const Lab = import.meta.env.DEV ? lazy(() => import('./lab/Lab')) : null
+const LabView = import.meta.env.DEV ? lazy(() => import('./lab/LabView')) : null
 
 export default function App() {
   return (
@@ -23,6 +30,12 @@ export default function App() {
         ) : (
           <>
             <Route path="/" element={<Directory />} />
+            {Lab && LabView && (
+              <>
+                <Route path="/lab" element={<Suspense fallback={null}><Lab /></Suspense>} />
+                <Route path="/lab/:job/:name/:slug" element={<Suspense fallback={null}><LabView /></Suspense>} />
+              </>
+            )}
             <Route path="/:slug/designs" element={<DesignChooser />} />
             <Route path="/:slug/d/:design/*" element={<BoutiquePage />} />
             <Route path="/:slug/*" element={<BoutiquePage />} />
