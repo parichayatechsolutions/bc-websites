@@ -24,12 +24,14 @@ export default function SplitHero() {
   // 1: Hero bridal piece (tall arch)
   // 2: Square detail / blouse
   // 3: Second arched piece / lehenga
-  const photo1 = media.work.find((f) => f.includes('bridal')) ?? media.hero.src
-  const photo2 = media.closeups?.[0] ?? media.work.find((f) => f.includes('blouse')) ?? media.hero.src
-  const photo3 = media.work.find((f) => f.includes('lehenga') || f.includes('saree')) ?? media.work[1] ?? media.hero.src
+  const collage = media.heroCollage
+  const photo1 = collage?.[0] ?? media.work.find((f) => f.includes('bridal')) ?? media.hero.src
+  const photo2 = collage?.[1] ?? media.closeups?.[0] ?? media.work.find((f) => f.includes('blouse')) ?? media.hero.src
+  const photo3 = collage?.[2] ?? media.work.find((f) => f.includes('lehenga') || f.includes('saree')) ?? media.work[1] ?? media.hero.src
 
   useMotion(root, () => {
-    rise('[data-hero-text]', { by: 'words', delay: 0.1 })
+    rise('[data-hero-name]', { by: brand.name.length > 20 ? 'words' : 'letters', delay: 0.1 })
+    rise('[data-hero-text]', { by: 'words', delay: 0.25 })
     wipe('[data-hero-collage]', { delay: 0.2 })
   })
 
@@ -43,7 +45,7 @@ export default function SplitHero() {
           </p>
 
           <h1
-            data-hero-text
+            data-hero-name
             className="t-hero mt-3 text-balance text-primary-ink"
             style={fitDisplay(brand.name, 10, 8, 3.2)}
           >

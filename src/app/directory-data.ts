@@ -240,9 +240,9 @@ export const DIRECTORY: IDirectoryEntry[] = [
   {
     slug: '2-vastravinyasaki',
     name: 'Vastra Vinyasaki Boutique',
-    tagline: 'Tailored with grace, worn with elegance',
+    tagline: 'Get your Dream Outfit Designed with Us',
     logo: 'logo.png',
-    colors: { primary: '#D2691E', accent: '#C9A24A' },
+    colors: { primary: '#7A1F2B', accent: '#C9A24A' },
     places: [
       {
         state: 'Karnataka',
@@ -252,11 +252,11 @@ export const DIRECTORY: IDirectoryEntry[] = [
       },
     ],
     featured: [
-      'Designer bridal blouses',
-      'Custom fit lehengas & ethnic gowns',
-      'Handcrafted aari and maggam embroidery',
+      'Bridal blouse stitching & aari/maggam embroidery',
+      'Handcrafted saree tassels (kuchu)',
+      'Custom designer lehengas & festive gowns',
     ],
-    rating: 4.7,
+    rating: 5,
     sold: false,
   },
   {

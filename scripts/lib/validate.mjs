@@ -41,6 +41,7 @@ function referencedPhotos(config) {
     ...(m.alterations ?? []).flatMap((p) => [p.before, p.after]),
     ...(m.looks ?? []),
     ...(m.drapes ?? []),
+    ...(m.heroCollage ?? []),
     ...(m.groom ?? []),
     ...[...(m.handworkPairs ?? []), ...(m.matching ?? [])].flatMap((p) => [p.first, p.second]),
     ...(config.rentals ?? []).map((r) => r.photo),

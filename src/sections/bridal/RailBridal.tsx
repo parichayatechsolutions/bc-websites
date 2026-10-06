@@ -33,7 +33,7 @@ export default function RailBridal() {
           'Trial fitting included',
           'Planned around your dates',
         ],
-        file: (['work-bridal-01.jpg', 'work-bridal-02.jpg', 'work-lehenga-01.jpg', 'work-bridal-03.jpg'][i] || 'work-bridal-01.jpg') as any,
+        file: (['work-bridal-01.jpg', 'work-bridal-02.jpg', 'work-bridal-03.jpg'][i] || 'work-bridal-01.jpg') as any,
       }))
     : [
         {
@@ -70,7 +70,7 @@ export default function RailBridal() {
             'Outfits for other ceremonies',
             'Fittings planned around your dates',
           ],
-          file: 'work-lehenga-01.jpg' as const,
+          file: 'work-bridal-03.jpg' as const,
         },
       ]
 

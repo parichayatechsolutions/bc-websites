@@ -266,6 +266,11 @@ const config: BoutiqueConfig = {
       'work-saree-01.jpg',
     ],
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
+    heroCollage: [
+      '74635c2b-4834-4b74-97b2-da2bc195d278.jpg',
+      'watermarked_img_7431764956573030727.jpg',
+      'watermarked_img_9765211060289559003.jpg',
+    ],
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],

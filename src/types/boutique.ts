@@ -277,6 +277,8 @@ export interface BoutiqueConfig {
     looks?: PhotoFile[]
     /** Saree drapes: drape-<style>.jpg ("drape-nivi.jpg"). */
     drapes?: PhotoFile[]
+    /** Optional specific 3-photo hero collage files: [tallArch, squareDetail, bottomArch] */
+    heroCollage?: PhotoFile[]
     /** A groom's look per function: groom-<function>.jpg ("groom-sangeet.jpg"). */
     groom?: PhotoFile[]
     /** The same blouse plain and with handwork: plain-01.jpg with worked-01.jpg. */
