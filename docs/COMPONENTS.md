@@ -168,20 +168,20 @@ Lab motions: Tap demo, Solid on scroll, Hide on scroll down, Dock rises.
 | E | Menu button | Just logo, WhatsApp and a "Menu" pill; opens a numbered full-screen menu with hours. |  | built: `nav/MenuNav` |  | keep |
 | F | Side rail / tab bar | Icon rail down the left on desktop; app-style tab bar at the bottom on phones. |  |  | repeats `nav/DockNav` | skip |
 | G | Open-now bar | Brand strip showing open or closed today and the rating, over a solid nav. |  | built: `nav/OpenNav` |  | keep |
-| H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  |  | frosted glass (contrast over photos) | skip |
+| H | Glass bar | Frosted, rounded bar floating inset over the hero photo. |  | built: `nav/GlassNav` |  | keep |
 | I | Brand bar | Solid brand colour with icon chips for each page and a zari edge. |  | built: `nav/BrandNav` |  | keep |
 | J | Tab switcher | Pages as a segmented pill control; the active one fills. |  | built: `nav/PillsNav` |  | keep |
 | K | Icon nav | Icons with small labels; compact and scannable. |  | built: `nav/IconNav` |  | keep |
 | L | Masthead | Newspaper style: name set large, links in a ruled row under it. |  | built: `nav/MastheadNav` |  | keep |
 | M | Arch tab | Logo and name hang from the top centre in an arch-shaped tab. |  | built: `nav/ArchNav` |  | keep |
 | N | Drawer | Menu slides in from the left with a photo header and hours. |  | built: `nav/DrawerNav` |  | keep |
-| O | Work mega menu | Desktop "Our work" opens a panel of categories; phones get a grid sheet. |  |  | no category pages to link to | skip |
+| O | Work mega menu | Desktop "Our work" opens a panel of categories; phones get a grid sheet. |  | built: `nav/MegaNav` |  | keep |
 | P | Prices mega menu | Dark bar; "Services & prices" opens groups plus a starting-price card. |  |  | no prices page to link to | skip |
 | Q | Call \| Book bar | Solid bar with a split pill: Call on one side, Book on WhatsApp on the other. | built: `nav/CallNav` |  | keep |  |
 | R | CTA band | Solid nav with a brand band under it: rating, delivery and "Book a fitting". |  | built: `nav/BandNav` |  | keep |
 | S | Local-name strip | Slim dark strip with the name in the local language, above a clean nav. |  | built: `nav/LocalNav` |  | keep |
 | T | Outline pill links | Clear over the hero; links inside an outlined pill, WhatsApp as an outline circle. |  | built: `nav/OutlineNav` |  | keep |
-| U | Dark luxe | Near-black bar with gold hairlines, a crown and an "Appointments" button. |  |  | repeats the dark-luxe family built elsewhere | skip |
+| U | Dark luxe | Near-black bar with gold hairlines, a crown and an "Appointments" button. |  | built: `nav/LuxeNav` |  | keep |
 | V | Thread progress | A thread with a needle under the nav shows how far down the page you are. |  | built: `nav/ThreadNav` |  | keep |
 | W | Shrinking | Tall with a large logo at the top, shrinks to a compact bar as you scroll. |  | built: `nav/ShrinkNav` |  | keep |
 | X | Split menu | Menu slides in as half photo with tagline, half numbered links. |  | built: `nav/SplitNav` |  | keep |

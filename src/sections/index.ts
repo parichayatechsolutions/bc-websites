@@ -30,6 +30,9 @@ export { default as BandNav } from './nav/BandNav' // Solid bar over a brand ban
 export { default as OutlineNav } from './nav/OutlineNav' // Clear over a dark hero: pages in one outlined pill, WhatsApp as an outlined circle
 export { default as ArchNav } from './nav/ArchNav' // Slim bar with the logo and name hanging from its centre in an arch-shaped tab
 export { default as OpenNav } from './nav/OpenNav' // Brand strip with open-now status and rating over a solid bar (reads branch hours)
+export { default as GlassNav } from './nav/GlassNav' // Frosted glass capsule floating inset over a dark hero; solidifies on scroll
+export { default as MegaNav } from './nav/MegaNav' // Solid nav with a multi-category "Our work" mega menu panel
+export { default as LuxeNav } from './nav/LuxeNav' // Deep obsidian bar with dual gold hairlines, haloed emblem and Appointments button
 
 // Footer (pick one)
 export { default as BrandFooter } from './footer/BrandFooter' // Brand colour, huge name, pages, contact icons
