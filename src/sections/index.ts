@@ -128,6 +128,7 @@ export { default as DiamondGallery } from './gallery/DiamondGallery' // On brand
 export { default as DeckGallery } from './gallery/DeckGallery' // Dark: work as a stack of prints dealt with arrows, kind and note beside
 export { default as SpreadGallery } from './gallery/SpreadGallery' // Kinds of work listed; choosing one lays out a three-photo spread
 export { default as ClothesGallery } from './gallery/ClothesGallery' // Work hanging from a thread rail, kind chips change what hangs
+export { default as CoverflowGallery } from './gallery/CoverflowGallery' // Dark: centre photo large, neighbours turned in 3D perspective with arrows (Lab: gallery T)
 
 // How it's made
 export { default as StickyProcess } from './process/StickyProcess' // Five making steps with a photo that follows the active step
@@ -187,6 +188,7 @@ export { default as PraiseReviews } from './reviews/PraiseReviews' // Tabs for t
 export { default as GoogleReviews } from './reviews/GoogleReviews' // Initial-led review cards under the rating, with Read and Write a review
 export { default as FramesReviews } from './reviews/FramesReviews' // On brand colour between zari borders: reviews in double gold frames
 export { default as DeckReviews } from './reviews/DeckReviews' // Dark: reviews as a stack of cards dealt with arrows
+export { default as SpotlightReviews } from './reviews/SpotlightReviews' // Dark stage; one review lit in the centre, customer names as chips
 
 // Bridal (packages from bridalPackages; prices only with permission)
 export { default as TierBridal } from './bridal/TierBridal' // Packages as equal cards: price, what's included, ask; consult button under them
@@ -198,6 +200,7 @@ export { default as CompareBridal } from './bridal/CompareBridal' // Packages co
 export { default as PricesBridal } from './bridal/PricesBridal' // Packages led by their starting prices, set large (needs prices permission)
 export { default as ArchBridal } from './bridal/ArchBridal' // Each bridal package inside a gold-edged temple arch with what it includes
 export { default as AccordionBridal } from './bridal/AccordionBridal' // Bridal packages as rows that open to what’s included
+export { default as RailBridal } from './bridal/RailBridal' // Photo rail: sideways package cards with photos and horizontal scroll
 export { default as MenuBridal } from './bridal/MenuBridal' // Dark framed menu card: packages with dotted leaders to their prices
 export { default as IncludedBridal } from './bridal/IncludedBridal' // Package tabs over one list of everything, ticked or greyed per package
 export { default as CeremonyBridal } from './bridal/CeremonyBridal' // Tabs per ceremony, each the bride’s look for it (look-<function>-NN.jpg)
@@ -220,6 +223,7 @@ export { default as ServicesAlterations } from './alterations/ServicesAlteration
 export { default as DeckAlterations } from './alterations/DeckAlterations' // Before/after pairs as a stack of prints dealt with arrows
 export { default as BandAlterations } from './alterations/BandAlterations' // On brand colour between zari borders: pairs in gold frames
 export { default as StoryAlterations } from './alterations/StoryAlterations' // "A second life": one pair large as a cover story, others small
+export { default as SpotlightAlterations } from './alterations/SpotlightAlterations' // Dark stage, one pair lit at a time with pips
 
 // Offers (only offers running today; each hides on the day after its last day)
 export { default as StripOffer } from './offer/StripOffer' // Band: one offer in brand colour with its last day and a WhatsApp link
@@ -351,6 +355,7 @@ export { default as StitchLine } from '../motion/StitchLine' // Running stitch s
 
 // Speciality (each shows only when their services say they do this work)
 export { default as BuilderBlouse } from './blouse/BuilderBlouse' // Pick neck, back and sleeves; live front and back drawings; send the design on WhatsApp
+export { default as StitchBlouse } from './blouse/StitchBlouse' // Stitch line: four steps on a dashed thread; picked step opens below; live front and back drawings
 export { default as NecksBlouse } from './blouse/NecksBlouse' // Every neckline as a drawn card with what it suits, then back and sleeves
 export { default as StepsBlouse } from './blouse/StepsBlouse' // Design a blouse one question at a time, with progress and live drawings
 export { default as GuideBlouse } from './blouse/GuideBlouse' // Neckline guide: each neck drawn, what it suits, what to wear with it

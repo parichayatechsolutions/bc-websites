@@ -19,7 +19,7 @@ export interface ILabEntry {
 function parse(text: string): ILabEntry[] {
   const entries: ILabEntry[] = []
   let group = ''
-  for (const line of text.split('\n')) {
+  for (const line of text.split(/\r?\n/)) {
     const heading = line.match(/^\/\/ (.+)$/)
     if (heading) {
       group = heading[1].replace(/\s*\(.*\)$/, '')

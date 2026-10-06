@@ -36,10 +36,11 @@ export default function Lab() {
   const asked = search.get('slug') ?? ''
   const slug = boutiqueSlugs.includes(asked) ? asked : DEFAULT_SLUG
   const font = search.get('font') ?? ''
-  const src = `/lab/${entry.job}/${entry.name}/${slug}${font ? `?font=${font}` : ''}`
 
   useEffect(() => {
-    document.title = `${entry.name} · lab`
+    if (entry) {
+      document.title = `${entry.name} · lab`
+    }
   }, [entry])
 
   const choose = (key: string, value: string) =>
@@ -53,6 +54,15 @@ export default function Lab() {
       { replace: true },
     )
 
+  if (!entry) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#faf7f2] font-app text-neutral-900">
+        <p>No components found in the catalog.</p>
+      </div>
+    )
+  }
+
+  const src = `/lab/${entry.job}/${entry.name}/${slug}${font ? `?font=${font}` : ''}`
   const groups = [...new Set(LAB_ENTRIES.map((e) => e.group))]
 
   return (
@@ -70,7 +80,7 @@ export default function Lab() {
           options={LAB_ENTRIES.map(keyOf)}
           display={(key) => key.split('/')[1]}
           onChange={(key) => choose('c', key)}
-          anyLabel={LAB_ENTRIES[0].name}
+          anyLabel={LAB_ENTRIES[0]?.name ?? ''}
         />
 
         <nav className="hidden md:block" aria-label="Components">

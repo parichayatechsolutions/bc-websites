@@ -112,10 +112,57 @@ const config: BoutiqueConfig = {
     express: '48 hours, ₹250 extra',
     paymentModes: ['Cash', 'UPI', 'Card'],
   },
+  bridalPackages: [
+    {
+      name: 'Muhurtham Bridal',
+      price: 8500,
+      includes: [
+        'Pure silk bridal blouse with intricate maggam & aari zari embroidery',
+        'saree fall',
+        'pico',
+        '2 trial fittings',
+      ],
+    },
+    {
+      name: 'Royal Bride Celebration',
+      price: 18500,
+      includes: [
+        'Muhurtham maggam blouse',
+        'reception designer blouse',
+        'sangeet lehenga styling',
+        '3 custom trial fittings',
+      ],
+    },
+    {
+      name: 'Complete Wedding Trousseau',
+      price: 35000,
+      includes: [
+        'Five custom function blouses',
+        'bespoke designer bridal lehenga',
+        'complimentary alteration care for 1 year',
+      ],
+    },
+  ],
+  alterationPrices: [
+    { item: 'Blouse side fitting & loosening', price: 150, days: 1 },
+    { item: 'Blouse padding addition', price: 300, days: 1 },
+    { item: 'Kurti & salwar suit alteration', price: 200, days: 1 },
+    { item: 'Lehenga waist & length alteration', price: 500, days: 2 },
+    { item: 'Gown zipper replacement & refit', price: 250, days: 1 },
+    { item: 'Saree fall & pico finishing', price: 120, days: 1 },
+  ],
   stats: [
     { value: '5+', label: 'Years stitching' },
     { value: '2,500+', label: 'Garments delivered' },
     { value: '6', label: 'People on our team' },
+  ],
+  team: [
+    { name: 'Lakshmi', role: 'Master tailor' },
+    { name: 'Ravi', role: 'Cutting master' },
+    { name: 'Fatima', role: 'Aari karigar' },
+    { name: 'Suresh', role: 'Maggam karigar' },
+    { name: 'Meena', role: 'Finishing' },
+    { name: 'Priya', role: 'Fittings and front desk' },
   ],
   reviews: [
     {
@@ -202,21 +249,21 @@ const config: BoutiqueConfig = {
     },
   ],
   media: {
-    hero: { type: 'image', src: 'work-bridal-01.jpg' },
+    hero: { type: 'image', src: 'work-blouse-01.jpg' },
     storefront: 'storefront.jpg',
     interior: ['interior-1.jpg', 'interior-2.jpg'],
     teamAtWork: 'team-at-work.jpg',
     work: [
-      'work-bridal-01.jpg',
-      'work-bridal-02.jpg',
-      'work-bridal-03.jpg',
       'work-blouse-01.jpg',
       'work-blouse-02.jpg',
       'work-blouse-03.jpg',
+      'work-bridal-01.jpg',
+      'work-bridal-02.jpg',
+      'work-bridal-03.jpg',
+      'work-kids-01.jpg',
       'work-lehenga-01.jpg',
       'work-lehenga-02.jpg',
       'work-saree-01.jpg',
-      'work-kids-01.jpg',
     ],
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
     alterations: [

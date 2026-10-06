@@ -12,7 +12,8 @@
     "prompts": "node --experimental-strip-types scripts/make-prompts.mjs",
     "check": "node --experimental-strip-types scripts/validate.mjs && tsc -b && vite build",
     "config": "node --experimental-strip-types scripts/build-config.mjs",
-    "validate": "node --experimental-strip-types scripts/validate.mjs"
+    "validate": "node --experimental-strip-types scripts/validate.mjs",
+    "lab:docs": "node scripts/serve-component-lab.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

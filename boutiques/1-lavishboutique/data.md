@@ -114,6 +114,42 @@
 - Express delivery time and extra charge: 48 hours, ₹250 extra
 - Payment modes (cash / UPI / card): Cash, UPI, Card
 
+## 6b. Bridal packages (optional)
+
+### Package 1
+
+- Package name: Muhurtham Bridal
+- Starting price (₹): 8500
+- What's included: Pure silk bridal blouse with intricate maggam & aari zari embroidery, saree fall, pico, 2 trial fittings
+
+### Package 2
+
+- Package name: Royal Bride Celebration
+- Starting price (₹): 18500
+- What's included: Muhurtham maggam blouse, reception designer blouse, sangeet lehenga styling, 3 custom trial fittings
+
+### Package 3
+
+- Package name: Complete Wedding Trousseau
+- Starting price (₹): 35000
+- What's included: Five custom function blouses, bespoke designer bridal lehenga, complimentary alteration care for 1 year
+
+## 6c. Current offer (optional)
+
+- Offer title: 10% off bridal blouse handwork for wedding season
+- Offer details: Valid on advance bookings for bridal maggam and aari embroidery work
+- Valid until: 2026-12-31
+- Counter code: LAVISHBRIDE
+
+## 6d. Alterations (optional)
+
+1. Alteration: Blouse side fitting & loosening | Price: 150 | Days: 1
+2. Alteration: Blouse padding addition | Price: 300 | Days: 1
+3. Alteration: Kurti & salwar suit alteration | Price: 200 | Days: 1
+4. Alteration: Lehenga waist & length alteration | Price: 500 | Days: 2
+5. Alteration: Gown zipper replacement & refit | Price: 250 | Days: 1
+6. Alteration: Saree fall & pico finishing | Price: 120 | Days: 1
+
 ## 7. Numbers to show on the website
 
 - Years in business: 5+

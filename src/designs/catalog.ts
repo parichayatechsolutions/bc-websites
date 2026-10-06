@@ -19,6 +19,16 @@ export interface IDesignMeta {
 /** In the order they appear on a boutique's card wall. */
 export const DESIGNS: IDesignMeta[] = [
   {
+    id: 'regal',
+    name: 'Regal',
+    description: 'Vogue & Sabyasachi luxury couture flagship. Floating glassmorphic island nav, full-bleed runway hero, interactive 3-step blouse atelier studio, before/after fit proof, and WhatsApp VIP booking.',
+  },
+  {
+    id: 'couture',
+    name: 'Couture',
+    description: 'Bespoke bridal atelier. Animated sewing thread progress header, double-framed gold temple arch opener, custom blouse designer, and a rising arch footer.',
+  },
+  {
     id: 'vitrine',
     name: 'Vitrine',
     description: 'The shop window. One photograph edge to edge, then everything they make in a grid you can narrow by kind. For a boutique whose pitch is range.',
@@ -99,6 +109,7 @@ const ROTATION = ['vitrine', 'arch', 'atelier', 'poster', 'ledger']
  */
 export const ASSIGNED: Record<string, string> = {
   'sample-boutique': 'arch',
+  '1-lavishboutique': 'regal',
 }
 
 /** Same slug, same number, every time and on both the server and the page. */

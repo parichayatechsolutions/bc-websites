@@ -1,14 +1,16 @@
 // src/sections/reviews/NumbersReviews.tsx
-// The numbers first, set huge: the Google rating, the number of reviews and
-// the garments they've delivered; then one review beneath to put a voice to
-// them. (Lab: reviews M, "Big numbers".)
-//
-// Numbers only from the config; needs the rating, or at least two numbers.
-// Hides otherwise.
-//
-// Motion: the numbers count up once. Reduced motion: as written.
+// Big numbers: Google rating, review count and garments delivered set huge;
+// one featured client quote in a brand-colour card below.
+// (Lab: reviews M, "Big numbers".)
 
 import { useRef } from 'react'
+import {
+  IconHanger,
+  IconMessageCircle,
+  IconQuote,
+  IconRosetteDiscountCheck,
+  IconStar,
+} from '@tabler/icons-react'
 import { useBoutique } from '../../app/BoutiqueContext'
 import { countUp } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
@@ -20,39 +22,92 @@ export default function NumbersReviews() {
   const root = useRef<HTMLElement>(null)
   const garments = boutique.stats?.find((s) => /garment|deliver|order|piece/i.test(s.label))
 
-  const numbers = [
-    rating && { value: rating.toFixed(1), label: 'On Google' },
-    count && { value: count.toLocaleString('en-IN'), label: 'Reviews' },
-    garments && { value: garments.value, label: garments.label },
-  ].filter(Boolean) as { value: string; label: string }[]
+  const bigCards = [
+    rating && {
+      icon: IconStar,
+      value: `${rating.toFixed(1)}★`,
+      label: 'on Google',
+    },
+    count && {
+      icon: IconMessageCircle,
+      value: count.toLocaleString('en-IN'),
+      label: 'reviews',
+    },
+    garments && {
+      icon: IconHanger,
+      value: garments.value,
+      label: garments.label,
+    },
+  ].filter(Boolean) as { icon: typeof IconStar; value: string; label: string }[]
 
   useMotion(root, () => {
     countUp('[data-count]', { trigger: root.current })
   })
 
-  if (numbers.length < 2) return null
+  if (bigCards.length < 2) return null
   const lead = reviews[0]
 
   return (
-    <section ref={root} id="reviews" className="section bg-dark text-light">
+    <section ref={root} id="reviews" className="section bg-light py-16 text-ink md:py-24">
       <div className="wrap">
-        <dl className="grid gap-10 sm:grid-cols-3">
-          {numbers.map(({ value, label }) => (
-            <div key={label} className="flex flex-col border-t border-light/20 pt-6">
-              <dt className="order-last mt-2 text-light/70">{label}</dt>
-              <dd data-count className="t-hero tabular-nums text-accent-on-dark">
+        {/* Top 3 Stat Cards */}
+        <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
+          {bigCards.map(({ icon: CardIcon, value, label }) => (
+            <div
+              key={label}
+              className="flex flex-col gap-3 rounded-2xl bg-paper p-6 shadow-sm md:p-8"
+            >
+              <span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-accent">
+                <CardIcon size={24} stroke={1.8} aria-hidden="true" />
+              </span>
+              <dd
+                data-count
+                className="font-display text-4xl font-normal leading-none text-primary-ink md:text-5xl lg:text-6xl"
+              >
                 {value}
               </dd>
+              <dt className="text-base text-muted">{label}</dt>
             </div>
           ))}
         </dl>
+
+        {/* Lead Quote Card in Brand Colour */}
         {lead && (
-          <figure className="mt-16 max-w-3xl">
-            <blockquote className="t-2 text-balance">“{lead.text}”</blockquote>
-            <figcaption className="mt-5 text-light/70">{lead.name}</figcaption>
+          <figure className="mt-6 flex flex-wrap items-start gap-5 rounded-2xl bg-primary p-6 text-on-primary shadow-md md:mt-8 md:p-10">
+            <IconQuote size={48} className="shrink-0 text-accent" aria-hidden="true" />
+            <div className="min-w-0 flex-1">
+              <blockquote className="font-display text-xl leading-snug font-normal md:text-2xl lg:text-3xl">
+                {lead.text}
+              </blockquote>
+
+              <div className="mt-5 flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-accent font-display text-lg font-bold text-on-accent">
+                  {lead.name.charAt(0)}
+                </span>
+                <span className="flex items-center gap-1.5 font-bold">
+                  {lead.name}
+                  <IconRosetteDiscountCheck size={18} className="text-accent" aria-hidden="true" />
+                </span>
+              </div>
+
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex items-center rounded-full bg-light/15 px-3 py-1 text-xs font-semibold text-on-primary">
+                  Fitting
+                </span>
+                <span className="inline-flex items-center rounded-full bg-light/15 px-3 py-1 text-xs font-semibold text-on-primary">
+                  Handwork
+                </span>
+              </div>
+            </div>
           </figure>
         )}
-        <GoogleLink href={google} className="mt-8 text-accent-on-dark" />
+
+        {google && (
+          <div className="mt-6 flex justify-end">
+            <GoogleLink href={google} className="text-primary-ink hover:underline" />
+          </div>
+        )}
       </div>
     </section>
   )

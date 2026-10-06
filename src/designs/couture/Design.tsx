@@ -1,46 +1,43 @@
-// src/designs/journal/Design.tsx
-// "Journal": a light, photo-led magazine. Three prints of their work laid
-// on the page beside the name, the facts as a newspaper box, the work in
-// spreads by kind, a dark cover for the lookbook, and their style notes as
-// the front page of an issue. For a boutique with good photographs and
-// something to say.
-//
-// Signature motion: the prints settling from a small swing in the opener.
-// Nothing pins; the rest is still or arrives once.
+// src/designs/couture/Design.tsx
+// "Couture": High-luxury bespoke tailoring & bridal atelier.
+// Combines an animated golden sewing thread & needle progress navigation,
+// a gold-framed temple arch opener with magnetic CTA, full bridal suite,
+// interactive blouse customizer, and an architectural arch footer.
 
 import { FONTS } from '../../theme/fonts'
 import {
   ArchBridal,
   ArchesFaq,
+  ArchFooter,
   BandOffer,
   BandTrust,
-  BrandFooter,
   BuilderBlouse,
   CardWedding,
   ColumnServices,
   CornerKids,
   FloatingWhatsApp,
+  FramedHero,
   HandsTeam,
   InkStory,
   NeedsSaree,
   NecksBlouse,
   PageHeader,
   PairsAlterations,
-  PrintsHero,
   RailGallery,
   RateAlterations,
   RatingReviews,
   SiteShell,
-  SplitNav,
   StickyProcess,
+  StitchLine,
   StoreVisit,
   TextureHandwork,
+  ThreadNav,
   WhatsAppForm,
   ZariHandwork,
   type IPage,
 } from '../../sections'
 
-export const fonts = FONTS.gloockFigtree
+export const fonts = FONTS.cormorantJost
 
 const pages: IPage[] = [
   {
@@ -48,40 +45,42 @@ const pages: IPage[] = [
     label: 'Home',
     element: (
       <>
-        <PrintsHero />
+        <FramedHero />
         <BandTrust />
         <BandOffer />
         <RailGallery />
-        <ArchBridal />
-        <CardWedding />
-        <BuilderBlouse />
-        <NecksBlouse />
-        <TextureHandwork />
-        <ZariHandwork />
-        <ColumnServices />
-        <NeedsSaree />
-        <CornerKids />
-        <PairsAlterations />
-        <RateAlterations />
-        <StickyProcess />
-        <RatingReviews />
-        <ArchesFaq />
-        <StoreVisit />
+        <StitchLine>
+          <ArchBridal />
+          <CardWedding />
+          <BuilderBlouse />
+          <NecksBlouse />
+          <TextureHandwork />
+          <ZariHandwork />
+          <ColumnServices />
+          <NeedsSaree />
+          <CornerKids />
+          <PairsAlterations />
+          <RateAlterations />
+          <StickyProcess />
+          <RatingReviews />
+          <ArchesFaq />
+          <StoreVisit />
+        </StitchLine>
       </>
     ),
   },
   {
     path: 'about',
     label: 'About us',
-    intro: 'Our story, the master artisans behind each piece, and how your garment is crafted.',
+    intro: 'Who we are, who stitches your clothes, and how a piece is made.',
     element: (
-      <>
+      <StitchLine>
         <PageHeader />
         <InkStory />
         <HandsTeam />
         <StickyProcess />
         <StoreVisit />
-      </>
+      </StitchLine>
     ),
   },
   {
@@ -102,9 +101,8 @@ const pages: IPage[] = [
 export default function Design() {
   return (
     <>
-      <SiteShell nav={SplitNav} footer={BrandFooter} pages={pages} />
+      <SiteShell nav={ThreadNav} footer={ArchFooter} pages={pages} />
       <FloatingWhatsApp />
     </>
   )
 }
-

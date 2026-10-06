@@ -48,7 +48,7 @@ function field(lines, label) {
 function sections(markdown) {
   const out = {}
   let current = null
-  for (const line of markdown.split('\n')) {
+  for (const line of markdown.split(/\r?\n/)) {
     const heading = line.match(/^##\s+(\d+[a-z]?)\./i)
     if (heading) {
       current = heading[1].toLowerCase()

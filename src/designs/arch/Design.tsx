@@ -9,19 +9,34 @@
 
 import { FONTS } from '../../theme/fonts'
 import {
+  ArchBridal,
   ArchHero,
+  ArchesFaq,
+  BandOffer,
+  BandTrust,
   BrandFooter,
+  BuilderBlouse,
+  CardWedding,
   ColumnServices,
+  CornerKids,
   FloatingNav,
+  FloatingWhatsApp,
+  HandsTeam,
   InkStory,
+  NeedsSaree,
+  NecksBlouse,
   PageHeader,
+  PairsAlterations,
   RailGallery,
+  RateAlterations,
   RatingReviews,
   SiteShell,
   StickyProcess,
   StitchLine,
   StoreVisit,
+  TextureHandwork,
   WhatsAppForm,
+  ZariHandwork,
   type IPage,
 } from '../../sections'
 
@@ -35,10 +50,25 @@ const pages: IPage[] = [
     element: (
       <>
         <ArchHero />
+        <BandTrust />
+        <BandOffer />
         <RailGallery />
         <StitchLine>
+          <ArchBridal />
+          <CardWedding />
+          <BuilderBlouse />
+          <NecksBlouse />
+          <TextureHandwork />
+          <ZariHandwork />
           <ColumnServices />
+          <NeedsSaree />
+          <CornerKids />
+          <PairsAlterations />
+          <RateAlterations />
+          <StickyProcess />
           <RatingReviews />
+          <ArchesFaq />
+          <StoreVisit />
         </StitchLine>
       </>
     ),
@@ -51,7 +81,9 @@ const pages: IPage[] = [
       <StitchLine>
         <PageHeader />
         <InkStory />
+        <HandsTeam />
         <StickyProcess />
+        <StoreVisit />
       </StitchLine>
     ),
   },
@@ -64,11 +96,18 @@ const pages: IPage[] = [
         <PageHeader />
         <WhatsAppForm />
         <StoreVisit />
+        <ArchesFaq />
       </>
     ),
   },
 ]
 
 export default function Design() {
-  return <SiteShell nav={FloatingNav} footer={BrandFooter} pages={pages} />
+  return (
+    <>
+      <SiteShell nav={FloatingNav} footer={BrandFooter} pages={pages} />
+      <FloatingWhatsApp />
+    </>
+  )
 }
+

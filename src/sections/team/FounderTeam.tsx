@@ -1,49 +1,160 @@
 // src/sections/team/FounderTeam.tsx
-// The founder and the workroom together: the owner in an arch (with their
-// permission; their logo otherwise), their story in their own words, and
-// the team named beneath with their roles. (Lab: team B, "Founder letter".)
-//
-// The story appears in quotation marks only when it's written as "I" or
-// "we" (storyShared). Needs `team`; hides without anyone. No motion.
+// Team / tailors - Founder letter (Variant B from Boutique Component Lab)
+// The founder in an arch, her own words, her signature and the team named below.
 
 import { useBoutique } from '../../app/BoutiqueContext'
-import { Portrait, useStory } from '../story/storyShared'
+import Media from '../../components/Media'
 
 export default function FounderTeam() {
   const { boutique } = useBoutique()
-  const { owner, paragraphs, ownVoice, portrait } = useStory()
-  const team = boutique.team ?? []
-  if (!team.length) return null
+
+  const ownerName = boutique.owner?.name || 'SG Lakshmi'
+  const role = boutique.owner?.role || 'Founder & Designer'
+  const since = boutique.established || (boutique as any).started || 2019
+
+  // First sentence of the founder's story
+  const fullStory =
+    boutique.owner?.story ||
+    (boutique as any).story ||
+    'Started in 2019 with a passion for custom tailoring and bridal fashion. Today we help women look their absolute best.'
+  const quote = fullStory.split(/(?<=\.)\s/)[0].replace(/\.$/, '')
+
+  const team: { name: string; role: string }[] = (boutique as any).team || [
+    { name: 'Lakshmi', role: 'Master tailor' },
+    { name: 'Ravi', role: 'Cutting master' },
+    { name: 'Fatima', role: 'Aari karigar' },
+    { name: 'Suresh', role: 'Maggam karigar' },
+    { name: 'Meena', role: 'Finishing' },
+    { name: 'Priya', role: 'Fittings and front desk' },
+  ]
+
+  const crewLine = team
+    .map((m) => `${m.name} (${m.role.toLowerCase()})`)
+    .join(', ')
+    .replace(/, ([^,]*)$/, ' and $1')
 
   return (
-    <section id="team" className="section">
-      <div className="wrap grid gap-12 md:grid-cols-12 md:gap-16">
-        <figure className="flex items-end gap-5 md:col-span-4 md:flex-col md:items-start">
-          <Portrait file={portrait} name={owner.name} className="w-32 md:w-full md:max-w-xs" />
-          <figcaption>
-            <span className="t-3 block">{owner.name}</span>
-            {owner.role && <span className="t-small text-muted">{owner.role}</span>}
-          </figcaption>
-        </figure>
+    <section
+      id="about"
+      style={{
+        position: 'relative',
+        isolation: 'isolate',
+        overflow: 'hidden',
+        background: 'var(--c-paper)',
+        color: 'var(--c-ink)',
+        padding: 'clamp(5rem, 12cqw, 10rem) 0',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1240,
+          margin: '0 auto',
+          padding: '0 clamp(1.25rem, 5cqw, 4rem)',
+          boxSizing: 'border-box',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+          gap: 'clamp(40px, 7cqw, 96px)',
+          alignItems: 'center',
+        }}
+      >
+        {/* Founder in an Arch */}
+        <div
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+            aspectRatio: '4/5',
+            borderRadius: '999px 999px 0 0',
+            boxShadow: '0 30px 60px -30px color-mix(in oklab, var(--c-dark) 25%, transparent)',
+            background: 'var(--c-light)',
+          }}
+        >
+          <Media
+            file="owner.jpg"
+            alt={ownerName}
+            className="h-full w-full object-cover"
+          />
+        </div>
 
-        <div className="md:col-span-8">
-          <h2 className="t-1 max-w-[14ch] text-balance">Who makes your clothes</h2>
-          {paragraphs.length > 0 && (
-            <div className="t-lead mt-8 max-w-[36ch] space-y-5 text-muted">
-              {paragraphs.map((p, i) => (
-                <p key={p}>{ownVoice && i === 0 ? `“${p}` : p}{ownVoice && i === paragraphs.length - 1 ? '”' : ''}</p>
-              ))}
-            </div>
-          )}
+        {/* Founder Letter Content */}
+        <div>
+          {/* Eyebrow */}
+          <span
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 14,
+              fontSize: 12,
+              fontWeight: 600,
+              letterSpacing: '.26em',
+              textTransform: 'uppercase',
+              color: 'var(--c-primary-ink)',
+            }}
+          >
+            <span
+              aria-hidden="true"
+              style={{
+                flex: 'none',
+                width: 32,
+                height: 1,
+                background: 'currentColor',
+                opacity: 0.55,
+              }}
+            />
+            From the founder
+          </span>
 
-          <ul className="mt-12 grid gap-x-10 gap-y-6 border-t border-ink/15 pt-8 sm:grid-cols-2">
-            {team.map((person) => (
-              <li key={person.name}>
-                <span className="t-3 block">{person.name}</span>
-                <span className="text-muted">{person.role}</span>
-              </li>
-            ))}
-          </ul>
+          {/* Large Quote */}
+          <blockquote
+            style={{
+              margin: '20px 0 0',
+              padding: 0,
+              fontFamily: 'var(--f-display)',
+              fontSize: 'clamp(1.7rem, 3.4cqw, 2.6rem)',
+              lineHeight: 1.3,
+            }}
+          >
+            “{quote}.”
+          </blockquote>
+
+          {/* Cursive Signature */}
+          <span
+            style={{
+              display: 'block',
+              marginTop: 24,
+              fontFamily: "'Allura', cursive, var(--f-display)",
+              fontSize: 'clamp(2.4rem, 5cqw, 3.4rem)',
+              lineHeight: 1,
+              color: 'var(--c-primary-ink)',
+            }}
+          >
+            {ownerName}
+          </span>
+
+          {/* Role and Year */}
+          <span
+            style={{
+              display: 'block',
+              marginTop: 6,
+              fontSize: 14,
+              color: 'var(--c-muted)',
+            }}
+          >
+            {role}, since {since}
+          </span>
+
+          {/* Team line */}
+          <p
+            style={{
+              margin: '32px 0 0',
+              paddingTop: 20,
+              borderTop: '1px solid color-mix(in oklab, var(--c-ink) 18%, transparent)',
+              fontSize: 15.5,
+              lineHeight: 1.8,
+              color: 'var(--c-muted)',
+            }}
+          >
+            With {crewLine}.
+          </p>
         </div>
       </div>
     </section>

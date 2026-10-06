@@ -1,104 +1,109 @@
 // src/sections/hero/SplitHero.tsx
-// A calm, light opening: the boutique's name and invitation on the left, one
-// tall photo of their work down the right, bleeding off the edge of the page.
-// Nothing pins and nothing is covered up, so it suits a design whose signature
-// motion belongs further down the page.
-//
-// The one moment is the arrival: the name's words rise into place while the
-// photo opens from its base. Scrolling afterwards only drifts the photo
-// inside its frame.
-//
-// Reduced motion: the resting layout, with the photo already open.
+// Lookbook split: name, tagline, WhatsApp CTA and stats on the left;
+// three-photo collage on the right with temple arches and closeups.
+// (Lab: hero C, "Lookbook split".)
 
 import { useRef } from 'react'
-import { IconBrandWhatsapp, IconMapPin } from '@tabler/icons-react'
+import { IconBrandWhatsapp } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
-import { useSite } from '../../app/SiteContext'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
 import Magnetic from '../../motion/Magnetic'
+import { rise, wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 import { fitDisplay } from '../../theme/theme'
-import { DURATION, EASE, gsap, MEDIA, SCRUB, SplitText, STAGGER, useGSAP } from '../../motion/gsap'
 
 export default function SplitHero() {
   const { boutique } = useBoutique()
-  const { find, href } = useSite()
   const root = useRef<HTMLElement>(null)
-  const { hero } = boutique.media
-  const city = boutique.branches[0]?.city
+  const { brand, media, stats } = boutique
+  const city = boutique.branches[0]?.city ?? 'Bengaluru'
+  const since = boutique.established
 
-  // "Stitching in Bengaluru since 1998", with whichever halves they gave us.
-  const since = [city && `In ${city}`, boutique.established && `since ${boutique.established}`].filter(Boolean).join(' ')
+  // Photos for the 3-image collage:
+  // 1: Hero bridal piece (tall arch)
+  // 2: Square detail / blouse
+  // 3: Second arched piece / lehenga
+  const photo1 = media.work.find((f) => f.includes('bridal')) ?? media.hero.src
+  const photo2 = media.closeups?.[0] ?? media.work.find((f) => f.includes('blouse')) ?? media.hero.src
+  const photo3 = media.work.find((f) => f.includes('lehenga') || f.includes('saree')) ?? media.work[1] ?? media.hero.src
 
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia()
-
-      mm.add(MEDIA.motion, () => {
-        const split = SplitText.create('[data-hero-name]', { type: 'words', mask: 'words' })
-        const tl = gsap.timeline()
-        tl.from(split.words, { yPercent: 115, duration: DURATION.slow, ease: EASE.enter, stagger: STAGGER.words })
-          .from('[data-hero-photo]', { clipPath: 'inset(100% 0% 0% 0%)', duration: DURATION.slow, ease: EASE.enter }, 0)
-          .from('[data-hero-line]', { autoAlpha: 0, y: 14, duration: DURATION.base, ease: EASE.settle, stagger: 0.08 }, 0.5)
-
-        // The photo drifts a little against the page as it scrolls by.
-        gsap.to('[data-hero-drift]', {
-          yPercent: -8,
-          ease: EASE.scroll,
-          scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: SCRUB.soft },
-        })
-
-        return () => {
-          tl.kill()
-          split.revert()
-        }
-      })
-
-      return () => mm.revert()
-    },
-    { scope: root },
-  )
+  useMotion(root, () => {
+    rise('[data-hero-text]', { by: 'words', delay: 0.1 })
+    wipe('[data-hero-collage]', { delay: 0.2 })
+  })
 
   return (
-    <section ref={root} id="top" className="page-top relative overflow-hidden bg-light">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-16 md:grid-cols-12 md:gap-12 md:px-0 md:pb-[12vh] md:pl-[6vw]">
-        <div className="md:col-span-6">
-          {since && (
-            <p data-hero-line className="t-small text-muted">
-              {since}
-            </p>
-          )}
-          <h1 data-hero-name className="t-hero mt-4 max-w-[11ch] text-balance" style={fitDisplay(boutique.brand.name, 10, 8)}>
-            {boutique.brand.name}
+    <section ref={root} id="top" className="relative overflow-hidden bg-paper pt-24 pb-16 md:pt-32 md:pb-24">
+      <div className="wrap flex flex-wrap items-center gap-10 lg:flex-nowrap lg:gap-16">
+        {/* Left Column: Facts & Branding */}
+        <div className="flex-1 min-w-[320px]">
+          <p data-hero-text className="text-sm font-medium tracking-wide text-muted">
+            Tailoring in {city} {since && `since ${since}`}
+          </p>
+
+          <h1
+            data-hero-text
+            className="t-hero mt-3 text-balance text-primary-ink"
+            style={fitDisplay(brand.name, 10, 8, 3.2)}
+          >
+            {brand.name}
           </h1>
-          {(boutique.highlight ?? boutique.brand.tagline) && (
-            <p data-hero-line className="t-lead mt-8 max-w-[30ch] text-muted">
-              {boutique.highlight ?? boutique.brand.tagline}
+
+          {brand.tagline && (
+            <p data-hero-text className="mt-5 text-xl font-light leading-relaxed text-ink/85 md:text-2xl">
+              {brand.tagline}
             </p>
           )}
-          <div data-hero-line className="mt-10 flex flex-wrap gap-3">
+
+          <div data-hero-text className="mt-8 flex flex-wrap items-center gap-3">
             <Magnetic>
               <Button href={whatsappLink(boutique)} variant="primary" icon={IconBrandWhatsapp}>
                 Book a fitting
               </Button>
             </Magnetic>
-            {find('contact') ? (
-              <Button to={href('contact')} variant="outline-dark" icon={IconMapPin}>
-                Visit the store
-              </Button>
-            ) : (
-              <Button href="#visit" variant="outline-dark" icon={IconMapPin}>
-                Visit the store
-              </Button>
-            )}
+            <a
+              href="#work"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/30 px-7 font-semibold text-ink transition-colors duration-200 hover:border-ink hover:bg-ink/5"
+            >
+              See our work
+            </a>
           </div>
+
+          {stats && stats.length > 0 && (
+            <dl data-hero-text className="mt-10 grid grid-cols-3 gap-4 border-t border-ink/15 pt-6">
+              {stats.slice(0, 3).map((st) => (
+                <div key={st.label} className="flex flex-col-reverse">
+                  <dt className="text-xs text-muted md:text-sm">{st.label}</dt>
+                  <dd className="font-display text-2xl font-normal leading-tight text-primary-ink md:text-3xl">
+                    {st.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
 
-        <figure data-hero-photo className="relative h-[58vh] overflow-hidden md:col-span-6 md:h-[76vh]">
-          <div data-hero-drift className="absolute inset-x-0 -top-[6%] h-[112%]">
-            <Media file={hero.src} poster={hero.poster} alt={`Work by ${boutique.brand.name}`} priority />
+        {/* Right Column: Three-photo collage */}
+        <div data-hero-collage className="flex-1 min-w-[300px] grid grid-cols-[1.3fr_1fr] items-end gap-3.5 md:gap-5">
+          {/* Main tall arch */}
+          <div className="relative aspect-[3/4.4] overflow-hidden rounded-t-full bg-light shadow-xl">
+            <Media file={photo1} alt={`Bespoke bridal work by ${brand.name}`} priority />
           </div>
-        </figure>
+
+          {/* Side stacked column */}
+          <div className="grid gap-3.5 md:gap-5">
+            {/* Square detail photo */}
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-light shadow-md">
+              <Media file={photo2} alt={`Embroidery detail by ${brand.name}`} priority />
+            </div>
+
+            {/* Smaller arch photo */}
+            <div className="relative aspect-[3/4] overflow-hidden rounded-t-full bg-light shadow-md">
+              <Media file={photo3} alt={`Custom tailoring by ${brand.name}`} priority />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
