@@ -7,9 +7,57 @@ import { createPortal } from 'react-dom'
 import { NavLink, useLocation } from 'react-router-dom'
 import { IconBrandWhatsapp, IconMenu2, IconPhone, IconX } from '@tabler/icons-react'
 import { telLink, useBoutique, whatsappLink } from '../../app/BoutiqueContext'
-import { useSite } from '../../app/SiteContext'
+import { useSite, type IPage } from '../../app/SiteContext'
 import Button from '../../components/Button'
 import { useLenis } from '../../motion/SmoothScroll'
+
+/**
+ * Detects which in-page section is currently in view when the page contains
+ * section targets (e.g. #top, #services, #about, #reviews, #contact).
+ * Returns `null` if the page doesn't have multiple matching sections.
+ */
+export function useActiveSection(pages: IPage[]) {
+  const { pathname } = useLocation()
+  const [activePath, setActivePath] = useState<string | null>(null)
+
+  useEffect(() => {
+    const targets = pages.map((p) => ({
+      path: p.path,
+      id: p.path === '' ? 'top' : p.path,
+    }))
+
+    const elements = targets
+      .map((t) => ({ ...t, el: document.getElementById(t.id) }))
+      .filter((t): t is typeof t & { el: HTMLElement } => Boolean(t.el))
+
+    if (elements.length < 2) {
+      setActivePath(null)
+      return
+    }
+
+    const onScroll = () => {
+      const scrollY = window.scrollY
+      if (scrollY < 200) {
+        setActivePath('')
+        return
+      }
+      const threshold = scrollY + 160
+      let current = elements[0].path
+      for (const item of elements) {
+        if (item.el.offsetTop <= threshold) {
+          current = item.path
+        }
+      }
+      setActivePath(current)
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [pages, pathname])
+
+  return activePath
+}
 
 /**
  * `solid` once the visitor has scrolled past the hero (or straight away on a
@@ -41,6 +89,9 @@ export function useNavScroll() {
 /** Page links for a desktop nav. The current page is marked for screen readers and styled. */
 export function PageLinks({ className = '', linkClassName = '' }: { className?: string; linkClassName?: string }) {
   const { pages, href } = useSite()
+  const lenis = useLenis()
+  const activePath = useActiveSection(pages)
+
   if (pages.length < 2) return null
   return (
     <ul className={className}>
@@ -49,7 +100,25 @@ export function PageLinks({ className = '', linkClassName = '' }: { className?: 
           <NavLink
             to={href(page.path)}
             end
-            className={({ isActive }) => `link-stitch ${isActive ? 'is-current' : 'is-quiet'} ${linkClassName}`}
+            onClick={(e) => {
+              const targetId = page.path === '' ? 'top' : page.path
+              const targetEl = document.getElementById(targetId)
+              if (targetEl) {
+                e.preventDefault()
+                if (lenis) {
+                  lenis.scrollTo(targetEl, { offset: -70 })
+                } else {
+                  targetEl.scrollIntoView({ behavior: 'smooth' })
+                }
+                const targetHash = page.path ? `#${page.path}` : ''
+                const targetUrl = targetHash ? `${window.location.pathname.replace(/\/$/, '')}/${targetHash}` : window.location.pathname
+                window.history.replaceState(null, '', targetUrl)
+              }
+            }}
+            className={({ isActive }) => {
+              const isCurrent = activePath !== null ? page.path === activePath : isActive
+              return `link-stitch ${isCurrent ? 'is-current' : 'is-quiet'} ${linkClassName}`
+            }}
           >
             {page.label}
           </NavLink>
@@ -87,6 +156,8 @@ export function MobileMenu({ buttonClassName = '' }: { buttonClassName?: string 
   const { boutique } = useBoutique()
   const { pages, href } = useSite()
   const [open, setOpen] = useMenuState()
+  const lenis = useLenis()
+  const activePath = useActiveSection(pages)
 
   if (pages.length < 2) return null
 
@@ -134,7 +205,30 @@ export function MobileMenu({ buttonClassName = '' }: { buttonClassName?: string 
                 <NavLink
                   to={href(page.path)}
                   end
-                  className={({ isActive }) => `t-1 block ${isActive ? 'text-accent-on-dark' : ''}`}
+                  onClick={(e) => {
+                    const targetId = page.path === '' ? 'top' : page.path
+                    const targetEl = document.getElementById(targetId)
+                    if (targetEl) {
+                      e.preventDefault()
+                      setOpen(false)
+                      setTimeout(() => {
+                        if (lenis) {
+                          lenis.scrollTo(targetEl, { offset: -70 })
+                        } else {
+                          targetEl.scrollIntoView({ behavior: 'smooth' })
+                        }
+                      }, 150)
+                      const targetHash = page.path ? `#${page.path}` : ''
+                      const targetUrl = targetHash ? `${window.location.pathname.replace(/\/$/, '')}/${targetHash}` : window.location.pathname
+                      window.history.replaceState(null, '', targetUrl)
+                    } else {
+                      setOpen(false)
+                    }
+                  }}
+                  className={({ isActive }) => {
+                    const isCurrent = activePath !== null ? page.path === activePath : isActive
+                    return `t-1 block ${isCurrent ? 'text-accent-on-dark' : ''}`
+                  }}
                 >
                   {page.label}
                 </NavLink>

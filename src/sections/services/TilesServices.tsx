@@ -12,14 +12,14 @@ import { rupees } from '../../app/text'
 import Button from '../../components/Button'
 import { PRICE_NOTE, useServices } from './servicesShared'
 
-export default function TilesServices() {
+export default function TilesServices({ id: sectionId = 'services' }: { id?: string } = {}) {
   const { groups, prices, delivery, askPrice } = useServices()
   const id = useId()
   const [open, setOpen] = useState(0)
   if (!groups.length) return null
 
   return (
-    <section id="services" className="section">
+    <section id={sectionId} className="section">
       <div className="wrap">
         <h2 className="t-1">What we stitch</h2>
         {prices.length > 0 && (

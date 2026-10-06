@@ -227,9 +227,9 @@
 - `interior-1.jpg`: Boutique showroom with Lord Krishna shrine, trial room, and designer gown display
 - `interior-2.jpg`: Boutique clothing display rack featuring custom stitched blouses and lehengas
 - `team-at-work.jpg`: Master tailor guiding rich Kanchipuram silk border under the sewing machine
-- `work-bridal-01.jpg`: Real bride wearing custom magenta silk saree and hand-embroidered bridal blouse
-- `work-bridal-02.jpg`: Rear view showing intricate bridal blouse back cutwork, latkans, and saree kuchu
-- `work-bridal-03.jpg`: Designer scarlet tiered ruffle occasion gown displayed at shop entrance
+- `work-bridal-01.jpg`: Bespoke royal maroon silk bridal blouse with heavy maggam elephant motifs and antique gold zari Kanchipuram silk saree
+- `work-bridal-02.jpg`: Festive royal sapphire peacock blue bridal blouse with intricate gold aari embroidery and matching pattu saree
+- `work-bridal-03.jpg`: Complete wedding trousseau emerald green silk blouse with handcrafted gold zardozi detailing and festive silk saree
 - `work-blouse-01.jpg`: Royal purple silk blouse flat lay with turquoise stone and antique gold aari work
 - `work-blouse-02.jpg`: Magenta sweetheart neckline blouse paired with pearl-beaded saree kuchu tassels
 - `work-blouse-03.jpg`: Crimson bridal silk blouse with scalloped zardosi neckline and beaded latkans

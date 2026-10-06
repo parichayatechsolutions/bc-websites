@@ -54,19 +54,23 @@ const pages: IPage[] = [
     element: (
       <>
         <SplitHero />
-        <CoverflowGallery />
-        <StitchBlouse />
-        <RailBridal />
-        <ZariHandwork />
-        <SpotlightAlterations />
-        <OrNewAlterations />
-        <TilesServices />
+        <div id="services">
+          <CoverflowGallery />
+          <StitchBlouse />
+          <RailBridal />
+          <ZariHandwork />
+          <SpotlightAlterations />
+          <OrNewAlterations />
+          <TilesServices id="services-prices" />
+        </div>
         <FounderTeam />
         <DaysProcess />
         <CardsFaq />
-        <StoreVisit />
         <SpotlightReviews />
-        <OccasionContact />
+        <div id="contact">
+          <OccasionContact />
+          <StoreVisit />
+        </div>
       </>
     ),
   },
@@ -79,7 +83,16 @@ const pages: IPage[] = [
         <PageHeader />
         <FounderTeam />
         <ThreadProcess />
-        <StoreVisit />
+        <div id="services">
+          <CoverflowGallery />
+          <RailBridal />
+          <ZariHandwork />
+        </div>
+        <SpotlightReviews />
+        <div id="contact">
+          <OccasionContact />
+          <StoreVisit />
+        </div>
       </>
     ),
   },
@@ -90,12 +103,23 @@ const pages: IPage[] = [
     element: (
       <>
         <PageHeader />
-        <TilesServices />
-        <StitchBlouse />
-        <RailBridal />
-        <SpotlightAlterations />
-        <OrNewAlterations />
-        <RingProcess />
+        <div id="services">
+          <TilesServices id="services-prices" />
+          <CoverflowGallery />
+          <StitchBlouse />
+          <RailBridal />
+          <ZariHandwork />
+          <SpotlightAlterations />
+          <OrNewAlterations />
+        </div>
+        <FounderTeam />
+        <DaysProcess />
+        <CardsFaq />
+        <SpotlightReviews />
+        <div id="contact">
+          <OccasionContact />
+          <StoreVisit />
+        </div>
       </>
     ),
   },
@@ -107,7 +131,16 @@ const pages: IPage[] = [
       <>
         <PageHeader />
         <SpotlightReviews />
-        <OccasionContact />
+        <div id="services">
+          <CoverflowGallery />
+          <RailBridal />
+          <ZariHandwork />
+        </div>
+        <FounderTeam />
+        <div id="contact">
+          <OccasionContact />
+          <StoreVisit />
+        </div>
       </>
     ),
   },
@@ -118,10 +151,16 @@ const pages: IPage[] = [
     element: (
       <>
         <PageHeader />
-        <OccasionContact />
-        <StoreVisit />
+        <div id="contact">
+          <OccasionContact />
+          <StoreVisit />
+        </div>
         <DaysProcess />
         <CardsFaq />
+        <div id="services">
+          <CoverflowGallery />
+        </div>
+        <SpotlightReviews />
       </>
     ),
   },
