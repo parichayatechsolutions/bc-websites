@@ -12,8 +12,8 @@
 - Owner's role (founder / designer / master tailor): Founder & Designer
 - Year started: 2021
 - Tagline or slogan (if they have one): Customisation Available In All Kinds Of Designer Outfits
-- Short story: how and why they started (2–4 lines, in the owner's words if possible): Established in 2021 near Hoysala Circle in Kengeri Satellite Town, Shaari Designer House specializes in custom designer blouses, festive lehengas, and customized ethnic outfits. We bring your dream outfits to life with tailored perfection.
-- What makes them different (1–2 lines, e.g. "known for bridal maggam work"): Customisation available in all kinds of designer outfits, grand bridal lehengas, and intricate embroidery.
+- Short story: how and why they started (2–4 lines, in the owner's words if possible): Established in 2021 near Hoysala Circle in Kengeri Satellite Town, Shaari Designer House specializes in custom designer blouses, festive lehengas, and customized ethnic outfits. From grand bridal aari and zardosi embroidery to contemporary cutwork blouses and custom-tailored lehengas, we bring your dream outfits to life with tailored perfection and a guaranteed first-trial fit.
+- What makes them different (1–2 lines, e.g. "known for bridal maggam work"): Personalized design consultations by Sharanya, specialized in intricate aari and zardosi bridal embroidery, custom-fit festive lehengas, and on-time delivery.
 
 ## 2. Contact
 
@@ -46,7 +46,7 @@
 - Facebook: NA
 - YouTube: NA
 - Google Business profile (the Google Maps listing): https://share.google/gZ4RGVoemQxA8k8rU
-- Google rating (e.g. 4.7): 4.6
+- Google rating (e.g. 4.7): 4.8
 - Number of Google reviews: 48
 - Justdial / other listing: https://www.justdial.com/Bangalore/Shaari-Designer-House-Near-Hoysala-Circle-Kengeri-Satellite-Town/080PXX80-XX80-211105153210-L7T4_BZDET
 
@@ -114,6 +114,42 @@
 - Express delivery time and extra charge: 48 hours, ₹300 extra
 - Payment modes (cash / UPI / card): Cash, UPI, Card
 
+## 6b. Bridal packages (optional)
+
+### Package 1
+
+- Package name: Muhurtham Bridal Essence
+- Starting price (₹): 8900
+- What's included: Pure silk bridal blouse with intricate aari and zardosi embroidery, premium cotton lining and piping, saree fall and pico, 2 trial fittings
+
+### Package 2
+
+- Package name: Royal Bride Celebration
+- Starting price (₹): 19500
+- What's included: Muhurtham aari blouse, reception designer cutwork blouse, custom festive lehenga styling, 3 personal trial fittings
+
+### Package 3
+
+- Package name: Grand Wedding Trousseau
+- Starting price (₹): 38000
+- What's included: Five bespoke ceremony blouses, bespoke designer bridal lehenga, full trousseau styling, complimentary alteration care for 1 year
+
+## 6c. Current offer (optional)
+
+- Offer title: 10% off bridal blouse handwork for wedding season bookings
+- Offer details: Valid on advance bookings for bridal zardosi and aari embroidery work
+- Valid until: 2026-12-31
+- Counter code: SHAARIBRIDE
+
+## 6d. Alterations (optional)
+
+1. Alteration: Blouse side fitting & loosening | Price: 150 | Days: 1
+2. Alteration: Blouse padding addition | Price: 300 | Days: 1
+3. Alteration: Kurti & salwar suit alteration | Price: 200 | Days: 1
+4. Alteration: Lehenga waist & length alteration | Price: 500 | Days: 2
+5. Alteration: Gown zipper replacement & refit | Price: 250 | Days: 1
+6. Alteration: Saree fall & pico finishing | Price: 120 | Days: 1
+
 ## 7. Numbers to show on the website
 
 - Years in business: 3+
@@ -133,6 +169,14 @@
 8. Name: Geethanjali | Review: Outstanding aari and zardosi work. Looked very luxurious and matched my Kanchipuram saree perfectly.
 9. Name: Pallavi | Review: Friendly designer with great styling advice. She suggested a unique back design that looked lovely.
 10. Name: Supriya | Review: Consistent quality and prompt delivery. Definitely one of the finest designer houses in Kengeri Satellite Town.
+
+## 8b. Frequently asked questions
+
+1. Question: How do I book a design consultation with designer Sharanya? | Answer: You can call or WhatsApp us on +91 99863 40423 to fix a time. We discuss your event, outfit style, necklines, and embroidery patterns.
+2. Question: How early should I give my bridal blouse? | Answer: We recommend visiting us 2 to 3 weeks before your wedding dates so our artisans can handcraft the embroidery without rush and schedule fittings comfortably.
+3. Question: Can I bring my own saree or dress fabric? | Answer: Yes! Bring your saree or fabric to our store near Hoysala Circle. We will help choose matching lining, borders, embroidery motifs, and latkans.
+4. Question: Do you offer urgent or express stitching? | Answer: Yes, we provide 48-hour express stitching for urgent functions at a small additional fee.
+5. Question: What happens if the fit needs a minor adjustment after trial? | Answer: We do trial fittings in our private fitting room and make adjustments immediately so you take home a garment that fits you flawlessly.
 
 ## 9. Brand, logo and photos
 
@@ -188,4 +232,4 @@
 - What they want most from a website (more customers / bridal bookings / looking professional / online orders): Showcase designer portfolio, attract bridal orders, professional web presence
 - Follow-up date: 2026-09-29
 - Website sold? (yes / no): no
-- Anything else we should know: Prime spot near Hoysala Circle, active Instagram presence, solid 4.6 star rating
+- Anything else we should know: Prime spot near Hoysala Circle, active Instagram presence, solid 4.8 star rating

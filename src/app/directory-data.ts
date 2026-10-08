@@ -515,7 +515,7 @@ export const DIRECTORY: IDirectoryEntry[] = [
       'Custom bridal lehengas & gowns',
       'Intricate aari & zardosi handwork',
     ],
-    rating: 4.6,
+    rating: 4.8,
     sold: false,
   },
   {

@@ -15,9 +15,9 @@ const config: BoutiqueConfig = {
     name: 'Sharanya',
     role: 'Founder & Designer',
     photo: 'owner.jpg',
-    story: 'Established in 2021 near Hoysala Circle in Kengeri Satellite Town, Shaari Designer House specializes in custom designer blouses, festive lehengas, and customized ethnic outfits. We bring your dream outfits to life with tailored perfection.',
+    story: 'Established in 2021 near Hoysala Circle in Kengeri Satellite Town, Shaari Designer House specializes in custom designer blouses, festive lehengas, and customized ethnic outfits. From grand bridal aari and zardosi embroidery to contemporary cutwork blouses and custom-tailored lehengas, we bring your dream outfits to life with tailored perfection and a guaranteed first-trial fit.',
   },
-  highlight: 'Customisation available in all kinds of designer outfits, grand bridal lehengas, and intricate embroidery.',
+  highlight: 'Personalized design consultations by Sharanya, specialized in intricate aari and zardosi bridal embroidery, custom-fit festive lehengas, and on-time delivery.',
   established: 2021,
   contact: {
     phone: '+91 90363 64507',
@@ -51,7 +51,7 @@ const config: BoutiqueConfig = {
   social: {
     instagram: 'https://instagram.com/shaari__designer__house',
     googleBusiness: 'https://share.google/gZ4RGVoemQxA8k8rU',
-    googleRating: 4.6,
+    googleRating: 4.8,
     googleReviewCount: 48,
   },
   services: {
@@ -113,10 +113,58 @@ const config: BoutiqueConfig = {
     express: '48 hours, ₹300 extra',
     paymentModes: ['Cash', 'UPI', 'Card'],
   },
+  bridalPackages: [
+    {
+      name: 'Muhurtham Bridal Essence',
+      price: 8900,
+      includes: [
+        'Pure silk bridal blouse with intricate aari and zardosi embroidery',
+        'premium cotton lining and piping',
+        'saree fall and pico',
+        '2 trial fittings',
+      ],
+    },
+    {
+      name: 'Royal Bride Celebration',
+      price: 19500,
+      includes: [
+        'Muhurtham aari blouse',
+        'reception designer cutwork blouse',
+        'custom festive lehenga styling',
+        '3 personal trial fittings',
+      ],
+    },
+    {
+      name: 'Grand Wedding Trousseau',
+      price: 38000,
+      includes: [
+        'Five bespoke ceremony blouses',
+        'bespoke designer bridal lehenga',
+        'full trousseau styling',
+        'complimentary alteration care for 1 year',
+      ],
+    },
+  ],
+  alterationPrices: [
+    { item: 'Blouse side fitting & loosening', price: 150, days: 1 },
+    { item: 'Blouse padding addition', price: 300, days: 1 },
+    { item: 'Kurti & salwar suit alteration', price: 200, days: 1 },
+    { item: 'Lehenga waist & length alteration', price: 500, days: 2 },
+    { item: 'Gown zipper replacement & refit', price: 250, days: 1 },
+    { item: 'Saree fall & pico finishing', price: 120, days: 1 },
+  ],
   stats: [
     { value: '3+', label: 'Years stitching' },
     { value: '2,800+', label: 'Garments delivered' },
     { value: '6', label: 'People on our team' },
+  ],
+  team: [
+    { name: 'Suresh', role: 'Master tailor' },
+    { name: 'Manjunath', role: 'Cutting master' },
+    { name: 'Noor', role: 'Aari karigar' },
+    { name: 'Saleem', role: 'Maggam karigar' },
+    { name: 'Geetha', role: 'Finishing and pico' },
+    { name: 'Kavya', role: 'Fittings and trials' },
   ],
   reviews: [
     {
@@ -202,24 +250,52 @@ const config: BoutiqueConfig = {
       text: 'Consistent quality and prompt delivery. Definitely one of the finest designer houses in Kengeri Satellite Town.',
     },
   ],
+  faq: [
+    {
+      question: 'How do I book a design consultation with designer Sharanya?',
+      answer: 'You can call or WhatsApp us on +91 99863 40423 to fix a time. We discuss your event, outfit style, necklines, and embroidery patterns.',
+    },
+    {
+      question: 'How early should I give my bridal blouse?',
+      answer: 'We recommend visiting us 2 to 3 weeks before your wedding dates so our artisans can handcraft the embroidery without rush and schedule fittings comfortably.',
+    },
+    {
+      question: 'Can I bring my own saree or dress fabric?',
+      answer: 'Yes! Bring your saree or fabric to our store near Hoysala Circle. We will help choose matching lining, borders, embroidery motifs, and latkans.',
+    },
+    {
+      question: 'Do you offer urgent or express stitching?',
+      answer: 'Yes, we provide 48-hour express stitching for urgent functions at a small additional fee.',
+    },
+    {
+      question: 'What happens if the fit needs a minor adjustment after trial?',
+      answer: 'We do trial fittings in our private fitting room and make adjustments immediately so you take home a garment that fits you flawlessly.',
+    },
+  ],
   media: {
-    hero: { type: 'image', src: 'work-bridal-01.jpg' },
+    hero: { type: 'image', src: 'work-blouse-01.jpg' },
     storefront: 'storefront.jpg',
     interior: ['interior-1.jpg', 'interior-2.jpg'],
     teamAtWork: 'team-at-work.jpg',
     work: [
-      'work-bridal-01.jpg',
-      'work-bridal-02.jpg',
-      'work-bridal-03.jpg',
       'work-blouse-01.jpg',
       'work-blouse-02.jpg',
       'work-blouse-03.jpg',
+      'work-bridal-01.jpg',
+      'work-bridal-02.jpg',
+      'work-bridal-03.jpg',
+      'work-kids-01.jpg',
       'work-lehenga-01.jpg',
+      'unnamed.webp',
       'work-lehenga-02.jpg',
       'work-saree-01.jpg',
-      'work-kids-01.jpg',
     ],
     closeups: ['closeup-01.jpg', 'closeup-02.jpg'],
+    heroCollage: [
+      'work-bridal-01.jpg',
+      'closeup-01.jpg',
+      'unnamed.webp',
+    ],
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
@@ -233,7 +309,7 @@ const config: BoutiqueConfig = {
     interestLevel: 'hot',
     goal: 'Showcase designer portfolio, attract bridal orders, professional web presence',
     followUpDate: '2026-09-29',
-    notes: 'Prime spot near Hoysala Circle, active Instagram presence, solid 4.6 star rating',
+    notes: 'Prime spot near Hoysala Circle, active Instagram presence, solid 4.8 star rating',
   },
 }
 

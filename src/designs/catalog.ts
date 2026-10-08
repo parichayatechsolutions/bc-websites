@@ -112,6 +112,7 @@ export const ASSIGNED: Record<string, string> = {
   '1-lavishboutique': 'regal',
   '2-vastravinyasaki': 'regal',
   '3-siddhiboutique': 'regal',
+  '4-shaaridesignerhouse': 'regal',
 }
 
 /** Same slug, same number, every time and on both the server and the page. */
