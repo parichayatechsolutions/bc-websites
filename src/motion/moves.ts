@@ -98,12 +98,26 @@ export function countUp(targets: gsap.DOMTarget, move: IMove = {}) {
  * A photo eases down from slightly too close. Animate the image inside an
  * `overflow-hidden` frame, not the frame, so the layout doesn't move.
  */
+function hasTargets(targets: gsap.DOMTarget): boolean {
+  if (!targets) return false
+  if (typeof targets === 'string') {
+    if (typeof document === 'undefined') return false
+    return document.querySelectorAll(targets).length > 0
+  }
+  if (Array.isArray(targets) || (typeof NodeList !== 'undefined' && targets instanceof NodeList)) {
+    return targets.length > 0
+  }
+  return true
+}
+
 export function settle(targets: gsap.DOMTarget, move: IMove = {}) {
+  if (!hasTargets(targets)) return undefined
   return gsap.from(targets, { scale: 1.25, duration: DURATION.slow, ease: EASE.enter, stagger: STAGGER.items, ...when(move) })
 }
 
 /** Frames uncover from one edge, one after another. The lab's "Photos wipe up". */
 export function wipe(targets: gsap.DOMTarget, { from = 'bottom', ...move }: IMove & { from?: 'bottom' | 'top' | 'left' } = {}) {
+  if (!hasTargets(targets)) return undefined
   const start = { bottom: 'inset(100% 0% 0% 0%)', top: 'inset(0% 0% 100% 0%)', left: 'inset(0% 100% 0% 0%)' }[from]
   return gsap.from(targets, { clipPath: start, duration: DURATION.slow, ease: EASE.enter, stagger: STAGGER.items, ...when(move) })
 }
@@ -114,6 +128,7 @@ export function wipe(targets: gsap.DOMTarget, { from = 'bottom', ...move }: IMov
  * patterns are uncovered instead of squashed.
  */
 export function draw(targets: gsap.DOMTarget, { from = 'centre', ...move }: IMove & { from?: 'centre' | 'start' | 'top' } = {}) {
+  if (!hasTargets(targets)) return undefined
   const start = { centre: 'inset(0% 50% 0% 50%)', start: 'inset(0% 100% 0% 0%)', top: 'inset(0% 0% 100% 0%)' }[from]
   return gsap.from(targets, { clipPath: start, duration: DURATION.slow, ease: EASE.morph, stagger: STAGGER.items, ...when(move) })
 }
@@ -123,6 +138,7 @@ export function draw(targets: gsap.DOMTarget, { from = 'centre', ...move }: IMov
  * on a rail. One easing out, no wobble back (DESIGN.md: no spring overshoot).
  */
 export function sway(targets: gsap.DOMTarget, move: IMove = {}) {
+  if (!hasTargets(targets)) return undefined
   return gsap.from(targets, {
     rotation: (i: number) => (i % 2 ? 5 : -5),
     transformOrigin: '50% 0%',
@@ -135,6 +151,7 @@ export function sway(targets: gsap.DOMTarget, move: IMove = {}) {
 
 /** Rating stars appear one by one. */
 export function starsIn(targets: gsap.DOMTarget, move: IMove = {}) {
+  if (!hasTargets(targets)) return undefined
   return gsap.from(targets, { autoAlpha: 0, scale: 0.6, duration: DURATION.quick, ease: EASE.settle, stagger: STAGGER.items, ...when(move) })
 }
 

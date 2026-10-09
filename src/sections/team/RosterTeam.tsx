@@ -28,11 +28,11 @@ export default function RosterTeam() {
       ? rawTeam
       : [
           {
-            name: boutique.story.owner.name,
-            role: boutique.story.owner.role ?? 'Founder & Lead Designer',
-            years: boutique.brand.established ? new Date().getFullYear() - boutique.brand.established : undefined,
-            line: boutique.story.owner.quote ?? 'Guiding every cut, drape, and stitch with artisanal precision.',
-            photo: boutique.media.owner?.src,
+            name: boutique.owner?.name ?? `${boutique.brand.name} Master Tailor`,
+            role: boutique.owner?.role ?? 'Founder & Lead Designer',
+            years: boutique.established ? new Date().getFullYear() - boutique.established : undefined,
+            line: boutique.owner?.story ?? boutique.highlight ?? 'Guiding every cut, drape, and stitch with artisanal precision.',
+            photo: boutique.owner?.photo,
           },
           {
             name: 'Master Tailor & Pattern Cutter',
