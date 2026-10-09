@@ -26,7 +26,7 @@ export const FONTS = {
   cormorantJost: {
     display: 'Cormorant Garamond',
     body: 'Jost',
-    href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;600&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap',
   },
 
   /** Roman inscriptional capitals with a friendly grotesque. Formal and ceremonial, like a wedding invitation. */

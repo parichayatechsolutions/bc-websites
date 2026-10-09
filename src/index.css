@@ -23,6 +23,16 @@
   color: var(--c-ink);
 }
 
+.luxe-theme .t-hero,
+.luxe-theme .t-1,
+.luxe-theme .t-2,
+.luxe-theme h1,
+.luxe-theme h2,
+.luxe-theme .font-display,
+.luxe-theme [data-hero-name] {
+  font-style: italic;
+}
+
 .luxe-theme .section {
   padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
 }
