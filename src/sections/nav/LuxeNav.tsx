@@ -29,9 +29,7 @@ export default function LuxeNav() {
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-3 md:px-10">
         {/* Logo and Name */}
         <Link to={href('')} className="group flex min-w-0 items-center gap-3">
-          <div className="relative rounded-full ring-2 ring-accent-on-dark/80 ring-offset-2 ring-offset-dark transition-transform duration-300 ease-stitch group-hover:scale-105">
-            <Logo className="h-10 w-10 shrink-0" />
-          </div>
+          <Logo className="h-10 w-10 shrink-0 object-contain transition-transform duration-300 ease-stitch group-hover:scale-105" />
           <span className="line-clamp-2 font-display text-lg tracking-[0.02em] leading-tight md:text-xl text-light">
             {boutique.brand.name}
           </span>
