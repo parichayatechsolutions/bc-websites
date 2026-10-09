@@ -17,7 +17,7 @@ import { useStory } from './storyShared'
 
 export default function TabsStory() {
   const { boutique } = useBoutique()
-  const { owner, paragraphs: rawParagraphs, ownVoice } = useStory()
+  const { owner, paragraphs: rawParagraphs, ownVoice, portrait } = useStory()
   const root = useRef<HTMLElement>(null)
   const id = useId()
   const [active, setActive] = useState(0)
@@ -40,21 +40,64 @@ export default function TabsStory() {
 
   const promises = trustPromises(boutique)
   const team = boutique.team ?? []
-  const photo = boutique.media.teamAtWork ?? boutique.media.interior?.[0]
+  const storyPhoto =
+    portrait ??
+    boutique.media.teamAtWork ??
+    boutique.media.interior?.[0] ??
+    boutique.media.work?.[0]
+  const promisePhoto =
+    boutique.media.closeups?.[0] ??
+    boutique.media.work?.[0] ??
+    boutique.media.interior?.[0] ??
+    boutique.media.storefront
+  const workroomPhoto =
+    boutique.media.teamAtWork ??
+    boutique.media.interior?.[0] ??
+    boutique.media.work?.[0]
 
   const panels: { name: string; body: ReactNode }[] = [
     {
       name: 'Our story',
       body: (
-        <div className="t-lead max-w-[40ch] space-y-5">
-          {paragraphs.map((p, i) => (
-            <p key={p}>
-              {ownVoice && i === 0 ? '“' : ''}
-              {p}
-              {ownVoice && i === paragraphs.length - 1 ? '”' : ''}
-            </p>
-          ))}
-          <p className="t-3">{owner.name}</p>
+        <div className="grid gap-10 md:grid-cols-12 md:items-center">
+          <div className={`${storyPhoto ? 'md:col-span-7' : 'max-w-[48ch]'} space-y-6`}>
+            <div className="t-lead space-y-5">
+              {paragraphs.map((p, i) => (
+                <p key={p}>
+                  {ownVoice && i === 0 ? '“' : ''}
+                  {p}
+                  {ownVoice && i === paragraphs.length - 1 ? '”' : ''}
+                </p>
+              ))}
+            </div>
+            <div className="border-l-2 border-primary-ink/30 pl-4 pt-1">
+              <p className="t-3 font-semibold text-primary-ink">{owner.name}</p>
+              {owner.role && <p className="t-small text-muted">{owner.role}</p>}
+            </div>
+          </div>
+          {storyPhoto && (
+            <div className="flex justify-center md:col-span-5 md:justify-end">
+              <figure className="group relative w-full max-w-xs">
+                <div className="arch relative aspect-[3/4] overflow-hidden bg-paper shadow-2xl ring-1 ring-ink/10 transition-transform duration-500 hover:scale-[1.02]">
+                  <Media
+                    file={storyPhoto}
+                    alt={portrait ? owner.name : `${boutique.brand.name} atelier`}
+                    priority
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                    <p className="font-serif text-lg font-medium tracking-wide">
+                      {portrait ? owner.name : boutique.brand.name}
+                    </p>
+                    <p className="text-xs uppercase tracking-wider text-white/80">
+                      {portrait && owner.role ? owner.role : 'Founder & Designer'}
+                    </p>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          )}
         </div>
       ),
     },
@@ -63,38 +106,87 @@ export default function TabsStory() {
           {
             name: 'Our promise',
             body: (
-              <ul className="grid max-w-3xl gap-6 sm:grid-cols-2">
-                {promises.map(({ title, text }) => (
-                  <li key={title} className="border-t border-ink/15 pt-4">
-                    <p className="t-3">{title}</p>
-                    <p className="mt-1 text-muted">{text}</p>
-                  </li>
-                ))}
-              </ul>
+              <div className="grid gap-10 md:grid-cols-12 md:items-center">
+                <ul className={`${promisePhoto ? 'md:col-span-7' : 'max-w-3xl'} grid gap-6 sm:grid-cols-2`}>
+                  {promises.map(({ title, text }) => (
+                    <li key={title} className="border-t border-ink/15 pt-4">
+                      <p className="t-3 font-semibold text-primary-ink">{title}</p>
+                      <p className="mt-1 text-muted">{text}</p>
+                    </li>
+                  ))}
+                </ul>
+                {promisePhoto && (
+                  <div className="flex justify-center md:col-span-5 md:justify-end">
+                    <figure className="group relative w-full max-w-xs">
+                      <div className="arch relative aspect-[3/4] overflow-hidden bg-paper shadow-2xl ring-1 ring-ink/10 transition-transform duration-500 hover:scale-[1.02]">
+                        <Media
+                          file={promisePhoto}
+                          alt={`${boutique.brand.name} craftsmanship standards`}
+                          priority
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                          <p className="font-serif text-lg font-medium tracking-wide">
+                            Artisanal Standards
+                          </p>
+                          <p className="text-xs uppercase tracking-wider text-white/80">
+                            Guaranteed Fit & Finish
+                          </p>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                )}
+              </div>
             ),
           },
         ]
       : []),
-    ...(photo || team.length
+    ...(workroomPhoto || team.length
       ? [
           {
             name: 'Our workroom',
             body: (
-              <div className="grid gap-8 md:grid-cols-2">
-                {photo && (
-                  <div className="aspect-[4/3] overflow-hidden bg-paper">
-                    <Media file={photo} alt={`Inside ${boutique.brand.name}`} />
+              <div className="grid gap-10 md:grid-cols-12 md:items-center">
+                <div className={`${workroomPhoto ? 'md:col-span-7' : 'max-w-3xl'} space-y-6`}>
+                  {team.length > 0 ? (
+                    <ul className="grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                      {team.map((t) => (
+                        <li key={t.name} className="border-t border-ink/15 pt-3">
+                          <p className="t-3 font-semibold text-primary-ink">{t.name}</p>
+                          <p className="mt-0.5 text-muted">{t.role}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="t-lead">
+                      Every garment is crafted in-house by our dedicated master tailors, pattern cutters, and embroidery karigars.
+                    </p>
+                  )}
+                </div>
+                {workroomPhoto && (
+                  <div className="flex justify-center md:col-span-5 md:justify-end">
+                    <figure className="group relative w-full max-w-xs">
+                      <div className="arch relative aspect-[3/4] overflow-hidden bg-paper shadow-2xl ring-1 ring-ink/10 transition-transform duration-500 hover:scale-[1.02]">
+                        <Media
+                          file={workroomPhoto}
+                          alt={`Inside ${boutique.brand.name} workroom`}
+                          priority
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                          <p className="font-serif text-lg font-medium tracking-wide">
+                            Our Workroom
+                          </p>
+                          <p className="text-xs uppercase tracking-wider text-white/80">
+                            Handcrafted in Atelier
+                          </p>
+                        </div>
+                      </div>
+                    </figure>
                   </div>
-                )}
-                {team.length > 0 && (
-                  <ul className="space-y-4">
-                    {team.map((t) => (
-                      <li key={t.name}>
-                        <p className="t-3">{t.name}</p>
-                        <p className="text-muted">{t.role}</p>
-                      </li>
-                    ))}
-                  </ul>
                 )}
               </div>
             ),

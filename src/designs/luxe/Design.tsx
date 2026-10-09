@@ -91,23 +91,13 @@ const pages: IPage[] = [
         <CoverHero />
 
         {/* ── 01. About Section ── */}
-        <section id="about" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 01 · Heritage & Vision"
-            title="Heritage & Founder's Story"
-            subtitle="Handcrafted couture tailoring, artisanal embroidery heritage, and our founder’s story."
-          />
+        <section id="about" className="scroll-mt-24 border-t border-ink/10">
           {/* 07. Owner's story: Story tabs (S) */}
           <TabsStory />
         </section>
 
         {/* ── 02. Stitching Atelier Section ── */}
-        <section id="stitching" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 02 · Atelier & Fittings"
-            title="Bespoke Stitching Atelier"
-            subtitle="Interactive custom blouse neckline & sleeve design studio, precision alteration craftsmanship, and real-time trial progress tracking."
-          />
+        <section id="stitching" className="scroll-mt-24 border-t border-ink/10">
           {/* 18. Blouse Design Picker: Sticky Preview (S) */}
           <StickyBlouse />
 
