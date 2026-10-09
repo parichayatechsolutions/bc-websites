@@ -38,7 +38,7 @@ export default function InitialsReviews() {
   return (
     <section ref={root} id="reviews" className="section">
       <div className="wrap max-w-4xl">
-        <h2 className="t-1 max-w-[12ch] text-balance">What customers say</h2>
+        <h2 className="t-1">What customers say</h2>
         {rating && (
           <div className="mt-5 flex items-center gap-3 text-primary-ink">
             <Stars rating={rating} />

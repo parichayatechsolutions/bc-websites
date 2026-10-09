@@ -35,7 +35,7 @@ export default function GridInstagram() {
   return (
     <section ref={root} className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[14ch] text-balance">Fresh from the workroom</h2>
+        <h2 className="t-1">Fresh from the workroom</h2>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-y border-ink/10 py-5">
           <div className="flex min-w-0 items-center gap-4">

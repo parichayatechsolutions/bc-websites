@@ -44,7 +44,7 @@ export default function TopicsFaq() {
   return (
     <section id="questions" className="section">
       <div className="wrap max-w-4xl">
-        <h2 className="t-1 max-w-[12ch] text-balance">Questions, answered</h2>
+        <h2 className="t-1">Questions, answered</h2>
         {topics.length > 1 && (
           <div role="tablist" aria-label="Topics" onKeyDown={onKey} className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-ink/15">
             {topics.map((t, i) => (

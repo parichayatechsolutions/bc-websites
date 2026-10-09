@@ -157,12 +157,60 @@ const config: BoutiqueConfig = {
     { value: '6', label: 'People on our team' },
   ],
   team: [
-    { name: 'Lakshmi', role: 'Master tailor' },
-    { name: 'Ravi', role: 'Cutting master' },
-    { name: 'Fatima', role: 'Aari karigar' },
-    { name: 'Suresh', role: 'Maggam karigar' },
-    { name: 'Meena', role: 'Finishing' },
-    { name: 'Priya', role: 'Fittings and front desk' },
+    {
+      name: 'Lakshmi',
+      role: 'Master tailor & Lead Designer',
+      years: 5,
+      specialty: 'Bridal Blouses & Bespoke Couture',
+      line: 'Creates bespoke bridal blouses, intricate necklines, and structured bridal fits.',
+      howTheyWork:
+        'Takes 14 anatomical measurements, conducts personal trial sessions, and engineers structured fits so each blouse feels effortless and stays snug all day.',
+    },
+    {
+      name: 'Ravi',
+      role: 'Cutting master',
+      years: 5,
+      specialty: 'Pattern Drafting & Fabric Shearing',
+      line: 'Specializes in high-precision pattern drafting, grain alignment, and 16-kali lehenga cuts.',
+      howTheyWork:
+        'Drafts customized paper patterns accounting for individual shoulder slopes and armhole ease before making the first scissor cut into pure bridal silks.',
+    },
+    {
+      name: 'Fatima',
+      role: 'Aari karigar',
+      years: 4,
+      specialty: 'Aari Needlework & Resham Threadwork',
+      line: 'Specializes in delicate floral vines, nakshi spring work, and fine seed pearl detailing.',
+      howTheyWork:
+        'Works with the fine traditional aari needle on a taut wooden frame, weaving delicate metallic zari loops and resham embroidery with millimeter precision.',
+    },
+    {
+      name: 'Suresh',
+      role: 'Maggam karigar',
+      years: 4,
+      specialty: 'Temple Zari & Heavy Maggam Jaal',
+      line: 'Specializes in grand South Indian temple motifs, antique zardosi, and bridal lattice borders.',
+      howTheyWork:
+        'Mounts heavy Kanchipuram silks on traditional wooden maggam cots, hand-sewing antique gold coils, kundan stones, and embossed motifs needle by needle.',
+    },
+    {
+      name: 'Meena',
+      role: 'Finishing & Handwork artisan',
+      years: 3,
+      specialty: 'Hand Turpai, Piping & Custom Latkans',
+      line: 'Specializes in invisible hand-hem turpai, contrast edge piping, and artisanal tassels.',
+      howTheyWork:
+        'Hand-stitches inner seam covers to protect sensitive skin, attaches handmade fabric latkans, and steam-presses every finished garment before handover.',
+    },
+    {
+      name: 'Priya',
+      role: 'Fittings coordinator & Client consult',
+      years: 3,
+      specialty: 'Design Consultation & Trial Fitting',
+      line: 'Specializes in saree-to-blouse style matching, trial schedules, and client fit reviews.',
+      howTheyWork:
+        'Guides clients through neckline swatches and embroidery catalogs, coordinates trial fitting adjustments, and guarantees on-time delivery.',
+    },
   ],
   reviews: [
     {
@@ -274,6 +322,19 @@ const config: BoutiqueConfig = {
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
+    captions: {
+      'work-bridal-01.jpg': 'Royal Muhurtham Maggam Bridal Blouse in crimson pure silk with temple motifs',
+      'work-blouse-01.jpg': 'Royal Purple Peacock Zari Designer Blouse with square cutout back',
+      'work-blouse-02.jpg': 'Rani Pink Scallop Cutwork Designer Blouse with pearl and gold beadwork',
+      'work-blouse-03.jpg': 'Emerald Green Classic Silk Blouse with contrast peach piping and zari cuffs',
+      'work-bridal-02.jpg': 'Royal Violet All-Over Maggam Bridal Blouse with dense lattice jaal work',
+      'work-bridal-03.jpg': 'Mint Teal Floral Aari & Pearl Bridal Blouse with resham embroidery',
+      'work-kids-01.jpg': 'Kids Mustard & Purple Traditional Pure Silk Pattu Pavadai Choli Set',
+      'work-lehenga-01.jpg': 'Lilac Shimmer Reception Designer Lehenga with sequin choli and can-can volume',
+      'work-lehenga-02.jpg': 'Handcrafted 16-Kali Designer Festive Lehenga with rich woven zari border',
+      'work-saree-01.jpg': 'Blush Peach Artisanal Cutwork Saree Blouse with keyhole back and pearl drops',
+      'after-01.jpg': 'Blouse refitted with structured princess darts and neat armhole alteration',
+    },
   },
   permissions: { showOwnerPhoto: true, showPrices: true },
   demo: { noindex: true, sold: false, preparedBy: 'Tech Team' },

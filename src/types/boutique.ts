@@ -130,6 +130,10 @@ export interface TeamMember {
   name: string
   role: string
   years?: number
+  /** What garments, cuts, or handwork they build and specialize in. */
+  specialty?: string
+  /** How they work, their craft process and technique. */
+  howTheyWork?: string
   /** One line about them, as they or the owner put it. */
   line?: string
   /** Only when the person agreed to their photo being shown. Never generated. */

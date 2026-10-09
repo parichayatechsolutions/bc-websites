@@ -34,7 +34,7 @@ export default function StepsContact() {
   return (
     <section ref={root} id="contact" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[12ch] text-balance">How ordering works</h2>
+        <h2 className="t-1">How ordering works</h2>
         <div className="relative mt-14">
           <span
             data-thread
