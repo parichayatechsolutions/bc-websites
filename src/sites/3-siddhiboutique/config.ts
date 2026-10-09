@@ -118,6 +118,44 @@ const config: BoutiqueConfig = {
     { value: '5,000+', label: 'Garments delivered' },
     { value: '4', label: 'People on our team' },
   ],
+  team: [
+    {
+      name: 'Siddhi',
+      role: 'Founder & Designer',
+      years: 9,
+      specialty: 'Bespoke Blouses & Saree Upcycling',
+      line: 'Specializes in transforming heritage sarees into designer wear and crafting precision blouses.',
+      howTheyWork:
+        'Personally consults on neckline designs, structural fit adjustments, and creative saree repurposing plans.',
+    },
+    {
+      name: 'Gopal',
+      role: 'Master Pattern Cutter',
+      years: 8,
+      specialty: 'Paper Pattern Drafting & Silk Cutting',
+      line: 'Drafts bespoke templates tailored to individual shoulder slope and posture.',
+      howTheyWork:
+        'Creates personalized card patterns to record exact customer measurements for reliable fits across every order.',
+    },
+    {
+      name: 'Parveen',
+      role: 'Maggam & Bead Karigar',
+      years: 6,
+      specialty: 'Temple Motifs & Antique Zardosi',
+      line: 'Specializes in bridal sleeve borders, peacock motifs, and antique gold zardosi.',
+      howTheyWork:
+        'Hand-embroiders antique gold coils, kundan stones, and glass beads directly onto mounted pure silk panels.',
+    },
+    {
+      name: 'Sunitha',
+      role: 'Finishing & Handwork Artisan',
+      years: 5,
+      specialty: 'Saree Fall & Pico, Invisible Turpai',
+      line: 'Master of clean edge finishing, invisible hand-hemming, and garment pressing.',
+      howTheyWork:
+        'Inspects all seams, installs concealed zippers, and steam-presses garments for flawless handover.',
+    },
+  ],
   reviews: [
     {
       name: 'Sharanya',
@@ -230,6 +268,21 @@ const config: BoutiqueConfig = {
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
+    captions: {
+      'work-blouse-01.jpg': 'Designer blouse with intricate neck cutwork and gold bead piping',
+      'work-blouse-02.jpg': 'Princess-cut festive silk blouse with contrast piping and elbow sleeves',
+      'work-blouse-03.jpg': 'Handcrafted designer blouse with jewel neckline and neat armhole fitting',
+      'work-blouse-04.jpg': 'Traditional silk blouse with gold zari border and custom latkan tassels',
+      'work-blouse-05.jpg': 'Raw silk embroidered blouse with delicate resham floral motifs',
+      'work-bridal-01.jpg': 'Royal muhurtham bridal blouse with heavy maggam jaal and temple motifs',
+      'work-bridal-02.jpg': 'Reception bridal blouse with zardosi lattice work and fine stone highlights',
+      'work-bridal-03.jpg': 'Pastel bridal blouse with antique gold threadwork and pearl bead drops',
+      'work-kids-01.jpg': 'Handcrafted traditional pattu pavadai with rich border and soft comfort lining',
+      'work-lehenga-01.jpg': 'Festive designer lehenga with circular flare skirt and embellished choli',
+      'work-lehenga-02.jpg': 'Custom-tailored bridal lehenga with layered volume and hand-worked dupatta',
+      'work-saree-01.jpg': 'Heritage silk saree upcycled into an elegant long designer gown',
+      'after-01.jpg': 'Blouse alteration with restructured princess darts and tailored side fitting',
+    },
   },
   bridalPackages: [
     {

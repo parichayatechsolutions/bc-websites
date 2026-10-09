@@ -159,12 +159,69 @@ const config: BoutiqueConfig = {
     { value: '6', label: 'People on our team' },
   ],
   team: [
-    { name: 'Suresh', role: 'Master tailor' },
-    { name: 'Manjunath', role: 'Cutting master' },
-    { name: 'Noor', role: 'Aari karigar' },
-    { name: 'Saleem', role: 'Maggam karigar' },
-    { name: 'Geetha', role: 'Finishing and pico' },
-    { name: 'Kavya', role: 'Fittings and trials' },
+    {
+      name: 'Sharanya',
+      role: 'Founder & Lead Designer',
+      years: 3,
+      specialty: 'Designer Blouse Styling & Trousseau Planning',
+      line: 'Passionate designer creating bespoke bridal ensembles with flawless first-trial fits.',
+      howTheyWork:
+        'Guides customers through neckline swatches, customizes embroidery motifs to saree borders, and conducts fitting checkups.',
+    },
+    {
+      name: 'Suresh',
+      role: 'Master tailor',
+      years: 6,
+      specialty: 'Structured Bridal Blouses & Contoured Fits',
+      line: 'Specializes in bridal blouse assembly, padded bust shaping, and seamless zipper installation.',
+      howTheyWork:
+        'Converts pattern cuts into contoured garments with reinforced stitching and clean inner finish.',
+    },
+    {
+      name: 'Manjunath',
+      role: 'Cutting master',
+      years: 6,
+      specialty: 'High-Precision Patterns & 16-Kali Lehenga Cuts',
+      line: 'Specializes in pattern drafting for tricky body contours and circular flares.',
+      howTheyWork:
+        'Drafts customized paper patterns accounting for individual shoulder slopes before cutting pure silks.',
+    },
+    {
+      name: 'Noor',
+      role: 'Aari karigar',
+      years: 5,
+      specialty: 'Delicate Resham Vines & Seed Pearl Accents',
+      line: 'Handcrafts delicate resham threadwork, nakshi spring detailing, and pearl piping.',
+      howTheyWork:
+        'Stretches fabrics on wooden embroidery slate cots to weave intricate metallic zari loops needle by needle.',
+    },
+    {
+      name: 'Saleem',
+      role: 'Maggam karigar',
+      years: 4,
+      specialty: 'Temple Motifs & Heavy Zardosi Jaal',
+      line: 'Specializes in bridal sleeve jaal, antique gold coils, and kundan stone encrusting.',
+      howTheyWork:
+        'Hand-embroiders antique zari coils and 3D temple motifs onto bridal silk sleeves and necklines.',
+    },
+    {
+      name: 'Geetha',
+      role: 'Finishing and pico',
+      years: 3,
+      specialty: 'Hand Turpai, Piping & Custom Latkans',
+      line: 'Specializes in invisible hand-hem turpai, saree fall/pico, and artisanal latkan tassels.',
+      howTheyWork:
+        'Hand-stitches inner seam covers to protect sensitive skin and steam-presses garments for handover.',
+    },
+    {
+      name: 'Kavya',
+      role: 'Fittings and trials',
+      years: 3,
+      specialty: 'Fitting Checkups & Measurement Profiling',
+      line: 'Manages private fitting sessions, verifies ease and posture drape, and schedules deliveries.',
+      howTheyWork:
+        'Coordinates trial fitting adjustments and ensures garments are ready on the promised delivery date.',
+    },
   ],
   reviews: [
     {
@@ -300,6 +357,21 @@ const config: BoutiqueConfig = {
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
+    captions: {
+      'hero-landscape.jpg': 'Designer festive lehenga and handcrafted blouse collection',
+      'work-blouse-01.jpg': 'Princess-cut designer blouse with contrast piping and elbow sleeves',
+      'work-blouse-02.jpg': 'Cutwork neck designer blouse with antique gold bead detailing',
+      'work-blouse-03.jpg': 'Heritage silk blouse with traditional temple borders and dori tassels',
+      'work-bridal-01.jpg': 'Grand muhurtham bridal blouse with intricate aari and zardosi embroidery',
+      'work-bridal-02.jpg': 'Reception bridal blouse in jewel tones with dense zardosi lattice work',
+      'work-bridal-03.jpg': 'Pastel wedding blouse with resham thread floral vines and pearl droplets',
+      'work-kids-01.jpg': 'Kids traditional pattu pavadai with rich border and soft breathable lining',
+      'work-lehenga-01.jpg': 'Custom festive lehenga with circular flare skirt and embellished choli',
+      'unnamed.webp': 'Signature designer bridal look with handcrafted veil and bespoke choli',
+      'work-lehenga-02.jpg': 'Handcrafted bridal lehenga with layered can-can volume and scalloped dupatta',
+      'work-saree-01.jpg': 'Bespoke designer saree styling with matching embroidered blouse',
+      'after-01.jpg': 'Blouse alteration with restructured princess darts and tailored side fitting',
+    },
   },
   permissions: { showOwnerPhoto: true, showPrices: true },
   demo: { noindex: true, sold: false, preparedBy: 'Tech Team' },

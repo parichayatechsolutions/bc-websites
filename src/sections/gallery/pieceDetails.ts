@@ -146,29 +146,29 @@ const LAVISH_PIECES: Record<string, PieceDetail> = {
  * checking specific curated records first, then boutique captions, then smart generation.
  */
 export function getPieceDetails(file: PhotoFile, boutique: BoutiqueConfig): PieceDetail {
-  // Check curated piece map first
-  if (LAVISH_PIECES[file]) {
+  // Check curated piece map for 1-lavishboutique
+  if (boutique.slug === '1-lavishboutique' && LAVISH_PIECES[file]) {
     return LAVISH_PIECES[file]
   }
 
   const category = photoCategory(file) ?? 'Custom Stitched'
   const caption = boutique.media.captions?.[file]
 
-  const title = caption
-    ? caption.split(',')[0]
-    : `${category} by ${boutique.brand.name}`
+  const title = caption ? caption : `${category} by ${boutique.brand.name}`
+  const handworkText = boutique.services?.handwork?.slice(0, 3).join(', ') || 'Aari, Maggam & Zari Handwork'
+  const fabricText = boutique.fabrics?.[0]?.name ? `${boutique.fabrics[0].name} with soft lining` : 'Pure silk & raw silk with soft cotton lining'
 
   return {
     title,
-    category,
-    timeline: `${boutique.pricing.deliveryDays || 7} Days · Custom Trial`,
+    category: category.toLowerCase().includes('bridal') ? 'Bridal Masterpiece' : category,
+    timeline: `${boutique.pricing?.deliveryDays ?? 7} Days · Trial Fitting Included`,
     description: caption
-      ? `${caption}. Tailored to your exact measurements with premium finishing and custom design consultation at ${boutique.brand.name}.`
+      ? `${caption}. Handcrafted with artisanal precision, personalized contouring, and luxury finishing at ${boutique.brand.name}.`
       : `Bespoke handcrafted ${category.toLowerCase()} stitched with precision contouring, premium linings, and signature embroidery at ${boutique.brand.name}.`,
-    handwork: boutique.services.handwork.slice(0, 2).join(' & ') || 'Hand Embroidery & Aari Work',
+    handwork: handworkText,
     silhouette: 'Custom tailored contour fit with personalized neckline and comfortable armhole ease',
     occasion: 'Weddings, receptions, festivals, and special family celebrations',
-    fabric: 'Pure silk, raw silk, or client-provided fabric with premium pre-shrunk cotton lining',
-    tags: ['Custom Fit', 'Artisan Stitched', 'Trial Fitting', category],
+    fabric: fabricText,
+    tags: [category, 'Custom Fit', 'Hand Embroidered', 'Bespoke'],
   }
 }

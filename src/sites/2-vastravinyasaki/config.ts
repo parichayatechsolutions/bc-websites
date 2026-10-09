@@ -188,6 +188,53 @@ const config: BoutiqueConfig = {
     { value: '3,500+', label: 'Garments delivered' },
     { value: '6', label: 'People on our team' },
   ],
+  team: [
+    {
+      name: 'Pooja Rani',
+      role: 'Founder & Fashion Designer (B.Sc)',
+      years: 5,
+      specialty: 'Bridal Masterpieces & Designer Blouses',
+      line: 'B.Sc Fashion Designer creating bespoke bridal ensembles and signature contour cuts.',
+      howTheyWork:
+        'Crafts custom fashion illustrations, conducts body-type consultations, and ensures first-trial fitting accuracy with structural dart engineering.',
+    },
+    {
+      name: 'Ramesh',
+      role: 'Senior Cutting Master',
+      years: 6,
+      specialty: 'Precision Pattern Cuts & Saree Drapes',
+      line: 'Specializes in pattern drafting for tricky body contours and circular flare lehengas.',
+      howTheyWork:
+        'Measures 14 anatomical points and hand-cuts pure silks along the natural grain for drape symmetry and comfort.',
+    },
+    {
+      name: 'Shabana',
+      role: 'Aari & Zardosi Artisan',
+      years: 4,
+      specialty: 'Resham Threadwork & Kundan Motifs',
+      line: 'Handcrafts delicate floral resham vines, cutwork borders, and stone highlights.',
+      howTheyWork:
+        'Works needle-by-needle on traditional wooden slate frames to execute intricate bridal neckline and sleeve borders.',
+    },
+    {
+      name: 'Manjula',
+      role: 'Saree Kuchu Specialist',
+      years: 4,
+      specialty: 'Silk Thread Kuchu & Pearl Drops',
+      line: 'Signature boutique specialist in traditional and designer saree pallu tassels.',
+      howTheyWork:
+        'Hand-weaves pure silk crochet loops, crystal beads, and dual-tone thread tassels directly onto saree pallus.',
+    },
+    {
+      name: 'Geetha',
+      role: 'Finishing & Trial Tailor',
+      years: 3,
+      specialty: 'Invisible Hemming & Trial Adjustments',
+      line: 'Ensures luxury inner finishing, armhole ease, and skin-soft comfort lining.',
+      howTheyWork:
+        'Hand-stitches inner seam covers, presses each garment, and assists during client trial fitting sessions.',
+    },
+  ],
   reviews: [
     {
       name: 'Mamtha',
@@ -320,6 +367,20 @@ const config: BoutiqueConfig = {
     alterations: [
       { before: 'before-01.jpg', after: 'after-01.jpg' },
     ],
+    captions: {
+      'hero-landscape.jpg': 'Bespoke bridal blouse with antique gold zari and designer saree tassels',
+      'work-blouse-01.jpg': 'Designer boat-neck blouse with intricate resham thread embroidery and contrast piping',
+      'work-blouse-02.jpg': 'Sweetheart neck raw silk bridal blouse with handcrafted beadwork borders',
+      'work-blouse-03.jpg': 'Classic round-neck festive blouse with hand-finished sleeve cuffs',
+      'work-bridal-01.jpg': 'Royal muhurtham bridal blouse with heavy maggam zari jaal and kundan work',
+      'work-bridal-02.jpg': 'Reception designer blouse in jewel tone with zardosi work and custom latkans',
+      'work-bridal-03.jpg': 'Pastel bridal blouse with floral resham embroidery and pearl droplets',
+      'work-kids-01.jpg': 'Traditional kids pattu pavadai with rich zari border and soft inner lining',
+      'work-lehenga-01.jpg': 'Designer festive lehenga with circular flare skirt and embellished choli',
+      'work-lehenga-02.jpg': 'Handcrafted bridal lehenga with layered can-can and scalloped dupatta',
+      'work-saree-01.jpg': 'Festive silk saree with signature handcrafted silk thread kuchu tassels',
+      'after-01.jpg': 'Blouse alteration with restructured side darts and armhole contouring',
+    },
   },
   permissions: { showOwnerPhoto: true, showPrices: true },
   demo: { noindex: true, sold: false, preparedBy: 'Parichaya Tech Solutions Data Team' },
