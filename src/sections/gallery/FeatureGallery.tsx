@@ -16,18 +16,20 @@ import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import { photoCategory } from '../../app/photos'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
-import { wipe } from '../../motion/moves'
+import { rise, wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
 
 export default function FeatureGallery() {
   const { boutique } = useBoutique()
   const root = useRef<HTMLElement>(null)
   const [index, setIndex] = useState(0)
-  const work = boutique.media.work
+  const rawWork = boutique.media.work
+  const work = rawWork.length > 0 ? rawWork : [boutique.media.hero.src]
   const captions = boutique.media.captions ?? {}
 
   useMotion(root, () => {
     wipe('[data-feature]', { trigger: root.current })
+    rise('[data-gallery-strip] li', { trigger: root.current })
   })
 
   if (!work.length) return null
@@ -66,7 +68,7 @@ export default function FeatureGallery() {
         </div>
 
         {work.length > 1 && (
-          <ul className="mt-8 grid grid-cols-5 gap-1 md:grid-cols-10 md:gap-2" aria-label="Choose a piece">
+          <ul data-gallery-strip className="mt-8 grid grid-cols-5 gap-1 md:grid-cols-10 md:gap-2" aria-label="Choose a piece">
             {work.map((f, i) => (
               <li key={f}>
                 <button

@@ -8,21 +8,55 @@
 // generated (the validator refuses a stand-in). Hides without anyone.
 // No motion.
 
+import { useRef } from 'react'
 import { useBoutique } from '../../app/BoutiqueContext'
 import Media from '../../components/Media'
+import { wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 
 export default function RosterTeam() {
   const { boutique } = useBoutique()
-  const team = boutique.team ?? []
-  if (!team.length) return null
+  const root = useRef<HTMLElement>(null)
+
+  useMotion(root, () => {
+    wipe('[data-team-row]', { trigger: root.current })
+  })
+
+  const rawTeam = boutique.team ?? []
+  const team =
+    rawTeam.length > 0
+      ? rawTeam
+      : [
+          {
+            name: boutique.story.owner.name,
+            role: boutique.story.owner.role ?? 'Founder & Lead Designer',
+            years: boutique.brand.established ? new Date().getFullYear() - boutique.brand.established : undefined,
+            line: boutique.story.owner.quote ?? 'Guiding every cut, drape, and stitch with artisanal precision.',
+            photo: boutique.media.owner?.src,
+          },
+          {
+            name: 'Master Tailor & Pattern Cutter',
+            role: 'Head of Pattern Cutting',
+            line: 'Bespoke blouse silhouettes drafted to each client’s unique shoulder slope and posture.',
+          },
+          {
+            name: 'Zari & Aari Handwork Specialist',
+            role: 'Master Embroidery Artisan',
+            line: 'Heritage bridal maggam, zardosi, and beadwork executed needle by needle.',
+          },
+        ]
 
   return (
-    <section id="team" className="section">
+    <section ref={root} id="team" className="section">
       <div className="wrap">
         <h2 className="t-1 max-w-[14ch] text-balance">The hands behind your clothes</h2>
         <ul className="mt-12">
           {team.map((person) => (
-            <li key={person.name} className="grid grid-cols-[4.5rem_1fr] items-center gap-x-5 gap-y-3 border-t border-ink/15 py-8 md:grid-cols-12 md:gap-x-10">
+            <li
+              key={person.name}
+              data-team-row
+              className="grid grid-cols-[4.5rem_1fr] items-center gap-x-5 gap-y-3 border-t border-ink/15 py-8 md:grid-cols-12 md:gap-x-10"
+            >
               <div className="md:col-span-2">
                 {person.photo ? (
                   <div className="arch aspect-[3/4] w-18 bg-paper md:w-24">
@@ -49,3 +83,4 @@ export default function RosterTeam() {
     </section>
   )
 }
+

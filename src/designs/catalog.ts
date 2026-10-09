@@ -19,6 +19,11 @@ export interface IDesignMeta {
 /** In the order they appear on a boutique's card wall. */
 export const DESIGNS: IDesignMeta[] = [
   {
+    id: 'luxe',
+    name: 'Luxe',
+    description: 'Dark luxury couture flagship. Dark Luxe nav, Magazine Cover hero, live Sticky Blouse studio, Progress Bar trial tracker, editorial lookbook & fabric notes, and double zari footer.',
+  },
+  {
     id: 'regal',
     name: 'Regal',
     description: 'Vogue & Sabyasachi luxury couture flagship. Floating glassmorphic island nav, full-bleed runway hero, interactive 3-step blouse atelier studio, before/after fit proof, and WhatsApp VIP booking.',

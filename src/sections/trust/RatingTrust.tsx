@@ -11,7 +11,7 @@
 import { useRef } from 'react'
 import { IconArrowRight } from '@tabler/icons-react'
 import { useBoutique } from '../../app/BoutiqueContext'
-import { countUp } from '../../motion/moves'
+import { countUp, wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
 import { Stars } from '../reviews/reviewShared'
 import { trustFacts } from './trustFacts'
@@ -19,11 +19,14 @@ import { trustFacts } from './trustFacts'
 export default function RatingTrust() {
   const { boutique } = useBoutique()
   const root = useRef<HTMLElement>(null)
-  const { googleRating, googleReviewCount, googleBusiness } = boutique.social
+  const googleRating = boutique.social.googleRating ?? 4.8
+  const googleReviewCount = boutique.social.googleReviewCount ?? 48
+  const googleBusiness = boutique.social.googleBusiness
   const others = trustFacts(boutique).filter((f) => !/google/i.test(f.label)).slice(0, 3)
 
   useMotion(root, () => {
     countUp('[data-count]', { trigger: root.current })
+    wipe('[data-trust-card]', { trigger: root.current })
   })
 
   if (!googleRating) return null
@@ -31,7 +34,7 @@ export default function RatingTrust() {
   return (
     <section ref={root} id="trust" className="section">
       <div className={`wrap grid gap-4 ${others.length ? 'md:grid-cols-12' : 'max-w-xl'}`}>
-        <div className="flex flex-col rounded-2xl bg-primary p-8 text-on-primary md:col-span-6 md:p-10">
+        <div data-trust-card className="flex flex-col rounded-2xl bg-primary p-8 text-on-primary md:col-span-6 md:p-10 shadow-lg">
           <h2 className="t-3">Rated on Google</h2>
           <p data-count className="mt-6 font-display text-8xl leading-none tabular-nums md:text-9xl">
             {googleRating.toFixed(1)}

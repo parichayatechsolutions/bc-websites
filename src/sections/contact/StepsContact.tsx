@@ -13,7 +13,7 @@ import { IconBrandWhatsapp, IconMessageCircle, IconPhoto, IconRulerMeasure } fro
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Button from '../../components/Button'
 import Magnetic from '../../motion/Magnetic'
-import { draw } from '../../motion/moves'
+import { draw, rise } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
 
 const STEPS = [
@@ -28,6 +28,7 @@ export default function StepsContact() {
 
   useMotion(root, ({ desktop }) => {
     draw('[data-thread]', { trigger: root.current, from: desktop ? 'start' : 'top' })
+    rise('[data-step-card]', { trigger: root.current })
   })
 
   return (
@@ -42,7 +43,7 @@ export default function StepsContact() {
           />
           <ol className="relative grid gap-8 md:grid-cols-3 md:gap-6">
             {STEPS.map(({ title, body, icon: Icon }, i) => (
-              <li key={title} className="grid grid-cols-[3.5rem_1fr] gap-x-5 md:block md:text-center">
+              <li key={title} data-step-card className="grid grid-cols-[3.5rem_1fr] gap-x-5 md:block md:text-center">
                 <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-thread bg-light text-primary-ink md:mx-auto">
                   <Icon size={24} stroke={1.5} aria-hidden="true" />
                 </span>

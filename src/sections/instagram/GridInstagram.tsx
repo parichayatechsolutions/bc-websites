@@ -18,9 +18,12 @@ import { FollowButton, fullRows, Post, useInstagram } from './igShared'
 
 export default function GridInstagram() {
   const { boutique } = useBoutique()
-  const instagram = useInstagram()
+  const rawInstagram = useInstagram()
+  const fallbackHandle = `@${boutique.slug.replace(/^[0-9]+-/, '')}`
+  const instagram = rawInstagram ?? { handle: fallbackHandle, href: `https://instagram.com/${fallbackHandle.replace('@', '')}` }
   const root = useRef<HTMLElement>(null)
-  const posts = fullRows(boutique.media.work, 9)
+  const workPhotos = boutique.media.work.length > 0 ? boutique.media.work : [boutique.media.hero.src]
+  const posts = fullRows(workPhotos, 9)
   const area = boutique.branches[0]?.area
 
   useMotion(root, () => {

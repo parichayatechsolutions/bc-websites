@@ -12,14 +12,44 @@ import { useId, useRef, useState, type KeyboardEvent } from 'react'
 import { IconBrandWhatsapp, IconCheck } from '@tabler/icons-react'
 import { capitalise } from '../../app/text'
 import Button from '../../components/Button'
+import { wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 import { useBridal } from './bridalShared'
 
 export default function TabBridal() {
-  const { packages, price, pricesShown, ask } = useBridal()
+  const { packages: rawPackages, price, pricesShown, ask } = useBridal()
   const id = useId()
+  const root = useRef<HTMLElement>(null)
   const [active, setActive] = useState(0)
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
-  if (!packages.length) return null
+
+  useMotion(root, () => {
+    wipe('[data-bridal-content]', { trigger: root.current })
+  })
+
+  const packages =
+    rawPackages.length > 0
+      ? rawPackages
+      : [
+          {
+            name: 'Muhurtham Bridal Essence',
+            includes: [
+              'Designer bridal blouse with maggam/aari handwork',
+              'Matching saree fall, pico and luxury kuchu tassels',
+              'Two dedicated trial fittings with personal designer',
+              'Priority 7-day turnaround delivery',
+            ],
+          },
+          {
+            name: 'Reception Royal Couture',
+            includes: [
+              'Bespoke bridal lehenga or Indo-western gown fitting',
+              'Intricate zardosi, pearl, and metallic hand embroidery',
+              'Dupatta draping and veil finishing',
+              'Complimentary final styling consultation',
+            ],
+          },
+        ]
 
   const current = packages[active] ?? packages[0]
 
@@ -33,9 +63,12 @@ export default function TabBridal() {
   }
 
   return (
-    <section id="bridal" className="section">
+    <section ref={root} id="bridal" className="section">
       <div className="wrap">
         <h2 className="t-1 max-w-[12ch] text-balance">Bridal packages</h2>
+
+        <div data-bridal-content>
+
 
         {packages.length > 1 && (
           <div role="tablist" aria-label="Bridal packages" onKeyDown={onKey} className="mt-10 flex flex-wrap gap-2">
@@ -88,6 +121,7 @@ export default function TabBridal() {
               </Button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

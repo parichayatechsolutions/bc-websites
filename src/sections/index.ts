@@ -359,6 +359,7 @@ export { default as StitchLine } from '../motion/StitchLine' // Running stitch s
 // Speciality (each shows only when their services say they do this work)
 export { default as BuilderBlouse } from './blouse/BuilderBlouse' // Pick neck, back and sleeves; live front and back drawings; send the design on WhatsApp
 export { default as StitchBlouse } from './blouse/StitchBlouse' // Stitch line: four steps on a dashed thread; picked step opens below; live front and back drawings
+export { default as StickyBlouse } from './blouse/StickyBlouse' // Sticky preview: live front and back diagrams stay put while options scroll (Lab: blouse S)
 export { default as NecksBlouse } from './blouse/NecksBlouse' // Every neckline as a drawn card with what it suits, then back and sleeves
 export { default as StepsBlouse } from './blouse/StepsBlouse' // Design a blouse one question at a time, with progress and live drawings
 export { default as GuideBlouse } from './blouse/GuideBlouse' // Neckline guide: each neck drawn, what it suits, what to wear with it
@@ -611,3 +612,6 @@ export { default as PlanWedding } from './wedding/PlanWedding' // Pick the weddi
 export { default as MonthsWedding } from './wedding/MonthsWedding' // Three month calendars marking each order-by day and the wedding (needs leadTimes)
 export { default as LeftWedding } from './wedding/LeftWedding' // Dark: days to go set huge with the next three pieces to order (needs leadTimes)
 export { default as WhereWedding } from './wedding/WhereWedding' // Dark: slide weeks to go; what should be ordered by now and what’s next (needs leadTimes)
+
+// Order status & trial fitting tracker
+export { default as ProgressBarTracker } from './tracker/ProgressBarTracker' // Eight-stage order status and trial fitting progress bar (Lab: track A)

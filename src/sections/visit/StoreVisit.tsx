@@ -1,7 +1,7 @@
 // src/sections/visit/StoreVisit.tsx
 // Where to find them, when they're open, and the three ways to get in touch.
 
-import type { ReactNode } from 'react'
+import { useRef, type ReactNode } from 'react'
 import {
   IconBrandWhatsapp,
   IconClock,
@@ -16,6 +16,8 @@ import { telLink, useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
 import Magnetic from '../../motion/Magnetic'
+import { wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 
 function Detail({ icon: DetailIcon, children }: { icon: Icon; children: ReactNode }) {
   return (
@@ -29,10 +31,22 @@ function Detail({ icon: DetailIcon, children }: { icon: Icon; children: ReactNod
 export default function StoreVisit() {
   const { boutique } = useBoutique()
   const { branches, contact, media } = boutique
+  const root = useRef<HTMLElement>(null)
+
+  useMotion(root, () => {
+    wipe('[data-visit-content]', { trigger: root.current })
+  })
+
+  const visitPhoto =
+    media.storefront ??
+    media.interior?.[0] ??
+    media.work[0] ??
+    media.hero.poster ??
+    media.hero.src
 
   return (
-    <section id="visit" className="section">
-      <div className="wrap grid gap-16 md:grid-cols-12">
+    <section ref={root} id="visit" className="section">
+      <div data-visit-content className="wrap grid gap-16 md:grid-cols-12 items-center">
         <div className="md:col-span-7">
           <h2 className="t-1">{branches.length > 1 ? 'Visit a branch' : 'Visit the store'}</h2>
 
@@ -81,10 +95,10 @@ export default function StoreVisit() {
           )}
         </div>
 
-        {media.storefront && (
+        {visitPhoto && (
           <div className="md:col-span-5">
-            <div className="arch aspect-[3/4] w-full">
-              <Media file={media.storefront} alt={`${boutique.brand.name} storefront`} />
+            <div className="arch aspect-[3/4] w-full overflow-hidden shadow-2xl">
+              <Media file={visitPhoto} alt={`${boutique.brand.name} studio`} />
             </div>
           </div>
         )}

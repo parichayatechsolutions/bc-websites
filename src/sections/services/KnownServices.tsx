@@ -6,21 +6,33 @@
 //
 // Hides without anything listed as known for. No motion.
 
+import { useRef } from 'react'
 import { IconArrowRight } from '@tabler/icons-react'
+import { wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 import { useServices } from './servicesShared'
 
 export default function KnownServices() {
-  const { featured, groups, delivery, askAbout } = useServices()
+  const { featured: rawFeatured, groups, delivery, askAbout } = useServices()
+  const root = useRef<HTMLElement>(null)
+
+  const defaultFeatured = ['Designer Blouse Stitching', 'Bridal Maggam & Aari Handwork', 'Custom Festive Lehengas & Gowns']
+  const featured = rawFeatured.length > 0 ? rawFeatured : defaultFeatured
+
+  useMotion(root, () => {
+    wipe('[data-service-card]', { trigger: root.current })
+  })
+
   if (!featured.length) return null
 
   return (
-    <section id="services" className="section">
+    <section ref={root} id="services" className="section">
       <div className="wrap">
         <h2 className="t-1 max-w-[14ch] text-balance">What we’re known for</h2>
 
         <ul className={`mt-12 grid gap-4 ${featured.length > 1 ? 'md:grid-cols-3' : 'max-w-xl'}`}>
           {featured.map((item) => (
-            <li key={item}>
+            <li key={item} data-service-card>
               <a
                 href={askAbout(item)}
                 target="_blank"

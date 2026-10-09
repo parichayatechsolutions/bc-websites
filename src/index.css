@@ -18,6 +18,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.luxe-theme {
+  background-color: var(--c-paper);
+  color: var(--c-ink);
+}
+
+
 @theme inline {
   --color-primary: var(--c-primary);
   --color-primary-ink: var(--c-primary-ink);

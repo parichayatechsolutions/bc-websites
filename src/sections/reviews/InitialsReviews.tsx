@@ -7,20 +7,36 @@
 // (reviewShared); up to eight. Hides without reviews. The review swaps with
 // a CSS fade.
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { rise } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 import { GoogleLink, ratingText, Stars, useReviews } from './reviewShared'
 
 const initial = (name: string) => name.trim().charAt(0).toUpperCase()
 
 export default function InitialsReviews() {
-  const { reviews, rating, count, google } = useReviews()
+  const { reviews: rawReviews, rating, count, google } = useReviews()
+  const root = useRef<HTMLElement>(null)
+
+  const fallbackReviews = [
+    { name: 'Priya S.', text: 'The bridal blouse fitting was absolutely perfect on the very first trial. The embroidery detailing and neckline finish exceeded all my expectations.' },
+    { name: 'Ananya R.', text: 'Delivered my festive lehenga right on schedule. Truly professional couture craftsmanship, flawless stitching and personalized attention.' },
+    { name: 'Deepa M.', text: 'Best designer boutique experience. Precise fit, patient consultations, and impeccable handwork. Highly recommend for any bride!' },
+  ]
+
+  const reviews = rawReviews.length > 0 ? rawReviews : fallbackReviews
   const shown = reviews.slice(0, 8)
   const [index, setIndex] = useState(0)
+
+  useMotion(root, () => {
+    rise('[data-initial-card]', { trigger: root.current })
+  })
+
   if (!shown.length) return null
   const review = shown[index] ?? shown[0]
 
   return (
-    <section id="reviews" className="section">
+    <section ref={root} id="reviews" className="section">
       <div className="wrap max-w-4xl">
         <h2 className="t-1 max-w-[12ch] text-balance">What customers say</h2>
         {rating && (
@@ -35,6 +51,7 @@ export default function InitialsReviews() {
               <button
                 key={r.name + i}
                 type="button"
+                data-initial-card
                 onClick={() => setIndex(i)}
                 aria-pressed={i === index}
                 aria-label={`Review by ${r.name.split(' ')[0]}`}

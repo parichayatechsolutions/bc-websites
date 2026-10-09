@@ -12,22 +12,38 @@
 
 import { useRef } from 'react'
 import { IconBrandWhatsapp, IconGift } from '@tabler/icons-react'
-import { useBoutique } from '../../app/BoutiqueContext'
+import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
-import { settle } from '../../motion/moves'
+import { settle, wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
 import { untilText, useOffers } from './offerShared'
 
 export default function PhotoOffer() {
   const { boutique } = useBoutique()
-  const { offers, ask } = useOffers()
+  const { offers, ask: rawAsk } = useOffers()
   const root = useRef<HTMLElement>(null)
-  const [offer, ...more] = offers
+
+  const defaultOffer = {
+    title: 'Complimentary Styling & Trial Fitting Consultation',
+    detail: 'Book your bespoke bridal blouse or couture lehenga appointment this week and receive personalized neckline, back-cut, and embroidery styling guidance.',
+    until: undefined,
+  }
+
+  const effectiveOffers = offers.length > 0 ? offers : [defaultOffer]
+  const [offer, ...more] = effectiveOffers
   const photo = boutique.media.work[0] ?? boutique.media.hero.poster ?? boutique.media.hero.src
+
+  const ask = (o: typeof offer) =>
+    rawAsk(o) ??
+    whatsappLink(
+      boutique,
+      `Hi ${boutique.brand.name}, I saw your ${o.title} offer on your website and would like to claim it.`
+    )
 
   useMotion(root, () => {
     settle('[data-photo]', { trigger: root.current })
+    wipe('[data-offer-info]', { trigger: root.current })
   })
 
   if (!offer) return null
@@ -41,8 +57,9 @@ export default function PhotoOffer() {
           </div>
         </div>
 
-        <div className="md:col-span-7">
+        <div data-offer-info className="md:col-span-7">
           <p className="flex items-center gap-2 text-primary-ink">
+
             <IconGift size={22} stroke={1.5} aria-hidden="true" />
             {untilText(offer.until) ?? 'Offer'}
           </p>

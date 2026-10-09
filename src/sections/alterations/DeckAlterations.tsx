@@ -9,6 +9,7 @@
 
 import { useState } from 'react'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
+import { useBoutique } from '../../app/BoutiqueContext'
 import Media from '../../components/Media'
 import { AskAboutAlterations, Label, useAlterations } from './altShared'
 
@@ -17,8 +18,26 @@ const ROUND =
 const BEHIND = ['rotate-0', 'rotate-2 translate-x-2', '-rotate-2 -translate-x-2']
 
 export default function DeckAlterations() {
-  const { pairs, caption } = useAlterations()
+  const { boutique } = useBoutique()
+  const { pairs: rawPairs, caption: rawCaption } = useAlterations()
   const [top, setTop] = useState(0)
+
+  const work = boutique.media.work
+  const pairs =
+    rawPairs.length > 0
+      ? rawPairs
+      : work.length >= 2
+        ? [
+            { before: work[0], after: work[1] },
+            { before: work[Math.min(2, work.length - 1)], after: work[Math.min(3, work.length - 1)] },
+          ]
+        : work.length === 1
+          ? [{ before: work[0], after: work[0] }]
+          : [{ before: boutique.media.hero.src, after: boutique.media.hero.poster ?? boutique.media.hero.src }]
+
+  const caption = (p: { before: string; after: string }) =>
+    rawCaption(p) ?? 'Precision blouse fitting, armhole ease adjustment and shoulder silhouette refinement'
+
   if (!pairs.length) return null
   const pair = pairs[top] ?? pairs[0]
   const step = (by: number) => setTop((top + by + pairs.length) % pairs.length)

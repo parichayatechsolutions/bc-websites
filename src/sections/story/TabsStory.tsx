@@ -10,15 +10,32 @@
 import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
 import { useBoutique } from '../../app/BoutiqueContext'
 import Media from '../../components/Media'
+import { wipe } from '../../motion/moves'
+import { useMotion } from '../../motion/useMotion'
 import { trustPromises } from '../trust/trustFacts'
 import { useStory } from './storyShared'
 
 export default function TabsStory() {
   const { boutique } = useBoutique()
-  const { owner, paragraphs, ownVoice } = useStory()
+  const { owner, paragraphs: rawParagraphs, ownVoice } = useStory()
+  const root = useRef<HTMLElement>(null)
   const id = useId()
   const [active, setActive] = useState(0)
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
+
+  const paragraphs =
+    rawParagraphs.length > 0
+      ? rawParagraphs
+      : [
+          boutique.owner?.story ??
+            boutique.highlight ??
+            `Bespoke couture tailoring, intricate bridal aari and maggam hand embroidery, and guaranteed first-trial perfection in our atelier.`,
+        ]
+
+  useMotion(root, () => {
+    wipe('[data-story-panel]', { trigger: root.current })
+  })
+
   if (!paragraphs.length) return null
 
   const promises = trustPromises(boutique)
@@ -97,7 +114,7 @@ export default function TabsStory() {
   }
 
   return (
-    <section id="story" className="section">
+    <section ref={root} id="story" className="section">
       <div className="wrap">
         <h2 className="t-1">About us</h2>
         {panels.length > 1 && (
@@ -125,6 +142,7 @@ export default function TabsStory() {
         <div
           key={current.name}
           id={`${id}-panel`}
+          data-story-panel
           role={panels.length > 1 ? 'tabpanel' : undefined}
           aria-labelledby={panels.length > 1 ? `${id}-tab${active}` : undefined}
           className="mt-10 animate-[fade-in_700ms_var(--ease-stitch)]"

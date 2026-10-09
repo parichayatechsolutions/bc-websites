@@ -28,17 +28,17 @@ export default function CoverHero() {
   })
 
   return (
-    <section ref={root} id="top" className="page-top relative isolate flex min-h-svh flex-col justify-between overflow-hidden pb-12 text-light">
+    <section ref={root} id="top" className="page-top relative isolate flex min-h-svh flex-col justify-between overflow-hidden pb-12 text-white">
       <div className="absolute inset-0 -z-10">
         <Media file={media.hero.src} poster={media.hero.poster} alt={`Work by ${brand.name}`} priority />
-        <div className="absolute inset-0 bg-dark/55" aria-hidden="true" />
+        <div className="absolute inset-0 bg-dark/60" aria-hidden="true" />
       </div>
 
       <div className="wrap">
-        <h1 data-hero-name className="t-hero text-balance" style={fitDisplay(brand.name, 13, 10)}>
+        <h1 data-hero-name className="t-hero text-balance text-white font-medium" style={fitDisplay(brand.name, 13, 10)}>
           {brand.name}
         </h1>
-        {brand.tagline && <p className="t-lead mt-4 max-w-[30ch] text-light/85">{brand.tagline}</p>}
+        {brand.tagline && <p className="t-lead mt-4 max-w-[30ch] text-white/90">{brand.tagline}</p>}
       </div>
 
       <div className="wrap mt-16 grid gap-8 md:grid-cols-12 md:items-end">

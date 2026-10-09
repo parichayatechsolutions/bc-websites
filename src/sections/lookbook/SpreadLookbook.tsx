@@ -13,7 +13,7 @@
 
 import { useRef, useState } from 'react'
 import { useBoutique } from '../../app/BoutiqueContext'
-import { byFunction, photoTag } from '../../app/photos'
+import { byFunction, photoCategory, photoTag } from '../../app/photos'
 import Media from '../../components/Media'
 import { wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
@@ -21,9 +21,11 @@ import { useMotion } from '../../motion/useMotion'
 export default function SpreadLookbook() {
   const { boutique } = useBoutique()
   const root = useRef<HTMLElement>(null)
-  const looks = byFunction(boutique.media.looks ?? [], 'look')
+  const looks = (boutique.media.looks && boutique.media.looks.length > 0)
+    ? byFunction(boutique.media.looks, 'look')
+    : boutique.media.work
   const captions = boutique.media.captions ?? {}
-  const chapters = [...new Set(looks.map((f) => photoTag(f, 'look') ?? 'Looks'))]
+  const chapters = [...new Set(looks.map((f) => photoTag(f, 'look') ?? photoCategory(f) ?? 'Couture'))]
   const [chapter, setChapter] = useState(chapters[0])
 
   useMotion(root, () => {
@@ -31,7 +33,7 @@ export default function SpreadLookbook() {
   })
 
   if (!looks.length) return null
-  const shown = looks.filter((f) => (photoTag(f, 'look') ?? 'Looks') === chapter).slice(0, 3)
+  const shown = looks.filter((f) => (photoTag(f, 'look') ?? photoCategory(f) ?? 'Couture') === chapter).slice(0, 3)
   const [tall, ...small] = shown.length ? shown : looks.slice(0, 3)
 
   return (
