@@ -15,7 +15,7 @@ import { IconBrandWhatsapp } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Button from '../../components/Button'
 import Media from '../../components/Media'
-import { rise, wipe } from '../../motion/moves'
+import { wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
 import { getPieceDetails } from './pieceDetails'
 
@@ -28,7 +28,6 @@ export default function FeatureGallery() {
 
   useMotion(root, () => {
     wipe('[data-feature]', { trigger: root.current })
-    rise('[data-gallery-strip] li', { trigger: root.current })
   })
 
   if (!work.length) return null
