@@ -57,28 +57,6 @@ import {
 
 export const fonts = FONTS.cormorantJost
 
-function ChapterHeader({
-  chapter,
-  title,
-  subtitle,
-}: {
-  chapter: string
-  title: string
-  subtitle: string
-}) {
-  return (
-    <div className="wrap mb-4 md:mb-8 text-center">
-      <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/5 px-4 py-1 text-xs font-mono uppercase tracking-[0.25em] text-accent">
-        <span>{chapter}</span>
-      </div>
-      <h2 className="t-1 mt-3 font-display text-ink text-balance">{title}</h2>
-      <p className="mt-2 text-muted max-w-2xl mx-auto text-base md:text-lg text-balance leading-relaxed">
-        {subtitle}
-      </p>
-      <div className="zari mx-auto mt-4 max-w-xs opacity-40" />
-    </div>
-  )
-}
 
 const pages: IPage[] = [
   {
@@ -109,12 +87,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 03. Craftsmanship Section ── */}
-        <section id="craftsmanship" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 03 · Art & Technique"
-            title="Artisanal Craftsmanship"
-            subtitle="From our 5-step bespoke tailoring process to 8 traditional handwork techniques and curated silk fabrics."
-          />
+        <section id="craftsmanship" className="scroll-mt-24 border-t border-ink/10">
           {/* 08. About them / Making Process: Thread Line (B) */}
           <ThreadProcess />
 
@@ -126,12 +99,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 04. Services & Collections Section ── */}
-        <section id="services" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 04 · Collections & Packages"
-            title="Services & Bridal Suites"
-            subtitle="Signature tailoring services, curated bridal packages, our featured blouse portfolio, and editorial lookbook spreads."
-          />
+        <section id="services" className="scroll-mt-24 border-t border-ink/10">
           {/* 06. Services & prices: Known For (N) */}
           <KnownServices />
 
@@ -146,23 +114,13 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 05. Careers / Team Section ── */}
-        <section id="careers" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 05 · Our Master Artisans"
-            title="Careers & Atelier Team"
-            subtitle="Meet the master tailors, pattern cutting masters, and aari karigars dedicated to crafting each garment."
-          />
+        <section id="careers" className="scroll-mt-24 border-t border-ink/10">
           {/* 22. Team / tailors: Editorial Roster (A) */}
           <RosterTeam />
         </section>
 
         {/* ── 06. FAQ & Testimonials Section ── */}
-        <section id="faq" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
-          <ChapterHeader
-            chapter="Chapter 06 · Guidance & Reviews"
-            title="FAQ & Client Testimonials"
-            subtitle="Transparent answers regarding pricing, delivery schedules, and verified testimonials from Bangalore brides."
-          />
+        <section id="faq" className="scroll-mt-24 border-t border-ink/10">
           {/* 09. FAQ: Topic Tabs (C) */}
           <TopicsFaq />
 
@@ -171,12 +129,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 07. Contact & Visit Section ── */}
-        <section id="contact" className="scroll-mt-24 border-t border-ink/10 pt-12 pb-12 md:pt-16 md:pb-16">
-          <ChapterHeader
-            chapter="Chapter 07 · Atelier Visit & Orders"
-            title="Contact & Atelier Visit"
-            subtitle="How ordering works via WhatsApp, visit our boutique, and explore our live workroom updates."
-          />
+        <section id="contact" className="scroll-mt-24 border-t border-ink/10 pb-12 md:pb-16">
           {/* 05. WhatsApp Contact: How ordering works (K) */}
           <StepsContact />
 
