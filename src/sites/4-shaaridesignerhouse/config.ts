@@ -273,11 +273,12 @@ const config: BoutiqueConfig = {
     },
   ],
   media: {
-    hero: { type: 'image', src: 'work-blouse-01.jpg' },
+    hero: { type: 'image', src: 'hero-landscape.jpg' },
     storefront: 'storefront.jpg',
     interior: ['interior-1.jpg', 'interior-2.jpg'],
     teamAtWork: 'team-at-work.jpg',
     work: [
+      'hero-landscape.jpg',
       'work-blouse-01.jpg',
       'work-blouse-02.jpg',
       'work-blouse-03.jpg',
