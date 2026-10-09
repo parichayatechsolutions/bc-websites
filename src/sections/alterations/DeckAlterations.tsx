@@ -45,6 +45,20 @@ export default function DeckAlterations() {
   return (
     <section id="alterations" className="section overflow-x-clip">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
+        <div className="md:col-span-5" aria-live="polite">
+          <h2 className="t-1 max-w-[10ch] text-balance">Before and after</h2>
+          {caption(pair) && <p className="t-lead mt-5 max-w-[34ch]">{caption(pair)}</p>}
+          {pairs.length > 1 && (
+            <div className="mt-8 flex gap-3">
+              <button type="button" onClick={() => step(-1)} aria-label="Previous pair" className={ROUND}>
+                <IconChevronLeft size={22} stroke={1.5} aria-hidden="true" />
+              </button>
+              <button type="button" onClick={() => step(1)} aria-label="Next pair" className={ROUND}>
+                <IconChevronRight size={22} stroke={1.5} aria-hidden="true" />
+              </button>
+            </div>
+          )}
+        </div>
         <div className="md:col-span-7">
           <div className="relative aspect-[4/3] w-full">
             {pairs.map((p, i) => {
@@ -70,20 +84,6 @@ export default function DeckAlterations() {
               )
             })}
           </div>
-        </div>
-        <div className="md:col-span-5" aria-live="polite">
-          <h2 className="t-1 max-w-[10ch] text-balance">Before and after</h2>
-          {caption(pair) && <p className="t-lead mt-5 max-w-[30ch]">{caption(pair)}</p>}
-          {pairs.length > 1 && (
-            <div className="mt-8 flex gap-3">
-              <button type="button" onClick={() => step(-1)} aria-label="Previous pair" className={ROUND}>
-                <IconChevronLeft size={22} stroke={1.5} aria-hidden="true" />
-              </button>
-              <button type="button" onClick={() => step(1)} aria-label="Next pair" className={ROUND}>
-                <IconChevronRight size={22} stroke={1.5} aria-hidden="true" />
-              </button>
-            </div>
-          )}
         </div>
       </div>
       <div className="wrap">
