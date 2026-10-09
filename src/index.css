@@ -23,6 +23,20 @@
   color: var(--c-ink);
 }
 
+.luxe-theme .section {
+  padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+
+.luxe-theme section > .section:first-child,
+.luxe-theme section > .section:first-of-type {
+  padding-top: 1rem;
+}
+
+.luxe-theme .section + .section {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
 
 @theme inline {
   --color-primary: var(--c-primary);

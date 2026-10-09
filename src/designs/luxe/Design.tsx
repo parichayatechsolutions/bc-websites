@@ -67,15 +67,15 @@ function ChapterHeader({
   subtitle: string
 }) {
   return (
-    <div className="wrap mb-10 md:mb-14 text-center">
+    <div className="wrap mb-4 md:mb-8 text-center">
       <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/5 px-4 py-1 text-xs font-mono uppercase tracking-[0.25em] text-accent">
         <span>{chapter}</span>
       </div>
-      <h2 className="t-1 mt-4 font-display text-ink text-balance">{title}</h2>
-      <p className="mt-3 text-muted max-w-2xl mx-auto text-base md:text-lg text-balance leading-relaxed">
+      <h2 className="t-1 mt-3 font-display text-ink text-balance">{title}</h2>
+      <p className="mt-2 text-muted max-w-2xl mx-auto text-base md:text-lg text-balance leading-relaxed">
         {subtitle}
       </p>
-      <div className="zari mx-auto mt-6 max-w-xs opacity-40" />
+      <div className="zari mx-auto mt-4 max-w-xs opacity-40" />
     </div>
   )
 }
@@ -91,7 +91,7 @@ const pages: IPage[] = [
         <CoverHero />
 
         {/* ── 01. About Section ── */}
-        <section id="about" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="about" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 01 · Heritage & Vision"
             title="Heritage & Founder's Story"
@@ -102,7 +102,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 02. Stitching Atelier Section ── */}
-        <section id="stitching" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="stitching" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 02 · Atelier & Fittings"
             title="Bespoke Stitching Atelier"
@@ -119,7 +119,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 03. Craftsmanship Section ── */}
-        <section id="craftsmanship" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="craftsmanship" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 03 · Art & Technique"
             title="Artisanal Craftsmanship"
@@ -136,7 +136,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 04. Services & Collections Section ── */}
-        <section id="services" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="services" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 04 · Collections & Packages"
             title="Services & Bridal Suites"
@@ -156,7 +156,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 05. Careers / Team Section ── */}
-        <section id="careers" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="careers" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 05 · Our Master Artisans"
             title="Careers & Atelier Team"
@@ -167,7 +167,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 06. FAQ & Testimonials Section ── */}
-        <section id="faq" className="scroll-mt-24 border-t border-ink/10 pt-20 md:pt-28">
+        <section id="faq" className="scroll-mt-24 border-t border-ink/10 pt-12 md:pt-16">
           <ChapterHeader
             chapter="Chapter 06 · Guidance & Reviews"
             title="FAQ & Client Testimonials"
@@ -181,7 +181,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 07. Contact & Visit Section ── */}
-        <section id="contact" className="scroll-mt-24 border-t border-ink/10 pt-20 pb-16 md:pt-28 md:pb-24">
+        <section id="contact" className="scroll-mt-24 border-t border-ink/10 pt-12 pb-12 md:pt-16 md:pb-16">
           <ChapterHeader
             chapter="Chapter 07 · Atelier Visit & Orders"
             title="Contact & Atelier Visit"

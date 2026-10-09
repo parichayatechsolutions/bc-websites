@@ -87,7 +87,7 @@ export function sweep(trigger: gsap.DOMTarget) {
 export function AskAboutAlterations() {
   const { boutique } = useBoutique()
   return (
-    <div className="mt-14 flex flex-wrap items-center justify-between gap-6">
+    <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-between gap-6">
       <div>
         <p className="t-3">Something that doesn’t fit?</p>
         <p className="mt-1 text-muted">Send us a photo of it on WhatsApp.</p>

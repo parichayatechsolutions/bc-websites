@@ -75,7 +75,7 @@ export default function StickyBlouse() {
   )
 
   return (
-    <section id="blouse-designer" className="section relative border-t border-ink/10">
+    <section id="blouse-designer" className="section relative">
       <div className="wrap">
         <div className="mb-12">
           <p className="text-xs font-semibold tracking-widest uppercase text-primary-ink">
