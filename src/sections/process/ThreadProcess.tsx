@@ -27,7 +27,7 @@ export default function ThreadProcess() {
   return (
     <section ref={root} id="process" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[14ch] text-balance">From your idea to a perfect fit</h2>
+        <h2 className="t-1">From your idea to a perfect fit</h2>
 
         <div className="relative mt-14">
           {/* The thread: down through the markers on a phone, across them on a computer. */}

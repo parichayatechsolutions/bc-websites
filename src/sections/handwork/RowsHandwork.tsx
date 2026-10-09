@@ -42,7 +42,7 @@ export default function RowsHandwork() {
   return (
     <section ref={root} id="handwork" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[14ch] text-balance">The handwork we do</h2>
+        <h2 className="t-1">The handwork we do</h2>
         <ul className="mt-12">
           {works.map(({ item, craft }, i) => (
             <li

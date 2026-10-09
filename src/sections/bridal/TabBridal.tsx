@@ -65,7 +65,7 @@ export default function TabBridal() {
   return (
     <section ref={root} id="bridal" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[12ch] text-balance">Bridal packages</h2>
+        <h2 className="t-1">Bridal packages</h2>
 
         <div data-bridal-content>
 

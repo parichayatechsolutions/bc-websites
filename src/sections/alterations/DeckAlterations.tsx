@@ -46,7 +46,7 @@ export default function DeckAlterations() {
     <section id="alterations" className="section overflow-x-clip">
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5" aria-live="polite">
-          <h2 className="t-1 max-w-[10ch] text-balance">Before and after</h2>
+          <h2 className="t-1">Before and after</h2>
           {caption(pair) && <p className="t-lead mt-5 max-w-[34ch]">{caption(pair)}</p>}
           {pairs.length > 1 && (
             <div className="mt-8 flex gap-3">

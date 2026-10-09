@@ -49,7 +49,7 @@ export default function RosterTeam() {
   return (
     <section ref={root} id="team" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[14ch] text-balance">The hands behind your clothes</h2>
+        <h2 className="t-1">The hands behind your clothes</h2>
         <ul className="mt-12">
           {team.map((person) => (
             <li

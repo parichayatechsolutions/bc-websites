@@ -28,7 +28,7 @@ export default function KnownServices() {
   return (
     <section ref={root} id="services" className="section">
       <div className="wrap">
-        <h2 className="t-1 max-w-[14ch] text-balance">What we’re known for</h2>
+        <h2 className="t-1">What we’re known for</h2>
 
         <ul className={`mt-12 grid gap-4 ${featured.length > 1 ? 'md:grid-cols-3' : 'max-w-xl'}`}>
           {featured.map((item) => (
