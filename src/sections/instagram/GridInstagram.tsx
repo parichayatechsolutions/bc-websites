@@ -35,6 +35,7 @@ export default function GridInstagram() {
   return (
     <section
       ref={root}
+      id="instagram"
       className="relative overflow-hidden py-10 md:py-14 border-t border-b border-accent/20 bg-cover bg-center"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.78), rgba(240, 233, 247, 0.85)), url('/botanical-luxe-bg.jpg')",

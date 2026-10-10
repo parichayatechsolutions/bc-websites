@@ -22,7 +22,7 @@ const STEPS = [
   { title: 'Come in to be measured', body: 'Bring your fabric, and we take it from there.', icon: IconRulerMeasure },
 ]
 
-export default function StepsContact() {
+export default function StepsContact({ id = 'how-to-order' }: { id?: string } = {}) {
   const { boutique } = useBoutique()
   const root = useRef<HTMLElement>(null)
 
@@ -34,7 +34,7 @@ export default function StepsContact() {
   return (
     <section
       ref={root}
-      id="contact"
+      id={id}
       className="relative pt-8 pb-12 md:pt-10 md:pb-14 text-white border-t border-b border-white/15 backdrop-blur-md overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(35, 11, 52, 0.92), rgba(25, 6, 37, 0.96)), url('/botanical-luxe-bg.jpg')",
