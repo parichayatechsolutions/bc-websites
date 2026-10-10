@@ -35,15 +35,15 @@ export default function StepsContact() {
     <section
       ref={root}
       id="contact"
-      className="section relative py-20 md:py-28 text-white border-t border-b border-accent/30 backdrop-blur-md overflow-hidden bg-gradient-to-b from-[#2A0E38] via-[#1C0726] to-[#2A0E38]"
+      className="section relative py-20 md:py-28 text-white border-t border-b border-white/15 backdrop-blur-md overflow-hidden bg-gradient-to-b from-[#230B34] via-[#190625] to-[#230B34]"
     >
-      {/* Background ambient purple and gold luxury glow */}
+      {/* Background clean soft purple glow (no muddy gold) */}
       <div
-        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-[#5B2A6E]/40 blur-3xl"
+        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-[#6B2C85]/25 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 left-10 h-96 w-96 rounded-full bg-accent/20 blur-3xl"
+        className="pointer-events-none absolute -bottom-32 left-10 h-96 w-96 rounded-full bg-[#521C69]/25 blur-3xl"
         aria-hidden="true"
       />
 
@@ -53,20 +53,20 @@ export default function StepsContact() {
           <span
             data-thread
             aria-hidden="true"
-            className="absolute top-7 bottom-7 left-7 border-l-2 border-dashed border-accent/40 md:right-[16.7%] md:bottom-auto md:left-[16.7%] md:border-t-2 md:border-l-0"
+            className="absolute top-7 bottom-7 left-7 border-l-2 border-dashed border-white/30 md:right-[16.7%] md:bottom-auto md:left-[16.7%] md:border-t-2 md:border-l-0"
           />
           <ol className="relative grid gap-8 md:grid-cols-3 md:gap-6">
             {STEPS.map(({ title, body, icon: Icon }, i) => (
               <li key={title} data-step-card className="grid grid-cols-[3.5rem_1fr] gap-x-5 md:block md:text-center">
-                <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-accent bg-[#38134B] text-accent shadow-lg shadow-black/50 backdrop-blur-md md:mx-auto transition-transform duration-300 hover:scale-110">
+                <span className="grid h-14 w-14 place-items-center rounded-full border border-white/40 bg-white/10 text-white shadow-lg shadow-black/40 backdrop-blur-md md:mx-auto transition-transform duration-300 hover:scale-110 hover:border-white">
                   <Icon size={24} stroke={1.75} aria-hidden="true" />
                 </span>
                 <div className="md:mt-5">
                   <h3 className="t-3 text-white">
-                    <span className="text-accent font-serif italic">{i + 1}. </span>
+                    <span className="text-white/90 font-serif italic">{i + 1}. </span>
                     {title}
                   </h3>
-                  <p className="mt-2 text-stone-300/85 md:mx-auto md:max-w-[28ch]">{body}</p>
+                  <p className="mt-2 text-white/80 md:mx-auto md:max-w-[28ch]">{body}</p>
                 </div>
               </li>
             ))}

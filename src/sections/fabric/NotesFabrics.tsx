@@ -89,13 +89,13 @@ export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
       id={id}
       className="relative overflow-hidden py-20 md:py-28 text-white border-t border-b border-accent/30 bg-gradient-to-b from-[#2A0E38] via-[#1C0726] to-[#2A0E38]"
     >
-      {/* Background ambient purple and gold luxury glow */}
+      {/* Background ambient clean purple luxury glow */}
       <div
-        className="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-[#5B2A6E]/40 blur-3xl"
+        className="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-[#5B2A6E]/35 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-accent/15 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-[#521C69]/25 blur-3xl"
         aria-hidden="true"
       />
 
