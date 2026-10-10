@@ -34,7 +34,7 @@ import {
   FeatureGallery,
   GridInstagram,
   InitialsReviews,
-  KnownServices,
+  MakeServices,
   LuxeNav,
   NotesFabrics,
   PageHeader,
@@ -47,7 +47,6 @@ import {
   StepsContact,
   StickyBlouse,
   StoreVisit,
-  TabBridal,
   TabsStory,
   ThreadProcess,
   TopicsFaq,
@@ -81,9 +80,6 @@ const pages: IPage[] = [
 
           {/* 12. Before / after alterations: Pair deck (O) */}
           <DeckAlterations />
-
-          {/* 21. Trial & delivery tracker: Progress bar (A) */}
-          <ProgressBarTracker />
         </section>
 
         {/* ── 03. Craftsmanship Section ── */}
@@ -94,29 +90,29 @@ const pages: IPage[] = [
           {/* 20. Embroidery types: Eight kinds of handwork */}
           <RowsHandwork />
 
+          {/* 21. Trial & delivery tracker: Progress bar (A) */}
+          <ProgressBarTracker />
+
           {/* 17. Fabric Swatches: Fabric notes */}
           <NotesFabrics />
         </section>
 
         {/* ── 04. Services & Collections Section ── */}
         <section id="services" className="scroll-mt-24 border-t border-ink/10">
-          {/* 06. Services & prices: Known For (N) */}
-          <KnownServices />
-
-          {/* 11. Bridal Packages: Package tabs */}
-          <TabBridal />
+          {/* 06. Services & prices: What We Make showcase */}
+          <MakeServices />
 
           {/* 03. Gallery (Our Work): Feature + strip (C) */}
           <FeatureGallery />
-
-          {/* 19. Lookbook: Editorial spread */}
-          <SpreadLookbook />
         </section>
 
         {/* ── 05. Careers / Team Section ── */}
         <section id="careers" className="scroll-mt-24 border-t border-ink/10">
           {/* 22. Team / tailors: Editorial Roster (A) */}
           <RosterTeam />
+
+          {/* 19. Lookbook: Editorial spread */}
+          <SpreadLookbook />
         </section>
 
         {/* ── 06. FAQ & Testimonials Section ── */}
@@ -156,25 +152,25 @@ const pages: IPage[] = [
   {
     path: 'stitching',
     label: 'Stitching',
-    intro: 'Interactive custom blouse studio, precision fit alterations, and real-time trial tracking.',
+    intro: 'Interactive custom blouse studio and precision fit alterations.',
     element: (
       <>
         <PageHeader />
         <StickyBlouse />
         <DeckAlterations />
-        <ProgressBarTracker />
       </>
     ),
   },
   {
     path: 'craftsmanship',
     label: 'Craftsmanship',
-    intro: 'The five-step bespoke tailoring process, eight traditional handwork techniques, and curated fabric notes.',
+    intro: 'The bespoke tailoring process, artisanal handwork techniques, real-time fitting tracker, and curated fabric notes.',
     element: (
       <>
         <PageHeader />
         <ThreadProcess />
         <RowsHandwork />
+        <ProgressBarTracker />
         <NotesFabrics />
       </>
     ),
@@ -182,25 +178,24 @@ const pages: IPage[] = [
   {
     path: 'services',
     label: 'Services',
-    intro: 'Bespoke bridal blouses, festive lehengas, bridal packages, and lookbook spreads.',
+    intro: 'Bespoke bridal blouses, festive lehengas, and curated atelier showcases.',
     element: (
       <>
         <PageHeader />
-        <KnownServices />
-        <TabBridal />
+        <MakeServices />
         <FeatureGallery />
-        <SpreadLookbook />
       </>
     ),
   },
   {
     path: 'careers',
     label: 'Careers',
-    intro: 'Meet our master tailors, pattern cutting artisans, and zardosi craftsmen behind every garment.',
+    intro: 'Meet our master tailors, pattern cutting artisans, and zardosi craftsmen behind every garment, followed by our curated lookbook.',
     element: (
       <>
         <PageHeader />
         <RosterTeam />
+        <SpreadLookbook />
       </>
     ),
   },

@@ -29,7 +29,13 @@ export default function PageHeader() {
   if (!current) return null
 
   return (
-    <header ref={root} className="page-top pb-12 md:pb-16">
+    <header
+      ref={root}
+      className="page-top relative overflow-hidden pb-12 md:pb-16 border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap">
         <h1 data-page-title className="t-1 max-w-[16ch] text-balance">
           {current.label}

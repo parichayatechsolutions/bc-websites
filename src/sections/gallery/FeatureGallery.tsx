@@ -39,7 +39,14 @@ export default function FeatureGallery() {
   )
 
   return (
-    <section ref={root} id="work" className="section">
+    <section
+      ref={root}
+      id="work"
+      className="relative overflow-hidden py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <h2 className="t-1">Our work</h2>

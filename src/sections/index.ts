@@ -156,6 +156,7 @@ export { default as ListServices } from './services/ListServices' // The same li
 export { default as MenuServices } from './services/MenuServices' // Dark, framed like a printed menu: prices with dotted leaders, groups, ask for a price
 export { default as PriceServices } from './services/PriceServices' // The lowest starting price set enormous, the rest in a line (needs prices and permission)
 export { default as KnownServices } from './services/KnownServices' // Their top three as big cards to ask about, everything else in compact groups
+export { default as MakeServices } from './services/MakeServices' // What we make: Custom Blouse, Bridal Wear, Lehengas with delivery info & hover scale-105 zoom
 export { default as SearchServices } from './services/SearchServices' // "Do we make it?" search over everything they stitch; asks about what she typed
 export { default as TabsServices } from './services/TabsServices' // Group tabs with the items large and a sticky brand-colour price card
 export { default as TimeServices } from './services/TimeServices' // Usual and express delivery as day bars, starting prices beneath (needs deliveryDays)

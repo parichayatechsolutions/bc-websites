@@ -130,7 +130,7 @@ export function Accordion({ questions }: { questions: IQuestion[] }) {
 export function AskOnWhatsApp() {
   const { boutique } = useBoutique()
   return (
-    <div className="mt-14 flex flex-wrap items-center justify-between gap-6">
+    <div className="mt-14 flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-white/70 p-6 border border-ink/10 shadow-xs backdrop-blur-xs">
       <p className="t-3">Still wondering about something?</p>
       <Button href={whatsappLink(boutique, `Hi ${boutique.brand.name}, I have a question.`)} variant="primary" icon={IconBrandWhatsapp}>
         Ask us on WhatsApp

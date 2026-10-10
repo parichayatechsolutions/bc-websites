@@ -75,7 +75,7 @@ export default function StickyBlouse() {
   )
 
   return (
-    <section id="blouse-designer" className="section relative">
+    <section id="blouse-designer" className="section relative bg-[#F4F2F7]/85 py-16 md:py-24 backdrop-blur-sm border-t border-b border-ink/10">
       <div className="wrap">
         <div className="mb-8">
           <p className="text-xs font-semibold tracking-widest uppercase text-primary-ink">
@@ -91,7 +91,7 @@ export default function StickyBlouse() {
 
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           {/* Sticky Left Preview Panel */}
-          <div className="lg:sticky lg:top-24 lg:col-span-5 rounded-2xl border border-ink/15 bg-paper p-6 md:p-8 shadow-sm">
+          <div className="lg:sticky lg:top-24 lg:col-span-5 rounded-2xl border border-ink/15 bg-white/95 p-6 md:p-8 shadow-sm backdrop-blur-xs">
             <div className="flex items-center justify-between border-b border-ink/10 pb-4">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted">Live Vector Blueprint</span>
               <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary-ink">
@@ -160,7 +160,7 @@ export default function StickyBlouse() {
                     className={`cursor-pointer rounded-xl border p-4 text-left transition-all duration-200 ${
                       neck === n.id
                         ? 'border-primary-ink bg-primary-ink/5 ring-1 ring-primary-ink'
-                        : 'border-ink/15 bg-paper/60 hover:border-ink/40'
+                        : 'border-ink/15 bg-white/85 hover:bg-white hover:border-ink/40'
                     }`}
                   >
                     <span className="block font-medium text-ink">{n.name}</span>
@@ -187,7 +187,7 @@ export default function StickyBlouse() {
                     className={`cursor-pointer rounded-xl border p-4 text-left transition-all duration-200 ${
                       back === b.id
                         ? 'border-primary-ink bg-primary-ink/5 ring-1 ring-primary-ink'
-                        : 'border-ink/15 bg-paper/60 hover:border-ink/40'
+                        : 'border-ink/15 bg-white/85 hover:bg-white hover:border-ink/40'
                     }`}
                   >
                     <span className="block font-medium text-ink">{b.name}</span>
@@ -214,7 +214,7 @@ export default function StickyBlouse() {
                     className={`cursor-pointer rounded-xl border p-4 text-left transition-all duration-200 ${
                       sleeve === s.id
                         ? 'border-primary-ink bg-primary-ink/5 ring-1 ring-primary-ink'
-                        : 'border-ink/15 bg-paper/60 hover:border-ink/40'
+                        : 'border-ink/15 bg-white/85 hover:bg-white hover:border-ink/40'
                     }`}
                   >
                     <span className="block font-medium text-ink">{s.name}</span>
@@ -243,7 +243,7 @@ export default function StickyBlouse() {
                       className={`cursor-pointer flex items-start gap-3 rounded-xl border p-4 text-left transition-all duration-200 ${
                         checked
                           ? 'border-accent bg-accent/10 ring-1 ring-accent'
-                          : 'border-ink/15 bg-paper/60 hover:border-ink/40'
+                          : 'border-ink/15 bg-white/85 hover:bg-white hover:border-ink/40'
                       }`}
                     >
                       <span

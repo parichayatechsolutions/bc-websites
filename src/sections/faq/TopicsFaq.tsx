@@ -42,7 +42,7 @@ export default function TopicsFaq() {
   }
 
   return (
-    <section id="questions" className="section">
+    <section id="questions" className="section relative bg-[#F6F1E9]/85 py-16 md:py-24 backdrop-blur-sm border-t border-b border-ink/10">
       <div className="wrap max-w-4xl">
         <h2 className="t-1">Questions, answered</h2>
         {topics.length > 1 && (

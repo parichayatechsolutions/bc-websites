@@ -206,7 +206,14 @@ export default function TabsStory() {
   }
 
   return (
-    <section ref={root} id="story" className="section">
+    <section
+      ref={root}
+      id="story"
+      className="relative overflow-hidden py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap">
         <h2 className="t-1">About us</h2>
         {panels.length > 1 && (

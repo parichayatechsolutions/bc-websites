@@ -43,7 +43,13 @@ export default function DeckAlterations() {
   const step = (by: number) => setTop((top + by + pairs.length) % pairs.length)
 
   return (
-    <section id="alterations" className="section overflow-x-clip">
+    <section
+      id="alterations"
+      className="relative overflow-x-clip py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5" aria-live="polite">
           <h2 className="t-1">Before and after</h2>

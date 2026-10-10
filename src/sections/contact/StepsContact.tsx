@@ -32,27 +32,37 @@ export default function StepsContact() {
   })
 
   return (
-    <section ref={root} id="contact" className="section">
-      <div className="wrap">
-        <h2 className="t-1">How ordering works</h2>
+    <section ref={root} id="contact" className="section relative bg-black/92 py-20 md:py-28 text-white border-t border-b border-white/10 backdrop-blur-md overflow-hidden">
+      {/* Background ambient luxury glow */}
+      <div
+        className="pointer-events-none absolute -top-32 right-1/4 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-32 left-10 h-80 w-80 rounded-full bg-accent/5 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="wrap relative z-10">
+        <h2 className="t-1 text-white">How ordering works</h2>
         <div className="relative mt-14">
           <span
             data-thread
             aria-hidden="true"
-            className="absolute top-7 bottom-7 left-7 border-l-2 border-dashed border-thread md:right-[16.7%] md:bottom-auto md:left-[16.7%] md:border-t-2 md:border-l-0"
+            className="absolute top-7 bottom-7 left-7 border-l-2 border-dashed border-accent/40 md:right-[16.7%] md:bottom-auto md:left-[16.7%] md:border-t-2 md:border-l-0"
           />
           <ol className="relative grid gap-8 md:grid-cols-3 md:gap-6">
             {STEPS.map(({ title, body, icon: Icon }, i) => (
               <li key={title} data-step-card className="grid grid-cols-[3.5rem_1fr] gap-x-5 md:block md:text-center">
-                <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-thread bg-light text-primary-ink md:mx-auto">
-                  <Icon size={24} stroke={1.5} aria-hidden="true" />
+                <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-accent bg-stone-900/90 text-accent shadow-lg shadow-black/50 backdrop-blur-md md:mx-auto transition-transform duration-300 hover:scale-110">
+                  <Icon size={24} stroke={1.75} aria-hidden="true" />
                 </span>
                 <div className="md:mt-5">
-                  <h3 className="t-3">
-                    <span className="text-thread">{i + 1}. </span>
+                  <h3 className="t-3 text-white">
+                    <span className="text-accent font-serif italic">{i + 1}. </span>
                     {title}
                   </h3>
-                  <p className="mt-2 text-muted md:mx-auto md:max-w-[28ch]">{body}</p>
+                  <p className="mt-2 text-stone-300/85 md:mx-auto md:max-w-[28ch]">{body}</p>
                 </div>
               </li>
             ))}

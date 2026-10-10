@@ -1,57 +1,193 @@
 // src/sections/fabric/NotesFabrics.tsx
-// "Know your fabric": a magazine page of the fabrics they stock in two
-// ruled columns, each with a small swatch, its name and what it's best for.
-// For the type-led designs. (Lab: fabric P, "Fabric notes".)
-//
-// From `fabrics`; hides without any. No motion.
+// "Know your fabric" - Innovative couture textile archive in a slim black translucent container
+// Large visual swatch cards with fabric feel tags, texture zoom, and hover scale-105 highlight.
 
 import { useRef } from 'react'
-import { useBoutique } from '../../app/BoutiqueContext'
+import { IconArrowRight, IconSparkles } from '@tabler/icons-react'
+import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import Media from '../../components/Media'
 import { wipe } from '../../motion/moves'
 import { useMotion } from '../../motion/useMotion'
+import type { PhotoFile } from '../../types/boutique'
 
-const DEFAULT_FABRICS = [
-  { name: 'Pure Raw Silk', bestFor: 'Bridal blouses, structure and rich hand embroidery' },
-  { name: 'Kanchipuram Silk', bestFor: 'Muhurtham blouses, traditional zari and temple borders' },
-  { name: 'Pure Georgette', bestFor: 'Flowing lehengas, festive anarkalis and soft drapes' },
-  { name: 'Brocade & Katan', bestFor: 'Royal jackets, heavy banarasi skirts and ceremonial wear' },
-  { name: 'Organza & Tissue', bestFor: 'Contemporary sheer sleeves, dupattas and lightweight styling' },
-  { name: 'Chanderi Silk', bestFor: 'Summer festive suits, lightweight kurtas and subtle sheen' },
+interface FabricItem {
+  name: string
+  feel: string
+  bestFor: string
+  photo: PhotoFile
+}
+
+const DEFAULT_FABRICS: FabricItem[] = [
+  {
+    name: 'Pure Raw Silk',
+    feel: 'Structured & Rich',
+    bestFor: 'Bridal blouses, architectural structure, and heavy aari & zardosi embroidery',
+    photo: 'work-blouse-01.jpg',
+  },
+  {
+    name: 'Kanchipuram Silk',
+    feel: 'Heirloom Weave',
+    bestFor: 'Muhurtham bridal blouses, traditional pure zari motifs, and temple borders',
+    photo: 'work-bridal-01.jpg',
+  },
+  {
+    name: 'Pure Georgette',
+    feel: 'Flowing & Fluid',
+    bestFor: 'Flowing lehengas, festive anarkalis, delicate pleats, and soft breezy drapes',
+    photo: 'work-lehenga-01.jpg',
+  },
+  {
+    name: 'Brocade & Katan',
+    feel: 'Royal & Opulent',
+    bestFor: 'Royal jackets, heavy banarasi flared skirts, and statement ceremonial wear',
+    photo: 'work-bridal-02.jpg',
+  },
+  {
+    name: 'Organza & Tissue',
+    feel: 'Lightweight & Sheer',
+    bestFor: 'Contemporary sheer puff sleeves, lightweight dupattas, and modern styling',
+    photo: 'work-blouse-02.jpg',
+  },
+  {
+    name: 'Chanderi Silk',
+    feel: 'Subtle Luster',
+    bestFor: 'Summer festive suits, lightweight boutique kurtas, and fine subtle sheen',
+    photo: 'work-saree-01.jpg',
+  },
 ]
 
-export default function NotesFabrics() {
+export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
   const { boutique } = useBoutique()
   const root = useRef<HTMLElement>(null)
 
   useMotion(root, () => {
-    wipe('[data-fabric-note]', { trigger: root.current })
+    wipe('[data-fabric-card]', { trigger: root.current })
   })
 
   const customFabrics = boutique.fabrics ?? []
-  const fabrics = customFabrics.length > 0 ? customFabrics : DEFAULT_FABRICS.map((d, i) => ({
-    name: d.name,
-    bestFor: d.bestFor,
-    photo: (boutique.media.work[i % boutique.media.work.length] || boutique.media.hero.src) as any,
-  }))
+  const workPhotos = boutique.media?.work || []
+
+  const fabrics: FabricItem[] =
+    customFabrics.length > 0
+      ? customFabrics.map((cf, i) => {
+        const defaultRef = DEFAULT_FABRICS[i % DEFAULT_FABRICS.length]
+        return {
+          name: cf.name,
+          feel: defaultRef.feel,
+          bestFor: cf.bestFor || defaultRef.bestFor,
+          photo: (cf.photo || workPhotos[i % workPhotos.length] || defaultRef.photo) as PhotoFile,
+        }
+      })
+      : DEFAULT_FABRICS.map((d, i) => ({
+        ...d,
+        photo: (workPhotos[i % workPhotos.length] || d.photo) as PhotoFile,
+      }))
 
   return (
-    <section ref={root} id="fabrics" className="section">
-      <div className="wrap">
-        <div className="flex flex-wrap items-baseline justify-between gap-4 border-b-2 border-ink pb-4">
-          <h2 className="t-1">Know your fabric</h2>
-          <p className="text-muted">{boutique.brand.name}</p>
+    <section
+      ref={root}
+      id={id}
+      className="relative overflow-hidden bg-black/92 py-20 md:py-28 text-white"
+    >
+      {/* Background ambient luxury glow */}
+      <div
+        className="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-accent/5 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="wrap relative z-10">
+        {/* Header Bar */}
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end border-b border-white/15 pb-8">
+          <div>
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+              <span className="h-[1.5px] w-6 bg-accent" />
+              <span>COUTURE TEXTILE ARCHIVE</span>
+            </div>
+
+            <h2 className="mt-3 font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white">
+              Know your <span className="italic text-accent font-serif">fabric</span>
+            </h2>
+
+            <p className="mt-3 max-w-xl text-sm md:text-base leading-relaxed text-stone-300/85">
+              Examine the weave, texture, and natural drape of each pure textile before tailoring your bespoke garment.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3 md:pb-1">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-xs font-mono tracking-wider text-accent backdrop-blur-xs">
+              <IconSparkles size={13} />
+              {boutique.brand.name} Library
+            </span>
+          </div>
         </div>
-        <ul className="mt-2 gap-12 md:columns-2">
+
+        {/* 6 Large Fabric Cards Contiguous Matrix (No gap, seamlessly connected) */}
+        <ul className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0  bg-black/40 overflow-visible">
           {fabrics.map((f) => (
-            <li key={f.name} data-fabric-note className="flex break-inside-avoid gap-5 border-b border-ink/15 py-6">
-              <span className="block h-16 w-16 shrink-0 overflow-hidden bg-paper" aria-hidden="true">
-                <Media file={f.photo} alt="" />
-              </span>
-              <span>
-                <span className="t-3 block">{f.name}</span>
-                {f.bestFor && <span className="mt-1 block text-muted">Best for {f.bestFor}.</span>}
-              </span>
+            <li key={f.name} data-fabric-card className="relative flex">
+              <a
+                href={whatsappLink(
+                  boutique,
+                  `Hi ${boutique.brand.name}, I would like to inquire about stitching with ${f.name} fabric.`
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ask about ${f.name} on WhatsApp`}
+                className="group relative z-10 flex w-full flex-col -ml-px -mt-px border border-white/15 bg-white/[0.03] p-5 md:p-6 backdrop-blur-md transition-all duration-300 ease-out hover:z-30 hover:scale-105 hover:-translate-y-2 hover:bg-black/95 hover:border-accent hover:ring-1 hover:ring-accent/80 hover:shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(201,162,74,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {/* Large Fabric Picture Box */}
+                <div className="relative aspect-[16/11] w-full overflow-hidden rounded-xs bg-stone-900/80 border border-white/10 transition-all duration-300 group-hover:border-accent/40">
+                  {/* Feel / Type Badge */}
+                  <span className="absolute top-3 left-3 z-10 rounded-xs bg-black/80 px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider text-accent border border-white/15 backdrop-blur-md">
+                    {f.feel}
+                  </span>
+
+                  {/* Gradient Scrim for contrast */}
+                  <div
+                    className="pointer-events-none absolute inset-0 z-5 bg-gradient-to-t from-black/75 via-transparent to-black/20"
+                    aria-hidden="true"
+                  />
+
+                  {/* High-Resolution Fabric Media */}
+                  <div className="flex h-full w-full items-center justify-center overflow-hidden">
+                    <Media
+                      file={f.photo}
+                      alt={f.name}
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-115"
+                    />
+                  </div>
+                </div>
+
+                {/* Fabric Information */}
+                <div className="flex flex-1 flex-col pt-5">
+                  <h3 className="font-serif text-2xl font-normal tracking-tight text-white transition-colors duration-200 group-hover:text-accent">
+                    {f.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-stone-300/85 transition-colors duration-200 group-hover:text-white line-clamp-2">
+                    {f.bestFor ? `Best for ${f.bestFor}.` : ''}
+                  </p>
+
+                  {/* Bottom Action Line */}
+                  <div className="mt-auto pt-5">
+                    <div className="flex items-center justify-between border-t border-white/10 pt-3.5 text-xs text-stone-400 transition-colors duration-200 group-hover:border-accent/40 group-hover:text-stone-200">
+                      <span className="font-mono text-[11px] uppercase tracking-wider text-accent/90">
+                        Ask on WhatsApp
+                      </span>
+                      <IconArrowRight
+                        size={15}
+                        stroke={1.75}
+                        className="shrink-0 transition-transform duration-300 ease-stitch group-hover:translate-x-1.5 group-hover:text-accent"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
             </li>
           ))}
         </ul>

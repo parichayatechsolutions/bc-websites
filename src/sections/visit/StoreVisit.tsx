@@ -45,7 +45,14 @@ export default function StoreVisit() {
     media.hero.src
 
   return (
-    <section ref={root} id="visit" className="section">
+    <section
+      ref={root}
+      id="visit"
+      className="relative overflow-hidden py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div data-visit-content className="wrap grid gap-16 md:grid-cols-12 items-center">
         <div className="md:col-span-7">
           <h2 className="t-1">{branches.length > 1 ? 'Visit a branch' : 'Visit the store'}</h2>

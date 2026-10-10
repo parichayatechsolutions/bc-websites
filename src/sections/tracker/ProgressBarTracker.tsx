@@ -87,7 +87,13 @@ export default function ProgressBarTracker() {
   const next = () => setCurrentStage((c) => Math.min(STAGES.length - 1, c + 1))
 
   return (
-    <section id="tracker" className="section relative border-t border-ink/10">
+    <section
+      id="tracker"
+      className="relative overflow-hidden py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap">
         <div className="flex flex-wrap items-end justify-between gap-6 border-b border-ink/10 pb-6">
           <div>

@@ -155,7 +155,7 @@ export function getPieceDetails(file: PhotoFile, boutique: BoutiqueConfig): Piec
   const caption = boutique.media.captions?.[file]
 
   const title = caption ? caption : `${category} by ${boutique.brand.name}`
-  const handworkText = boutique.services?.handwork?.slice(0, 3).join(', ') || 'Aari, Maggam & Zari Handwork'
+  const handworkText = 'Aari, Maggam & Zari Handwork'
   const fabricText = boutique.fabrics?.[0]?.name ? `${boutique.fabrics[0].name} with soft lining` : 'Pure silk & raw silk with soft cotton lining'
 
   return {
