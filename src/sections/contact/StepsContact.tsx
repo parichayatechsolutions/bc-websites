@@ -32,14 +32,18 @@ export default function StepsContact() {
   })
 
   return (
-    <section ref={root} id="contact" className="section relative bg-black/92 py-20 md:py-28 text-white border-t border-b border-white/10 backdrop-blur-md overflow-hidden">
-      {/* Background ambient luxury glow */}
+    <section
+      ref={root}
+      id="contact"
+      className="section relative py-20 md:py-28 text-white border-t border-b border-accent/30 backdrop-blur-md overflow-hidden bg-gradient-to-b from-[#2A0E38] via-[#1C0726] to-[#2A0E38]"
+    >
+      {/* Background ambient purple and gold luxury glow */}
       <div
-        className="pointer-events-none absolute -top-32 right-1/4 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
+        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-[#5B2A6E]/40 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 left-10 h-80 w-80 rounded-full bg-accent/5 blur-3xl"
+        className="pointer-events-none absolute -bottom-32 left-10 h-96 w-96 rounded-full bg-accent/20 blur-3xl"
         aria-hidden="true"
       />
 
@@ -54,7 +58,7 @@ export default function StepsContact() {
           <ol className="relative grid gap-8 md:grid-cols-3 md:gap-6">
             {STEPS.map(({ title, body, icon: Icon }, i) => (
               <li key={title} data-step-card className="grid grid-cols-[3.5rem_1fr] gap-x-5 md:block md:text-center">
-                <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-accent bg-stone-900/90 text-accent shadow-lg shadow-black/50 backdrop-blur-md md:mx-auto transition-transform duration-300 hover:scale-110">
+                <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-accent bg-[#38134B] text-accent shadow-lg shadow-black/50 backdrop-blur-md md:mx-auto transition-transform duration-300 hover:scale-110">
                   <Icon size={24} stroke={1.75} aria-hidden="true" />
                 </span>
                 <div className="md:mt-5">

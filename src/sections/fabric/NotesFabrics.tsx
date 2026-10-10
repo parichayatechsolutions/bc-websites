@@ -87,15 +87,15 @@ export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-black/92 py-20 md:py-28 text-white"
+      className="relative overflow-hidden py-20 md:py-28 text-white border-t border-b border-accent/30 bg-gradient-to-b from-[#2A0E38] via-[#1C0726] to-[#2A0E38]"
     >
-      {/* Background ambient luxury glow */}
+      {/* Background ambient purple and gold luxury glow */}
       <div
-        className="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
+        className="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-[#5B2A6E]/40 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-accent/5 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 left-10 h-96 w-96 rounded-full bg-accent/15 blur-3xl"
         aria-hidden="true"
       />
 
@@ -127,7 +127,7 @@ export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
         </div>
 
         {/* 6 Large Fabric Cards Contiguous Matrix (No gap, seamlessly connected) */}
-        <ul className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0  bg-black/40 overflow-visible">
+        <ul className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 bg-[#1E0929]/70 overflow-visible">
           {fabrics.map((f) => (
             <li key={f.name} data-fabric-card className="relative flex">
               <a
@@ -138,18 +138,18 @@ export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Ask about ${f.name} on WhatsApp`}
-                className="group relative z-10 flex w-full flex-col -ml-px -mt-px border border-white/15 bg-white/[0.03] p-5 md:p-6 backdrop-blur-md transition-all duration-300 ease-out hover:z-30 hover:scale-105 hover:-translate-y-2 hover:bg-black/95 hover:border-accent hover:ring-1 hover:ring-accent/80 hover:shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(201,162,74,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="group relative z-10 flex w-full flex-col -ml-px -mt-px border border-white/15 bg-white/[0.04] p-5 md:p-6 backdrop-blur-md transition-all duration-300 ease-out hover:z-30 hover:scale-105 hover:-translate-y-2 hover:bg-[#321142]/95 hover:border-accent hover:ring-1 hover:ring-accent/80 hover:shadow-[0_25px_60px_rgba(20,5,30,0.95),0_0_35px_rgba(201,162,74,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 {/* Large Fabric Picture Box */}
-                <div className="relative aspect-[16/11] w-full overflow-hidden rounded-xs bg-stone-900/80 border border-white/10 transition-all duration-300 group-hover:border-accent/40">
+                <div className="relative aspect-[16/11] w-full overflow-hidden rounded-xs bg-[#240B30] border border-white/10 transition-all duration-300 group-hover:border-accent/40">
                   {/* Feel / Type Badge */}
-                  <span className="absolute top-3 left-3 z-10 rounded-xs bg-black/80 px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider text-accent border border-white/15 backdrop-blur-md">
+                  <span className="absolute top-3 left-3 z-10 rounded-xs bg-[#2E0F3D]/90 px-2.5 py-1 text-[11px] font-mono uppercase tracking-wider text-accent border border-white/20 backdrop-blur-md">
                     {f.feel}
                   </span>
 
                   {/* Gradient Scrim for contrast */}
                   <div
-                    className="pointer-events-none absolute inset-0 z-5 bg-gradient-to-t from-black/75 via-transparent to-black/20"
+                    className="pointer-events-none absolute inset-0 z-5 bg-gradient-to-t from-[#1C0726]/85 via-transparent to-[#1C0726]/25"
                     aria-hidden="true"
                   />
 
