@@ -97,7 +97,7 @@ export default function RowsHandwork({ id = 'handwork' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="section relative overflow-hidden bg-gradient-to-b from-[#FAF5ED] via-[#F1E9DC] to-[#F8F4EC] py-20 md:py-28 border-t border-b border-ink/10"
+      className="relative overflow-hidden bg-gradient-to-b from-[#FAF5ED] via-[#F1E9DC] to-[#F8F4EC] py-10 md:py-14 border-t border-b border-ink/10"
     >
       {/* Shading ambient gradient layers */}
       <div

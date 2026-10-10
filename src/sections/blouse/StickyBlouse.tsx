@@ -75,7 +75,7 @@ export default function StickyBlouse() {
   )
 
   return (
-    <section id="blouse-designer" className="section relative bg-[#F4F2F7]/85 py-16 md:py-24 backdrop-blur-sm border-t border-b border-ink/10">
+    <section id="blouse-designer" className="relative bg-[#F4F2F7]/85 pt-8 pb-12 md:pt-10 md:pb-16 backdrop-blur-sm border-t border-b border-ink/10">
       <div className="wrap">
         <div className="mb-8">
           <p className="text-xs font-semibold tracking-widest uppercase text-primary-ink">

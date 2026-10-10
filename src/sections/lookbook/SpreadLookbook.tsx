@@ -41,7 +41,7 @@ export default function SpreadLookbook() {
     <section
       ref={root}
       id="lookbook"
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F4EFE6] to-[#FAF6EE] py-20 md:py-28 border-b border-accent/25"
+      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F4EFE6] to-[#FAF6EE] pt-8 pb-12 md:pt-10 md:pb-14 border-b border-accent/25"
     >
       {/* Background Soft Golden Ambient Glow */}
       <div

@@ -31,7 +31,7 @@ export default function PageHeader() {
   return (
     <header
       ref={root}
-      className="page-top relative overflow-hidden pb-12 md:pb-16 border-b border-accent/20 bg-cover bg-center"
+      className="page-top relative overflow-hidden pb-8 md:pb-10 border-b border-accent/20 bg-cover bg-center"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
       }}

@@ -209,7 +209,7 @@ export default function TabsStory() {
     <section
       ref={root}
       id="story"
-      className="relative overflow-hidden py-16 md:py-24 border-t border-b border-accent/20 bg-cover bg-center"
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-accent/20 bg-cover bg-center"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
       }}

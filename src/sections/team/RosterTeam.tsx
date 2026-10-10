@@ -85,7 +85,7 @@ export default function RosterTeam({ id = 'team' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-[#FAF6EE]/92 py-20 md:py-28 border-t border-b border-accent/25"
+      className="relative overflow-hidden bg-[#FAF6EE]/92 py-10 md:py-14 border-t border-b border-accent/25"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

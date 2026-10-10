@@ -120,7 +120,7 @@ export default function InitialsReviews({ id = 'reviews' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F5EFE6] to-[#FAF6EE] py-20 md:py-28 border-t border-b border-accent/25"
+      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F5EFE6] to-[#FAF6EE] py-10 md:py-14 border-t border-b border-accent/25"
     >
       {/* Background Ambient Warmth Glows */}
       <div

@@ -57,7 +57,7 @@ export default function MakeServices({ id = 'services-cards' }: { id?: string })
   ]
 
   return (
-    <section ref={root} id={id} className="section bg-paper/30 py-16 md:py-24">
+    <section ref={root} id={id} className="bg-paper/30 py-10 md:py-14 border-t border-b border-ink/10">
       <div className="wrap">
         {/* Eyebrow */}
         <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-accent">

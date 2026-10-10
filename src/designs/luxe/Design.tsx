@@ -125,7 +125,7 @@ const pages: IPage[] = [
         </section>
 
         {/* ── 07. Contact & Visit Section ── */}
-        <section id="contact" className="scroll-mt-24 border-t border-ink/10 pb-12 md:pb-16">
+        <section id="contact" className="scroll-mt-24 border-t border-ink/10">
           {/* 05. WhatsApp Contact: How ordering works (K) */}
           <StepsContact />
 
