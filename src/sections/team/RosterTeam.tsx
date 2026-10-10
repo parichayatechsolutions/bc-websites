@@ -85,17 +85,20 @@ export default function RosterTeam({ id = 'team' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-[#FAF6EE]/92 py-10 md:py-14 border-t border-b border-accent/25"
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-accent/25 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Background Soft Golden Ambient Glow */}
+      {/* Background Soft Purple Ambient Glow */}
       <div
-        className="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-accent/15 blur-3xl opacity-60"
+        className="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-[#7B2E96]/15 blur-3xl opacity-60"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 right-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl opacity-50"
+        className="pointer-events-none absolute -bottom-32 right-10 h-96 w-96 rounded-full bg-[#6B2485]/10 blur-3xl opacity-50"
         aria-hidden="true"
       />
 

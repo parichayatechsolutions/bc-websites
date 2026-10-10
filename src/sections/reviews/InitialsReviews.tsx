@@ -120,15 +120,18 @@ export default function InitialsReviews({ id = 'reviews' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F5EFE6] to-[#FAF6EE] py-10 md:py-14 border-t border-b border-accent/25"
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-accent/25 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
     >
-      {/* Background Ambient Warmth Glows */}
+      {/* Background Ambient Purple Warmth Glows */}
       <div
-        className="pointer-events-none absolute -top-40 left-1/3 h-96 w-96 rounded-full bg-accent/15 blur-3xl opacity-60"
+        className="pointer-events-none absolute -top-40 left-1/3 h-96 w-96 rounded-full bg-[#7B2E96]/15 blur-3xl opacity-60"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-40 right-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl opacity-50"
+        className="pointer-events-none absolute -bottom-40 right-10 h-96 w-96 rounded-full bg-[#6B2485]/10 blur-3xl opacity-50"
         aria-hidden="true"
       />
 

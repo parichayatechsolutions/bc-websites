@@ -47,7 +47,7 @@ export default function DeckAlterations() {
       id="alterations"
       className="relative overflow-x-clip py-10 md:py-14 border-t border-b border-accent/20 bg-cover bg-center"
       style={{
-        backgroundImage: "linear-gradient(to bottom, rgba(253, 251, 247, 0.78), rgba(246, 240, 232, 0.85)), url('/botanical-luxe-bg.jpg')",
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.78), rgba(240, 233, 247, 0.85)), url('/botanical-luxe-bg.jpg')",
       }}
     >
       <div className="wrap grid items-center gap-12 md:grid-cols-12 md:gap-16">

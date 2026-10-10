@@ -126,14 +126,14 @@ const pages: IPage[] = [
 
         {/* ── 07. Contact & Visit Section ── */}
         <section id="contact" className="scroll-mt-24 border-t border-ink/10">
-          {/* 05. WhatsApp Contact: How ordering works (K) */}
-          <StepsContact />
-
           {/* 15. Location map: Split details (B) */}
           <StoreVisit />
 
           {/* 10. Instagram feed: Profile + Grid */}
           <GridInstagram />
+
+          {/* 05. WhatsApp Contact: How ordering works (K) - Directly above footer */}
+          <StepsContact />
         </section>
       </>
     ),
@@ -218,9 +218,9 @@ const pages: IPage[] = [
     element: (
       <>
         <PageHeader />
-        <StepsContact />
         <StoreVisit />
         <GridInstagram />
+        <StepsContact />
       </>
     ),
   },

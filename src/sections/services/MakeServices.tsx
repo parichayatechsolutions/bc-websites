@@ -57,7 +57,14 @@ export default function MakeServices({ id = 'services-cards' }: { id?: string })
   ]
 
   return (
-    <section ref={root} id={id} className="bg-paper/30 py-10 md:py-14 border-t border-b border-ink/10">
+    <section
+      ref={root}
+      id={id}
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-ink/10 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap">
         {/* Eyebrow */}
         <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-accent">

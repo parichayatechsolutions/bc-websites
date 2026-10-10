@@ -87,7 +87,10 @@ export default function NotesFabrics({ id = 'fabrics' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden pt-8 pb-12 md:pt-10 md:pb-14 text-white border-t border-b border-accent/30 bg-gradient-to-b from-[#2A0E38] via-[#1C0726] to-[#2A0E38]"
+      className="relative overflow-hidden pt-8 pb-12 md:pt-10 md:pb-14 text-white border-t border-b border-accent/30 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(42, 14, 56, 0.92), rgba(28, 7, 38, 0.96)), url('/botanical-luxe-bg.jpg')",
+      }}
     >
       {/* Background ambient clean purple luxury glow */}
       <div

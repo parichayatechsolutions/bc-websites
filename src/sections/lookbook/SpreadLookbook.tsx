@@ -41,15 +41,18 @@ export default function SpreadLookbook() {
     <section
       ref={root}
       id="lookbook"
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF6EE] via-[#F4EFE6] to-[#FAF6EE] pt-8 pb-12 md:pt-10 md:pb-14 border-b border-accent/25"
+      className="relative overflow-hidden pt-8 pb-12 md:pt-10 md:pb-14 border-b border-accent/25 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
     >
-      {/* Background Soft Golden Ambient Glow */}
+      {/* Background Soft Purple Ambient Glow */}
       <div
-        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-accent/15 blur-3xl opacity-60"
+        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-[#7B2E96]/15 blur-3xl opacity-60"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-32 left-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl opacity-50"
+        className="pointer-events-none absolute -bottom-32 left-10 h-96 w-96 rounded-full bg-[#6B2485]/10 blur-3xl opacity-50"
         aria-hidden="true"
       />
 

@@ -35,7 +35,10 @@ export default function StepsContact() {
     <section
       ref={root}
       id="contact"
-      className="relative pt-8 pb-12 md:pt-10 md:pb-14 text-white border-t border-b border-white/15 backdrop-blur-md overflow-hidden bg-gradient-to-b from-[#230B34] via-[#190625] to-[#230B34]"
+      className="relative pt-8 pb-12 md:pt-10 md:pb-14 text-white border-t border-b border-white/15 backdrop-blur-md overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(35, 11, 52, 0.92), rgba(25, 6, 37, 0.96)), url('/botanical-luxe-bg.jpg')",
+      }}
     >
       {/* Background clean soft purple glow (no muddy gold) */}
       <div

@@ -97,15 +97,18 @@ export default function RowsHandwork({ id = 'handwork' }: { id?: string }) {
     <section
       ref={root}
       id={id}
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF5ED] via-[#F1E9DC] to-[#F8F4EC] py-10 md:py-14 border-t border-b border-ink/10"
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-ink/10 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
     >
-      {/* Shading ambient gradient layers */}
+      {/* Shading ambient purple gradient layers */}
       <div
-        className="pointer-events-none absolute -top-40 left-1/3 h-[500px] w-[500px] rounded-full bg-accent/15 blur-3xl opacity-70"
+        className="pointer-events-none absolute -top-40 left-1/3 h-[500px] w-[500px] rounded-full bg-[#7B2E96]/15 blur-3xl opacity-70"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-40 right-1/4 h-[500px] w-[500px] rounded-full bg-amber-200/25 blur-3xl opacity-60"
+        className="pointer-events-none absolute -bottom-40 right-1/4 h-[500px] w-[500px] rounded-full bg-[#6B2485]/12 blur-3xl opacity-60"
         aria-hidden="true"
       />
       <div

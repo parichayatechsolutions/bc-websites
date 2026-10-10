@@ -42,7 +42,13 @@ export default function TopicsFaq() {
   }
 
   return (
-    <section id="questions" className="relative bg-[#F6F1E9]/85 py-10 md:py-14 backdrop-blur-sm border-t border-b border-ink/10">
+    <section
+      id="questions"
+      className="relative overflow-hidden py-10 md:py-14 border-t border-b border-ink/10 bg-cover bg-center"
+      style={{
+        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.80), rgba(240, 233, 247, 0.87)), url('/botanical-luxe-bg.jpg')",
+      }}
+    >
       <div className="wrap max-w-4xl">
         <h2 className="t-1">Questions, answered</h2>
         {topics.length > 1 && (
