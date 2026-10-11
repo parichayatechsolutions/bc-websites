@@ -31,10 +31,7 @@ export default function PageHeader() {
   return (
     <header
       ref={root}
-      className="page-top relative overflow-hidden pb-8 md:pb-10 border-b border-accent/20 bg-cover bg-center"
-      style={{
-        backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.78), rgba(240, 233, 247, 0.85)), url('/botanical-luxe-bg.jpg')",
-      }}
+      className="page-top relative overflow-hidden pb-8 md:pb-10 border-b border-ink/10 bg-paper"
     >
       <div className="wrap">
         <h1 data-page-title className="t-1 max-w-[16ch] text-balance">

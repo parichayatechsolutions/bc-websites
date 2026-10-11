@@ -47,6 +47,14 @@
   padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
 }
 
+.luxe-theme #visit,
+.luxe-theme .page-top,
+.luxe-theme #process {
+  background-image: linear-gradient(to bottom, rgba(248, 243, 252, 0.78), rgba(240, 233, 247, 0.85)), url('/botanical-luxe-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 
 @theme inline {
   --color-primary: var(--c-primary);
