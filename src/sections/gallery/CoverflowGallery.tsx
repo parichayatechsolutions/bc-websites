@@ -25,10 +25,20 @@ export default function CoverflowGallery() {
   }
 
   return (
-    <section id="work" className="relative overflow-hidden bg-dark py-16 text-light md:py-24">
+    <section
+      id="work"
+      className="relative overflow-hidden py-16 md:py-24"
+      style={{
+        background:
+          'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
+        color: 'var(--c-ink)',
+        borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+        borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+      }}
+    >
       <div className="wrap text-center">
-        <h2 className="t-1 text-balance">Our work</h2>
-        <p className="mt-3 font-display text-xl text-accent-on-dark md:text-2xl">
+        <h2 className="t-1 text-balance text-ink">Our work</h2>
+        <p className="mt-3 font-display text-xl text-primary-ink md:text-2xl font-medium">
           {currentCategory} · {active + 1} of {len}
         </p>
       </div>
@@ -52,9 +62,11 @@ export default function CoverflowGallery() {
               style={{
                 transform: `translateX(0%) translateX(${r * 58}%) translateZ(-${a * 150}px) rotateY(${isCenter ? 0 : r > 0 ? -38 : 38}deg) scale(${isCenter ? 1 : 0.85})`,
                 zIndex: 20 - a,
-                opacity: a > 2 ? 0 : isCenter ? 1 : 0.65,
-                border: isCenter ? '2px solid var(--c-accent)' : '1px solid rgba(255,255,255,0.12)',
-                boxShadow: isCenter ? '0 30px 60px -15px rgba(0,0,0,0.9)' : '0 10px 25px -10px rgba(0,0,0,0.5)',
+                opacity: a > 2 ? 0 : isCenter ? 1 : 0.75,
+                border: isCenter ? '2.5px solid var(--c-primary)' : '1px solid color-mix(in oklab, var(--c-ink) 18%, transparent)',
+                boxShadow: isCenter
+                  ? '0 30px 60px -15px color-mix(in oklab, var(--c-primary) 35%, transparent)'
+                  : '0 10px 25px -10px rgba(0,0,0,0.12)',
                 pointerEvents: a > 2 ? 'none' : 'auto',
               }}
             >
@@ -70,7 +82,7 @@ export default function CoverflowGallery() {
             type="button"
             onClick={() => step(-1)}
             aria-label="Previous photo"
-            className="grid h-12 w-12 cursor-pointer place-items-center rounded-full border border-light/40 transition-colors duration-200 hover:bg-light hover:text-dark"
+            className="grid h-12 w-12 cursor-pointer place-items-center rounded-full border border-ink/25 text-ink transition-colors duration-200 hover:bg-primary-ink hover:text-on-primary-ink"
           >
             <IconArrowLeft size={22} aria-hidden="true" />
           </button>
@@ -78,7 +90,7 @@ export default function CoverflowGallery() {
             type="button"
             onClick={() => step(1)}
             aria-label="Next photo"
-            className="grid h-12 w-12 cursor-pointer place-items-center rounded-full bg-accent text-on-accent transition-transform duration-200 hover:scale-105"
+            className="grid h-12 w-12 cursor-pointer place-items-center rounded-full bg-primary text-on-primary transition-transform duration-200 hover:scale-105 shadow-md shadow-primary/25"
           >
             <IconArrowRight size={22} aria-hidden="true" />
           </button>
@@ -88,6 +100,7 @@ export default function CoverflowGallery() {
           <Button
             href={whatsappLink(boutique, `Hi ${boutique.brand.name}, I loved this ${currentCategory} from your gallery and would like to consult on a similar design.`)}
             icon={IconBrandWhatsapp}
+            variant="primary"
           >
             Ask about this {currentCategory.replace(/s$/i, '')}
           </Button>

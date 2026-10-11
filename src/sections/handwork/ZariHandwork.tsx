@@ -28,29 +28,39 @@ export default function ZariHandwork() {
   const zari = ZARI[index]
 
   return (
-    <section id="handwork-zari" className="section bg-dark text-light">
+    <section
+      id="handwork-zari"
+      className="section"
+      style={{
+        background:
+          'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
+        color: 'var(--c-ink)',
+        borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+        borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+      }}
+    >
       <div className="wrap">
-        <h2 className="t-1 max-w-[12ch] text-balance">The colour of the zari</h2>
+        <h2 className="t-1 max-w-[12ch] text-balance text-ink">The colour of the zari</h2>
         <ul className="mt-12 flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10" role="group" aria-label="Zari colour">
           {ZARI.map((z, i) => (
             <li key={z.name}>
               <button type="button" onClick={() => setIndex(i)} aria-pressed={i === index} className="group flex w-20 cursor-pointer flex-col items-center gap-3 md:w-24">
                 <span
                   aria-hidden="true"
-                  className="block aspect-square w-full rounded-full ring-offset-4 ring-offset-dark transition-[box-shadow] duration-200 ease-stitch group-hover:ring-2 group-hover:ring-light/40 group-aria-pressed:ring-2 group-aria-pressed:ring-light"
+                  className="block aspect-square w-full rounded-full ring-offset-4 ring-offset-paper transition-[box-shadow] duration-200 ease-stitch group-hover:ring-2 group-hover:ring-primary/40 group-aria-pressed:ring-2 group-aria-pressed:ring-primary shadow-sm"
                   style={{ backgroundColor: z.hex, backgroundImage: 'repeating-linear-gradient(35deg, rgba(255,255,255,0.22) 0 1px, transparent 1px 4px)' }}
                 />
-                <span className="t-small text-center group-aria-pressed:font-semibold">{z.name}</span>
+                <span className="t-small text-center text-ink group-aria-pressed:font-semibold group-aria-pressed:text-primary-ink">{z.name}</span>
               </button>
             </li>
           ))}
         </ul>
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-light/15 pt-8" aria-live="polite">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-ink/15 pt-8" aria-live="polite">
           <div>
-            <p className="t-3">{zari.name}</p>
-            <p className="mt-1 max-w-[44ch] text-light/80">{zari.note}</p>
+            <p className="t-3 text-ink">{zari.name}</p>
+            <p className="mt-1 max-w-[44ch] text-ink/80">{zari.note}</p>
           </div>
-          <Button href={whatsappLink(boutique, `Hi ${boutique.brand.name}, I'd like ${zari.name.toLowerCase()} zari work. Could you tell me more?`)} icon={IconBrandWhatsapp}>
+          <Button href={whatsappLink(boutique, `Hi ${boutique.brand.name}, I'd like ${zari.name.toLowerCase()} zari work. Could you tell me more?`)} variant="primary" icon={IconBrandWhatsapp}>
             Ask for {zari.name.toLowerCase()}
           </Button>
         </div>

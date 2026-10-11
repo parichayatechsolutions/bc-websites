@@ -19,7 +19,7 @@ export default function RateAlterations() {
   return (
     <section id="alteration-prices" className="section">
       <div className="wrap">
-        <div className="mx-auto max-w-3xl border border-ink/15 bg-paper px-6 py-10 md:px-14 md:py-14">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-ink/15 bg-paper px-6 py-10 md:px-14 md:py-14 shadow-sm">
           <h2 className="t-2 text-center">Alteration rates</h2>
           <p className="t-small mt-2 text-center text-muted">{boutique.brand.name}</p>
           <dl className="mt-10 grid gap-x-12 gap-y-4 md:grid-cols-2">

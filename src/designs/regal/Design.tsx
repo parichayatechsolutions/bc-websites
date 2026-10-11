@@ -29,9 +29,9 @@ import {
   FloatingWhatsApp,
   FounderTeam,
   OccasionContact,
-  OrNewAlterations,
   PageHeader,
   RailBridal,
+  RateAlterations,
   RingProcess,
   SiteShell,
   SplitHero,
@@ -60,7 +60,7 @@ const pages: IPage[] = [
           <RailBridal />
           <ZariHandwork />
           <SpotlightAlterations />
-          <OrNewAlterations />
+          <RateAlterations />
           <TilesServices id="services-prices" />
         </div>
         <FounderTeam />
@@ -110,7 +110,7 @@ const pages: IPage[] = [
           <RailBridal />
           <ZariHandwork />
           <SpotlightAlterations />
-          <OrNewAlterations />
+          <RateAlterations />
         </div>
         <FounderTeam />
         <DaysProcess />
