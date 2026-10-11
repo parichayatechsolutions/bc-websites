@@ -77,7 +77,7 @@ export default function StickyBlouse() {
   return (
     <section
       id="blouse-designer"
-      className="relative overflow-hidden pt-8 pb-12 md:pt-10 md:pb-16 border-t border-b border-ink/10 bg-cover bg-center"
+      className="relative pt-8 pb-12 md:pt-10 md:pb-16 border-t border-b border-ink/10 bg-cover bg-center"
       style={{
         backgroundImage: "linear-gradient(to bottom, rgba(248, 243, 252, 0.82), rgba(240, 233, 247, 0.88)), url('/botanical-luxe-bg.jpg')",
       }}
