@@ -2,7 +2,7 @@
 // Dark. Centre photo large, neighbours turned away in perspective; arrows step through.
 // (Lab: gallery T, "Coverflow".)
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IconArrowLeft, IconArrowRight, IconBrandWhatsapp } from '@tabler/icons-react'
 import { useBoutique, whatsappLink } from '../../app/BoutiqueContext'
 import { photoCategory } from '../../app/photos'
