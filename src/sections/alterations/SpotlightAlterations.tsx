@@ -77,27 +77,14 @@ export default function SpotlightAlterations() {
         position: 'relative',
         isolation: 'isolate',
         overflow: 'hidden',
-        background: 'var(--c-dark)',
-        color: 'var(--c-light)',
+        background:
+          'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
+        color: 'var(--c-ink)',
         padding: 'clamp(5.5rem, 13cqw, 11rem) 0',
+        borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+        borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
       }}
     >
-      {/* Background radial glow */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0,
-          width: '120%',
-          height: '100%',
-          transform: 'translateX(-50%)',
-          zIndex: -1,
-          background:
-            'radial-gradient(ellipse 34% 46% at 50% 44%, color-mix(in oklab, var(--c-accent) 26%, transparent), transparent 70%)',
-        }}
-      />
-
       <div
         style={{
           maxWidth: 900,
@@ -122,7 +109,7 @@ export default function SpotlightAlterations() {
             fontWeight: 600,
             letterSpacing: '.24em',
             textTransform: 'uppercase',
-            color: 'var(--c-accent-on-dark)',
+            color: 'var(--c-primary-ink)',
           }}
         >
           <span style={{ width: 32, height: 1, background: 'currentColor' }} />
@@ -206,11 +193,12 @@ export default function SpotlightAlterations() {
               fontFamily: 'var(--f-display)',
               fontStyle: 'italic',
               fontSize: 'clamp(1.8rem, 3.6cqw, 2.6rem)',
+              color: 'var(--c-ink)',
             }}
           >
             {cur.title}
           </p>
-          <p style={{ margin: '8px 0 0', fontSize: 16, opacity: 0.8 }}>
+          <p style={{ margin: '8px 0 0', fontSize: 16, color: 'var(--c-ink)', opacity: 0.8 }}>
             {cur.note}
           </p>
         </div>
@@ -239,8 +227,8 @@ export default function SpotlightAlterations() {
                   borderRadius: 999,
                   background:
                     i === xa
-                      ? 'var(--c-accent)'
-                      : 'color-mix(in oklab, var(--c-light) 35%, transparent)',
+                      ? 'var(--c-primary)'
+                      : 'color-mix(in oklab, var(--c-ink) 25%, transparent)',
                   transition: 'width 350ms, background-color 350ms',
                 }}
               />
@@ -266,11 +254,11 @@ export default function SpotlightAlterations() {
               fontSize: 15,
               fontWeight: 600,
               letterSpacing: '.02em',
-              background: 'var(--c-accent)',
-              color: 'var(--c-on-accent)',
+              background: 'var(--c-primary)',
+              color: 'var(--c-on-primary)',
               textDecoration: 'none',
               boxShadow:
-                '0 0 0 1px color-mix(in oklab, var(--c-thread) 55%, transparent), 0 0 0 5px color-mix(in oklab, var(--c-thread) 12%, transparent)',
+                '0 10px 24px -6px color-mix(in oklab, var(--c-primary) 35%, transparent)',
               transition: 'transform 200ms ease',
             }}
           >

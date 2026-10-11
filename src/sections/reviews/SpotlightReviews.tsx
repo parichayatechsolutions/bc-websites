@@ -46,28 +46,14 @@ export default function SpotlightReviews() {
       id="reviews"
       style={{
         position: 'relative',
-        background: 'var(--c-dark)',
-        color: 'var(--c-light)',
+        background: 'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
+        color: 'var(--c-ink)',
         padding: 'clamp(4.5rem, 11vw, 9rem) 0',
+        borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
+        borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
         overflow: 'hidden',
       }}
     >
-      {/* Spotlight radial glow */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0,
-          width: '120%',
-          height: '100%',
-          transform: 'translateX(-50%)',
-          background:
-            'radial-gradient(ellipse 40% 50% at 50% 45%, color-mix(in oklab, var(--c-accent) 30%, transparent), transparent 70%)',
-          pointerEvents: 'none',
-        }}
-      />
-
       <div
         style={{
           position: 'relative',
@@ -89,8 +75,10 @@ export default function SpotlightReviews() {
             borderRadius: '50%',
             display: 'grid',
             placeItems: 'center',
-            border: '1px solid var(--c-accent-on-dark)',
-            color: 'var(--c-accent-on-dark)',
+            border: '1.5px solid color-mix(in oklab, var(--c-primary-ink) 35%, transparent)',
+            color: 'var(--c-primary-ink)',
+            background: 'color-mix(in oklab, var(--c-primary) 10%, var(--c-light))',
+            boxShadow: '0 8px 24px -6px color-mix(in oklab, var(--c-primary) 18%, transparent)',
           }}
         >
           <IconQuote size={32} />
@@ -104,6 +92,7 @@ export default function SpotlightReviews() {
             fontSize: 'clamp(1.8rem, 4vw, 3.2rem)',
             lineHeight: 1.18,
             maxWidth: '28ch',
+            color: 'var(--c-ink)',
             textWrap: 'pretty',
           }}
         >
@@ -112,7 +101,7 @@ export default function SpotlightReviews() {
 
         {/* 5 Stars */}
         <div style={{ marginTop: 14 }}>
-          <span style={{ display: 'flex', gap: 4, color: 'var(--c-accent-on-dark)', fontSize: 20 }}>
+          <span style={{ display: 'flex', gap: 4, color: 'var(--c-accent)', fontSize: 20 }}>
             {[1, 2, 3, 4, 5].map((st) => (
               <IconStarFilled key={st} size={20} />
             ))}
@@ -141,8 +130,9 @@ export default function SpotlightReviews() {
                   minHeight: 30,
                   padding: '0 14px',
                   borderRadius: 999,
-                  background: 'color-mix(in oklab, var(--c-light) 12%, transparent)',
-                  color: 'inherit',
+                  background: 'color-mix(in oklab, var(--c-primary) 8%, var(--c-light))',
+                  border: '1px solid color-mix(in oklab, var(--c-primary-ink) 20%, transparent)',
+                  color: 'var(--c-primary-ink)',
                   fontSize: 13,
                   fontWeight: 600,
                   whiteSpace: 'nowrap',
@@ -189,10 +179,13 @@ export default function SpotlightReviews() {
                   fontWeight: 600,
                   whiteSpace: 'nowrap',
                   border: isSelected
-                    ? '1px solid var(--c-accent)'
-                    : '1px solid color-mix(in oklab, var(--c-light) 40%, transparent)',
-                  background: isSelected ? 'var(--c-accent)' : 'transparent',
-                  color: isSelected ? 'var(--c-on-accent)' : 'var(--c-light)',
+                    ? '1.5px solid var(--c-primary-ink)'
+                    : '1px solid color-mix(in oklab, var(--c-ink) 18%, transparent)',
+                  background: isSelected ? 'var(--c-primary-ink)' : 'var(--c-light)',
+                  color: isSelected ? 'var(--c-on-primary-ink)' : 'var(--c-ink)',
+                  boxShadow: isSelected
+                    ? '0 6px 16px -4px color-mix(in oklab, var(--c-primary-ink) 30%, transparent)'
+                    : '0 2px 6px -2px rgba(0,0,0,0.06)',
                   transition: 'background-color 200ms, color 200ms, transform 200ms',
                 }}
               >
@@ -220,12 +213,13 @@ export default function SpotlightReviews() {
         {/* Rating note */}
         <p
           style={{
-            margin: '18px 0 0',
+            margin: '22px 0 0',
             display: 'flex',
             alignItems: 'center',
             gap: 8,
             fontSize: '0.9375rem',
-            color: 'var(--c-accent-on-dark)',
+            fontWeight: 600,
+            color: 'var(--c-primary-ink)',
           }}
         >
           <IconBrandGoogle size={18} />
