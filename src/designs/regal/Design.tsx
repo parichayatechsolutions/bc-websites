@@ -1,23 +1,21 @@
 // src/designs/regal/Design.tsx
 // "Regal": Assembled according to the boutique component lab specifications:
 // 00. Navigation: Pill + thumb dock (DockNav - Variant C)
+//     Updated pages: Home, Services, Craftmanship, About Us, Store, Contact us
 // 01. Hero: Lookbook split with 3-photo collage and facts (SplitHero - Variant C)
-// 02. Gallery: Coverflow 3D perspective viewer (CoverflowGallery - Variant T)
-// 03. Boutique Specialities:
-//     - Interactive blouse designer with live auto-updating sketches (StitchBlouse - Variant V)
-//     - Bridal packages photo rail (RailBridal - Variant I)
-//     - Handwork and embroidery craft (ZariHandwork)
-//     - Before & after alterations spotlight (SpotlightAlterations - Variant Z)
-//     - Transparent alteration rates list (RateAlterations)
-// 04. Services & Prices: Price tiles + accordion (TilesServices - Variant C)
-// 05. Owner's Story: Designer card (CardStory - Variant Q)
-// 06. Process & Timeline: Day-by-day order tracking timeline (DaysProcess & RingProcess)
-// 07. FAQ: Card grid (CardsFaq - Variant E)
-// 08. Location & Visit: Split details card (StoreVisit - Variant B)
-// 09. Reviews & Testimonials: Spotlight (SpotlightReviews - Variant Z)
-// 10. WhatsApp Contact: Occasion consultation picker (OccasionContact)
-// 11. Footer: Columns (ColumnsFooter - Variant B)
-// 12. Floating Concierge: FloatingWhatsApp
+// 02. Services: Comprehensive 3-column auto-rotating catalogue (ShowcaseServices)
+// 03. Gallery: Coverflow 3D perspective viewer with 3-second auto-rotation (CoverflowGallery)
+// 04. Craftsmanship:
+//     - Interactive blouse designer with live auto-updating sketches (StitchBlouse)
+//     - Bridal packages photo rail (RailBridal)
+//     - Handwork and zari embroidery craft (ZariHandwork)
+//     - Before & after alterations spotlight (SpotlightAlterations)
+// 05. About Us: Master tailor & designer story (FounderTeam) & Timeline (DaysProcess)
+// 06. Store: Studio location, hours, and parking (StoreVisit)
+// 07. Reviews & FAQ: Customer testimonials (SpotlightReviews) & FAQ cards (CardsFaq)
+// 08. Contact: Occasion consultation picker (OccasionContact)
+// 09. Footer: Columns (ColumnsFooter - Variant B)
+// 10. Floating Concierge: FloatingWhatsApp
 
 import { FONTS } from '../../theme/fonts'
 import {
@@ -31,7 +29,7 @@ import {
   OccasionContact,
   PageHeader,
   RailBridal,
-  RingProcess,
+  ShowcaseServices,
   SiteShell,
   SplitHero,
   SpotlightAlterations,
@@ -54,17 +52,45 @@ const pages: IPage[] = [
       <>
         <SplitHero />
         <div id="services">
+          <ShowcaseServices />
           <CoverflowGallery />
+          <TilesServices id="services-prices" />
+        </div>
+        <div id="craftsmanship">
           <StitchBlouse />
           <RailBridal />
           <ZariHandwork />
           <SpotlightAlterations />
+        </div>
+        <div id="about">
+          <FounderTeam />
+          <DaysProcess />
+        </div>
+        <div id="store">
+          <StoreVisit id="store" />
+        </div>
+        <div id="reviews">
+          <CardsFaq />
+          <SpotlightReviews />
+        </div>
+        <div id="contact">
+          <OccasionContact />
+        </div>
+      </>
+    ),
+  },
+  {
+    path: 'services',
+    label: 'Services',
+    intro: 'From bespoke bridal trousseau and handcrafted maggam blouses to swift alteration care, tailored to your exact measurements.',
+    element: (
+      <>
+        <PageHeader />
+        <div id="services">
+          <ShowcaseServices />
+          <CoverflowGallery />
           <TilesServices id="services-prices" />
         </div>
-        <FounderTeam />
-        <DaysProcess />
-        <CardsFaq />
-        <SpotlightReviews />
         <div id="contact">
           <OccasionContact />
           <StoreVisit />
@@ -73,8 +99,28 @@ const pages: IPage[] = [
     ),
   },
   {
+    path: 'craftsmanship',
+    label: 'Craftmanship',
+    intro: 'Handcrafted zardosi embroidery, bespoke necklines, structured armhole fits, and artisanal handwork perfected over years.',
+    element: (
+      <>
+        <PageHeader />
+        <div id="craftsmanship">
+          <StitchBlouse />
+          <RailBridal />
+          <ZariHandwork />
+          <SpotlightAlterations />
+        </div>
+        <FounderTeam />
+        <div id="contact">
+          <OccasionContact />
+        </div>
+      </>
+    ),
+  },
+  {
     path: 'about',
-    label: 'About us',
+    label: 'About Us',
     intro: 'Handcrafting bespoke bridal fashion, heirloom blouse embroidery, and personalized fit in Kengeri since 2019.',
     element: (
       <>
@@ -95,48 +141,19 @@ const pages: IPage[] = [
     ),
   },
   {
-    path: 'services',
-    label: 'Services',
-    intro: 'From bespoke bridal trousseau and handcrafted maggam blouses to swift alteration care, tailored to your exact measurements.',
+    path: 'store',
+    label: 'Store',
+    intro: 'Visit our bespoke studio near Hoysala Circle, Kengeri Satellite Town. Free client parking and personal designer trials available.',
     element: (
       <>
         <PageHeader />
-        <div id="services">
-          <TilesServices id="services-prices" />
-          <CoverflowGallery />
-          <StitchBlouse />
-          <RailBridal />
-          <ZariHandwork />
-          <SpotlightAlterations />
+        <div id="store">
+          <StoreVisit id="store" />
         </div>
-        <FounderTeam />
         <DaysProcess />
         <CardsFaq />
-        <SpotlightReviews />
         <div id="contact">
           <OccasionContact />
-          <StoreVisit />
-        </div>
-      </>
-    ),
-  },
-  {
-    path: 'reviews',
-    label: 'Reviews',
-    intro: 'Rated 4.9 stars by over 50 women across Bengaluru for perfect first-try fit, delicate embroidery, and on-time delivery.',
-    element: (
-      <>
-        <PageHeader />
-        <SpotlightReviews />
-        <div id="services">
-          <CoverflowGallery />
-          <RailBridal />
-          <ZariHandwork />
-        </div>
-        <FounderTeam />
-        <div id="contact">
-          <OccasionContact />
-          <StoreVisit />
         </div>
       </>
     ),

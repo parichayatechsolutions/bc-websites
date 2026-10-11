@@ -28,7 +28,7 @@ function Detail({ icon: DetailIcon, children }: { icon: Icon; children: ReactNod
   )
 }
 
-export default function StoreVisit() {
+export default function StoreVisit({ id = 'visit' }: { id?: string } = {}) {
   const { boutique } = useBoutique()
   const { branches, contact, media } = boutique
   const root = useRef<HTMLElement>(null)
@@ -47,7 +47,7 @@ export default function StoreVisit() {
   return (
     <section
       ref={root}
-      id="visit"
+      id={id}
       className="relative overflow-hidden py-10 md:py-14 border-t border-b border-ink/10 bg-paper"
     >
       <div data-visit-content className="wrap grid gap-16 md:grid-cols-12 items-center">

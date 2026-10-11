@@ -162,6 +162,7 @@ export { default as TabsServices } from './services/TabsServices' // Group tabs 
 export { default as TimeServices } from './services/TimeServices' // Usual and express delivery as day bars, starting prices beneath (needs deliveryDays)
 export { default as YesServices } from './services/YesServices' // "Yes, we do that": every service with a tick, plus an "ask anyway" card
 export { default as TilesServices } from './services/TilesServices' // Starting prices as three brand tiles, then service groups that open
+export { default as ShowcaseServices } from './services/ShowcaseServices' // 3-column interactive services catalogue with 4-second auto-rotation
 export { default as CloudServices } from './services/CloudServices' // Everything they stitch as tappable pills, featured ones larger; each a WhatsApp ask
 export { default as BillServices } from './services/BillServices' // Dark: starting prices on a torn slip from their bill book (with permission)
 export { default as MedallionServices } from './services/MedallionServices' // Starting prices in three gold-ringed medallions, groups in ruled columns

@@ -13,6 +13,7 @@ export default function CoverflowGallery() {
   const { boutique } = useBoutique()
   const photos = boutique.media.work
   const [active, setActive] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
   if (!photos.length) return null
 
@@ -23,6 +24,15 @@ export default function CoverflowGallery() {
   const step = (delta: number) => {
     setActive((prev) => (prev + delta + len) % len)
   }
+
+  // Auto-slide every 3 seconds, seamlessly combinable with manual clicks
+  useEffect(() => {
+    if (isPaused) return
+    const timer = setInterval(() => {
+      setActive((prev) => (prev + 1) % len)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [len, isPaused])
 
   return (
     <section
@@ -35,6 +45,8 @@ export default function CoverflowGallery() {
         borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
         borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
       }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       <div className="wrap text-center">
         <h2 className="t-1 text-balance text-ink">Our work</h2>
