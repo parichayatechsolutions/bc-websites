@@ -84,7 +84,7 @@ export default function CardsFaq() {
         overflow: 'hidden',
         background: 'var(--c-light)',
         color: 'var(--c-ink)',
-        padding: 'clamp(2.75rem, 6vw, 4.5rem) 0',
+        padding: 'clamp(2.5rem, 5vw, 3.5rem) 0',
       }}
     >
       {/* Background dotted radial motif */}

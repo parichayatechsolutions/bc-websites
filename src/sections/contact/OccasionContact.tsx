@@ -21,7 +21,7 @@ export default function OccasionContact() {
   const { boutique } = useBoutique()
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="relative overflow-hidden py-10 md:py-14">
       <div className="wrap">
         <h2 className="t-1 max-w-[12ch] text-balance">What’s the occasion?</h2>
         <p className="mt-4 text-muted">Tap one and WhatsApp opens with the message written.</p>

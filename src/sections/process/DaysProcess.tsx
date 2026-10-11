@@ -39,7 +39,7 @@ export default function DaysProcess() {
   ]
 
   return (
-    <section ref={root} id="process" className="section">
+    <section ref={root} id="process" className="relative overflow-hidden py-10 md:py-14">
       <div className="wrap">
         <h2 className="t-1 max-w-[14ch] text-balance">What happens, day by day</h2>
         <p className="mt-5 text-muted">

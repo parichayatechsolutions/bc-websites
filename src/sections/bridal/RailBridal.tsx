@@ -99,7 +99,7 @@ export default function RailBridal() {
         overflow: 'hidden',
         background: 'var(--c-light)',
         color: 'var(--c-ink)',
-        padding: 'clamp(2.75rem, 6cqw, 4.5rem) 0',
+        padding: 'clamp(2.5rem, 5cqw, 3.5rem) 0',
       }}
     >
       {/* Header with Title and Prev/Next buttons */}

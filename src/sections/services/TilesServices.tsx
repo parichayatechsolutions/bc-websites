@@ -19,7 +19,7 @@ export default function TilesServices({ id: sectionId = 'services' }: { id?: str
   if (!groups.length) return null
 
   return (
-    <section id={sectionId} className="section">
+    <section id={sectionId} className="relative overflow-hidden py-10 md:py-14">
       <div className="wrap">
         <h2 className="t-1">What we stitch</h2>
         {prices.length > 0 && (
