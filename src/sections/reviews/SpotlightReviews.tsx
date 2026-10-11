@@ -48,7 +48,7 @@ export default function SpotlightReviews() {
         position: 'relative',
         background: 'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
         color: 'var(--c-ink)',
-        padding: 'clamp(4.5rem, 11vw, 9rem) 0',
+        padding: 'clamp(2.75rem, 6vw, 4.5rem) 0',
         borderTop: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
         borderBottom: '1px solid color-mix(in oklab, var(--c-ink) 10%, transparent)',
         overflow: 'hidden',

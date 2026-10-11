@@ -36,7 +36,7 @@ export default function SplitHero() {
   })
 
   return (
-    <section ref={root} id="top" className="relative overflow-hidden bg-paper pt-24 pb-16 md:pt-32 md:pb-24">
+    <section ref={root} id="top" className="relative overflow-hidden bg-paper pt-24 pb-10 md:pt-28 md:pb-12">
       <div className="wrap flex flex-wrap items-center gap-10 lg:flex-nowrap lg:gap-16">
         {/* Left Column: Facts & Branding */}
         <div className="flex-1 min-w-[320px]">

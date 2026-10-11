@@ -31,7 +31,6 @@ import {
   OccasionContact,
   PageHeader,
   RailBridal,
-  RateAlterations,
   RingProcess,
   SiteShell,
   SplitHero,
@@ -60,7 +59,6 @@ const pages: IPage[] = [
           <RailBridal />
           <ZariHandwork />
           <SpotlightAlterations />
-          <RateAlterations />
           <TilesServices id="services-prices" />
         </div>
         <FounderTeam />
@@ -110,7 +108,6 @@ const pages: IPage[] = [
           <RailBridal />
           <ZariHandwork />
           <SpotlightAlterations />
-          <RateAlterations />
         </div>
         <FounderTeam />
         <DaysProcess />

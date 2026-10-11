@@ -71,8 +71,10 @@ export default function ColumnsFooter() {
         position: 'relative',
         overflow: 'hidden',
         isolation: 'isolate',
-        background: 'var(--c-dark)',
-        color: 'var(--c-light)',
+        background:
+          'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',
+        color: 'var(--c-ink)',
+        borderTop: '1px solid color-mix(in oklab, var(--c-ink) 12%, transparent)',
         padding: '0 0 32px',
       }}
     >
@@ -84,7 +86,7 @@ export default function ColumnsFooter() {
           inset: 0,
           zIndex: -1,
           background:
-            'radial-gradient(ellipse 60% 50% at 85% 0%, color-mix(in oklab, var(--c-accent) 16%, transparent), transparent 70%), radial-gradient(ellipse 50% 40% at 0% 100%, color-mix(in oklab, var(--c-primary) 30%, transparent), transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 85% 0%, color-mix(in oklab, var(--c-primary) 6%, transparent), transparent 70%), radial-gradient(ellipse 50% 40% at 0% 100%, color-mix(in oklab, var(--c-primary) 5%, transparent), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -96,7 +98,7 @@ export default function ColumnsFooter() {
         style={{
           maxWidth: 1440,
           margin: '0 auto',
-          padding: '64px clamp(1.25rem, 5vw, 4rem) 0',
+          padding: '44px clamp(1.25rem, 5vw, 4rem) 0',
           boxSizing: 'border-box',
         }}
       >
@@ -116,6 +118,7 @@ export default function ColumnsFooter() {
                 fontFamily: 'var(--f-display)',
                 fontSize: 24,
                 lineHeight: 1.1,
+                color: 'var(--c-primary-ink)',
               }}
             >
               {brand.name}
@@ -135,7 +138,7 @@ export default function ColumnsFooter() {
                   margin: '0 0 14px',
                   fontSize: 13,
                   fontWeight: 700,
-                  color: 'var(--c-accent-on-dark)',
+                  color: 'var(--c-primary-ink)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
@@ -172,7 +175,7 @@ export default function ColumnsFooter() {
                 margin: '0 0 14px',
                 fontSize: 13,
                 fontWeight: 700,
-                color: 'var(--c-accent-on-dark)',
+                color: 'var(--c-primary-ink)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,
@@ -196,7 +199,7 @@ export default function ColumnsFooter() {
                   display: 'inline-block',
                   marginTop: 10,
                   fontSize: 14,
-                  color: 'var(--c-accent-on-dark)',
+                  color: 'var(--c-primary-ink)',
                   textDecoration: 'underline dashed',
                   textUnderlineOffset: '0.3em',
                 }}
@@ -213,7 +216,7 @@ export default function ColumnsFooter() {
                 margin: '0 0 14px',
                 fontSize: 13,
                 fontWeight: 700,
-                color: 'var(--c-accent-on-dark)',
+                color: 'var(--c-primary-ink)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,

@@ -42,7 +42,7 @@ export default function FounderTeam() {
         overflow: 'hidden',
         background: 'var(--c-paper)',
         color: 'var(--c-ink)',
-        padding: 'clamp(5rem, 12cqw, 10rem) 0',
+        padding: 'clamp(2.75rem, 6cqw, 4.5rem) 0',
       }}
     >
       <div

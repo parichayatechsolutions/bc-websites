@@ -27,7 +27,7 @@ export default function CoverflowGallery() {
   return (
     <section
       id="work"
-      className="relative overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden py-10 md:py-14"
       style={{
         background:
           'linear-gradient(to bottom, color-mix(in oklab, var(--c-paper) 95%, var(--c-primary) 5%), color-mix(in oklab, var(--c-light) 96%, var(--c-primary) 4%))',

@@ -193,7 +193,7 @@
   }
 
   .section {
-    padding-block: clamp(5rem, 12vw, 10rem);
+    padding-block: clamp(2.75rem, 6vw, 4.5rem);
   }
 
   /* A slim strip between sections (a row of facts under the hero), which

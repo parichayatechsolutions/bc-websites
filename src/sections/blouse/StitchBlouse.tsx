@@ -131,7 +131,7 @@ export default function StitchBlouse() {
         overflow: 'hidden',
         background: 'var(--c-paper)',
         color: 'var(--c-ink)',
-        padding: 'clamp(4.5rem, 11cqw, 9rem) 0',
+        padding: 'clamp(2.75rem, 6cqw, 4.5rem) 0',
       }}
     >
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 clamp(1.25rem, 5cqw, 4rem)', boxSizing: 'border-box' }}>
