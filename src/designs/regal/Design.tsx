@@ -37,7 +37,6 @@ import {
   StitchBlouse,
   StoreVisit,
   ThreadProcess,
-  TilesServices,
   ZariHandwork,
   type IPage,
 } from '../../sections'
@@ -54,7 +53,6 @@ const pages: IPage[] = [
         <div id="services">
           <ShowcaseServices />
           <CoverflowGallery />
-          <TilesServices id="services-prices" />
         </div>
         <div id="craftsmanship">
           <StitchBlouse />
@@ -89,7 +87,6 @@ const pages: IPage[] = [
         <div id="services">
           <ShowcaseServices />
           <CoverflowGallery />
-          <TilesServices id="services-prices" />
         </div>
         <div id="contact">
           <OccasionContact />

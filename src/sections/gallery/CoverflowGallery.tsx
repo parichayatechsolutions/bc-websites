@@ -32,7 +32,7 @@ export default function CoverflowGallery() {
       setActive((prev) => (prev + 1) % len)
     }, 3000)
     return () => clearInterval(timer)
-  }, [len, isPaused])
+  }, [len, isPaused, active])
 
   return (
     <section
